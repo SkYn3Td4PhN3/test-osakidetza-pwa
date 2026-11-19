@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v1.2.0 - Test Oposición Osakidetza PWA (Modo Estudio vs Modo Examen navegable con revisión completa) -->
+<!-- v1.3.0 - Test Oposición Osakidetza PWA (Soporte iOS/Safari apple-touch-icon + Modo Estudio/Examen) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -14,6 +14,7 @@
   <!-- Manifest dinámico mediante Data URI para instalación PWA en Android Chrome -->
   <link id="pwa-manifest" rel="manifest" href="" />
   <link id="pwa-icon" rel="icon" type="image/svg+xml" href="" />
+  <link id="apple-touch-icon" rel="apple-touch-icon" href="" />
 
   <style>
     /* ==========================================================================
@@ -964,6 +965,8 @@
       </svg>`;
       const iconDataUri = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgIcon);
       document.getElementById("pwa-icon").setAttribute("href", iconDataUri);
+      const appleIconEl = document.getElementById("apple-touch-icon");
+      if (appleIconEl) appleIconEl.setAttribute("href", iconDataUri);
 
       const manifestObj = {
         name: "Test Oposición Osakidetza",
