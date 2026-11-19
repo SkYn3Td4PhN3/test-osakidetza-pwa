@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v1.1.0 - Test Oposición Osakidetza PWA (Soporte content://, guía instalación y persistencia offline) -->
+<!-- v1.2.0 - Test Oposición Osakidetza PWA (Modo Estudio vs Modo Examen navegable con revisión completa) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -657,6 +657,53 @@
       margin-top: 8px;
     }
 
+
+    /* Estilos Modo Examen, navegación anterior/siguiente y revisión completa */
+    .mode-help-text {
+      font-size: 0.84rem;
+      color: var(--md-on-surface-variant);
+      margin: 8px 0 0;
+    }
+
+    .option-btn.selected-exam {
+      border-color: var(--md-primary);
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+    }
+
+    .option-btn.selected-exam .option-letter {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+
+    .quiz-nav-row {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .quiz-nav-row.single-col {
+      grid-template-columns: 1fr;
+    }
+
+    .review-tabs-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .review-card-item {
+      border-bottom: 1px solid var(--md-outline-variant);
+      padding: 16px 0;
+    }
+
+    .review-card-item:last-child {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+
     .hidden {
       display: none !important;
     }
@@ -670,7 +717,7 @@
         <div class="app-logo" aria-hidden="true">112</div>
         <div>
           <h1 class="app-title">Test Oposición Osakidetza</h1>
-          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · Modo Offline</p>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.2.0</span> · Offline</p>
         </div>
       </div>
       <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
@@ -708,6 +755,17 @@
         <div class="segmented-group" role="group" aria-label="Modo de orden">
           <button type="button" class="seg-btn active" id="mode-seq-btn">En orden secuencial (todas)</button>
           <button type="button" class="seg-btn" id="mode-rnd-btn">Modo Aleatorio</button>
+        </div>
+
+        <div style="margin-top: 16px;">
+          <h3 class="section-label" style="margin-bottom: 8px;">Modalidad de sesión</h3>
+          <div class="segmented-group" role="group" aria-label="Modalidad de sesión" style="margin-bottom: 6px;">
+            <button type="button" class="seg-btn active" id="eval-study-btn">Modo Estudio</button>
+            <button type="button" class="seg-btn" id="eval-exam-btn">Modo Examen</button>
+          </div>
+          <p class="mode-help-text" id="eval-mode-desc">
+            <strong>Estudio:</strong> Corrección inmediata, bloqueo al responder y explicación al instante.
+          </p>
         </div>
 
         <div id="random-options-panel" class="random-config hidden">
@@ -779,7 +837,10 @@
       </section>
 
       <div class="sticky-footer">
-        <button type="button" id="btn-next-question" class="btn btn-primary" disabled>Siguiente pregunta</button>
+        <div class="quiz-nav-row single-col" id="quiz-nav-row">
+          <button type="button" id="btn-prev-question" class="btn btn-outlined hidden">← Anterior</button>
+          <button type="button" id="btn-next-question" class="btn btn-primary" disabled>Siguiente pregunta</button>
+        </div>
       </div>
     </main>
 
@@ -811,7 +872,11 @@
       </section>
 
       <section class="card" id="failures-section">
-        <h2 class="section-label">Revisión de fallos (<span id="fail-list-count">0</span>)</h2>
+        <div class="review-tabs-row">
+          <button type="button" class="btn btn-tonal btn-sm" id="btn-tab-failures">Solo fallos (<span id="fail-list-count">0</span>)</button>
+          <button type="button" class="btn btn-outlined btn-sm" id="btn-tab-all">Todas las respuestas (<span id="all-list-count">0</span>)</button>
+        </div>
+        <h2 class="section-label" id="review-section-title">Revisión de fallos</h2>
         <div id="failures-list"></div>
       </section>
 
@@ -873,15 +938,19 @@
        ========================================================================== */
     const STORAGE_KEY = "osakidetza_ope_preguntas_v1";
 
+    const APP_VERSION = "v1.2.0";
     let allQuestions = [];
     let selectedBlock = "comun"; // "comun" | "conductor" | "todos"
     let orderMode = "secuencial"; // "secuencial" | "aleatorio"
+    let evaluationMode = "estudio"; // "estudio" | "examen"
     let sessionQuestions = [];
+    let userAnswers = []; // almacena letra elegida ('a'|'b'|'c'|'d'|null) por índice en Modo Examen
     let currentIndex = 0;
     let hitsCount = 0;
     let missesCount = 0;
     let failedQuestions = [];
     let answeredCurrent = false;
+    let reviewFilter = "failures"; // "failures" | "all"
 
     /* ==========================================================================
        INICIALIZACIÓN PWA (MANIFEST DATA URI + SERVICE WORKER INLINE)
@@ -1086,6 +1155,7 @@
         }
       }
 
+      userAnswers = new Array(sessionQuestions.length).fill(null);
       currentIndex = 0;
       hitsCount = 0;
       missesCount = 0;
@@ -1095,29 +1165,44 @@
       renderCurrentQuestion();
     }
 
+    function updateExamLiveCounters() {
+      const answeredTotal = userAnswers.filter(Boolean).length;
+      document.getElementById("live-hits").textContent = `Respondidas: ${answeredTotal}/${sessionQuestions.length}`;
+      document.getElementById("live-misses").textContent = `Modo Examen`;
+    }
+
     function renderCurrentQuestion() {
       answeredCurrent = false;
       const total = sessionQuestions.length;
       const q = sessionQuestions[currentIndex];
+      const isExam = evaluationMode === "examen";
 
       // Progreso y contadores
       document.getElementById("quiz-progress-text").textContent = `Pregunta ${currentIndex + 1} de ${total}`;
-      document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
-      document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
+      if (isExam) {
+        updateExamLiveCounters();
+      } else {
+        document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
+        document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
+      }
       document.getElementById("quiz-progress-bar").style.width = `${((currentIndex + 1) / total) * 100}%`;
 
       // Enunciado y bloque
-      document.getElementById("q-block-badge").textContent = `${q.bloque || "General"} · #${q.id ?? currentIndex + 1}`;
+      document.getElementById("q-block-badge").textContent = `${q.bloque || "General"} · #${q.id ?? currentIndex + 1}${isExam ? " · Examen" : ""}`;
       document.getElementById("q-statement").textContent = q.pregunta;
 
       // Opciones A, B, C, D
       const optionsContainer = document.getElementById("q-options-container");
       optionsContainer.innerHTML = "";
+      const savedChoice = isExam ? userAnswers[currentIndex] : null;
 
       ["a", "b", "c", "d"].forEach((key) => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "option-btn";
+        if (isExam && savedChoice === key) {
+          btn.classList.add("selected-exam");
+        }
         btn.dataset.option = key;
         btn.innerHTML = `
           <span class="option-letter">${key.toUpperCase()}</span>
@@ -1127,16 +1212,40 @@
         optionsContainer.appendChild(btn);
       });
 
-      // Reset explicación y botón siguiente
+      // Reset explicación y configurar botones de navegación
       const feedbackBox = document.getElementById("q-feedback-box");
       feedbackBox.classList.add("hidden");
 
+      const navRow = document.getElementById("quiz-nav-row");
+      const prevBtn = document.getElementById("btn-prev-question");
       const nextBtn = document.getElementById("btn-next-question");
-      nextBtn.disabled = true;
-      nextBtn.textContent = currentIndex === total - 1 ? "Finalizar y ver resultados" : "Siguiente pregunta";
+
+      if (isExam) {
+        navRow.classList.remove("single-col");
+        prevBtn.classList.remove("hidden");
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = false;
+        nextBtn.textContent = currentIndex === total - 1 ? "Enviar examen" : "Siguiente pregunta";
+      } else {
+        navRow.classList.add("single-col");
+        prevBtn.classList.add("hidden");
+        nextBtn.disabled = true;
+        nextBtn.textContent = currentIndex === total - 1 ? "Finalizar y ver resultados" : "Siguiente pregunta";
+      }
     }
 
     function handleAnswerSelection(selectedKey) {
+      if (evaluationMode === "examen") {
+        // En Modo Examen se permite cambiar la respuesta libremente antes de enviar
+        userAnswers[currentIndex] = selectedKey;
+        const buttons = document.querySelectorAll("#q-options-container .option-btn");
+        buttons.forEach((btn) => {
+          btn.classList.toggle("selected-exam", btn.dataset.option === selectedKey);
+        });
+        updateExamLiveCounters();
+        return;
+      }
+
       if (answeredCurrent) return;
       answeredCurrent = true;
 
@@ -1180,9 +1289,74 @@
       document.getElementById("btn-next-question").disabled = false;
     }
 
+    function gradeExamSession() {
+      hitsCount = 0;
+      missesCount = 0;
+      failedQuestions = [];
+
+      sessionQuestions.forEach((q, idx) => {
+        const chosen = userAnswers[idx];
+        const correctKey = String(q.correcta).toLowerCase();
+        if (chosen && chosen === correctKey) {
+          hitsCount++;
+        } else {
+          missesCount++;
+          failedQuestions.push({
+            question: q,
+            userAnswer: chosen || null
+          });
+        }
+      });
+    }
+
     /* ==========================================================================
        PANTALLA DE RESULTADOS Y REPASO DE FALLOS
        ========================================================================== */
+    function renderReviewItems() {
+      const failuresList = document.getElementById("failures-list");
+      const titleEl = document.getElementById("review-section-title");
+      failuresList.innerHTML = "";
+
+      if (reviewFilter === "all") {
+        titleEl.textContent = "Revisión de todas las respuestas";
+        sessionQuestions.forEach((q, idx) => {
+          const cKey = String(q.correcta).toLowerCase();
+          const uKey = evaluationMode === "examen"
+            ? userAnswers[idx]
+            : (failedQuestions.find((f) => f.question === q)?.userAnswer ?? cKey);
+          const isRight = uKey === cKey;
+
+          const article = document.createElement("article");
+          article.className = "review-card-item";
+          article.innerHTML = `
+            <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
+            <div class="fail-ans ${isRight ? "real-right" : "user-wrong"}">${isRight ? "✓" : "✕"} Tu respuesta (${uKey ? uKey.toUpperCase() : "—"}): ${uKey ? escapeHTML(q.opciones[uKey]) : "Sin responder"}</div>
+            ${!isRight ? `<div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>` : ""}
+            <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
+          `;
+          failuresList.appendChild(article);
+        });
+        return;
+      }
+
+      titleEl.textContent = "Revisión de fallos";
+      failedQuestions.forEach((item, idx) => {
+        const q = item.question;
+        const uKey = item.userAnswer;
+        const cKey = String(q.correcta).toLowerCase();
+
+        const article = document.createElement("article");
+        article.className = "fail-item";
+        article.innerHTML = `
+          <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
+          <div class="fail-ans user-wrong">✕ Tu respuesta (${uKey ? uKey.toUpperCase() : "—"}): ${uKey ? escapeHTML(q.opciones[uKey]) : "Sin responder"}</div>
+          <div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>
+          <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
+        `;
+        failuresList.appendChild(article);
+      });
+    }
+
     function showResults() {
       const total = sessionQuestions.length;
       const pct = total > 0 ? (hitsCount / total) * 100 : 0;
@@ -1195,35 +1369,24 @@
       document.getElementById("res-misses").textContent = missesCount;
 
       const failuresSection = document.getElementById("failures-section");
-      const failuresList = document.getElementById("failures-list");
       const retryBtn = document.getElementById("btn-retry-failed");
 
       document.getElementById("fail-list-count").textContent = failedQuestions.length;
-      failuresList.innerHTML = "";
+      document.getElementById("all-list-count").textContent = total;
 
       if (failedQuestions.length === 0) {
-        failuresSection.classList.add("hidden");
         retryBtn.classList.add("hidden");
+        reviewFilter = "all";
       } else {
-        failuresSection.classList.remove("hidden");
         retryBtn.classList.remove("hidden");
-
-        failedQuestions.forEach((item, idx) => {
-          const q = item.question;
-          const uKey = item.userAnswer;
-          const cKey = String(q.correcta).toLowerCase();
-
-          const article = document.createElement("article");
-          article.className = "fail-item";
-          article.innerHTML = `
-            <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
-            <div class="fail-ans user-wrong">✕ Tu respuesta (${uKey.toUpperCase()}): ${escapeHTML(q.opciones[uKey])}</div>
-            <div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>
-            <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
-          `;
-          failuresList.appendChild(article);
-        });
+        reviewFilter = "failures";
       }
+
+      document.getElementById("btn-tab-failures").className = `btn btn-sm ${reviewFilter === "failures" ? "btn-tonal" : "btn-outlined"}`;
+      document.getElementById("btn-tab-all").className = `btn btn-sm ${reviewFilter === "all" ? "btn-tonal" : "btn-outlined"}`;
+
+      failuresSection.classList.remove("hidden");
+      renderReviewItems();
 
       switchScreen("screen-results");
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1351,18 +1514,64 @@
         reader.readAsText(file, "UTF-8");
       });
 
+      // Selector Modalidad: Modo Estudio vs Modo Examen
+      const evalStudyBtn = document.getElementById("eval-study-btn");
+      const evalExamBtn = document.getElementById("eval-exam-btn");
+      const evalModeDesc = document.getElementById("eval-mode-desc");
+
+      evalStudyBtn.addEventListener("click", () => {
+        evaluationMode = "estudio";
+        evalStudyBtn.classList.add("active");
+        evalExamBtn.classList.remove("active");
+        evalModeDesc.innerHTML = "<strong>Estudio:</strong> Corrección inmediata, bloqueo al responder y explicación al instante.";
+      });
+
+      evalExamBtn.addEventListener("click", () => {
+        evaluationMode = "examen";
+        evalExamBtn.classList.add("active");
+        evalStudyBtn.classList.remove("active");
+        evalModeDesc.innerHTML = "<strong>Examen:</strong> Sin corrección durante el test; puedes volver atrás, cambiar respuestas y revisar todas al enviar.";
+      });
+
       // Iniciar test
       document.getElementById("btn-start-test").addEventListener("click", () => startQuiz());
 
-      // Siguiente pregunta / Finalizar
+      // Pregunta anterior (en Modo Examen)
+      document.getElementById("btn-prev-question").addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          renderCurrentQuestion();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      // Siguiente pregunta / Finalizar o Enviar examen
       document.getElementById("btn-next-question").addEventListener("click", () => {
         if (currentIndex < sessionQuestions.length - 1) {
           currentIndex++;
           renderCurrentQuestion();
           window.scrollTo({ top: 0, behavior: "smooth" });
         } else {
+          if (evaluationMode === "examen") {
+            gradeExamSession();
+          }
           showResults();
         }
+      });
+
+      // Pestañas de revisión en resultados: Solo fallos vs Todas las respuestas
+      document.getElementById("btn-tab-failures").addEventListener("click", () => {
+        reviewFilter = "failures";
+        document.getElementById("btn-tab-failures").className = "btn btn-tonal btn-sm";
+        document.getElementById("btn-tab-all").className = "btn btn-outlined btn-sm";
+        renderReviewItems();
+      });
+
+      document.getElementById("btn-tab-all").addEventListener("click", () => {
+        reviewFilter = "all";
+        document.getElementById("btn-tab-all").className = "btn btn-tonal btn-sm";
+        document.getElementById("btn-tab-failures").className = "btn btn-outlined btn-sm";
+        renderReviewItems();
       });
 
       // Salir del test en curso
