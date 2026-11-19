@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<!-- v1.1.0 - Test Oposición Osakidetza PWA (Soporte content://, guía instalación y persistencia offline) -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#006874" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#4FD8EB" media="(prefers-color-scheme: dark)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="App de entrenamiento tipo test para oposiciones de Osakidetza (Temario Común y Conductor/a de Vehículos de Emergencias)" />
+  <title>Test Oposición Osakidetza</title>
+
+  <!-- Manifest dinámico mediante Data URI para instalación PWA en Android Chrome -->
+  <link id="pwa-manifest" rel="manifest" href="" />
+  <link id="pwa-icon" rel="icon" type="image/svg+xml" href="" />
+
+  <style>
+    /* ==========================================================================
+       SISTEMA DE DISEÑO MATERIAL DESIGN 3 (TOKENS CLARO / OSCURO AUTOMÁTICO)
+       ========================================================================== */
+    :root {
+      --md-primary: #006874;
+      --md-on-primary: #ffffff;
+      --md-primary-container: #97f0ff;
+      --md-on-primary-container: #001f24;
+      --md-secondary: #4a6267;
+      --md-secondary-container: #cde7ec;
+      --md-on-secondary-container: #051f23;
+      --md-background: #f5fafb;
+      --md-surface: #ffffff;
+      --md-surface-variant: #dbe4e6;
+      --md-on-surface: #171d1e;
+      --md-on-surface-variant: #3f484a;
+      --md-outline: #6f797a;
+      --md-outline-variant: #bfc8ca;
+
+      /* Semántica aciertos y fallos */
+      --md-success: #1b6d32;
+      --md-on-success: #ffffff;
+      --md-success-container: #c5f7cc;
+      --md-on-success-container: #002109;
+
+      --md-error: #ba1a1a;
+      --md-on-error: #ffffff;
+      --md-error-container: #ffdad6;
+      --md-on-error-container: #410002;
+
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+      --transition-fast: 180ms cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --md-primary: #4fd8eb;
+        --md-on-primary: #00363d;
+        --md-primary-container: #004f58;
+        --md-on-primary-container: #97f0ff;
+        --md-secondary: #b1cbd0;
+        --md-secondary-container: #334b4f;
+        --md-on-secondary-container: #cde7ec;
+        --md-background: #0e1415;
+        --md-surface: #171d1e;
+        --md-surface-variant: #3f484a;
+        --md-on-surface: #dee3e5;
+        --md-on-surface-variant: #bfc8ca;
+        --md-outline: #899294;
+        --md-outline-variant: #3f484a;
+
+        --md-success: #82da90;
+        --md-on-success: #003914;
+        --md-success-container: #005321;
+        --md-on-success-container: #c5f7cc;
+
+        --md-error: #ffb4ab;
+        --md-on-error: #690005;
+        --md-error-container: #93000a;
+        --md-on-error-container: #ffdad6;
+
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+        --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    /* Reset y prevención estricta de scroll horizontal */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      background-color: var(--md-background);
+      color: var(--md-on-surface);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Contenedor principal adaptable (Móvil / Plegable / Tablet) */
+    .app-shell {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: env(safe-area-inset-top, 12px) 16px calc(env(safe-area-inset-bottom, 16px) + 16px);
+    }
+
+    /* Top App Bar MD3 */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 4px 16px;
+    }
+
+    .app-title-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .app-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .app-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .app-subtitle {
+      font-size: 0.78rem;
+      color: var(--md-on-surface-variant);
+      margin: 0;
+    }
+
+    /* Tarjetas MD3 */
+    .card {
+      background: var(--md-surface);
+      border: 1px solid var(--md-outline-variant);
+      border-radius: var(--radius-xl);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+    }
+
+    .section-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--md-primary);
+      margin: 0 0 12px;
+    }
+
+    /* Selector de Bloques / Temarios */
+    .block-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 600px) {
+      .block-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .radio-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--md-outline-variant);
+      background: var(--md-surface);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      user-select: none;
+    }
+
+    .radio-card input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-card.selected {
+      border-color: var(--md-primary);
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+    }
+
+    .radio-card-title {
+      font-weight: 700;
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    .radio-card-count {
+      font-size: 0.82rem;
+      opacity: 0.85;
+      font-weight: 600;
+    }
+
+    /* Segmented Buttons MD3 (Secuencial vs Aleatorio) */
+    .segmented-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1.5px solid var(--md-outline);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .seg-btn {
+      border: none;
+      background: transparent;
+      color: var(--md-on-surface);
+      padding: 12px 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .seg-btn.active {
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+    }
+
+    /* Controles de cantidad aleatoria */
+    .random-config {
+      background: var(--md-background);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      border: 1px solid var(--md-outline-variant);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .chip-btn {
+      flex: 1 1 auto;
+      min-width: 56px;
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--md-outline-variant);
+      background: var(--md-surface);
+      color: var(--md-on-surface);
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+    }
+
+    .chip-btn.active {
+      border-color: var(--md-primary);
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+    }
+
+    .num-input-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .num-input-row label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--md-on-surface-variant);
+    }
+
+    .num-input {
+      width: 110px;
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--md-outline);
+      background: var(--md-surface);
+      color: var(--md-on-surface);
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* Botones MD3 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: var(--radius-full);
+      border: none;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 100ms ease, opacity var(--transition-fast), background var(--transition-fast);
+      min-height: 52px;
+    }
+
+    .btn:active:not(:disabled) {
+      transform: scale(0.985);
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-tonal {
+      background: var(--md-secondary-container);
+      color: var(--md-on-secondary-container);
+    }
+
+    .btn-outlined {
+      background: transparent;
+      color: var(--md-primary);
+      border: 1.5px solid var(--md-outline);
+    }
+
+    .btn-sm {
+      width: auto;
+      padding: 8px 14px;
+      min-height: 38px;
+      font-size: 0.84rem;
+    }
+
+    /* Fila discreta de importación JSON */
+    .import-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+    }
+
+    .import-status {
+      font-size: 0.82rem;
+      color: var(--md-on-surface-variant);
+    }
+
+    /* ==========================================================================
+       PANTALLA DE REALIZACIÓN DEL TEST
+       ========================================================================== */
+    .quiz-header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .quiz-stats-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .progress-text {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .live-counters {
+      display: flex;
+      gap: 8px;
+    }
+
+    .badge {
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .badge-ok {
+      background: var(--md-success-container);
+      color: var(--md-on-success-container);
+    }
+
+    .badge-ko {
+      background: var(--md-error-container);
+      color: var(--md-on-error-container);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background: var(--md-surface-variant);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--md-primary);
+      transition: width 260ms ease;
+    }
+
+    .question-meta {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--md-primary);
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 10px;
+    }
+
+    .question-text {
+      font-size: 1.12rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin: 0 0 18px;
+      word-wrap: break-word;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option-btn {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+      text-align: left;
+      padding: 15px 16px;
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--md-outline-variant);
+      background: var(--md-surface);
+      color: var(--md-on-surface);
+      font-size: 1rem;
+      line-height: 1.42;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      min-height: 58px;
+    }
+
+    .option-btn:hover:not(:disabled) {
+      border-color: var(--md-primary);
+    }
+
+    .option-btn:disabled {
+      cursor: default;
+    }
+
+    .option-letter {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--md-surface-variant);
+      color: var(--md-on-surface);
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .option-text {
+      flex: 1;
+      word-wrap: break-word;
+    }
+
+    /* Estados de corrección inmediata */
+    .option-btn.correct {
+      border-color: var(--md-success);
+      background: var(--md-success-container);
+      color: var(--md-on-success-container);
+    }
+
+    .option-btn.correct .option-letter {
+      background: var(--md-success);
+      color: var(--md-on-success);
+    }
+
+    .option-btn.wrong {
+      border-color: var(--md-error);
+      background: var(--md-error-container);
+      color: var(--md-on-error-container);
+    }
+
+    .option-btn.wrong .option-letter {
+      background: var(--md-error);
+      color: var(--md-on-error);
+    }
+
+    .instant-explanation {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: var(--radius-lg);
+      background: var(--md-background);
+      border-left: 4px solid var(--md-primary);
+      font-size: 0.94rem;
+      color: var(--md-on-surface);
+    }
+
+    .instant-explanation strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--md-primary);
+    }
+
+    .sticky-footer {
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    /* ==========================================================================
+       PANTALLA DE RESULTADOS Y REPASO DE FALLOS
+       ========================================================================== */
+    .score-hero {
+      text-align: center;
+      padding: 10px 0 6px;
+    }
+
+    .score-grade {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--md-primary);
+      line-height: 1.1;
+      margin: 4px 0;
+    }
+
+    .score-sub {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--md-on-surface-variant);
+      margin-bottom: 16px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .metric-box {
+      padding: 12px 8px;
+      border-radius: var(--radius-lg);
+      background: var(--md-background);
+      text-align: center;
+      border: 1px solid var(--md-outline-variant);
+    }
+
+    .metric-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      display: block;
+    }
+
+    .metric-lbl {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--md-on-surface-variant);
+    }
+
+    .fail-item {
+      border-bottom: 1px solid var(--md-outline-variant);
+      padding: 16px 0;
+    }
+
+    .fail-item:last-child {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+
+    .fail-q {
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0 0 10px;
+    }
+
+    .fail-ans {
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .fail-ans.user-wrong {
+      background: var(--md-error-container);
+      color: var(--md-on-error-container);
+    }
+
+    .fail-ans.real-right {
+      background: var(--md-success-container);
+      color: var(--md-on-success-container);
+    }
+
+    .fail-exp {
+      font-size: 0.9rem;
+      color: var(--md-on-surface-variant);
+      background: var(--md-background);
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      margin: 0;
+    }
+
+    .actions-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- CABECERA -->
+    <header class="top-bar">
+      <div class="app-title-group">
+        <div class="app-logo" aria-hidden="true">112</div>
+        <div>
+          <h1 class="app-title">Test Oposición Osakidetza</h1>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · Modo Offline</p>
+        </div>
+      </div>
+      <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
+    </header>
+
+    <!-- =====================================================================
+         1. PANTALLA DE CONFIGURACIÓN INICIAL (MENÚ)
+         ===================================================================== -->
+    <main id="screen-menu">
+      <section class="card">
+        <h2 class="section-label">1. Selecciona el temario</h2>
+        <div class="block-grid" id="block-selector">
+          <label class="radio-card selected" data-block="comun">
+            <input type="radio" name="bloque" value="comun" checked />
+            <span class="radio-card-title">Temario Común</span>
+            <span class="radio-card-count" id="count-comun">0 preguntas</span>
+          </label>
+
+          <label class="radio-card" data-block="conductor">
+            <input type="radio" name="bloque" value="conductor" />
+            <span class="radio-card-title">Conductor/a Emergencias</span>
+            <span class="radio-card-count" id="count-conductor">0 preguntas</span>
+          </label>
+
+          <label class="radio-card" data-block="todos">
+            <input type="radio" name="bloque" value="todos" />
+            <span class="radio-card-title">Todos mezclados</span>
+            <span class="radio-card-count" id="count-todos">0 preguntas</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-label">2. Modo de orden y cantidad</h2>
+        <div class="segmented-group" role="group" aria-label="Modo de orden">
+          <button type="button" class="seg-btn active" id="mode-seq-btn">En orden secuencial (todas)</button>
+          <button type="button" class="seg-btn" id="mode-rnd-btn">Modo Aleatorio</button>
+        </div>
+
+        <div id="random-options-panel" class="random-config hidden">
+          <div class="chip-row" id="quick-chips">
+            <button type="button" class="chip-btn active" data-qty="10">10</button>
+            <button type="button" class="chip-btn" data-qty="20">20</button>
+            <button type="button" class="chip-btn" data-qty="50">50</button>
+            <button type="button" class="chip-btn" data-qty="100">100</button>
+          </div>
+          <div class="num-input-row">
+            <label for="custom-qty">Cantidad personalizada (1 - <span id="max-qty-label">1</span>):</label>
+            <input type="number" id="custom-qty" class="num-input" min="1" max="100" value="10" inputmode="numeric" />
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="import-bar">
+          <span class="import-status" id="import-status">Batería integrada cargada en memoria.</span>
+          <label for="json-file-input" class="btn btn-outlined btn-sm" style="cursor:pointer;">
+            📂 Importar archivo .json
+          </label>
+          <input type="file" id="json-file-input" accept=".json,application/json" class="hidden" />
+        </div>
+      </section>
+
+      <section class="card" id="install-guide-card">
+        <h2 class="section-label">Instalación en Android (PWA)</h2>
+        <p class="import-status" id="install-guide-text" style="margin:0 0 10px;">
+          Si abres el archivo desde <strong>content://</strong> (al tocarlo en Descargas/Gestor de archivos), Chrome bloquea la instalación PWA. Para instalarlo como app independiente, ábrelo mediante un servidor local HTTP/HTTPS (ej. <code>npx serve</code> o GitHub Pages) y pulsa <em>Añadir a pantalla de inicio</em>.
+        </p>
+        <button type="button" id="btn-install-pwa" class="btn btn-tonal btn-sm">Instalar aplicación (PWA)</button>
+      </section>
+
+      <div class="sticky-footer">
+        <button type="button" id="btn-start-test" class="btn btn-primary">Comenzar Test</button>
+      </div>
+    </main>
+
+    <!-- =====================================================================
+         2. PANTALLA DE REALIZACIÓN DEL TEST
+         ===================================================================== -->
+    <main id="screen-quiz" class="hidden">
+      <div class="quiz-header">
+        <div class="quiz-stats-row">
+          <span class="progress-text" id="quiz-progress-text">Pregunta 1 de 10</span>
+          <div class="live-counters">
+            <span class="badge badge-ok" id="live-hits">✓ 0</span>
+            <span class="badge badge-ko" id="live-misses">✕ 0</span>
+          </div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="quiz-progress-bar"></div>
+        </div>
+      </div>
+
+      <section class="card">
+        <span class="question-meta" id="q-block-badge">Temario Común · #1</span>
+        <p class="question-text" id="q-statement">Texto de la pregunta...</p>
+
+        <div class="options-list" id="q-options-container">
+          <!-- Botones A, B, C, D generados dinámicamente -->
+        </div>
+
+        <div id="q-feedback-box" class="instant-explanation hidden">
+          <strong id="q-feedback-title">Explicación</strong>
+          <span id="q-feedback-text"></span>
+        </div>
+      </section>
+
+      <div class="sticky-footer">
+        <button type="button" id="btn-next-question" class="btn btn-primary" disabled>Siguiente pregunta</button>
+      </div>
+    </main>
+
+    <!-- =====================================================================
+         3. PANTALLA DE RESULTADOS FINALES Y REPASO
+         ===================================================================== -->
+    <main id="screen-results" class="hidden">
+      <section class="card">
+        <h2 class="section-label" style="text-align:center;">Resultado de la sesión</h2>
+        <div class="score-hero">
+          <div class="score-grade" id="res-grade">0.00 / 10</div>
+          <div class="score-sub" id="res-percentage">0% de aciertos</div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <span class="metric-val" id="res-total">0</span>
+            <span class="metric-lbl">Respondidas</span>
+          </div>
+          <div class="metric-box" style="border-color: var(--md-success);">
+            <span class="metric-val" style="color: var(--md-success);" id="res-hits">0</span>
+            <span class="metric-lbl">Aciertos</span>
+          </div>
+          <div class="metric-box" style="border-color: var(--md-error);">
+            <span class="metric-val" style="color: var(--md-error);" id="res-misses">0</span>
+            <span class="metric-lbl">Fallos</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="failures-section">
+        <h2 class="section-label">Revisión de fallos (<span id="fail-list-count">0</span>)</h2>
+        <div id="failures-list"></div>
+      </section>
+
+      <div class="actions-stack sticky-footer">
+        <button type="button" id="btn-retry-failed" class="btn btn-primary">Repetir solo preguntas falladas</button>
+        <button type="button" id="btn-back-menu" class="btn btn-tonal">Volver al menú principal</button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       BANCO DE PREGUNTAS INTEGRADO (Pega aquí tu array JSON completo de preguntas)
+       ========================================================================== */
+    const bancoPreguntas = [
+      {
+        "id": 1,
+        "bloque": "Temario Común",
+        "pregunta": "De acuerdo con las normas generales de ordenación de las profesiones sanitarias, para poder ejercer una profesión sanitaria será requisito imprescindible:",
+        "opciones": {
+          "a": "La colegiación, cuando una ley estatal establezca esta obligación para el ejercicio de una profesión titulada o algunas actividades propias de ésta.",
+          "b": "La inexistencia de inhabilitación o suspensión para el ejercicio profesional por sentencia judicial, aunque no sea firme, durante el periodo de tiempo que fije ésta; por resolución sancionadora impuesta por un colegio profesional sanitario, cuando una ley estatal establezca para este ejercicio la obligación de pertenecer al colegio profesional respectivo durante el periodo de tiempo que fije ésta; o por resolución administrativa sancionadora firme, durante el periodo de tiempo que fije ésta, cuando se ejerza la profesión en el ámbito de la asistencia sanitaria pública.",
+          "c": "Tener suscrito y vigente un seguro de responsabilidad, un aval u otra garantía financiera, ya sean de protección personal o colectiva, que cubra las indemnizaciones que se puedan derivar de la responsabilidad profesional por un eventual daño a las personas, causado con ocasión de la prestación de tal asistencia o servicios, cuando se ejerza la profesión en el ámbito de la asistencia sanitaria pública.",
+          "d": "Todo lo anterior."
+        },
+        "correcta": "d",
+        "explicacion": "Según el artículo 4.8 de la Ley 44/2003, de 21 de noviembre, de ordenación de las profesiones sanitarias (LOPS), para ejercer una profesión sanitaria son requisitos imprescindibles la colegiación cuando una ley estatal lo exija, la inexistencia de inhabilitación o suspensión y contar con seguro de responsabilidad, aval u otra garantía financiera."
+      },
+      {
+        "id": 1,
+        "bloque": "Conductor/a Vehículos Emergencias",
+        "pregunta": "Las conductas referidas a la conducción temeraria tendrán consideración de:",
+        "opciones": {
+          "a": "Infracción muy grave.",
+          "b": "Infracción grave.",
+          "c": "Infracción leve.",
+          "d": "No tendrá consideración de infracción."
+        },
+        "correcta": "a",
+        "explicacion": "Según el Texto Refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015, art. 77) y el Reglamento General de Circulación (RD 1428/2003), las conductas de conducción temeraria se califican como infracción muy grave."
+      },
+      {
+        "id": 4,
+        "bloque": "Conductor/a Vehículos Emergencias",
+        "pregunta": "En los vehículos destinados al servicio de urgencia, las personas conductoras NO podrán superar la tasa de alcohol en aire espirado de:",
+        "opciones": {
+          "a": "Alcohol en aire espirado superior a 0,15 miligramos por litro.",
+          "b": "Alcohol en aire espirado superior a 0,3 miligramos por litro.",
+          "c": "Alcohol en aire espirado superior a 0,25 miligramos por litro.",
+          "d": "Alcohol en aire espirado superior a 0,50 miligramos por litro."
+        },
+        "correcta": "a",
+        "explicacion": "Según el artículo 20 del Reglamento General de Circulación (RD 1428/2003), los conductores de vehículos destinados a servicios de urgencia no pueden superar 0,15 mg/l en aire espirado (ni 0,3 g/l en sangre)."
+      }
+    ];
+
+    /* ==========================================================================
+       ESTADO DE LA APLICACIÓN
+       ========================================================================== */
+    const STORAGE_KEY = "osakidetza_ope_preguntas_v1";
+
+    let allQuestions = [];
+    let selectedBlock = "comun"; // "comun" | "conductor" | "todos"
+    let orderMode = "secuencial"; // "secuencial" | "aleatorio"
+    let sessionQuestions = [];
+    let currentIndex = 0;
+    let hitsCount = 0;
+    let missesCount = 0;
+    let failedQuestions = [];
+    let answeredCurrent = false;
+
+    /* ==========================================================================
+       INICIALIZACIÓN PWA (MANIFEST DATA URI + SERVICE WORKER INLINE)
+       ========================================================================== */
+    function initPWA() {
+      const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <rect width="512" height="512" rx="112" fill="#006874"/>
+        <circle cx="256" cy="256" r="185" fill="#97f0ff" opacity="0.18"/>
+        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+              font-family="sans-serif" font-weight="800" font-size="168" fill="#ffffff">112</text>
+      </svg>`;
+      const iconDataUri = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgIcon);
+      document.getElementById("pwa-icon").setAttribute("href", iconDataUri);
+
+      const manifestObj = {
+        name: "Test Oposición Osakidetza",
+        short_name: "Test Osakidetza",
+        description: "Simulador tipo test OPE Osakidetza con corrección y repaso de fallos",
+        start_url: "./",
+        display: "standalone",
+        orientation: "any",
+        background_color: "#f5fafb",
+        theme_color: "#006874",
+        icons: [
+          {
+            src: iconDataUri,
+            sizes: "512x512",
+            type: "image/svg+xml",
+            purpose: "any maskable"
+          }
+        ]
+      };
+
+      const manifestDataUri = "data:application/manifest+json;charset=utf-8," + encodeURIComponent(JSON.stringify(manifestObj));
+      document.getElementById("pwa-manifest").setAttribute("href", manifestDataUri);
+
+
+      // Detección de esquema content:// o file:// donde Chrome restringe beforeinstallprompt
+      const isLocalFileOrContent = ["content:", "file:"].includes(window.location.protocol);
+      const installBtn = document.getElementById("btn-install-pwa");
+      const guideText = document.getElementById("install-guide-text");
+      let deferredPrompt = null;
+
+      if (isLocalFileOrContent) {
+        guideText.innerHTML = "Estás en <strong>" + escapeHTML(window.location.protocol) + "//</strong>. Chrome no permite instalar PWAs directamente desde archivos locales o <em>content://</em>. Sírvelo por <strong>HTTP/HTTPS</strong> (por ejemplo en tu PC con <code>python -m http.server 8080</code> o en GitHub Pages) para habilitar la instalación.";
+        installBtn.disabled = true;
+        installBtn.textContent = "Requiere HTTP/HTTPS para instalar";
+      }
+
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBtn.disabled = false;
+        installBtn.textContent = "Instalar en pantalla de inicio";
+        guideText.textContent = "Tu navegador soporta instalación directa de esta PWA sin conexión.";
+      });
+
+      installBtn.addEventListener("click", async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        installBtn.disabled = true;
+      });
+
+      // Registro de Service Worker en línea para caché 100% offline
+      if ("serviceWorker" in navigator) {
+        const swCode = `
+          const CACHE_NAME = 'osakidetza-test-pwa-v1';
+          self.addEventListener('install', (event) => {
+            self.skipWaiting();
+            event.waitUntil(
+              caches.open(CACHE_NAME).then((cache) => cache.addAll(['./']).catch(() => {}))
+            );
+          });
+          self.addEventListener('activate', (event) => {
+            event.waitUntil(self.clients.claim());
+          });
+          self.addEventListener('fetch', (event) => {
+            if (event.request.method !== 'GET') return;
+            event.respondWith(
+              caches.match(event.request).then((cached) => {
+                return cached || fetch(event.request).then((response) => {
+                  const copy = response.clone();
+                  caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => {});
+                  return response;
+                }).catch(() => cached);
+              })
+            );
+          });
+        `;
+        const swBlob = new Blob([swCode], { type: "application/javascript" });
+        const swUrl = URL.createObjectURL(swBlob);
+        navigator.serviceWorker.register(swUrl).catch(() => {
+          // En entornos file:// locales el SW puede no registrarse, pero la app sigue operando 100% offline
+        });
+      }
+    }
+
+    /* ==========================================================================
+       UTILIDADES DE FILTRADO, MEZCLA Y SANITIZACIÓN
+       ========================================================================== */
+    function normalizeBlockName(bloqueStr) {
+      const b = String(bloqueStr || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (b.includes("conductor") || b.includes("emergencia")) return "conductor";
+      return "comun";
+    }
+
+    function getFilteredQuestions(blockKey) {
+      if (blockKey === "todos") return [...allQuestions];
+      return allQuestions.filter((q) => normalizeBlockName(q.bloque) === blockKey);
+    }
+
+    // Algoritmo Fisher-Yates (Knuth Shuffle) sin repeticiones
+    function fisherYatesShuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function escapeHTML(str) {
+      const div = document.createElement("div");
+      div.textContent = String(str ?? "");
+      return div.innerHTML;
+    }
+
+    function validateQuestionsArray(data) {
+      if (!Array.isArray(data) || data.length === 0) return false;
+      return data.every(
+        (item) =>
+          item &&
+          typeof item.pregunta === "string" &&
+          item.opciones &&
+          typeof item.opciones.a === "string" &&
+          typeof item.opciones.b === "string" &&
+          typeof item.opciones.c === "string" &&
+          typeof item.opciones.d === "string" &&
+          ["a", "b", "c", "d"].includes(String(item.correcta).toLowerCase())
+      );
+    }
+
+    /* ==========================================================================
+       ACTUALIZACIÓN DE UI DEL MENÚ
+       ========================================================================== */
+    function updateMenuCounts() {
+      const comunCount = getFilteredQuestions("comun").length;
+      const conductorCount = getFilteredQuestions("conductor").length;
+      const totalCount = allQuestions.length;
+
+      document.getElementById("count-comun").textContent = `${comunCount} pregunta${comunCount === 1 ? "" : "s"}`;
+      document.getElementById("count-conductor").textContent = `${conductorCount} pregunta${conductorCount === 1 ? "" : "s"}`;
+      document.getElementById("count-todos").textContent = `${totalCount} pregunta${totalCount === 1 ? "" : "s"}`;
+
+      const available = getFilteredQuestions(selectedBlock).length;
+      const maxLabel = document.getElementById("max-qty-label");
+      const customInput = document.getElementById("custom-qty");
+      const startBtn = document.getElementById("btn-start-test");
+
+      maxLabel.textContent = Math.max(1, available);
+      customInput.max = Math.max(1, available);
+
+      if (available > 0 && Number(customInput.value) > available) {
+        customInput.value = available;
+      } else if (available > 0 && Number(customInput.value) < 1) {
+        customInput.value = 1;
+      }
+
+      startBtn.disabled = available === 0;
+      startBtn.textContent = available === 0
+        ? "No hay preguntas en este bloque"
+        : `Comenzar Test (${orderMode === "secuencial" ? available : Math.min(available, Math.max(1, Number(customInput.value) || 1))} preg.)`;
+    }
+
+    function switchScreen(screenId) {
+      ["screen-menu", "screen-quiz", "screen-results"].forEach((id) => {
+        document.getElementById(id).classList.toggle("hidden", id !== screenId);
+      });
+      document.getElementById("btn-abort-quiz").classList.toggle("hidden", screenId !== "screen-quiz");
+    }
+
+    /* ==========================================================================
+       LÓGICA DEL TEST
+       ========================================================================== */
+    function startQuiz(customQuestionList = null) {
+      if (customQuestionList) {
+        sessionQuestions = [...customQuestionList];
+      } else {
+        const pool = getFilteredQuestions(selectedBlock);
+        if (pool.length === 0) return;
+
+        if (orderMode === "secuencial") {
+          sessionQuestions = pool;
+        } else {
+          const requestedQty = Math.min(
+            pool.length,
+            Math.max(1, parseInt(document.getElementById("custom-qty").value, 10) || 10)
+          );
+          sessionQuestions = fisherYatesShuffle(pool).slice(0, requestedQty);
+        }
+      }
+
+      currentIndex = 0;
+      hitsCount = 0;
+      missesCount = 0;
+      failedQuestions = [];
+
+      switchScreen("screen-quiz");
+      renderCurrentQuestion();
+    }
+
+    function renderCurrentQuestion() {
+      answeredCurrent = false;
+      const total = sessionQuestions.length;
+      const q = sessionQuestions[currentIndex];
+
+      // Progreso y contadores
+      document.getElementById("quiz-progress-text").textContent = `Pregunta ${currentIndex + 1} de ${total}`;
+      document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
+      document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
+      document.getElementById("quiz-progress-bar").style.width = `${((currentIndex + 1) / total) * 100}%`;
+
+      // Enunciado y bloque
+      document.getElementById("q-block-badge").textContent = `${q.bloque || "General"} · #${q.id ?? currentIndex + 1}`;
+      document.getElementById("q-statement").textContent = q.pregunta;
+
+      // Opciones A, B, C, D
+      const optionsContainer = document.getElementById("q-options-container");
+      optionsContainer.innerHTML = "";
+
+      ["a", "b", "c", "d"].forEach((key) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "option-btn";
+        btn.dataset.option = key;
+        btn.innerHTML = `
+          <span class="option-letter">${key.toUpperCase()}</span>
+          <span class="option-text">${escapeHTML(q.opciones[key])}</span>
+        `;
+        btn.addEventListener("click", () => handleAnswerSelection(key));
+        optionsContainer.appendChild(btn);
+      });
+
+      // Reset explicación y botón siguiente
+      const feedbackBox = document.getElementById("q-feedback-box");
+      feedbackBox.classList.add("hidden");
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.disabled = true;
+      nextBtn.textContent = currentIndex === total - 1 ? "Finalizar y ver resultados" : "Siguiente pregunta";
+    }
+
+    function handleAnswerSelection(selectedKey) {
+      if (answeredCurrent) return;
+      answeredCurrent = true;
+
+      const q = sessionQuestions[currentIndex];
+      const correctKey = String(q.correcta).toLowerCase();
+      const isCorrect = selectedKey === correctKey;
+
+      const buttons = document.querySelectorAll("#q-options-container .option-btn");
+      buttons.forEach((btn) => {
+        btn.disabled = true;
+        const opt = btn.dataset.option;
+        if (opt === correctKey) {
+          btn.classList.add("correct");
+        } else if (opt === selectedKey && !isCorrect) {
+          btn.classList.add("wrong");
+        }
+      });
+
+      if (isCorrect) {
+        hitsCount++;
+        document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
+      } else {
+        missesCount++;
+        document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
+        failedQuestions.push({
+          question: q,
+          userAnswer: selectedKey
+        });
+      }
+
+      // Mostrar explicación inmediata para reforzar aprendizaje
+      const feedbackBox = document.getElementById("q-feedback-box");
+      const feedbackTitle = document.getElementById("q-feedback-title");
+      const feedbackText = document.getElementById("q-feedback-text");
+
+      feedbackTitle.textContent = isCorrect ? "¡Respuesta correcta!" : `Incorrecta · La correcta es la ${correctKey.toUpperCase()}`;
+      feedbackTitle.style.color = isCorrect ? "var(--md-success)" : "var(--md-error)";
+      feedbackText.textContent = q.explicacion || "Sin explicación adicional disponible.";
+      feedbackBox.classList.remove("hidden");
+
+      document.getElementById("btn-next-question").disabled = false;
+    }
+
+    /* ==========================================================================
+       PANTALLA DE RESULTADOS Y REPASO DE FALLOS
+       ========================================================================== */
+    function showResults() {
+      const total = sessionQuestions.length;
+      const pct = total > 0 ? (hitsCount / total) * 100 : 0;
+      const gradeOver10 = total > 0 ? (hitsCount / total) * 10 : 0;
+
+      document.getElementById("res-grade").textContent = `${gradeOver10.toFixed(2)} / 10`;
+      document.getElementById("res-percentage").textContent = `${pct.toFixed(1)}% de aciertos`;
+      document.getElementById("res-total").textContent = total;
+      document.getElementById("res-hits").textContent = hitsCount;
+      document.getElementById("res-misses").textContent = missesCount;
+
+      const failuresSection = document.getElementById("failures-section");
+      const failuresList = document.getElementById("failures-list");
+      const retryBtn = document.getElementById("btn-retry-failed");
+
+      document.getElementById("fail-list-count").textContent = failedQuestions.length;
+      failuresList.innerHTML = "";
+
+      if (failedQuestions.length === 0) {
+        failuresSection.classList.add("hidden");
+        retryBtn.classList.add("hidden");
+      } else {
+        failuresSection.classList.remove("hidden");
+        retryBtn.classList.remove("hidden");
+
+        failedQuestions.forEach((item, idx) => {
+          const q = item.question;
+          const uKey = item.userAnswer;
+          const cKey = String(q.correcta).toLowerCase();
+
+          const article = document.createElement("article");
+          article.className = "fail-item";
+          article.innerHTML = `
+            <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
+            <div class="fail-ans user-wrong">✕ Tu respuesta (${uKey.toUpperCase()}): ${escapeHTML(q.opciones[uKey])}</div>
+            <div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>
+            <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
+          `;
+          failuresList.appendChild(article);
+        });
+      }
+
+      switchScreen("screen-results");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       EVENTOS E INICIALIZACIÓN
+       ========================================================================== */
+    document.addEventListener("DOMContentLoaded", () => {
+      initPWA();
+
+      // Cargar preguntas guardadas previamente en localStorage o usar bancoPreguntas integrado
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (validateQuestionsArray(parsed)) {
+            allQuestions = parsed;
+            document.getElementById("import-status").textContent = `Batería guardada en dispositivo (${allQuestions.length} preg.).`;
+          } else {
+            allQuestions = [...bancoPreguntas];
+          }
+        } else {
+          allQuestions = [...bancoPreguntas];
+        }
+      } catch {
+        allQuestions = [...bancoPreguntas];
+      }
+
+      updateMenuCounts();
+
+      // Selección de bloque
+      document.querySelectorAll("#block-selector .radio-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          document.querySelectorAll("#block-selector .radio-card").forEach((c) => c.classList.remove("selected"));
+          card.classList.add("selected");
+          card.querySelector("input").checked = true;
+          selectedBlock = card.dataset.block;
+          updateMenuCounts();
+        });
+      });
+
+      // Selector Secuencial vs Aleatorio
+      const modeSeqBtn = document.getElementById("mode-seq-btn");
+      const modeRndBtn = document.getElementById("mode-rnd-btn");
+      const randomPanel = document.getElementById("random-options-panel");
+
+      modeSeqBtn.addEventListener("click", () => {
+        orderMode = "secuencial";
+        modeSeqBtn.classList.add("active");
+        modeRndBtn.classList.remove("active");
+        randomPanel.classList.add("hidden");
+        updateMenuCounts();
+      });
+
+      modeRndBtn.addEventListener("click", () => {
+        orderMode = "aleatorio";
+        modeRndBtn.classList.add("active");
+        modeSeqBtn.classList.remove("active");
+        randomPanel.classList.remove("hidden");
+        updateMenuCounts();
+      });
+
+      // Botones rápidos de cantidad aleatoria (10, 20, 50, 100)
+      document.querySelectorAll("#quick-chips .chip-btn").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          document.querySelectorAll("#quick-chips .chip-btn").forEach((c) => c.classList.remove("active"));
+          chip.classList.add("active");
+          const maxAvail = Math.max(1, getFilteredQuestions(selectedBlock).length);
+          const qty = Math.min(maxAvail, Number(chip.dataset.qty));
+          document.getElementById("custom-qty").value = qty;
+          updateMenuCounts();
+        });
+      });
+
+      // Input numérico personalizado
+      document.getElementById("custom-qty").addEventListener("input", (e) => {
+        document.querySelectorAll("#quick-chips .chip-btn").forEach((c) => {
+          c.classList.toggle("active", Number(c.dataset.qty) === Number(e.target.value));
+        });
+        updateMenuCounts();
+      });
+
+      // Importación dinámica de archivo .json desde el móvil
+      document.getElementById("json-file-input").addEventListener("change", (event) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            let text = String(e.target?.result || "").trim();
+            // Eliminar posibles comentarios iniciales tipo // v1.0.0 si los hubiera
+            if (text.startsWith("//")) {
+              text = text.replace(/^\/\/.*$/gm, "").trim();
+            }
+            const json = JSON.parse(text);
+            if (!validateQuestionsArray(json)) {
+              alert("El archivo JSON no tiene la estructura esperada (id, bloque, pregunta, opciones {a,b,c,d}, correcta, explicacion).");
+              return;
+            }
+
+            // Fusionar o reemplazar evitando duplicados por (bloque + id + pregunta)
+            const map = new Map();
+            [...allQuestions, ...json].forEach((q) => {
+              const key = `${normalizeBlockName(q.bloque)}_${q.id}_${q.pregunta.slice(0, 40)}`;
+              map.set(key, q);
+            });
+            allQuestions = Array.from(map.values());
+
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions));
+            } catch {
+              // Ignorar si excede cuota de almacenamiento
+            }
+
+            document.getElementById("import-status").textContent = `✓ Importadas (${allQuestions.length} preguntas totales).`;
+            updateMenuCounts();
+          } catch (err) {
+            alert("Error al leer el archivo JSON. Verifica que sea un formato JSON válido.");
+          } finally {
+            event.target.value = "";
+          }
+        };
+        reader.readAsText(file, "UTF-8");
+      });
+
+      // Iniciar test
+      document.getElementById("btn-start-test").addEventListener("click", () => startQuiz());
+
+      // Siguiente pregunta / Finalizar
+      document.getElementById("btn-next-question").addEventListener("click", () => {
+        if (currentIndex < sessionQuestions.length - 1) {
+          currentIndex++;
+          renderCurrentQuestion();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          showResults();
+        }
+      });
+
+      // Salir del test en curso
+      document.getElementById("btn-abort-quiz").addEventListener("click", () => {
+        switchScreen("screen-menu");
+        updateMenuCounts();
+      });
+
+      // Repetir solo preguntas falladas
+      document.getElementById("btn-retry-failed").addEventListener("click", () => {
+        const onlyFailed = failedQuestions.map((item) => item.question);
+        if (onlyFailed.length > 0) {
+          startQuiz(onlyFailed);
+        }
+      });
+
+      // Volver al menú principal
+      document.getElementById("btn-back-menu").addEventListener("click", () => {
+        switchScreen("screen-menu");
+        updateMenuCounts();
+      });
+    });
+  </script>
+</body>
+</html>
