@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v1.3.0 - Test Oposición Osakidetza PWA (Soporte iOS/Safari apple-touch-icon + Modo Estudio/Examen) -->
+<!-- v1.4.0 - Test Oposición Osakidetza PWA (Alineación justificada en textos de preguntas + Modo Estudio/Examen) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -460,6 +460,9 @@
       font-weight: 700;
       line-height: 1.45;
       margin: 0 0 18px;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
       word-wrap: break-word;
     }
 
@@ -622,6 +625,10 @@
       font-weight: 700;
       font-size: 1rem;
       margin: 0 0 10px;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      word-wrap: break-word;
     }
 
     .fail-ans {
@@ -718,7 +725,7 @@
         <div class="app-logo" aria-hidden="true">112</div>
         <div>
           <h1 class="app-title">Test Oposición Osakidetza</h1>
-          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.2.0</span> · Offline</p>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.4.0</span> · Offline</p>
         </div>
       </div>
       <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
@@ -939,7 +946,7 @@
        ========================================================================== */
     const STORAGE_KEY = "osakidetza_ope_preguntas_v1";
 
-    const APP_VERSION = "v1.2.0";
+    const APP_VERSION = "v1.4.0";
     let allQuestions = [];
     let selectedBlock = "comun"; // "comun" | "conductor" | "todos"
     let orderMode = "secuencial"; // "secuencial" | "aleatorio"
