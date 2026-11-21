@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v1.4.0 - Test Oposición Osakidetza PWA (Alineación justificada en textos de preguntas + Modo Estudio/Examen) -->
+<!-- v1.5.0 - Test Oposición Osakidetza PWA (Confirmación en Estudio, Lotes/Continuar y Banco de Examen con Reserva) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -47,6 +47,9 @@
       --md-error-container: #ffdad6;
       --md-on-error-container: #410002;
 
+      --md-warning-container: #ffedb3;
+      --md-on-warning-container: #261a00;
+
       --radius-xl: 24px;
       --radius-lg: 16px;
       --radius-md: 12px;
@@ -82,6 +85,9 @@
         --md-on-error: #690005;
         --md-error-container: #93000a;
         --md-on-error-container: #ffdad6;
+
+        --md-warning-container: #564400;
+        --md-on-warning-container: #ffedb3;
 
         --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
         --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
@@ -231,7 +237,7 @@
       font-weight: 600;
     }
 
-    /* Segmented Buttons MD3 (Secuencial vs Aleatorio) */
+    /* Segmented Buttons MD3 */
     .segmented-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -241,12 +247,16 @@
       margin-bottom: 14px;
     }
 
+    .segmented-group.three-cols {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .seg-btn {
       border: none;
       background: transparent;
       color: var(--md-on-surface);
-      padding: 12px 10px;
-      font-size: 0.92rem;
+      padding: 12px 8px;
+      font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
       transition: background var(--transition-fast), color var(--transition-fast);
@@ -257,12 +267,13 @@
       color: var(--md-on-secondary-container);
     }
 
-    /* Controles de cantidad aleatoria */
+    /* Controles de configuración (Lotes, Aleatorio y Banco de Examen) */
     .random-config {
       background: var(--md-background);
       border-radius: var(--radius-lg);
       padding: 14px;
       border: 1px solid var(--md-outline-variant);
+      margin-top: 10px;
     }
 
     .chip-row {
@@ -281,7 +292,7 @@
       background: var(--md-surface);
       color: var(--md-on-surface);
       font-weight: 700;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       cursor: pointer;
     }
 
@@ -296,6 +307,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .num-input-row:last-child {
+      margin-bottom: 0;
     }
 
     .num-input-row label {
@@ -305,7 +321,7 @@
     }
 
     .num-input {
-      width: 110px;
+      width: 104px;
       padding: 10px 12px;
       border-radius: var(--radius-md);
       border: 1.5px solid var(--md-outline);
@@ -314,6 +330,58 @@
       font-size: 1rem;
       font-weight: 700;
       text-align: center;
+    }
+
+    .range-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .range-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: var(--md-surface);
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--md-outline-variant);
+    }
+
+    .range-field label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--md-on-surface-variant);
+    }
+
+    .range-field input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--md-on-surface);
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 2px 0;
+    }
+
+    .range-field input:focus {
+      outline: none;
+    }
+
+    .resume-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 10px;
     }
 
     /* Botones MD3 */
@@ -443,16 +511,44 @@
       transition: width 260ms ease;
     }
 
+    .question-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
     .question-meta {
       display: inline-block;
       font-size: 0.78rem;
       font-weight: 700;
-      color: var(--md-primary);
       background: var(--md-primary-container);
       color: var(--md-on-primary-container);
       padding: 4px 10px;
       border-radius: var(--radius-full);
-      margin-bottom: 10px;
+    }
+
+    .bookmark-exam-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      border: 1.5px solid var(--md-outline);
+      background: var(--md-surface);
+      color: var(--md-on-surface);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .bookmark-exam-btn.marked {
+      border-color: var(--md-primary);
+      background: var(--md-warning-container);
+      color: var(--md-on-warning-container);
     }
 
     .question-text {
@@ -515,6 +611,18 @@
     .option-text {
       flex: 1;
       word-wrap: break-word;
+    }
+
+    /* Selección pre-envío (Modo Estudio y Modo Examen) */
+    .option-btn.selected-exam {
+      border-color: var(--md-primary);
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+    }
+
+    .option-btn.selected-exam .option-letter {
+      background: var(--md-primary);
+      color: var(--md-on-primary);
     }
 
     /* Estados de corrección inmediata */
@@ -611,12 +719,12 @@
       color: var(--md-on-surface-variant);
     }
 
-    .fail-item {
+    .fail-item, .review-card-item {
       border-bottom: 1px solid var(--md-outline-variant);
       padding: 16px 0;
     }
 
-    .fail-item:last-child {
+    .fail-item:last-child, .review-card-item:last-child {
       border-bottom: none;
       padding-bottom: 4px;
     }
@@ -665,23 +773,10 @@
       margin-top: 8px;
     }
 
-
-    /* Estilos Modo Examen, navegación anterior/siguiente y revisión completa */
     .mode-help-text {
       font-size: 0.84rem;
       color: var(--md-on-surface-variant);
       margin: 8px 0 0;
-    }
-
-    .option-btn.selected-exam {
-      border-color: var(--md-primary);
-      background: var(--md-primary-container);
-      color: var(--md-on-primary-container);
-    }
-
-    .option-btn.selected-exam .option-letter {
-      background: var(--md-primary);
-      color: var(--md-on-primary);
     }
 
     .quiz-nav-row {
@@ -702,14 +797,54 @@
       margin-bottom: 12px;
     }
 
-    .review-card-item {
-      border-bottom: 1px solid var(--md-outline-variant);
-      padding: 16px 0;
+    .exam-pool-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
-    .review-card-item:last-child {
-      border-bottom: none;
-      padding-bottom: 4px;
+    .exam-pool-badge {
+      background: var(--md-primary-container);
+      color: var(--md-on-primary-container);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      background: var(--md-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--md-outline-variant);
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .toggle-row input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--md-primary);
+    }
+
+    .reserve-divider {
+      margin: 12px 0 8px;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      background: var(--md-warning-container);
+      color: var(--md-on-warning-container);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .hidden {
@@ -725,7 +860,7 @@
         <div class="app-logo" aria-hidden="true">112</div>
         <div>
           <h1 class="app-title">Test Oposición Osakidetza</h1>
-          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.4.0</span> · Offline</p>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.5.0</span> · Offline</p>
         </div>
       </div>
       <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
@@ -759,23 +894,40 @@
       </section>
 
       <section class="card">
-        <h2 class="section-label">2. Modo de orden y cantidad</h2>
+        <h2 class="section-label">2. Modo de orden, lotes y cantidad</h2>
         <div class="segmented-group" role="group" aria-label="Modo de orden">
-          <button type="button" class="seg-btn active" id="mode-seq-btn">En orden secuencial (todas)</button>
+          <button type="button" class="seg-btn active" id="mode-seq-btn">Por orden / Lotes</button>
           <button type="button" class="seg-btn" id="mode-rnd-btn">Modo Aleatorio</button>
         </div>
 
-        <div style="margin-top: 16px;">
-          <h3 class="section-label" style="margin-bottom: 8px;">Modalidad de sesión</h3>
-          <div class="segmented-group" role="group" aria-label="Modalidad de sesión" style="margin-bottom: 6px;">
-            <button type="button" class="seg-btn active" id="eval-study-btn">Modo Estudio</button>
-            <button type="button" class="seg-btn" id="eval-exam-btn">Modo Examen</button>
+        <!-- PANEL POR ORDEN / LOTES / CONTINUAR -->
+        <div id="sequential-options-panel" class="random-config">
+          <div class="chip-row" id="batch-presets">
+            <button type="button" class="chip-btn active" data-batch="all">Todas</button>
+            <button type="button" class="chip-btn" data-batch="50">+50 desde inicio</button>
+            <button type="button" class="chip-btn" data-batch="100">+100 desde inicio</button>
           </div>
-          <p class="mode-help-text" id="eval-mode-desc">
-            <strong>Estudio:</strong> Corrección inmediata, bloqueo al responder y explicación al instante.
+          <div class="range-grid">
+            <div class="range-field">
+              <label for="range-start">Desde pregunta nº</label>
+              <input type="number" id="range-start" min="1" value="1" inputmode="numeric" />
+            </div>
+            <div class="range-field">
+              <label for="range-end">Hasta pregunta nº</label>
+              <input type="number" id="range-end" min="1" value="1" inputmode="numeric" />
+            </div>
+          </div>
+          <p class="mode-help-text" id="range-summary-text" style="margin-top:0;">
+            Seleccionadas: 0 preguntas (del 1 al 1).
           </p>
+
+          <div id="resume-container" class="resume-banner hidden">
+            <span id="resume-info-text">Última vez llegaste hasta la nº 1.</span>
+            <button type="button" id="btn-continue-last" class="btn btn-primary btn-sm">Continuar aquí</button>
+          </div>
         </div>
 
+        <!-- PANEL MODO ALEATORIO -->
         <div id="random-options-panel" class="random-config hidden">
           <div class="chip-row" id="quick-chips">
             <button type="button" class="chip-btn active" data-qty="10">10</button>
@@ -786,6 +938,61 @@
           <div class="num-input-row">
             <label for="custom-qty">Cantidad personalizada (1 - <span id="max-qty-label">1</span>):</label>
             <input type="number" id="custom-qty" class="num-input" min="1" max="100" value="10" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div style="margin-top: 16px;">
+          <h3 class="section-label" style="margin-bottom: 8px;">Modalidad de sesión</h3>
+          <div class="segmented-group" role="group" aria-label="Modalidad de sesión" style="margin-bottom: 6px;">
+            <button type="button" class="seg-btn active" id="eval-study-btn">Modo Estudio</button>
+            <button type="button" class="seg-btn" id="eval-exam-btn">Modo Examen</button>
+          </div>
+          <p class="mode-help-text" id="eval-mode-desc">
+            <strong>Estudio:</strong> Seleccionas una opción y pulsas <em>Comprobar respuesta</em> para evitar toques accidentales.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN BANCO DE PREGUNTAS SELECCIONADAS PARA EXAMEN PERSONALIZADO -->
+      <section class="card" id="custom-exam-builder-card">
+        <div class="exam-pool-header">
+          <h2 class="section-label" style="margin:0;">3. Examen con preguntas seleccionadas</h2>
+          <span class="exam-pool-badge" id="exam-pool-count-badge">0 seleccionadas</span>
+        </div>
+        <p class="mode-help-text" style="margin: 0 0 12px;">
+          Mientras revisas o estudias preguntas, márcalas con <strong>«★ Añadir a examen»</strong> para confeccionar aquí tu propio simulacro.
+        </p>
+
+        <div id="custom-exam-controls" class="random-config hidden">
+          <div class="num-input-row">
+            <label for="exam-titulares-qty">Nº preguntas titulares del examen:</label>
+            <input type="number" id="exam-titulares-qty" class="num-input" min="1" value="10" inputmode="numeric" />
+          </div>
+
+          <label class="toggle-row" for="exam-has-reserve">
+            <span style="font-size:0.9rem; font-weight:600;">Incluir preguntas de reserva</span>
+            <input type="checkbox" id="exam-has-reserve" />
+          </label>
+
+          <div class="num-input-row hidden" id="exam-reserve-qty-row">
+            <label for="exam-reserve-qty">Nº preguntas de reserva:</label>
+            <input type="number" id="exam-reserve-qty" class="num-input" min="1" value="5" inputmode="numeric" />
+          </div>
+
+          <div style="margin-top: 10px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--md-on-surface-variant); margin-bottom:6px;">
+              Orden de las preguntas en el examen:
+            </label>
+            <div class="segmented-group three-cols" style="margin-bottom:10px;">
+              <button type="button" class="seg-btn active" data-exam-order="selection">Orden elegidas</button>
+              <button type="button" class="seg-btn" data-exam-order="temario">Orden temario</button>
+              <button type="button" class="seg-btn" data-exam-order="random">Aleatorio</button>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
+            <button type="button" id="btn-start-custom-exam" class="btn btn-primary">Iniciar examen elegido</button>
+            <button type="button" id="btn-clear-exam-pool" class="btn btn-outlined btn-sm" title="Vaciar selección">Vaciar</button>
           </div>
         </div>
       </section>
@@ -830,8 +1037,17 @@
         </div>
       </div>
 
+      <div id="reserve-banner-quiz" class="reserve-divider hidden">
+        Pregunta de Reserva
+      </div>
+
       <section class="card">
-        <span class="question-meta" id="q-block-badge">Temario Común · #1</span>
+        <div class="question-meta-row">
+          <span class="question-meta" id="q-block-badge">Temario Común · #1</span>
+          <button type="button" id="btn-toggle-exam-bookmark" class="bookmark-exam-btn">
+            ☆ Añadir a examen
+          </button>
+        </div>
         <p class="question-text" id="q-statement">Texto de la pregunta...</p>
 
         <div class="options-list" id="q-options-container">
@@ -847,7 +1063,7 @@
       <div class="sticky-footer">
         <div class="quiz-nav-row single-col" id="quiz-nav-row">
           <button type="button" id="btn-prev-question" class="btn btn-outlined hidden">← Anterior</button>
-          <button type="button" id="btn-next-question" class="btn btn-primary" disabled>Siguiente pregunta</button>
+          <button type="button" id="btn-next-question" class="btn btn-primary" disabled>Comprobar respuesta</button>
         </div>
       </div>
     </main>
@@ -945,20 +1161,32 @@
        ESTADO DE LA APLICACIÓN
        ========================================================================== */
     const STORAGE_KEY = "osakidetza_ope_preguntas_v1";
+    const PROGRESS_STORAGE_KEY = "osakidetza_ope_progreso_v1";
+    const EXAM_POOL_STORAGE_KEY = "osakidetza_ope_examen_pool_v1";
 
-    const APP_VERSION = "v1.4.0";
+    const APP_VERSION = "v1.5.0";
     let allQuestions = [];
     let selectedBlock = "comun"; // "comun" | "conductor" | "todos"
     let orderMode = "secuencial"; // "secuencial" | "aleatorio"
     let evaluationMode = "estudio"; // "estudio" | "examen"
+    let examOrderMode = "selection"; // "selection" | "temario" | "random"
+
     let sessionQuestions = [];
-    let userAnswers = []; // almacena letra elegida ('a'|'b'|'c'|'d'|null) por índice en Modo Examen
+    let sessionReserveStartIndex = null; // índice donde comienzan las de reserva (si las hay)
+    let isSequentialTrackableSession = false; // para guardar dónde se quedó el usuario
+    let sessionRangeStart1Based = 1;
+
+    let userAnswers = []; // almacena letra elegida ('a'|'b'|'c'|'d'|null) por índice
     let currentIndex = 0;
     let hitsCount = 0;
     let missesCount = 0;
     let failedQuestions = [];
+    let pendingStudyChoice = null; // selección temporal en Modo Estudio antes de confirmar
     let answeredCurrent = false;
     let reviewFilter = "failures"; // "failures" | "all"
+
+    // Banco de preguntas marcadas por el usuario para examen personalizado (array de keys únicas)
+    let customExamPoolKeys = [];
 
     /* ==========================================================================
        INICIALIZACIÓN PWA (MANIFEST DATA URI + SERVICE WORKER INLINE)
@@ -997,8 +1225,6 @@
       const manifestDataUri = "data:application/manifest+json;charset=utf-8," + encodeURIComponent(JSON.stringify(manifestObj));
       document.getElementById("pwa-manifest").setAttribute("href", manifestDataUri);
 
-
-      // Detección de esquema content:// o file:// donde Chrome restringe beforeinstallprompt
       const isLocalFileOrContent = ["content:", "file:"].includes(window.location.protocol);
       const installBtn = document.getElementById("btn-install-pwa");
       const guideText = document.getElementById("install-guide-text");
@@ -1026,10 +1252,9 @@
         installBtn.disabled = true;
       });
 
-      // Registro de Service Worker en línea para caché 100% offline
       if ("serviceWorker" in navigator) {
         const swCode = `
-          const CACHE_NAME = 'osakidetza-test-pwa-v1';
+          const CACHE_NAME = 'osakidetza-test-pwa-v150';
           self.addEventListener('install', (event) => {
             self.skipWaiting();
             event.waitUntil(
@@ -1054,19 +1279,21 @@
         `;
         const swBlob = new Blob([swCode], { type: "application/javascript" });
         const swUrl = URL.createObjectURL(swBlob);
-        navigator.serviceWorker.register(swUrl).catch(() => {
-          // En entornos file:// locales el SW puede no registrarse, pero la app sigue operando 100% offline
-        });
+        navigator.serviceWorker.register(swUrl).catch(() => {});
       }
     }
 
     /* ==========================================================================
-       UTILIDADES DE FILTRADO, MEZCLA Y SANITIZACIÓN
+       UTILIDADES DE FILTRADO, CLAVES ÚNICAS Y PERSISTENCIA
        ========================================================================== */
     function normalizeBlockName(bloqueStr) {
-      const b = String(bloqueStr || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const b = String(bloqueStr || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
       if (b.includes("conductor") || b.includes("emergencia")) return "conductor";
       return "comun";
+    }
+
+    function getQuestionUniqueKey(q) {
+      return `${normalizeBlockName(q.bloque)}__${q.id ?? 0}__${String(q.pregunta || "").slice(0, 50)}`;
     }
 
     function getFilteredQuestions(blockKey) {
@@ -1074,7 +1301,6 @@
       return allQuestions.filter((q) => normalizeBlockName(q.bloque) === blockKey);
     }
 
-    // Algoritmo Fisher-Yates (Knuth Shuffle) sin repeticiones
     function fisherYatesShuffle(array) {
       const arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
@@ -1106,9 +1332,175 @@
     }
 
     /* ==========================================================================
-       ACTUALIZACIÓN DE UI DEL MENÚ
+       PERSISTENCIA DE PROGRESO POR BLOQUE Y BANCO DE EXAMEN PERSONALIZADO
        ========================================================================== */
-    function updateMenuCounts() {
+    function getSavedProgressMap() {
+      try {
+        return JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveBlockLastPosition(blockKey, lastReached1Based) {
+      try {
+        const map = getSavedProgressMap();
+        map[blockKey] = {
+          lastPosition: lastReached1Based,
+          updatedAt: Date.now()
+        };
+        localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(map));
+      } catch {}
+    }
+
+    function loadCustomExamPool() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(EXAM_POOL_STORAGE_KEY) || "[]");
+        if (Array.isArray(raw)) {
+          customExamPoolKeys = raw;
+        }
+      } catch {
+        customExamPoolKeys = [];
+      }
+    }
+
+    function saveCustomExamPool() {
+      try {
+        localStorage.setItem(EXAM_POOL_STORAGE_KEY, JSON.stringify(customExamPoolKeys));
+      } catch {}
+    }
+
+    function isQuestionInExamPool(q) {
+      return customExamPoolKeys.includes(getQuestionUniqueKey(q));
+    }
+
+    function toggleQuestionInExamPool(q) {
+      const key = getQuestionUniqueKey(q);
+      const idx = customExamPoolKeys.indexOf(key);
+      if (idx === -1) {
+        customExamPoolKeys.push(key);
+      } else {
+        customExamPoolKeys.splice(idx, 1);
+      }
+      saveCustomExamPool();
+      updateCustomExamBuilderUI();
+    }
+
+    function getResolvedCustomExamQuestions() {
+      const map = new Map();
+      allQuestions.forEach((q) => map.set(getQuestionUniqueKey(q), q));
+      return customExamPoolKeys.map((k) => map.get(k)).filter(Boolean);
+    }
+
+    function updateCustomExamBuilderUI() {
+      const resolved = getResolvedCustomExamQuestions();
+      const totalSelected = resolved.length;
+
+      document.getElementById("exam-pool-count-badge").textContent =
+        `${totalSelected} seleccionada${totalSelected === 1 ? "" : "s"}`;
+
+      const controls = document.getElementById("custom-exam-controls");
+      if (totalSelected === 0) {
+        controls.classList.add("hidden");
+        return;
+      }
+
+      controls.classList.remove("hidden");
+
+      const titularesInput = document.getElementById("exam-titulares-qty");
+      const hasReserveCheck = document.getElementById("exam-has-reserve");
+      const reserveRow = document.getElementById("exam-reserve-qty-row");
+      const reserveInput = document.getElementById("exam-reserve-qty");
+
+      titularesInput.max = totalSelected;
+      if (Number(titularesInput.value) > totalSelected) {
+        titularesInput.value = totalSelected;
+      }
+      if (Number(titularesInput.value) < 1) {
+        titularesInput.value = 1;
+      }
+
+      const titularesVal = Number(titularesInput.value) || 1;
+      const remainingForReserve = Math.max(0, totalSelected - titularesVal);
+
+      if (hasReserveCheck.checked) {
+        reserveRow.classList.remove("hidden");
+        reserveInput.max = Math.max(0, remainingForReserve);
+        if (remainingForReserve === 0) {
+          reserveInput.value = 0;
+        } else if (Number(reserveInput.value) > remainingForReserve) {
+          reserveInput.value = remainingForReserve;
+        } else if (Number(reserveInput.value) < 1) {
+          reserveInput.value = Math.min(5, remainingForReserve);
+        }
+      } else {
+        reserveRow.classList.add("hidden");
+      }
+
+      const resVal = hasReserveCheck.checked ? (Number(reserveInput.value) || 0) : 0;
+      const startCustomBtn = document.getElementById("btn-start-custom-exam");
+      startCustomBtn.textContent = resVal > 0
+        ? `Iniciar examen (${titularesVal} + ${resVal} res.)`
+        : `Iniciar examen (${titularesVal} preg.)`;
+    }
+
+    /* ==========================================================================
+       ACTUALIZACIÓN DE UI DEL MENÚ Y LOTES SECUENCIALES
+       ========================================================================== */
+    function syncSequentialRangeControls(resetToFull = false) {
+      const available = getFilteredQuestions(selectedBlock).length;
+      const startInput = document.getElementById("range-start");
+      const endInput = document.getElementById("range-end");
+      const summaryEl = document.getElementById("range-summary-text");
+      const resumeBanner = document.getElementById("resume-container");
+
+      if (available === 0) {
+        startInput.value = 0;
+        endInput.value = 0;
+        summaryEl.textContent = "No hay preguntas disponibles en este temario.";
+        resumeBanner.classList.add("hidden");
+        return { start: 0, end: 0, count: 0 };
+      }
+
+      startInput.min = 1;
+      startInput.max = available;
+      endInput.min = 1;
+      endInput.max = available;
+
+      if (resetToFull) {
+        startInput.value = 1;
+        endInput.value = available;
+      } else {
+        let s = Math.max(1, Math.min(available, parseInt(startInput.value, 10) || 1));
+        let e = Math.max(s, Math.min(available, parseInt(endInput.value, 10) || available));
+        startInput.value = s;
+        endInput.value = e;
+      }
+
+      const sFinal = Number(startInput.value);
+      const eFinal = Number(endInput.value);
+      const count = eFinal - sFinal + 1;
+      summaryEl.textContent = `Seleccionadas: ${count} pregunta${count === 1 ? "" : "s"} (de la nº ${sFinal} a la nº ${eFinal} de ${available}).`;
+
+      // Comprobar si hay progreso guardado donde se quedó la última vez
+      const progressMap = getSavedProgressMap();
+      const savedEntry = progressMap[selectedBlock];
+      if (savedEntry && savedEntry.lastPosition >= 1 && savedEntry.lastPosition < available) {
+        const nextPos = savedEntry.lastPosition + 1;
+        document.getElementById("resume-info-text").textContent =
+          `Última vez te quedaste en la pregunta nº ${savedEntry.lastPosition} de ${available}.`;
+        const contBtn = document.getElementById("btn-continue-last");
+        contBtn.textContent = `Continuar desde la ${nextPos}`;
+        contBtn.dataset.nextPos = String(nextPos);
+        resumeBanner.classList.remove("hidden");
+      } else {
+        resumeBanner.classList.add("hidden");
+      }
+
+      return { start: sFinal, end: eFinal, count };
+    }
+
+    function updateMenuCounts(resetRange = false) {
       const comunCount = getFilteredQuestions("comun").length;
       const conductorCount = getFilteredQuestions("conductor").length;
       const totalCount = allQuestions.length;
@@ -1131,10 +1523,19 @@
         customInput.value = 1;
       }
 
+      const rangeInfo = syncSequentialRangeControls(resetRange);
+
       startBtn.disabled = available === 0;
-      startBtn.textContent = available === 0
-        ? "No hay preguntas en este bloque"
-        : `Comenzar Test (${orderMode === "secuencial" ? available : Math.min(available, Math.max(1, Number(customInput.value) || 1))} preg.)`;
+      if (available === 0) {
+        startBtn.textContent = "No hay preguntas en este bloque";
+      } else if (orderMode === "secuencial") {
+        startBtn.textContent = `Comenzar Test (${rangeInfo.count} preg. · ${rangeInfo.start} a ${rangeInfo.end})`;
+      } else {
+        const rndCount = Math.min(available, Math.max(1, Number(customInput.value) || 1));
+        startBtn.textContent = `Comenzar Test (${rndCount} preg. aleatorias)`;
+      }
+
+      updateCustomExamBuilderUI();
     }
 
     function switchScreen(screenId) {
@@ -1145,9 +1546,17 @@
     }
 
     /* ==========================================================================
-       LÓGICA DEL TEST
+       LÓGICA DEL TEST (ESTUDIO CON CONFIRMACIÓN, LOTES Y EXAMEN CON RESERVA)
        ========================================================================== */
-    function startQuiz(customQuestionList = null) {
+    function startQuiz(customQuestionList = null, options = {}) {
+      sessionReserveStartIndex = options.reserveStartIndex ?? null;
+      isSequentialTrackableSession = Boolean(options.trackSequentialProgress);
+      sessionRangeStart1Based = options.rangeStart1Based ?? 1;
+
+      if (options.forceExamMode) {
+        evaluationMode = "examen";
+      }
+
       if (customQuestionList) {
         sessionQuestions = [...customQuestionList];
       } else {
@@ -1155,13 +1564,18 @@
         if (pool.length === 0) return;
 
         if (orderMode === "secuencial") {
-          sessionQuestions = pool;
+          const s = Math.max(1, Math.min(pool.length, parseInt(document.getElementById("range-start").value, 10) || 1));
+          const e = Math.max(s, Math.min(pool.length, parseInt(document.getElementById("range-end").value, 10) || pool.length));
+          sessionQuestions = pool.slice(s - 1, e);
+          isSequentialTrackableSession = true;
+          sessionRangeStart1Based = s;
         } else {
           const requestedQty = Math.min(
             pool.length,
             Math.max(1, parseInt(document.getElementById("custom-qty").value, 10) || 10)
           );
           sessionQuestions = fisherYatesShuffle(pool).slice(0, requestedQty);
+          isSequentialTrackableSession = false;
         }
       }
 
@@ -1170,6 +1584,8 @@
       hitsCount = 0;
       missesCount = 0;
       failedQuestions = [];
+      pendingStudyChoice = null;
+      answeredCurrent = false;
 
       switchScreen("screen-quiz");
       renderCurrentQuestion();
@@ -1181,11 +1597,30 @@
       document.getElementById("live-misses").textContent = `Modo Examen`;
     }
 
+    function updateBookmarkButtonUI(q) {
+      const btn = document.getElementById("btn-toggle-exam-bookmark");
+      const marked = isQuestionInExamPool(q);
+      btn.classList.toggle("marked", marked);
+      btn.textContent = marked ? "★ En mi examen" : "☆ Añadir a examen";
+    }
+
     function renderCurrentQuestion() {
       answeredCurrent = false;
+      pendingStudyChoice = null;
+
       const total = sessionQuestions.length;
       const q = sessionQuestions[currentIndex];
       const isExam = evaluationMode === "examen";
+
+      // Banner de pregunta de reserva si aplica
+      const reserveBanner = document.getElementById("reserve-banner-quiz");
+      if (sessionReserveStartIndex !== null && currentIndex >= sessionReserveStartIndex) {
+        const resNum = currentIndex - sessionReserveStartIndex + 1;
+        reserveBanner.textContent = `Pregunta de Reserva nº ${resNum}`;
+        reserveBanner.classList.remove("hidden");
+      } else {
+        reserveBanner.classList.add("hidden");
+      }
 
       // Progreso y contadores
       document.getElementById("quiz-progress-text").textContent = `Pregunta ${currentIndex + 1} de ${total}`;
@@ -1197,9 +1632,11 @@
       }
       document.getElementById("quiz-progress-bar").style.width = `${((currentIndex + 1) / total) * 100}%`;
 
-      // Enunciado y bloque
-      document.getElementById("q-block-badge").textContent = `${q.bloque || "General"} · #${q.id ?? currentIndex + 1}${isExam ? " · Examen" : ""}`;
+      // Enunciado, bloque y botón de selección para examen
+      const numLabel = isSequentialTrackableSession ? `#${sessionRangeStart1Based + currentIndex}` : `#${q.id ?? currentIndex + 1}`;
+      document.getElementById("q-block-badge").textContent = `${q.bloque || "General"} · ${numLabel}${isExam ? " · Examen" : ""}`;
       document.getElementById("q-statement").textContent = q.pregunta;
+      updateBookmarkButtonUI(q);
 
       // Opciones A, B, C, D
       const optionsContainer = document.getElementById("q-options-container");
@@ -1240,13 +1677,12 @@
         navRow.classList.add("single-col");
         prevBtn.classList.add("hidden");
         nextBtn.disabled = true;
-        nextBtn.textContent = currentIndex === total - 1 ? "Finalizar y ver resultados" : "Siguiente pregunta";
+        nextBtn.textContent = "Comprobar respuesta";
       }
     }
 
     function handleAnswerSelection(selectedKey) {
       if (evaluationMode === "examen") {
-        // En Modo Examen se permite cambiar la respuesta libremente antes de enviar
         userAnswers[currentIndex] = selectedKey;
         const buttons = document.querySelectorAll("#q-options-container .option-btn");
         buttons.forEach((btn) => {
@@ -1256,9 +1692,26 @@
         return;
       }
 
+      // En Modo Estudio: si ya se confirmó la respuesta, no permitir cambios
       if (answeredCurrent) return;
+
+      // Permitir marcar/cambiar la selección antes de enviar para evitar toques accidentales
+      pendingStudyChoice = selectedKey;
+      const buttons = document.querySelectorAll("#q-options-container .option-btn");
+      buttons.forEach((btn) => {
+        btn.classList.toggle("selected-exam", btn.dataset.option === selectedKey);
+      });
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.disabled = false;
+      nextBtn.textContent = "Comprobar respuesta";
+    }
+
+    function confirmStudyAnswer() {
+      if (answeredCurrent || !pendingStudyChoice) return;
       answeredCurrent = true;
 
+      const selectedKey = pendingStudyChoice;
       const q = sessionQuestions[currentIndex];
       const correctKey = String(q.correcta).toLowerCase();
       const isCorrect = selectedKey === correctKey;
@@ -1266,6 +1719,7 @@
       const buttons = document.querySelectorAll("#q-options-container .option-btn");
       buttons.forEach((btn) => {
         btn.disabled = true;
+        btn.classList.remove("selected-exam");
         const opt = btn.dataset.option;
         if (opt === correctKey) {
           btn.classList.add("correct");
@@ -1286,7 +1740,11 @@
         });
       }
 
-      // Mostrar explicación inmediata para reforzar aprendizaje
+      // Guardar avance si estamos en modo secuencial por lotes
+      if (isSequentialTrackableSession) {
+        saveBlockLastPosition(selectedBlock, sessionRangeStart1Based + currentIndex);
+      }
+
       const feedbackBox = document.getElementById("q-feedback-box");
       const feedbackTitle = document.getElementById("q-feedback-title");
       const feedbackText = document.getElementById("q-feedback-text");
@@ -1296,7 +1754,11 @@
       feedbackText.textContent = q.explicacion || "Sin explicación adicional disponible.";
       feedbackBox.classList.remove("hidden");
 
-      document.getElementById("btn-next-question").disabled = false;
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.disabled = false;
+      nextBtn.textContent = currentIndex === sessionQuestions.length - 1
+        ? "Finalizar y ver resultados"
+        : "Siguiente pregunta";
     }
 
     function gradeExamSession() {
@@ -1335,15 +1797,29 @@
             ? userAnswers[idx]
             : (failedQuestions.find((f) => f.question === q)?.userAnswer ?? cKey);
           const isRight = uKey === cKey;
+          const isReserve = sessionReserveStartIndex !== null && idx >= sessionReserveStartIndex;
+          const inPool = isQuestionInExamPool(q);
 
           const article = document.createElement("article");
           article.className = "review-card-item";
           article.innerHTML = `
+            <div class="question-meta-row">
+              <span class="question-meta">${isReserve ? `Reserva ${idx - sessionReserveStartIndex + 1}` : `Pregunta ${idx + 1}`}</span>
+              <button type="button" class="bookmark-exam-btn ${inPool ? "marked" : ""}" data-review-idx="${idx}">
+                ${inPool ? "★ En mi examen" : "☆ Añadir a examen"}
+              </button>
+            </div>
             <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
             <div class="fail-ans ${isRight ? "real-right" : "user-wrong"}">${isRight ? "✓" : "✕"} Tu respuesta (${uKey ? uKey.toUpperCase() : "—"}): ${uKey ? escapeHTML(q.opciones[uKey]) : "Sin responder"}</div>
             ${!isRight ? `<div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>` : ""}
             <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
           `;
+          article.querySelector("[data-review-idx]").addEventListener("click", (ev) => {
+            toggleQuestionInExamPool(q);
+            const nowMarked = isQuestionInExamPool(q);
+            ev.currentTarget.classList.toggle("marked", nowMarked);
+            ev.currentTarget.textContent = nowMarked ? "★ En mi examen" : "☆ Añadir a examen";
+          });
           failuresList.appendChild(article);
         });
         return;
@@ -1354,15 +1830,28 @@
         const q = item.question;
         const uKey = item.userAnswer;
         const cKey = String(q.correcta).toLowerCase();
+        const inPool = isQuestionInExamPool(q);
 
         const article = document.createElement("article");
         article.className = "fail-item";
         article.innerHTML = `
+          <div class="question-meta-row">
+            <span class="question-meta">Fallo #${idx + 1}</span>
+            <button type="button" class="bookmark-exam-btn ${inPool ? "marked" : ""}">
+              ${inPool ? "★ En mi examen" : "☆ Añadir a examen"}
+            </button>
+          </div>
           <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
           <div class="fail-ans user-wrong">✕ Tu respuesta (${uKey ? uKey.toUpperCase() : "—"}): ${uKey ? escapeHTML(q.opciones[uKey]) : "Sin responder"}</div>
           <div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>
           <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
         `;
+        article.querySelector(".bookmark-exam-btn").addEventListener("click", (ev) => {
+          toggleQuestionInExamPool(q);
+          const nowMarked = isQuestionInExamPool(q);
+          ev.currentTarget.classList.toggle("marked", nowMarked);
+          ev.currentTarget.textContent = nowMarked ? "★ En mi examen" : "☆ Añadir a examen";
+        });
         failuresList.appendChild(article);
       });
     }
@@ -1407,8 +1896,8 @@
        ========================================================================== */
     document.addEventListener("DOMContentLoaded", () => {
       initPWA();
+      loadCustomExamPool();
 
-      // Cargar preguntas guardadas previamente en localStorage o usar bancoPreguntas integrado
       try {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
@@ -1426,7 +1915,7 @@
         allQuestions = [...bancoPreguntas];
       }
 
-      updateMenuCounts();
+      updateMenuCounts(true);
 
       // Selección de bloque
       document.querySelectorAll("#block-selector .radio-card").forEach((card) => {
@@ -1435,21 +1924,23 @@
           card.classList.add("selected");
           card.querySelector("input").checked = true;
           selectedBlock = card.dataset.block;
-          updateMenuCounts();
+          updateMenuCounts(true);
         });
       });
 
-      // Selector Secuencial vs Aleatorio
+      // Selector Por orden/Lotes vs Aleatorio
       const modeSeqBtn = document.getElementById("mode-seq-btn");
       const modeRndBtn = document.getElementById("mode-rnd-btn");
+      const seqPanel = document.getElementById("sequential-options-panel");
       const randomPanel = document.getElementById("random-options-panel");
 
       modeSeqBtn.addEventListener("click", () => {
         orderMode = "secuencial";
         modeSeqBtn.classList.add("active");
         modeRndBtn.classList.remove("active");
+        seqPanel.classList.remove("hidden");
         randomPanel.classList.add("hidden");
-        updateMenuCounts();
+        updateMenuCounts(false);
       });
 
       modeRndBtn.addEventListener("click", () => {
@@ -1457,7 +1948,45 @@
         modeRndBtn.classList.add("active");
         modeSeqBtn.classList.remove("active");
         randomPanel.classList.remove("hidden");
-        updateMenuCounts();
+        seqPanel.classList.add("hidden");
+        updateMenuCounts(false);
+      });
+
+      // Presets rápidos de lotes secuenciales (Todas, +50, +100)
+      document.querySelectorAll("#batch-presets .chip-btn").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          document.querySelectorAll("#batch-presets .chip-btn").forEach((c) => c.classList.remove("active"));
+          chip.classList.add("active");
+          const available = getFilteredQuestions(selectedBlock).length;
+          const mode = chip.dataset.batch;
+          const startInput = document.getElementById("range-start");
+          const endInput = document.getElementById("range-end");
+
+          if (mode === "all") {
+            startInput.value = 1;
+            endInput.value = available;
+          } else {
+            const size = Number(mode);
+            const currentStart = Math.max(1, Math.min(available, Number(startInput.value) || 1));
+            startInput.value = currentStart;
+            endInput.value = Math.min(available, currentStart + size - 1);
+          }
+          updateMenuCounts(false);
+        });
+      });
+
+      // Inputs manuales Desde / Hasta
+      document.getElementById("range-start").addEventListener("change", () => updateMenuCounts(false));
+      document.getElementById("range-end").addEventListener("change", () => updateMenuCounts(false));
+
+      // Botón Continuar donde se quedó la última vez
+      document.getElementById("btn-continue-last").addEventListener("click", (e) => {
+        const available = getFilteredQuestions(selectedBlock).length;
+        const nextPos = Math.min(available, Math.max(1, Number(e.currentTarget.dataset.nextPos) || 1));
+        document.getElementById("range-start").value = nextPos;
+        document.getElementById("range-end").value = available;
+        updateMenuCounts(false);
+        startQuiz();
       });
 
       // Botones rápidos de cantidad aleatoria (10, 20, 50, 100)
@@ -1468,16 +1997,16 @@
           const maxAvail = Math.max(1, getFilteredQuestions(selectedBlock).length);
           const qty = Math.min(maxAvail, Number(chip.dataset.qty));
           document.getElementById("custom-qty").value = qty;
-          updateMenuCounts();
+          updateMenuCounts(false);
         });
       });
 
-      // Input numérico personalizado
+      // Input numérico personalizado aleatorio
       document.getElementById("custom-qty").addEventListener("input", (e) => {
         document.querySelectorAll("#quick-chips .chip-btn").forEach((c) => {
           c.classList.toggle("active", Number(c.dataset.qty) === Number(e.target.value));
         });
-        updateMenuCounts();
+        updateMenuCounts(false);
       });
 
       // Importación dinámica de archivo .json desde el móvil
@@ -1489,7 +2018,6 @@
         reader.onload = (e) => {
           try {
             let text = String(e.target?.result || "").trim();
-            // Eliminar posibles comentarios iniciales tipo // v1.0.0 si los hubiera
             if (text.startsWith("//")) {
               text = text.replace(/^\/\/.*$/gm, "").trim();
             }
@@ -1499,7 +2027,6 @@
               return;
             }
 
-            // Fusionar o reemplazar evitando duplicados por (bloque + id + pregunta)
             const map = new Map();
             [...allQuestions, ...json].forEach((q) => {
               const key = `${normalizeBlockName(q.bloque)}_${q.id}_${q.pregunta.slice(0, 40)}`;
@@ -1509,13 +2036,11 @@
 
             try {
               localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions));
-            } catch {
-              // Ignorar si excede cuota de almacenamiento
-            }
+            } catch {}
 
             document.getElementById("import-status").textContent = `✓ Importadas (${allQuestions.length} preguntas totales).`;
-            updateMenuCounts();
-          } catch (err) {
+            updateMenuCounts(true);
+          } catch {
             alert("Error al leer el archivo JSON. Verifica que sea un formato JSON válido.");
           } finally {
             event.target.value = "";
@@ -1533,7 +2058,7 @@
         evaluationMode = "estudio";
         evalStudyBtn.classList.add("active");
         evalExamBtn.classList.remove("active");
-        evalModeDesc.innerHTML = "<strong>Estudio:</strong> Corrección inmediata, bloqueo al responder y explicación al instante.";
+        evalModeDesc.innerHTML = "<strong>Estudio:</strong> Seleccionas una opción y pulsas <em>Comprobar respuesta</em> para evitar toques accidentales.";
       });
 
       evalExamBtn.addEventListener("click", () => {
@@ -1543,7 +2068,66 @@
         evalModeDesc.innerHTML = "<strong>Examen:</strong> Sin corrección durante el test; puedes volver atrás, cambiar respuestas y revisar todas al enviar.";
       });
 
-      // Iniciar test
+      // Controles del constructor de examen personalizado
+      document.getElementById("exam-titulares-qty").addEventListener("input", updateCustomExamBuilderUI);
+      document.getElementById("exam-has-reserve").addEventListener("change", updateCustomExamBuilderUI);
+      document.getElementById("exam-reserve-qty").addEventListener("input", updateCustomExamBuilderUI);
+
+      document.querySelectorAll("[data-exam-order]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("[data-exam-order]").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          examOrderMode = btn.dataset.examOrder;
+        });
+      });
+
+      document.getElementById("btn-clear-exam-pool").addEventListener("click", () => {
+        customExamPoolKeys = [];
+        saveCustomExamPool();
+        updateCustomExamBuilderUI();
+      });
+
+      document.getElementById("btn-start-custom-exam").addEventListener("click", () => {
+        const resolved = getResolvedCustomExamQuestions();
+        if (resolved.length === 0) return;
+
+        let orderedPool = [...resolved];
+        if (examOrderMode === "temario") {
+          const indexMap = new Map();
+          allQuestions.forEach((q, idx) => indexMap.set(getQuestionUniqueKey(q), idx));
+          orderedPool.sort((a, b) => (indexMap.get(getQuestionUniqueKey(a)) ?? 0) - (indexMap.get(getQuestionUniqueKey(b)) ?? 0));
+        } else if (examOrderMode === "random") {
+          orderedPool = fisherYatesShuffle(orderedPool);
+        }
+
+        const titularesQty = Math.min(orderedPool.length, Math.max(1, Number(document.getElementById("exam-titulares-qty").value) || 1));
+        const hasReserve = document.getElementById("exam-has-reserve").checked;
+        const maxReserve = Math.max(0, orderedPool.length - titularesQty);
+        const reserveQty = hasReserve ? Math.min(maxReserve, Math.max(0, Number(document.getElementById("exam-reserve-qty").value) || 0)) : 0;
+
+        const finalQuestions = orderedPool.slice(0, titularesQty + reserveQty);
+        const reserveStartIdx = reserveQty > 0 ? titularesQty : null;
+
+        // Sincronizar UI de modalidad a Examen
+        evaluationMode = "examen";
+        evalExamBtn.classList.add("active");
+        evalStudyBtn.classList.remove("active");
+
+        startQuiz(finalQuestions, {
+          reserveStartIndex: reserveStartIdx,
+          forceExamMode: true
+        });
+      });
+
+      // Botón marcar/desmarcar pregunta durante el test
+      document.getElementById("btn-toggle-exam-bookmark").addEventListener("click", () => {
+        const q = sessionQuestions[currentIndex];
+        if (!q) return;
+        toggleQuestionInExamPool(q);
+        updateBookmarkButtonUI(q);
+      });
+
+      // Iniciar test normal
       document.getElementById("btn-start-test").addEventListener("click", () => startQuiz());
 
       // Pregunta anterior (en Modo Examen)
@@ -1555,8 +2139,13 @@
         }
       });
 
-      // Siguiente pregunta / Finalizar o Enviar examen
+      // Siguiente pregunta / Comprobar en Estudio / Enviar examen
       document.getElementById("btn-next-question").addEventListener("click", () => {
+        if (evaluationMode === "estudio" && !answeredCurrent) {
+          confirmStudyAnswer();
+          return;
+        }
+
         if (currentIndex < sessionQuestions.length - 1) {
           currentIndex++;
           renderCurrentQuestion();
@@ -1587,7 +2176,7 @@
       // Salir del test en curso
       document.getElementById("btn-abort-quiz").addEventListener("click", () => {
         switchScreen("screen-menu");
-        updateMenuCounts();
+        updateMenuCounts(false);
       });
 
       // Repetir solo preguntas falladas
@@ -1601,7 +2190,7 @@
       // Volver al menú principal
       document.getElementById("btn-back-menu").addEventListener("click", () => {
         switchScreen("screen-menu");
-        updateMenuCounts();
+        updateMenuCounts(false);
       });
     });
   </script>
