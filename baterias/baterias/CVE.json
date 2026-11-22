@@ -1,0 +1,2602 @@
+[
+  {
+    "id": 1,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las conductas referidas a la conducción temeraria tendrán consideración de:",
+    "opciones": {
+      "a": "Infracción muy grave.",
+      "b": "Infracción grave.",
+      "c": "Infracción leve.",
+      "d": "No tendrá consideración de infracción."
+    },
+    "correcta": "a",
+    "explicacion": "Según el Texto Refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015, art. 77) y el Reglamento General de Circulación (RD 1428/2003), las conductas de conducción temeraria se califican como infracción muy grave."
+  },
+  {
+    "id": 2,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué sanción podríamos cometer si arrojamos a la vía pública cualquier objeto que pueda dar lugar a la producción de incendios, según el RD 1428/2003?",
+    "opciones": {
+      "a": "Una infracción considerada muy grave.",
+      "b": "Una infracción considerada leve.",
+      "c": "Una infracción considerada grave.",
+      "d": "Una infracción considerada extremadamente grave."
+    },
+    "correcta": "a",
+    "explicacion": "Arrojar a la vía o en sus inmediaciones objetos que puedan dar lugar a la producción de incendios o poner en peligro grave la seguridad vial está tipificado como infracción muy grave (art. 77 del RDLeg 6/2015 y art. 6 del RD 1428/2003)."
+  },
+  {
+    "id": 3,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las y los agentes de la autoridad que se encargan de la vigilancia del tráfico podrán someter a las pruebas que se establezcan para la detección de las posibles intoxicaciones por alcohol.",
+    "opciones": {
+      "a": "A cualquier persona usuaria de la vía o conductora de vehículo implicada directamente como posible responsable en un accidente de circulación.",
+      "b": "A quienes conduzcan cualquier vehículo con síntomas evidentes, que permitan razonablemente presumir que lo hacen bajo la influencia de bebidas alcohólicas.",
+      "c": "A las personas que, con ocasión de conducir un vehículo, sean requeridas al efecto por la autoridad dentro de los programas de controles preventivos de alcoholemia.",
+      "d": "Todas las respuestas son verdaderas."
+    },
+    "correcta": "d",
+    "explicacion": "Conforme al artículo 21 del Reglamento General de Circulación (RD 1428/2003), los agentes pueden someter a pruebas de alcoholemia a los conductores implicados en accidentes, a quienes presenten síntomas evidentes y a los requeridos en controles preventivos."
+  },
+  {
+    "id": 4,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En los vehículos destinados al servicio de urgencia, las personas conductoras NO podrán superar la tasa de alcohol en aire espirado de:",
+    "opciones": {
+      "a": "Alcohol en aire espirado superior a 0,15 miligramos por litro.",
+      "b": "Alcohol en aire espirado superior a 0,3 miligramos por litro.",
+      "c": "Alcohol en aire espirado superior a 0,25 miligramos por litro.",
+      "d": "Alcohol en aire espirado superior a 0,50 miligramos por litro."
+    },
+    "correcta": "a",
+    "explicacion": "Según el artículo 20 del Reglamento General de Circulación (RD 1428/2003), los conductores de vehículos destinados al transporte de mercancías con MMA > 3.500 kg, transporte de viajeros de más de 9 plazas, servicio público, escolar y de menores, mercancías peligrosas y servicios de urgencia no pueden superar 0,15 mg/l en aire espirado (ni 0,3 g/l en sangre)."
+  },
+  {
+    "id": 5,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las personas encargadas de señalar en cada caso concreto los lugares donde deben situarse los vehículos de servicio de urgencia, son:",
+    "opciones": {
+      "a": "El personal sanitario del propio vehículo.",
+      "b": "El personal bombero presente en la zona.",
+      "c": "La autoridad autonómica o local responsable de la regulación de tráfico.",
+      "d": "Las tres afirmaciones son falsas."
+    },
+    "correcta": "c",
+    "explicacion": "De acuerdo con el artículo 69 del Reglamento General de Circulación (RD 1428/2003), los agentes de la autoridad o responsables de la regulación del tráfico señalan en cada caso concreto los lugares donde deben situarse los vehículos de servicios de urgencia."
+  },
+  {
+    "id": 6,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En la actuación de los equipos de los servicios de urgencias, la parada o estacionamiento:",
+    "opciones": {
+      "a": "Deberá efectuarse de forma que no cree un nuevo peligro.",
+      "b": "Las respuestas a) y c) son las correctas.",
+      "c": "Donde cause menor obstáculo a la circulación.",
+      "d": "En el lugar más cercano a la posterior actuación."
+    },
+    "correcta": "b",
+    "explicacion": "Según el artículo 69 del Reglamento General de Circulación (RD 1428/2003), los equipos de urgencia deben situar el vehículo de forma que no creen un nuevo peligro y donde causen menor obstáculo a la circulación."
+  },
+  {
+    "id": 7,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El cuarto eslabón de la Cadena de Supervivencia, hace referencia a una serie de acciones a realizar. ¿Cuáles son?",
+    "opciones": {
+      "a": "Reconocimiento de la persona en parada cardiaca.",
+      "b": "Soporte vital avanzado con el manejo de la vía aérea, fármacos y corrección de factores desencadenantes de la parada cardiaca.",
+      "c": "Activación del SVB y SVA.",
+      "d": "Rcp inmediata y desfibrilación temprana como componentes fundamentales."
+    },
+    "correcta": "b",
+    "explicacion": "En el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 2, basado en ERC 2021), el eslabón final de la cadena de supervivencia corresponde al soporte vital avanzado (manejo de vía aérea, fármacos y corrección de factores desencadenantes) y cuidados post-resucitación."
+  },
+  {
+    "id": 8,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Para que un vehículo pueda ser adscrito a una autorización de transporte sanitario, deberá resultar acreditado que se encuentra provisto de:",
+    "opciones": {
+      "a": "Solo es necesario disponer de Certificación técnico-sanitaria en vigor.",
+      "b": "Certificación técnico-sanitaria en vigor y que su titular dispone de un vehículo que solo puede estar en régimen de propiedad.",
+      "c": "Certificación sanitaria en vigor y que su titular dispone de un vehículo que puede ser en arrendamiento.",
+      "d": "Certificación técnico-sanitaria en vigor y que su titular dispone de un vehículo, que puede ser en propiedad o arrendamiento financiero."
+    },
+    "correcta": "d",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, de 23 de julio, para adscribir un vehículo a una autorización de transporte sanitario debe acreditarse la certificación técnico-sanitaria en vigor y que el titular dispone del vehículo en propiedad, arrendamiento financiero u otro título válido previsto en la norma."
+  },
+  {
+    "id": 9,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las autorizaciones de transporte sanitario otorgadas conforme a la orden PRE/1435/2013 de 23 de julio, habilitan para realizar dicho transporte en:",
+    "opciones": {
+      "a": "El Estado, sin limitaciones respecto a su radio de acción.",
+      "b": "La Comunidad Autónoma donde han sido inscritos los vehículos, con limitaciones respecto a su radio de acción.",
+      "c": "La Unión Europea, sin limitaciones respecto a su radio de acción.",
+      "d": "La Comunidad Autónoma Vasca, sin limitaciones respecto a su radio de acción."
+    },
+    "correcta": "a",
+    "explicacion": "Según la Orden PRE/1435/2013, las autorizaciones de transporte sanitario habilitan para realizar servicios de transporte sanitario en todo el territorio del Estado sin limitaciones respecto a su radio de acción."
+  },
+  {
+    "id": 10,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según la ORDEN PRE 1435/2013, el otorgamiento de las autorizaciones de transporte sanitario se realizará:",
+    "opciones": {
+      "a": "Por el órgano competente para la expedición de las autorizaciones de transporte discrecional interurbano.",
+      "b": "Por el órgano competente para la expedición de las autorizaciones del departamento de Sanidad.",
+      "c": "Por el órgano competente para la expedición de las autorizaciones del departamento de Trabajo.",
+      "d": "Por el órgano competente para la expedición de las autorizaciones del ministerio de Fomento, Sanidad y Consumo."
+    },
+    "correcta": "a",
+    "explicacion": "De acuerdo con la Orden PRE/1435/2013, el otorgamiento de las autorizaciones de transporte sanitario corresponde al órgano competente para la expedición de las autorizaciones de transporte discrecional interurbano."
+  },
+  {
+    "id": 11,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La autorización de transporte sanitario público o privado complementario se otorgarán con un plazo de:",
+    "opciones": {
+      "a": "Con un plazo prefijado de tres años, ampliable a otros tres años.",
+      "b": "Sin plazo, entendiéndose a tal efecto no superar la antigüedad del vehículo.",
+      "c": "Sin plazo de duración prefijado, pero puede estar condicionada su validez a la comprobación periódica del mantenimiento de las condiciones iniciales.",
+      "d": "Con un plazo máximo de ocho años, ampliable por otros dos años."
+    },
+    "correcta": "c",
+    "explicacion": "Según la Orden PRE/1435/2013, las autorizaciones de transporte sanitario se otorgan sin plazo de duración prefijado, quedando su validez condicionada a la comprobación periódica (visado) del mantenimiento de las condiciones que justificaron su otorgamiento."
+  },
+  {
+    "id": 12,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En caso de que la certificación técnico-sanitaria sea suspendida, se considera:",
+    "opciones": {
+      "a": "El vehículo a la que está referida, tiene el plazo de un mes para subsanar los errores que han llevado a esa suspensión.",
+      "b": "El vehículo a la que hace referencia, tiene el plazo de seis meses para subsanar los errores que han llevado a esa suspensión.",
+      "c": "El vehículo a la que está referida, queda inhabilitado para realizar el transporte sanitario.",
+      "d": "El vehículo a la que está referida, tiene el plazo de dos años, tal como indica su visado para subsanar los errores que han llevado a esa suspensión."
+    },
+    "correcta": "c",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, la suspensión de la certificación técnico-sanitaria inhabilita temporalmente al vehículo para la realización de transporte sanitario mientras subsista la causa de suspensión."
+  },
+  {
+    "id": 13,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Para la obtención de la certificación técnico-sanitaria será necesario presentar ante el órgano competente la siguiente documentación:",
+    "opciones": {
+      "a": "Impreso oficial, permiso de circulación, número de bastidor y titularidad del vehículo.",
+      "b": "Matrícula, clase del vehículo, ficha de inspección técnica y memoria descriptiva.",
+      "c": "Impreso oficial normalizado, matrícula, número de bastidor, clase y antigüedad del vehículo.",
+      "d": "Memoria descriptiva de las características técnicas y el equipamiento sanitario y dotación de personal, ficha de inspección técnica, permiso de circulación del vehículo e impreso oficial normalizado."
+    },
+    "correcta": "d",
+    "explicacion": "Según la Orden PRE/1435/2013, para obtener la certificación técnico-sanitaria se exige la solicitud en impreso oficial normalizado, permiso de circulación, ficha de inspección técnica (ITV) y memoria descriptiva de características técnicas, equipamiento sanitario y dotación de personal."
+  },
+  {
+    "id": 14,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Para la obtención de la certificación técnico-sanitaria será necesario acreditar el cumplimiento de, al menos, uno de los siguientes requisitos:",
+    "opciones": {
+      "a": "El vehículo deberá estar matriculado y habilitado para circular y no superar la antigüedad de 10 años, contando desde su primera matriculación.",
+      "b": "El vehículo deberá estar matriculado y habilitado para circular y no superar la antigüedad de 10 años, independientemente de su fecha de matriculación.",
+      "c": "El vehículo deberá estar matriculado y habilitado para circular y no superar la antigüedad de 2 años, independientemente de su fecha de matriculación.",
+      "d": "El vehículo deberá estar matriculado y habilitado para circular y no superar la antigüedad de 8 años, contando desde su primera matriculación."
+    },
+    "correcta": "a",
+    "explicacion": "Conforme a la Orden PRE/1435/2013 (y sus modificaciones posteriores), el vehículo debe estar matriculado y habilitado para circular y no superar la antigüedad máxima de 10 años contados desde su primera matriculación."
+  },
+  {
+    "id": 15,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según la Orden PRE/1435/2013, las certificaciones técnico-sanitarias de los vehículos de transporte sanitario deberán:",
+    "opciones": {
+      "a": "Depositarse en el órgano competente habilitado a tal efecto por cada Comunidad Autónoma.",
+      "b": "Depositarse en el órgano competente en materia de sanidad en el lugar en que se encuentren residenciados.",
+      "c": "Ir en todo momento junto con la documentación del vehículo.",
+      "d": "Custodiarse en las oficinas de la empresa titular del vehículo."
+    },
+    "correcta": "b",
+    "explicacion": "Corregida según clave oficial del Tribunal (Examen 21/11/2026, Modelo B nº 73): opción B."
+  },
+  {
+    "id": 16,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Entre los tiempos de funcionamiento de un motor diesel, cuando hablamos de la admisión, la diferencia fundamental entre esta en un motor de explosión es:",
+    "opciones": {
+      "a": "La admisión de un motor diésel admite aire y combustible",
+      "b": "La admisión de un motor diésel admite aire solamente",
+      "c": "La admisión de un motor diésel admite combustible solamente",
+      "d": "La admisión de un motor diésel admite aire y aceite"
+    },
+    "correcta": "b",
+    "explicacion": "En el ciclo diésel, durante el tiempo de admisión únicamente entra aire en el cilindro (a diferencia del motor de explosión o ciclo Otto, que admite mezcla de aire y combustible), inyectándose el combustible al final de la compresión."
+  },
+  {
+    "id": 17,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de proceder a la certificación técnico-sanitaria, una vez examinada la documentación aportada por el órgano competente, se podrá otorgar una certificación provisional que tendrá una validez de:",
+    "opciones": {
+      "a": "Una validez máxima de 2 meses.",
+      "b": "Una validez máxima de 3 meses.",
+      "c": "Una validez máxima de dos años.",
+      "d": "Una validez máxima de 10 años."
+    },
+    "correcta": "b",
+    "explicacion": "Según la Orden PRE/1435/2013, tras examinar la documentación puede otorgarse una certificación técnico-sanitaria provisional con una validez máxima de 3 meses (sujeta a la comprobación física del vehículo y su equipamiento)."
+  },
+  {
+    "id": 18,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La pérdida de la certificación técnico-sanitaria procederá cuando se produzca cualquiera de las siguientes circunstancias:",
+    "opciones": {
+      "a": "Recalificación del vehículo de acuerdo a su finalidad.",
+      "b": "Falta de renovación de la certificación en el plazo previsto.",
+      "c": "a) y b) son correctas.",
+      "d": "a) y b) son falsas."
+    },
+    "correcta": "c",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, la certificación técnico-sanitaria pierde su validez/eficacia tanto por recalificación del vehículo respecto a su finalidad como por no renovarla en el plazo previsto."
+  },
+  {
+    "id": 19,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En el Registro de Certificaciones Técnico-Sanitarias deberán figurar:",
+    "opciones": {
+      "a": "Las certificaciones técnicas sanitarias, tanto las vigentes como las no vigentes.",
+      "b": "Todos los cambios en la titularidad de la empresa.",
+      "c": "Solo se registran las certificaciones no vigentes, estando las vigentes en el departamento de Salud.",
+      "d": "Se registran únicamente las bajas y ceses en la actividad de los vehículos."
+    },
+    "correcta": "a",
+    "explicacion": "Según la Orden PRE/1435/2013, en el Registro de Certificaciones Técnico-Sanitarias constan las certificaciones técnico-sanitarias otorgadas, tanto vigentes como no vigentes."
+  },
+  {
+    "id": 20,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El Real Decreto 836/2012 de 25 de mayo tiene por objeto:",
+    "opciones": {
+      "a": "Establecer las características técnicas de los vehículos destinados a la realización de servicios de transporte sanitario por carretera.",
+      "b": "Establecer el equipamiento sanitario de los vehículos destinados a la realización de servicios de transporte sanitario por carretera.",
+      "c": "Establecer la dotación de personal de los vehículos destinados a la realización de servicios de transporte sanitario por carretera.",
+      "d": "Todas las anteriores son ciertas."
+    },
+    "correcta": "d",
+    "explicacion": "El artículo 1 del Real Decreto 836/2012, de 25 de mayo, establece precisamente las características técnicas, el equipamiento sanitario y la dotación de personal de los vehículos de transporte sanitario por carretera."
+  },
+  {
+    "id": 21,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El transporte sanitario por carretera aprobado por el Real Decreto 836/2012 podrá ser realizado por las siguientes categorías de vehículos de transporte sanitario:",
+    "opciones": {
+      "a": "Ambulancias de clase A1, ambulancias de clase A2, ambulancias de clase B y ambulancias de clase C.",
+      "b": "Ambulancias de clase A, ambulancias de clase B1, ambulancias de clase B2 y ambulancias de clase C.",
+      "c": "Ambulancias de clase A, ambulancias de clase B, ambulancias de clase C1 y ambulancias de clase C2.",
+      "d": "Ambulancias de clase A, ambulancias de clase B, ambulancias de clase C y ambulancias de clase D."
+    },
+    "correcta": "a",
+    "explicacion": "El artículo 2 del Real Decreto 836/2012 clasifica las ambulancias en no asistenciales (Clase A1 y Clase A2) y asistenciales (Clase B y Clase C)."
+  },
+  {
+    "id": 22,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Indique la respuesta correcta:",
+    "opciones": {
+      "a": "Las ambulancias de clase B son las destinadas al transporte de pacientes en camilla",
+      "b": "Las ambulancias de clase B son las destinadas a proporcionar soporte vital básico y atención sanitaria inicial.",
+      "c": "Las ambulancias de clase B son las destinadas al transporte colectivo, acondicionadas para el transporte conjunto de personas enfermas cuyo traslado no revista carácter de urgencia.",
+      "d": "Las ambulancias de clase B son las destinadas a proporcionar soporte vital avanzado."
+    },
+    "correcta": "b",
+    "explicacion": "De acuerdo con el artículo 2 del Real Decreto 836/2012, las ambulancias asistenciales de clase B están acondicionadas para permitir la asistencia técnico-sanitaria en ruta (soporte vital básico y atención sanitaria inicial)."
+  },
+  {
+    "id": 23,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En cuanto a la identificación exterior que permita distinguir claramente que se trata de una ambulancia:",
+    "opciones": {
+      "a": "La inscripción de la palabra ambulancia se colocará únicamente en la parte trasera de la ambulancia.",
+      "b": "La inscripción de la palabra ambulancia se colocará únicamente en la parte delantera de la ambulancia.",
+      "c": "No es necesaria la inscripción con la palabra ambulancia.",
+      "d": "La inscripción de la palabra ambulancia se colocará tanto en la parte trasera como delantera de la ambulancia."
+    },
+    "correcta": "d",
+    "explicacion": "Según el Anexo I del Real Decreto 836/2012, la palabra 'Ambulancia' debe figurar en la parte delantera y trasera del vehículo (en sentido inverso en la parte delantera para su lectura por reflexión en retrovisores)."
+  },
+  {
+    "id": 24,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el R.D 836/2012 de 25 de mayo, los documentos que son obligatorios llevar en la ambulancia son:",
+    "opciones": {
+      "a": "Libro de reclamaciones y registro de desinfecciones del habitáculo y del equipamiento.",
+      "b": "Registro de desinfecciones y protocolos de Osakidetza.",
+      "c": "Partes asistenciales y protocolos de Osakidetza, registro de desinfecciones.",
+      "d": "Libro de reclamaciones y partes asistenciales."
+    },
+    "correcta": "a",
+    "explicacion": "De acuerdo con el Anexo I del Real Decreto 836/2012, toda ambulancia debe llevar a bordo el libro de reclamaciones a disposición de los usuarios y el registro de desinfecciones del habitáculo y del equipamiento."
+  },
+  {
+    "id": 25,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el R.D 836/2012, la dotación de personal mínima de las ambulancias asistenciales de clase B destinados a la prestación de transporte sanitario será:",
+    "opciones": {
+      "a": "Al menos una persona conductora que ostente, como mínimo, el certificado de profesionalidad de transporte sanitario y otra persona en funciones de ayudante que ostente, como mínimo, la misma titulación.",
+      "b": "Al menos, una persona conductora que esté en posesión del título de FP de Técnico en Emergencias Sanitarias y otra persona en funciones de ayudante que ostente, como mínimo, la misma titulación.",
+      "c": "Al menos, una persona conductora que esté en posesión del título de FP de Técnico en Emergencias Sanitarias y otra persona técnica que ostente, como mínimo, el CP de transporte sanitario.",
+      "d": "Al menos, con una persona conductora que esté en posesión del título de FP de Técnico en Emergencias Sanitarias y con una persona enfermera que ostente el título de Grado."
+    },
+    "correcta": "b",
+    "explicacion": "Según el artículo 4 del Real Decreto 836/2012, las ambulancias asistenciales de clase B deben contar, al menos, con un conductor con el título de FP de Técnico en Emergencias Sanitarias (RD 1397/2007) y otra persona en funciones de ayudante que ostente, como mínimo, la misma titulación."
+  },
+  {
+    "id": 26,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el Real Decreto 836/2012 las características que la célula sanitaria debe cumplir, entre otras, con las siguientes exigencias:",
+    "opciones": {
+      "a": "Lunas translúcidas. En el caso de los vehículos de transporte colectivo podrán optar por otro dispositivo que asegure eventualmente la intimidad de la persona paciente.",
+      "b": "Medidas de isotermia e insonorización aplicadas a la carrocería.",
+      "c": "Armarios para material, instrumental y lencería.",
+      "d": "Todas las anteriores son ciertas."
+    },
+    "correcta": "d",
+    "explicacion": "El Anexo I del Real Decreto 836/2012 exige que la célula sanitaria cuente con lunas translúcidas (o dispositivo de intimidad en transporte colectivo), medidas de isotermia e insonorización en la carrocería y armarios para material, instrumental y lencería."
+  },
+  {
+    "id": 27,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el Real Decreto 836/2012: \"El personal voluntario que desempeñe las funciones de conducción en entidades cuya actividad principal sea la prestación de servicios de asistencia sanitaria con una finalidad humanitaria\", ¿qué requisitos deberá ostentar?",
+    "opciones": {
+      "a": "No deberán ostentar título o certificado alguno.",
+      "b": "Deberán ostentar, como mínimo, el título de FP de Técnico en Emergencias Sanitarias.",
+      "c": "Deberán ostentar, como mínimo, el certificado de profesionalidad de transporte sanitario.",
+      "d": "Deberán ostentar, como mínimo, el certificado de profesionalidad de transporte sanitario e incidentes con múltiples víctimas."
+    },
+    "correcta": "c",
+    "explicacion": "Conforme a la Disposición adicional segunda del Real Decreto 836/2012, el personal voluntario en entidades cuya actividad principal sea la asistencia sanitaria con finalidad humanitaria deberá ostentar, como mínimo, el certificado de profesionalidad de transporte sanitario (RD 710/2011)."
+  },
+  {
+    "id": 28,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el Real Decreto 836/2012 las características de la célula sanitaria debe cumplir con las siguientes exigencias: (Indique la respuesta INCORRECTA)",
+    "opciones": {
+      "a": "Lunas translúcidas. En el caso de los vehículos de transporte colectivo podrán optar por otro dispositivo que asegure eventualmente la intimidad de la persona paciente.",
+      "b": "Climatización e iluminación independientes de las del habitáculo de la persona conductora.",
+      "c": "Las ambulancias no asistenciales deberán contar, además, con dispositivos de transmisión de datos y localización GPS con su Centro de Coordinación.",
+      "d": "Armarios para material, instrumental y lencería."
+    },
+    "correcta": "c",
+    "explicacion": "Según el Anexo I del Real Decreto 836/2012, el dispositivo de transmisión de datos y localización GPS vinculado al Centro de Coordinación es exigible a las ambulancias asistenciales (clases B y C), no a las ambulancias no asistenciales (clase A)."
+  },
+  {
+    "id": 29,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En el sector del automóvil, los vehículos se pueden clasificar en función del empleo para el que han sido concebidos, por los que se pueden dividir en tres grandes grupos que son:",
+    "opciones": {
+      "a": "Vehículos industriales ligeros, vehículos industriales pesados y vehículos de competición.",
+      "b": "Vehículos monovolúmenes, de dos volúmenes y de tres volúmenes.",
+      "c": "Por la configuración de sus compartimientos, por la configuración de su forma exterior y por la configuración de sus prestaciones.",
+      "d": "Vehículos industriales, especiales y turismos."
+    },
+    "correcta": "d",
+    "explicacion": "Según los manuales tecnológicos del automóvil de la bibliografía (Águeda Casado et al., 'Fundamentos tecnológicos del automóvil'), por su empleo o destino se agrupan en turismos, vehículos industriales y vehículos especiales."
+  },
+  {
+    "id": 30,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los vehículos de tipo dos volúmenes tiene dos zonas claramente diferenciadas:",
+    "opciones": {
+      "a": "El volumen fronto central y el trasero.",
+      "b": "El compartimiento motor y el maletero.",
+      "c": "La parte frontal y el habitáculo.",
+      "d": "La zona del chasis y la plataforma."
+    },
+    "correcta": "c",
+    "explicacion": "En una carrocería de dos volúmenes, un volumen corresponde a la parte frontal (vanomotor) y el segundo volumen integra el habitáculo y el espacio de carga/maletero."
+  },
+  {
+    "id": 31,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuáles de estos elementos forman parte de la seguridad activa del vehículo?",
+    "opciones": {
+      "a": "Los airbags.",
+      "b": "Las barras laterales.",
+      "c": "EI ASR.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "El ASR (control de tracción) es un sistema de seguridad activa porque actúa durante la conducción para evitar el patinamiento de las ruedas motrices y prevenir accidentes; los airbags y las barras laterales pertenecen a la seguridad pasiva."
+  },
+  {
+    "id": 32,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El ESP es un sistema electrónico de seguridad del vehículo cuya función principal es:",
+    "opciones": {
+      "a": "Evitar el deslizamiento de las ruedas sobre sí mismas cuando las condiciones de adherencia del neumático disminuyen.",
+      "b": "Evitar el deslizamiento de las ruedas sobre sí mismas cuando se les aplica a éstas más potencia de las que las condiciones de adherencia permiten.",
+      "c": "Es un sistema que evita el bloqueo de los frenos mientras el vehículo se está desplazando con el fin de no perder su direccionabilidad.",
+      "d": "Es un sistema que evita la posibilidad de que el vehículo derrape al tomar una curva porque se ha producido un giro de volante brusco."
+    },
+    "correcta": "d",
+    "explicacion": "El programa electrónico de estabilidad (ESP) corrige pérdidas de trayectoria (subviraje o sobreviraje) actuando selectivamente sobre los frenos y la potencia del motor para evitar derrapes al tomar una curva."
+  },
+  {
+    "id": 33,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuando hablamos de seguridad preventiva en el automóvil, ¿a qué nos estamos refiriendo?",
+    "opciones": {
+      "a": "Al conjunto de dispositivos y características del vehículo que crean un entorno confortable en la persona que conduce.",
+      "b": "Al conjunto de dispositivos que van a prevenir y evitar posibles accidentes.",
+      "c": "Según el reglamento de circulación, a todos los cursos de formación, haciendo hincapié a los cursos de especialización de personas conductoras.",
+      "d": "A los sistemas ABS, ASR y ASP que están diseñados con el fin de evitar situaciones que pudieran ocasionar accidentes."
+    },
+    "correcta": "b",
+    "explicacion": "La seguridad preventiva engloba los elementos y condiciones del vehículo y la conducción orientados a evitar que se produzca el accidente (visibilidad, ergonomía, iluminación, mantenimiento y sistemas de asistencia)."
+  },
+  {
+    "id": 34,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En un vehículo, el volante de inercia, ¿dónde va situado?",
+    "opciones": {
+      "a": "Están situados en las gargantas practicadas en la cabeza del pistón.",
+      "b": "Situado junto a los frenos, van a impedir que el vehículo derrape al tomar una curva cuando las condiciones del suelo han disminuido.",
+      "c": "Situado junto a los frenos, van a impedir el desplazamiento de las ruedas en caso de derrape.",
+      "d": "Situado en uno de los extremos del cigüeñal."
+    },
+    "correcta": "d",
+    "explicacion": "El volante de inercia (o volante motor) se ubica en uno de los extremos del cigüeñal y acumula energía cinética para regular el giro y suavizar los tiempos no motores del ciclo."
+  },
+  {
+    "id": 35,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuáles son las funciones del segmento del pistón?",
+    "opciones": {
+      "a": "Asegurar la estanqueidad entre el cilindro y el pistón, evitar el paso de aceite hacia la cámara de compresión y facilitar la evacuación de calor.",
+      "b": "Transmite la fuerza procedente de la expansión de los gases y el movimiento al cigüeñal.",
+      "c": "Convierte el movimiento ascendente y descendente del pistón en movimiento giratorio en el cigüeñal.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "Los segmentos (de compresión y rascador/de aceite) alojados en las ranuras del pistón garantizan la estanqueidad de la cámara de combustión, controlan el aceite lubricante y transmiten calor del pistón a las paredes del cilindro."
+  },
+  {
+    "id": 36,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es la misión de los balancines?",
+    "opciones": {
+      "a": "Abrir las válvulas.",
+      "b": "Cerrar las válvulas exclusivamente.",
+      "c": "Transmitir el movimiento desde el taqué hasta el muelle.",
+      "d": "Permite la admisión y escape del cilindro."
+    },
+    "correcta": "a",
+    "explicacion": "En el sistema de distribución, los balancines transmiten el movimiento de la leva/taqué para empujar y abrir las válvulas (mientras que el cierre de las válvulas lo realizan los muelles o resortes)."
+  },
+  {
+    "id": 37,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los elementos que, entre otros, componen el circuito de refrigeración, son los siguientes:",
+    "opciones": {
+      "a": "Radiador, taqué, bomba y termostato.",
+      "b": "Botella de expansión, purgadores y válvula de apertura.",
+      "c": "Radiador, manguitos, purgadores y líquido refrigerante.",
+      "d": "Radiador, botella de expansión y líquido lubricante."
+    },
+    "correcta": "c",
+    "explicacion": "El circuito de refrigeración líquida incluye el radiador, manguitos, bomba de agua, termostato, botella de expansión, purgadores y el líquido refrigerante."
+  },
+  {
+    "id": 38,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué aparato del automóvil tiene como misión regular la temperatura del líquido refrigerante e impide la circulación del refrigerante hacia el radiador?",
+    "opciones": {
+      "a": "La bomba de expansión.",
+      "b": "Los purgadores.",
+      "c": "El termostato.",
+      "d": "Los elementos de control."
+    },
+    "correcta": "c",
+    "explicacion": "El termostato permanece cerrado cuando el motor está frío para impedir el paso hacia el radiador y acelerar el calentamiento hasta la temperatura de servicio, abriéndose progresivamente al alcanzarla."
+  },
+  {
+    "id": 39,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuáles de estas características son más representativas de los aceites lubricantes de los automóviles?",
+    "opciones": {
+      "a": "Viscosidad, untuosidad y estabilidad química.",
+      "b": "Punto de congelación, punto de inflamación y punto de ebullición.",
+      "c": "Detergencia y dispersión, relación lubricación-cilindrada.",
+      "d": "Estabilidad química y física."
+    },
+    "correcta": "a",
+    "explicacion": "Entre las propiedades fundamentales de los aceites lubricantes de automoción destacan la viscosidad (resistencia a fluir y capacidad de mantener la película), la untuosidad (adherencia a las superficies metálicas) y la estabilidad química."
+  },
+  {
+    "id": 40,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Respecto a la bomba de aceite, indique la respuesta correcta:",
+    "opciones": {
+      "a": "La bomba de aceite es el elemento mecánico que debe garantizar un caudal de aceite en el circuito superior al necesario y a una presión adecuada.",
+      "b": "La bomba de aceite limita la presión en el circuito hasta un valor preestablecido por la empresa fabricante en torno a 5 Kgf./em2.",
+      "c": "La bomba de aceite dispone de un depósito de aceite y un filtro.",
+      "d": "Todas son erróneas."
+    },
+    "correcta": "a",
+    "explicacion": "La bomba de aceite impulsa el lubricante desde el cárter asegurando un caudal suficiente (incluso a bajo régimen) y una presión adecuada en el circuito; la limitación de presión corresponde a la válvula limitadora/de descarga."
+  },
+  {
+    "id": 41,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El árbol de transmisión es una parte del automóvil que se utiliza en, ¿qué tipo de vehículos?",
+    "opciones": {
+      "a": "En los vehículos con motor delantero exclusivamente.",
+      "b": "En los vehículos con motor delantero y trasero exclusivamente.",
+      "c": "En los vehículos de motor trasero y tracción delantera exclusivamente.",
+      "d": "En los vehículos con motor delantero y tracción trasera y en los vehículos de tracción total."
+    },
+    "correcta": "d",
+    "explicacion": "El árbol de transmisión transmite el movimiento desde la caja de cambios hasta el grupo diferencial cuando el motor y el eje motriz están separados longitudinalmente, como en propulsión trasera (motor delantero/trasero) y tracción total."
+  },
+  {
+    "id": 42,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Indique la respuesta correcta respecto a los palieres de un automóvil.",
+    "opciones": {
+      "a": "Los palieres están unidos por uno de los extremos a los planetarios del diferencial y por el otro a los bujes de las ruedas.",
+      "b": "Los palieres consisten en unas horquillas unidas a unos ejes alojados en el interior de la caja de cambios.",
+      "c": "Los palieres están situados entre el volante de inercia y la maza de embrague.",
+      "d": "Los palieres son un dispositivo que se encarga de presionar el diafragma del embrague cuando la persona conductora pisa el embrague."
+    },
+    "correcta": "a",
+    "explicacion": "Los semiejes o palieres transmiten el giro desde los planetarios del diferencial hasta los bujes de las ruedas motrices."
+  },
+  {
+    "id": 43,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los amortiguadores son una parte del automóvil cuya función es:",
+    "opciones": {
+      "a": "Un conjunto de hojas de acero superpuestas y unidas a través de abrazaderas.",
+      "b": "Los amortiguadores absorben los impactos para que la rueda esté en contacto continuo con el suelo.",
+      "c": "Los amortiguadores controlan las oscilaciones de los elementos elásticos y contribuyen a la estabilidad de marcha del vehículo.",
+      "d": "Los amortiguadores evitan el balanceo del vehículo en su paso por las curvas."
+    },
+    "correcta": "c",
+    "explicacion": "La función del amortiguador es frenar y controlar las oscilaciones generadas por los elementos elásticos (muelles, ballestas, barras de torsión), manteniendo el contacto del neumático con el suelo y la estabilidad."
+  },
+  {
+    "id": 44,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La suspensión de tipo Mc Pherson dentro del sistema de suspensión de un vehículo, es un tipo de suspensión:",
+    "opciones": {
+      "a": "Exclusivamente delantera.",
+      "b": "Delantera y trasera.",
+      "c": "De suspensión por eje rígido.",
+      "d": "Exclusivamente Hidroneumática."
+    },
+    "correcta": "b",
+    "explicacion": "Aunque la suspensión MacPherson es muy habitual en el tren delantero, también puede emplearse en el tren trasero de algunos vehículos (de ahí que se clasifique como aplicable en suspensión delantera y/o trasera)."
+  },
+  {
+    "id": 45,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las bieletas de dirección del automóvil tiene como función:",
+    "opciones": {
+      "a": "Hacer elástica la unión entre la mangueta y la caja de dirección.",
+      "b": "Unir la caja de la dirección con una mangueta a través de una rótula para transmitir movimiento y regular el alineado de la dirección.",
+      "c": "Sujetar la rueda con una inclinación respecto del suelo.",
+      "d": "Dar a la mangueta una inclinación para que la rueda no apoye totalmente perpendicular al suelo."
+    },
+    "correcta": "b",
+    "explicacion": "Las bieletas (o barras de acoplamiento/dirección) enlazan la caja/cremallera de dirección con la mangueta mediante rótulas, transmitiendo el giro y permitiendo ajustar la convergencia/alineación."
+  },
+  {
+    "id": 46,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuando hablamos de los discos de frenos de un automóvil, indique la respuesta correcta:",
+    "opciones": {
+      "a": "Abrazan las pastillas y es en ellos donde se monta el actuador hidráulico.",
+      "b": "Son los elementos que rozan entre ellos para reducir la velocidad.",
+      "c": "Los autoventilados llevan practicadas unas ranuras radiales para facilitar la evacuación del calor.",
+      "d": "Presionan las pastillas de freno para frenar el vehículo cuando se presiona el pedal."
+    },
+    "correcta": "c",
+    "explicacion": "Los discos de freno autoventilados disponen de conductos/canales o ranuras radiales internas entre sus pistas para favorecer la circulación de aire y evacuar el calor generado por la fricción."
+  },
+  {
+    "id": 47,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuáles son las propiedades que tiene que cumplir el líquido de frenos de un automóvil:",
+    "opciones": {
+      "a": "Durabilidad aceptable (es recomendable sustituirlo cada 4 años o 150.000kms)",
+      "b": "Admitir aditivos que permitan reducir la presión.",
+      "c": "Temperatura de ebullición baja y de congelación alta.",
+      "d": "Temperatura de ebullición alta y de congelación baja."
+    },
+    "correcta": "d",
+    "explicacion": "El líquido de frenos debe poseer un alto punto de ebullición (para evitar formación de burbujas/vapor lock por calentamiento) y un bajo punto de congelación para mantener su fluidez a bajas temperaturas."
+  },
+  {
+    "id": 48,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuando hablamos de la rueda metálica de un vehículo, sus componentes son:",
+    "opciones": {
+      "a": "La llanta y el disco.",
+      "b": "Un revestimiento de goma impermeable y vulcanizado.",
+      "c": "La cubierta y la llanta.",
+      "d": "El disco y la cubierta."
+    },
+    "correcta": "a",
+    "explicacion": "La rueda metálica (sin neumático/cubierta) está constituida por la llanta (donde asienta el neumático) y el disco (que une la llanta al buje de la rueda)."
+  },
+  {
+    "id": 49,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las funciones que cumple la banda de rodadura de un neumático son, entre otras:",
+    "opciones": {
+      "a": "Adherencia al suelo tanto longitudinal como transversal y resistencia al choque y al desgaste.",
+      "b": "Garantizar la buena direccionabilidad.",
+      "c": "Contribuir al confort de marcha disminuyendo la sonoridad.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "La banda de rodadura proporciona adherencia longitudinal y transversal, resiste el desgaste y los impactos, participa en la direccionalidad y en la evacuación de agua y contribuye a reducir el ruido de rodadura."
+  },
+  {
+    "id": 50,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Una presión baja de los neumáticos provoca, entre otros, los siguientes efectos:",
+    "opciones": {
+      "a": "Excesiva tensión del tejido de carcasa y pérdida de adherencia.",
+      "b": "Grietas en el fondo de la escultura y fatiga de los talones.",
+      "c": "Pérdida de estabilidad y desgaste más acusado en la parte central de la banda de rodadura.",
+      "d": "Mayor consumo y excesiva flexibilidad."
+    },
+    "correcta": "d",
+    "explicacion": "Una presión insuficiente aumenta la deformación/flexibilidad de la carcasa, eleva la temperatura y la resistencia a la rodadura (incrementando el consumo de combustible), provoca desgaste en los bordes/hombros y merma la estabilidad y precisión."
+  },
+  {
+    "id": 51,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El circuito de carga del sistema eléctrico del vehículo está formado por:",
+    "opciones": {
+      "a": "La llave de contacto, el relé y la batería.",
+      "b": "El motor de arranque, el alternador y las bobinas.",
+      "c": "El distribuidor, el relé y un alternador.",
+      "d": "Un alternador, una batería y un regulador."
+    },
+    "correcta": "d",
+    "explicacion": "El circuito de carga de un vehículo está compuesto básicamente por el alternador (genera corriente alterna/rectificada), el regulador de tensión (mantiene constante la tensión de carga) y la batería (acumula la energía eléctrica)."
+  },
+  {
+    "id": 52,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué circuitos eléctricos forman parte del circuito de maniobra?",
+    "opciones": {
+      "a": "Circuito eléctricos de posición, luz de cruce y las intermitencias.",
+      "b": "Las intermitencias, las luces de freno y la luz de marcha atrás.",
+      "c": "Las luces antiniebla y las luces de freno.",
+      "d": "La luz de marcha atrás, las intermitencias y la luz de cruce."
+    },
+    "correcta": "b",
+    "explicacion": "El circuito de maniobra o señalización óptica incluye los intermitentes (indicadores de dirección/emergencia), las luces de frenado y la luz de marcha atrás, destinadas a advertir las maniobras del vehículo."
+  },
+  {
+    "id": 53,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Entre los componentes del sistema ABS Bosh (cuatro canales) de un automóvil encontramos:",
+    "opciones": {
+      "a": "El plato portafreno y el actuador hidráulico.",
+      "b": "El tensor automático y un sensor móvil en cada rueda que informa de las revoluciones de cada rueda.",
+      "c": "Una rueda fónica móvil y un sensor fijo en cada rueda.",
+      "d": "Un grupo hidráulico donde se alojan unas electroválvulas y las zapatas."
+    },
+    "correcta": "c",
+    "explicacion": "En los sistemas ABS de cuatro canales, cada rueda dispone de un sensor de velocidad (fijo) y una rueda fónica o dentada (solidaria al giro de la rueda) para monitorizar de forma independiente el bloqueo de cada una."
+  },
+  {
+    "id": 54,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En relación a los paneles de mensaje variable. Indique la respuesta INCORRECTA.",
+    "opciones": {
+      "a": "Informan, advierten de posibles peligros.",
+      "b": "Dan recomendaciones o instrucciones de obligado cumplimiento.",
+      "c": "Deben cambiar el mensaje cada 45 minutos.",
+      "d": "Regulan la circulación adaptándola a las circunstancias."
+    },
+    "correcta": "c",
+    "explicacion": "No existe ninguna norma en el Reglamento General de Circulación (RD 1428/2003) que obligue a cambiar el mensaje de un panel de mensaje variable cada 45 minutos; su actualización depende de las condiciones del tráfico o de la vía."
+  },
+  {
+    "id": 55,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Indique la respuesta correcta sobre los semáforos:",
+    "opciones": {
+      "a": "Una luz amarilla intermitente obliga a las personas que conducen a extremar la precaución.",
+      "b": "Una luz verde intermitente obliga a las personas que conducen a extremar la precaución.",
+      "c": "Una luz amarilla intermitente prohíbe temporalmente el paso.",
+      "d": "Una luz roja intermitente obliga a las personas que conducen a extremar la precaución."
+    },
+    "correcta": "a",
+    "explicacion": "Conforme al artículo 146 del Reglamento General de Circulación (RD 1428/2003), una luz amarilla intermitente obliga a los conductores a extremar la precaución y, en su caso, ceder el paso."
+  },
+  {
+    "id": 56,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según las normas de circulación, las señales de reglamentación tienen como finalidad:",
+    "opciones": {
+      "a": "Indicar obligaciones, limitaciones o prohibiciones.",
+      "b": "Indicar la proximidad de la naturaleza de un peligro difícil de ser percibido a tiempo.",
+      "c": "Facilitar a la persona usuaria de las vías ciertas indicaciones que pueden ser de utilidad.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "Según el Reglamento General de Circulación (RD 1428/2003, art. 149 y ss.), las señales de reglamentación tienen por objeto indicar a los usuarios de la vía obligaciones, limitaciones o prohibiciones especiales."
+  },
+  {
+    "id": 57,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es el principal responsable de las causas de accidentes de circulación?",
+    "opciones": {
+      "a": "El factor vehículo.",
+      "b": "El factor humano.",
+      "c": "Exceso de carga o mala distribución de esta.",
+      "d": "La vía."
+    },
+    "correcta": "b",
+    "explicacion": "En seguridad vial, el factor humano es el principal desencadenante o responsable de la gran mayoría de los accidentes de circulación (distracciones, velocidad inadecuada, alcohol/drogas, fatiga)."
+  },
+  {
+    "id": 58,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En cuáles de los siguientes casos se circulará a velocidad moderada y si fuera preciso se detendrá el vehículo, según las normas de seguridad vial:",
+    "opciones": {
+      "a": "En tramos con edificios de inmediato acceso a la vía.",
+      "b": "En los casos de niebla densa, lluvia intensa, nevada, nubes de polvo o humo.",
+      "c": "a) y b) son correctas.",
+      "d": "a) y b) son incorrectas."
+    },
+    "correcta": "c",
+    "explicacion": "Conforme al artículo 46 del Reglamento General de Circulación (RD 1428/2003), se debe circular a velocidad moderada y, si fuera preciso, detener el vehículo tanto en tramos con edificios de inmediato acceso a la vía como en condiciones meteorológicas o ambientales adversas (niebla densa, lluvia intensa, nevada, nubes de polvo o humo)."
+  },
+  {
+    "id": 59,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuando hablamos de la documentación del vehículo y cuando nos referimos del permiso de circulación: (Indique la respuesta correcta)",
+    "opciones": {
+      "a": "Exclusivamente se pueden llevar el original.",
+      "b": "Se puede llevar una fotocopia.",
+      "c": "Se deben llevar los originales o fotocopias debidamente cotejadas.",
+      "d": "No es obligatorio llevarlo en el vehículo."
+    },
+    "correcta": "c",
+    "explicacion": "De acuerdo con el Reglamento General de Vehículos (RD 2822/1998) y la normativa de tráfico, el conductor debe llevar el permiso de circulación (original o fotocopia debidamente cotejada)."
+  },
+  {
+    "id": 60,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El efecto de la depresión en la persona conductora, puede causar efectos como:",
+    "opciones": {
+      "a": "Mayor irritabilidad, ansiedad e inseguridad.",
+      "b": "Aumentar la agresividad, hostilidad y competitividad.",
+      "c": "Aumenta la tendencia a respetar las señales y normas de circulación.",
+      "d": "Controlan peor la velocidad, pudiendo conducir de forma errática."
+    },
+    "correcta": "a",
+    "explicacion": "En seguridad vial, los estados depresivos suelen asociarse a mayor irritabilidad, ansiedad, inseguridad, apatía y disminución de la atención y capacidad de reacción."
+  },
+  {
+    "id": 61,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La fuerza centrífuga a las que está sometido el vehículo en las curva (indique la respuesta correcta):",
+    "opciones": {
+      "a": "Viene determinada por la línea curva que el vehículo quiere seguir, empujando hacia el interior de la curva al vehículo.",
+      "b": "Viene determinada por la línea recta que el vehículo quiere seguir, empujando hacia el exterior de la curva al vehículo.",
+      "c": "Es la fuerza que viene determinada cuanto más cerrada es la curva y empuja el vehículo hacia el interior.",
+      "d": "La a) y la c) son correctas."
+    },
+    "correcta": "b",
+    "explicacion": "Por inercia, el vehículo tiende a seguir en línea recta y la fuerza centrífuga empuja hacia el exterior de la curva, aumentando con la velocidad y con la menor radio/mayor cierre de la curva."
+  },
+  {
+    "id": 62,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El laringoscopio óptico (modelo Airtraq) permite a la persona que lo utiliza:",
+    "opciones": {
+      "a": "Visualizar el interior de la tráquea a través del visor óptico iluminado.",
+      "b": "El aislamiento de la vía aérea.",
+      "c": "La visualización de la imagen visible en el Airtraq en una pantalla portátil.",
+      "d": "Disponer de un dispositivo de aislamiento de la vía aérea que ofrece una solución para la oxigenación pasiva."
+    },
+    "correcta": "a",
+    "explicacion": "El dispositivo Airtraq es un laringoscopio óptico con canal guía que permite visualizar las estructuras glóticas/vía aérea a través de su visor óptico iluminado (o adaptador de cámara/pantalla si se acopla) sin necesidad de alinear los ejes oral, faríngeo y laríngeo."
+  },
+  {
+    "id": 63,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La ventilación mecánica que se realiza a través del respirador puede ser de dos tipos. Indique la correcta:",
+    "opciones": {
+      "a": "Los métodos invasivos pueden ser con intubación o sin intubación.",
+      "b": "Los métodos invasivos requieren intubación de la persona paciente y los no invasivos se usan con máscara.",
+      "c": "Los métodos no invasivos requieren intubación de la persona paciente y los invasivos se usan generalmente una máscara.",
+      "d": "Los métodos no invasivos pueden ser con intubación o sin intubación."
+    },
+    "correcta": "b",
+    "explicacion": "En ventilación mecánica, los métodos invasivos emplean una vía aérea artificial (como tubo endotraqueal o cánula de traqueostomía), mientras que los métodos no invasivos (VMNI) utilizan mascarillas faciales o nasales sin intubación."
+  },
+  {
+    "id": 64,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Un monitor desfibrilador es un aparato que permite realizar una serie de terapias como son:",
+    "opciones": {
+      "a": "La desfibrilación, la cardioversión eléctrica y la valoración de la temperatura.",
+      "b": "La cardioversión eléctrica y la función de marcapasos interno.",
+      "c": "La función de marcapasos externo, cardioversión eléctrica y desfibrilación.",
+      "d": "Monitoriza todas las constantes y realiza la desfibrilación solamente."
+    },
+    "correcta": "c",
+    "explicacion": "Un monitor desfibrilador externo permite monitorizar el ECG y aplicar terapias eléctricas como la desfibrilación, la cardioversión eléctrica sincronizada y la estimulación mediante marcapasos externo transcutáneo."
+  },
+  {
+    "id": 65,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuando se va a realizar una intubación orotraqueal el bloqueante neuromuscular de acción rápida y corta que se va a utilizar, como norma general, será:",
+    "opciones": {
+      "a": "Vecuronio.",
+      "b": "Fentanilo.",
+      "c": "Midazolam.",
+      "d": "Succinilcolina."
+    },
+    "correcta": "d",
+    "explicacion": "La succinilcolina (suxametonio) es un bloqueante neuromuscular despolarizante clásico de inicio de acción muy rápido y duración corta, empleado habitualmente en secuencia rápida de intubación (salvo contraindicaciones)."
+  },
+  {
+    "id": 66,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según la OMS reacción adversa a un medicamento (RAM) es:",
+    "opciones": {
+      "a": "Todo efecto perjudicial y no deseado que ocurre a dosis usadas con fines terapéuticos, profilácticos o de diagnóstico.",
+      "b": "Todo efecto adverso o no que se produzca por la toma de medicación.",
+      "c": "Se consideran RAM solo en los casos que la reacción haya provocado la muerte después de la toma de una medicación, ya sea de manera voluntaria o no.",
+      "d": "Todas son falsas."
+    },
+    "correcta": "a",
+    "explicacion": "Según la definición clásica de la OMS, una reacción adversa a un medicamento (RAM) es cualquier respuesta a un fármaco que sea nociva y no intencionada, y que tenga lugar a dosis que se apliquen normalmente en el ser humano para la profilaxis, el diagnóstico o el tratamiento de enfermedades."
+  },
+  {
+    "id": 67,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las vías de administración de la adrenalina son:",
+    "opciones": {
+      "a": "Vía intravenosa, exclusivamente.",
+      "b": "Se puede administrar a través de todas las vías.",
+      "c": "Vía intravenosa, subcutánea, inhalatoria y endotraqueal.",
+      "d": "Vía intravenosa, subcutánea, oral, inhalatoria y endotraqueal."
+    },
+    "correcta": "c",
+    "explicacion": "La adrenalina (junto con la intramuscular/intraósea en urgencias) puede administrarse por vía intravenosa, subcutánea, inhalatoria (nebulizada) o endotraqueal, pero no por vía oral ya que se inactiva en el tracto gastrointestinal."
+  },
+  {
+    "id": 68,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál sería la zona de elección para una punción por vía intraósea en un niño o una niña de 4 años?",
+    "opciones": {
+      "a": "Porción inferior del esternón.",
+      "b": "Maléolo tibial.",
+      "c": "Tuberosidad tibial.",
+      "d": "Porción proximal del fémur."
+    },
+    "correcta": "c",
+    "explicacion": "En lactantes y niños pequeños (como un niño de 4 años), la tibia proximal (en la cara anteromedial, por debajo de la tuberosidad tibial) es el sitio de elección habitual para el acceso intraóseo por su amplia cavidad medular y fácil localización anatómica."
+  },
+  {
+    "id": 69,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En un niño o una niña de tres años inconsciente, ¿durante cuánto tiempo comprobaremos la respiración?",
+    "opciones": {
+      "a": "Un máximo de 10 segundos.",
+      "b": "Un máximo de 5 segundos.",
+      "c": "Un máximo de 2 segundos.",
+      "d": "Un máximo de 8 segundos."
+    },
+    "correcta": "a",
+    "explicacion": "Según el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 15, guías ERC 2021), se debe 'ver, oír y sentir' si la respiración es normal durante un máximo de 10 segundos."
+  },
+  {
+    "id": 70,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es la definición de noria de rescate en caso de un IMV?",
+    "opciones": {
+      "a": "El circuito realizado desde el parque de ambulancias hasta el puesto de carga.",
+      "b": "El circuito realizado desde la zona de carga hasta el centro sanitario de destino.",
+      "c": "El circuito realizado desde el centro sanitario a la zona del incidente.",
+      "d": "El dispositivo que permite llevar a las víctimas desde el punto de impacto hasta el área sanitaria."
+    },
+    "correcta": "d",
+    "explicacion": "En la terminología de Incidentes de Múltiples Víctimas (IMV), la noria de rescate/evacuación (o de camilleo) corresponde al flujo/dispositivo de traslado de las víctimas desde el lugar del impacto/zona caliente hasta el área sanitaria o puesto médico/de carga."
+  },
+  {
+    "id": 71,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En un IMV, la persona responsable de transportes y comunicaciones, tendrá como funciones, entre otras, las siguientes:",
+    "opciones": {
+      "a": "Mantendrá informada a la persona sanitaria al mando del número de víctimas y su prioridad.",
+      "b": "Supervisará y si fuera necesario organizará la noria de camilleo.",
+      "c": "Solicitará al centro coordinador el destino de las víctimas preparadas para traslado.",
+      "d": "Supervisará el trabajo de los equipos que colaboran en el área asistencial."
+    },
+    "correcta": "c",
+    "explicacion": "En la organización sanitaria de un IMV (Plan de actuación sanitario en IMV de Osakidetza Emergentziak), la coordinación de la evacuación, el enlace con el Centro Coordinador y la asignación/solicitud de destino hospitalario de las víctimas listas para traslado corresponden al ámbito de transporte y comunicaciones."
+  },
+  {
+    "id": 72,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Indique la respuesta correcta:",
+    "opciones": {
+      "a": "Antes de movilizar hay que inmovilizar, aunque exista una situación de parada cardiaca, riesgo de incendio o explosión.",
+      "b": "Antes de inmovilizar hay que movilizar, aunque exista una situación de parada cardiaca, riesgo de incendio o explosión.",
+      "c": "Antes de movilizar hay que inmovilizar, excepto que exista una situación de parada cardiaca, riesgo de incendio o explosión.",
+      "d": "Antes de inmovilizar hay que movilizar, excepto que exista una situación de parada cardiaca, riesgo de incendio o explosión."
+    },
+    "correcta": "c",
+    "explicacion": "En trauma, la regla general es inmovilizar antes de movilizar, salvo peligro vital inminente o emergencia extrema (como parada cardiorrespiratoria que requiera RCP inmediata, incendio, explosión o escena insegura), donde procede una extracción rápida."
+  },
+  {
+    "id": 73,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Ante la presencia de una fractura, tras valorar el mecanismo lesional y aseguradas las funciones vitales, la actuación va dirigida a seguir los siguientes pasos:",
+    "opciones": {
+      "a": "Explorar, inmovilizar y movilizar.",
+      "b": "Preguntar a la persona accidentada, inspección, palpación y movilización.",
+      "c": "Valoración de la fractura y pulsos distales, retirada de elementos de compresión, alienación del miembro afectado (si está indicado), inmovilización y reevaluación.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "La secuencia correcta de manejo local de una fractura incluye evaluar el foco y la perfusión/pulsos distales, retirar objetos o prendas que compriman, alinear si está indicado, inmovilizar incluyendo articulaciones adyacentes y reevaluar el estado neurovascular distal."
+  },
+  {
+    "id": 74,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El dispositivo tipo KENDRICK, es un dispositivo que sirve para:",
+    "opciones": {
+      "a": "Inmovilizar la columna vertebral.",
+      "b": "Aislar la vía aérea en caso de vómito.",
+      "c": "Es un laringoscopio de última generación con luz y tiene acoplada una cámara.",
+      "d": "Nos va a permitir valorar el nivel de monóxido de carbono en sangre."
+    },
+    "correcta": "a",
+    "explicacion": "El chaleco espinal o férula espinal tipo Kendrick (KED) es un dispositivo de inmovilización diseñado para estabilizar e inmovilizar el eje cabeza-cuello-tronco (columna cervical, dorsal y lumbar) en la extracción de pacientes traumatizados, especialmente en vehículos o espacios reducidos."
+  },
+  {
+    "id": 75,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En un traslado de una/un neonato en el interior de una incubadora, ¿qué aspecto importante tendremos en cuenta? (Indique la respuesta correcta):",
+    "opciones": {
+      "a": "Adecuar la temperatura, ya que son muy sensibles a los cambios de temperatura.",
+      "b": "Adecuar los ruidos ambientales, ya que son muy sensibles al ruido.",
+      "c": "Adecuar las vibraciones de la zona asistencial.",
+      "d": "Se realizará siempre por carretera, para evitar la altitud, que puede ser perjudicial."
+    },
+    "correcta": "a",
+    "explicacion": "El neonato tiene una elevada superficie corporal en relación con su peso y escasa reserva térmica, por lo que el control y adecuación de la temperatura (termorregulación y prevención de hipotermia) es crítico durante el transporte."
+  },
+  {
+    "id": 76,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es la posición de traslado de una mujer embarazada cuyo parto no es inminente?",
+    "opciones": {
+      "a": "Decúbito supino con la cabeza en los pies de la camilla.",
+      "b": "Decúbito lateral derecho.",
+      "c": "Decúbito supino.",
+      "d": "Decúbito lateral izquierdo."
+    },
+    "correcta": "d",
+    "explicacion": "En la gestante (especialmente en etapas avanzadas), el decúbito lateral izquierdo (o desplazamiento uterino lateral izquierdo) evita la compresión de la vena cava inferior por el útero grávido, previniendo la hipotensión supina y mejorando el retorno venoso y la perfusión uteroplacentaria."
+  },
+  {
+    "id": 77,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de transferir una persona paciente de un/una profesional sanitaria a otro/otra, esta transferencia debe ser:",
+    "opciones": {
+      "a": "Transferencia verbal únicamente.",
+      "b": "Transferencia documentada únicamente.",
+      "c": "Transferencia verbal y documentada.",
+      "d": "Transferencia escrita."
+    },
+    "correcta": "c",
+    "explicacion": "La transferencia asistencial segura entre equipos o niveles asistenciales exige comunicación estructurada verbal y registro documentado (informe/parte asistencial) para garantizar la continuidad asistencial y la seguridad del paciente."
+  },
+  {
+    "id": 78,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La lona de rescate es un tipo de material que se utiliza fundamentalmente:",
+    "opciones": {
+      "a": "En pacientes que no tengan lesiones traumáticas.",
+      "b": "En pacientes a rescatar en espacios confinados y a quienes hay que inmovilizar la columna vertebral.",
+      "c": "En pacientes con lesiones traumáticas.",
+      "d": "Es apta para usarse en helicópteros, en el agua, alta montaña."
+    },
+    "correcta": "b",
+    "explicacion": "La lona de rescate (camilla de lona/rescate con refuerzos o tablillas) está pensada para evacuaciones y rescates en espacios confinados o de difícil acceso donde se requiere movilización segura y soporte del raquis/columna."
+  },
+  {
+    "id": 79,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En cuanto a las premisas de uso de los collarines laterales como son los rígidos tipos Philadelphia, tenemos que tener en cuenta que:",
+    "opciones": {
+      "a": "Permite movimientos de flexoextensión de la cabeza sin limitar los laterales.",
+      "b": "Permite movimientos de flexoextensión de la cabeza limitando los laterales.",
+      "c": "Impide movimientos de flexoextensión de la cabeza limitando los laterales.",
+      "d": "Impide movimientos de flexoextensión de la cabeza sin limitar los laterales."
+    },
+    "correcta": "c",
+    "explicacion": "Los collarines cervicales rígidos tipo Philadelphia cuentan con apoyo mentoniano y occipital que limitan de forma importante la flexoextensión y los movimientos laterales del raquis cervical (siempre debiendo completarse con inmovilizador lateral de cabeza/dama de Elche y tablero/colchón de vacío para un control integral)."
+  },
+  {
+    "id": 80,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el protocolo asistencial de SVB en caso de convulsión, se podría definir el estatus epiléptico como:",
+    "opciones": {
+      "a": "Episodio paroxístico y autolimitado inferior a 3 minutos.",
+      "b": "Crisis epiléptica con una duración menor a 5 minutos.",
+      "c": "Varias crisis repetidas que no permiten recuperación entre ellas.",
+      "d": "Varias crisis repetidas que sí permiten recuperación entre ellas."
+    },
+    "correcta": "c",
+    "explicacion": "Según el Protocolo Asistencial de Convulsión (adulto) SVB de Osakidetza Emergentziak (p. 9), el estatus epiléptico se define como crisis de repetición sin recuperación completa de la consciencia entre ellas o crisis mayor de 5 minutos."
+  },
+  {
+    "id": 81,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el protocolo asistencial de SVB en caso de asistencia por un síncope, dentro de los aspectos mínimos de exploración son los siguientes:",
+    "opciones": {
+      "a": "FC, relleno capilar, pulsos en EESS.",
+      "b": "Trabajo respiratorio, FR y Pulsioximetría.",
+      "c": "Si presenta dolor torácico, de espalda o abdominal que haga sospechar una disección de aorta, toma de TA en ambos brazos.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "El Protocolo Asistencial de Síncope SVB de Osakidetza Emergentziak (p. 37) incluye en los aspectos mínimos de exploración el trabajo respiratorio, FR y pulsioximetría, la FC, relleno capilar y pulsos en EESS, y la toma de TA en ambos brazos ante sospecha de disección de aorta."
+  },
+  {
+    "id": 82,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el protocolo asistencial de SVB en caso de emergencias pediátricas por trauma grave, la hipotensión en menores de 1 a 10 años se valora de la siguiente manera:",
+    "opciones": {
+      "a": "PAS < 70+ (edad en años x 2).",
+      "b": "PAS < 60 + (edad en años x 2).",
+      "c": "PAS > 70 + (edad en años x 2).",
+      "d": "PAS <= 90."
+    },
+    "correcta": "a",
+    "explicacion": "Según el Protocolo de Emergencias Pediátricas: Politraumatismo / Trauma Grave SVB de Osakidetza Emergentziak (p. 29), la hipotensión en niños de 1 a 10 años se define como PAS < 70 + (edad en años x 2)."
+  },
+  {
+    "id": 83,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el protocolo asistencial de SVB en caso de lesión medular traumática, el shock neurogénico tiene los siguientes signos:",
+    "opciones": {
+      "a": "Signos de shock con taquicardia, taquipnea, palidez y sudoración profusa.",
+      "b": "Signos de shock con taquicardia, bradipnea, palidez y piel seca.",
+      "c": "Signos de shock con bradicardia, piel húmeda y fría.",
+      "d": "Signos de shock con ausencia de taquicardia, piel seca y caliente."
+    },
+    "correcta": "d",
+    "explicacion": "El Protocolo Asistencial de Lesión Medular Traumática SVB de Osakidetza Emergentziak (p. 22) indica que, si el nivel de lesión es superior a la zona lumbar, puede afectarse la función simpática presentando signos de shock con ausencia de taquicardia, piel seca y caliente."
+  },
+  {
+    "id": 84,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Entre los diferentes distintivos de prioridad de las víctimas de un IMV, se encuentran:",
+    "opciones": {
+      "a": "Cintas de colores, tarjetas de triaje, lonas de colores y banderines de señalización.",
+      "b": "El TEP pediátrico, el triaje SHORT Y EL START.",
+      "c": "Exclusivamente las tarjeta de triaje de Emergencias Osakidetza.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "En un Incidente de Múltiples Víctimas (IMV), para identificar visualmente la prioridad asistencial/evacuación de los heridos se emplean distintivos como tarjetas de triaje, cintas de colores, lonas de colores o banderines de señalización."
+  },
+  {
+    "id": 85,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según la red de carreteras de interés preferente la denominación Autopista Del Cantábrico, le corresponde la nomenclatura: (Indique la respuesta correcta)",
+    "opciones": {
+      "a": "N-240.",
+      "b": "AP-1.",
+      "c": "A-8.",
+      "d": "N-634."
+    },
+    "correcta": "c",
+    "explicacion": "En la clasificación de la Red de Carreteras del País Vasco (Tercer Plan General de Carreteras del País Vasco 2017-2028, Capítulo 2), la denominación 'Autopista del Cantábrico' corresponde a la A-8."
+  },
+  {
+    "id": 86,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según la red de carreteras de interés preferente la denominación Autopista Navarra - Gipuzkoa, le corresponde la nomenclatura. Señala la correcta:",
+    "opciones": {
+      "a": "AP-68.",
+      "b": "A-8.",
+      "c": "AP-1.",
+      "d": "A-15."
+    },
+    "correcta": "d",
+    "explicacion": "Según la clasificación de la Red de Carreteras del País Vasco (Tercer Plan General de Carreteras del País Vasco 2017-2028, Capítulo 2), la denominación 'Autopista Navarra - Gipuzkoa' corresponde a la A-15 (A-15/GI-131)."
+  },
+  {
+    "id": 87,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La posición de Fowler en la ambulancia la utilizaremos en los siguientes casos:",
+    "opciones": {
+      "a": "Personas usuarias con problemas respiratorios.",
+      "b": "Personas usuarias con problemas cardiacos.",
+      "c": "Colocación de sondas nasogástricas.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "La posición de Fowler (semisentado con cabecera elevada) facilita la expansión torácica y mejora el confort respiratorio en disnea/problemas respiratorios o cardíacos y facilita la colocación de sonda nasogástrica."
+  },
+  {
+    "id": 88,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La certificación técnico-sanitaria se otorgará por un plazo de duración de:",
+    "opciones": {
+      "a": "Dos años para vehículos nuevos y anual a partir del segundo año de antigüedad, hasta los diez años.",
+      "b": "Dos años para vehículos nuevos y prorrogable otros dos años hasta los 10 años.",
+      "c": "Anual independientemente de si el vehículo es nuevo o de nueva matriculación.",
+      "d": "Anual para vehículos nuevos y cada dos años a partir del segundo año de antigüedad, hasta los diez años."
+    },
+    "correcta": "a",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, de 23 de julio, la certificación técnico-sanitaria tiene una duración de dos años para vehículos nuevos y anual a partir del segundo año de antigüedad, hasta el límite de diez años."
+  },
+  {
+    "id": 89,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el Real Decreto 836/2012, los requisitos y condiciones técnicas de los vehículos de transporte sanitario considerados como básicos: (Indique la respuesta correcta)",
+    "opciones": {
+      "a": "Tienen el carácter de mínimos, no pudiendo ser mejoradas por las empresas en la prestación de los servicios",
+      "b": "Las Administraciones de las comunidades autónomas no podrán exigir otros requisitos y condiciones técnicas.",
+      "c": "Tienen el carácter de mínimos, pudiendo ser mejoradas por las empresas en la prestación de los servicios.",
+      "d": "Las Administraciones de las comunidades autónomas no podrán exigir otros requisitos en relación a la dotación de personal."
+    },
+    "correcta": "c",
+    "explicacion": "Según el artículo 1 y el Anexo I del Real Decreto 836/2012, las condiciones técnicas y de equipamiento establecidas tienen el carácter de mínimos, pudiendo ser mejoradas por las empresas y exigirse requisitos adicionales por las comunidades autónomas."
+  },
+  {
+    "id": 90,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El órgano competente procederá a denegar la certificación técnico-sanitaria si las especificaciones contenidas en la memoria no se ajustan a lo establecido en:",
+    "opciones": {
+      "a": "ORDEN PRE 1435/2013 de 23 de julio.",
+      "b": "Ley 8/1998, de 26 de junio de Ordenación Sanitaria de Euskadi.",
+      "c": "RD 1428/2004 de 21 de noviembre.",
+      "d": "RD 836/2012 de 25 de mayo."
+    },
+    "correcta": "d",
+    "explicacion": "De acuerdo con la Orden PRE/1435/2013, se denegará la certificación técnico-sanitaria cuando el vehículo o las especificaciones de la memoria no cumplan las condiciones técnico-sanitarias reguladas en el Real Decreto 836/2012, de 25 de mayo."
+  },
+  {
+    "id": 91,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los elementos, entre otros, que componen el sistema de dirección son:",
+    "opciones": {
+      "a": "La columna de la dirección, el volante y las rótulas.",
+      "b": "Los palieres y las rótulas.",
+      "c": "El árbol de transmisión y el volante.",
+      "d": "Manguitos y bieletas de dirección."
+    },
+    "correcta": "a",
+    "explicacion": "El sistema de dirección incluye el volante, la columna de dirección (con articulaciones/juntas), el mecanismo o caja de dirección, las bieletas/barras y las rótulas que enlazan con las manguetas."
+  },
+  {
+    "id": 92,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La autorización de transporte sanitario habilitará para realizar transporte exclusivamente con los vehículos:",
+    "opciones": {
+      "a": "Vinculado mediante inscripción de su matrícula en el Registro de Sanidad.",
+      "b": "Vinculado mediante inscripción de su matrícula en el Registro de Empresas y Actividad de Transporte.",
+      "c": "Vinculado mediante inscripción de su matrícula en el Registro de la Dirección General de Tráfico.",
+      "d": "Vinculado mediante inscripción de su matrícula en el Registro de Transporte y Movilidad."
+    },
+    "correcta": "b",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, la autorización de transporte sanitario habilita para realizar servicios exclusivamente con los vehículos vinculados mediante inscripción de su matrícula en el Registro de Empresas y Actividades de Transporte."
+  },
+  {
+    "id": 93,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según la red de carreteras de interés preferente la denominación Autovía Norte Madrid- San Sebastián, le corresponde la nomenclatura: (Indique la respuesta correcta)",
+    "opciones": {
+      "a": "N-240",
+      "b": "N-1",
+      "c": "AP-8",
+      "d": "N-634"
+    },
+    "correcta": "b",
+    "explicacion": "En la clasificación de la Red de Carreteras del País Vasco (Tercer Plan General de Carreteras del País Vasco 2017-2028, Capítulo 2), la denominación 'Autovía Norte de Madrid - San Sebastián' figura en la Red de Interés Preferente como N-I / N-1 (y A-1 en su adaptación)."
+  },
+  {
+    "id": 94,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las y los agentes de la autoridad que se encargan de la vigilancia del tráfico podrán someter a las pruebas que se establezcan para la detección de las posibles intoxicaciones por alcohol:",
+    "opciones": {
+      "a": "En cualquier momento y a cualquier persona usuaria de la vía o conductora.",
+      "b": "A quienes conduzcan cualquier vehículo sin síntomas evidentes, fuera de los programas de controles preventivos de alcoholemia.",
+      "c": "A las personas que, con ocasión de conducir un vehículo, sean requeridas al efecto por la autoridad dentro de los programas de controles preventivos de alcoholemia.",
+      "d": "Todas las respuestas son verdaderas."
+    },
+    "correcta": "c",
+    "explicacion": "Según el artículo 21 del Reglamento General de Circulación (RD 1428/2003), los agentes pueden someter a pruebas de alcoholemia a quienes conduciendo un vehículo sean requeridos dentro de los programas de controles preventivos establecidos por la autoridad."
+  },
+  {
+    "id": 95,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La certificación técnico-sanitaria se otorgará por un plazo de duración de:",
+    "opciones": {
+      "a": "Tres años para vehículos nuevos y anual a partir del tercer año de antigüedad",
+      "b": "Dos años para vehículos nuevos y anual a partir del tercer año de antigüedad.",
+      "c": "Dos años para vehículos nuevos y anual a partir del segundo año de antigüedad.",
+      "d": "Tres años para vehículos nuevos y anual a partir del segundo año de antigüedad."
+    },
+    "correcta": "c",
+    "explicacion": "De acuerdo con la Orden PRE/1435/2013, de 23 de julio, la certificación técnico-sanitaria se otorga por dos años en vehículos nuevos y de forma anual a partir del segundo año de antigüedad (hasta los diez años)."
+  },
+  {
+    "id": 96,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿De qué se encarga el colector de admisión? Seleccione la respuesta correcta.",
+    "opciones": {
+      "a": "Se encarga de evacuar los gases quemados desde el exterior del cilindro hasta el tubo de escape.",
+      "b": "Se encarga de canalizar los gases o aire de admisión hasta el exterior del cilindro, evitando que se produzcan contrapresiones en su exterior que impidan un correcto llenado del cilindro.",
+      "c": "Se encarga de evacuar los gases quemados desde el interior del cilindro hasta el tubo de escape.",
+      "d": "Se encarga de canalizar los gases o aire de admisión hasta el interior del cilindro, evitando que se produzcan contrapresiones en su interior que impidan un correcto llenado del cilindro."
+    },
+    "correcta": "d",
+    "explicacion": "El colector de admisión distribuye y canaliza el aire (en motores diésel) o la mezcla aire-combustible (en motores de encendido provocado) desde el sistema de filtración/dosificación hacia el interior de cada cilindro."
+  },
+  {
+    "id": 97,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué elementos tratan de hacer elástica la unión entre la mangueta y la caja de dirección, transmitiendo el movimiento sin holguras?",
+    "opciones": {
+      "a": "Las rótulas.",
+      "b": "Las bieletas de dirección.",
+      "c": "Tiranterias.",
+      "d": "Los muelles."
+    },
+    "correcta": "a",
+    "explicacion": "Corregida según clave oficial del Tribunal (Examen 21/11/2026, Modelo B nº 5): opción A."
+  },
+  {
+    "id": 98,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Una zona marcada por franjas oblicuas paralelas enmarcadas por una línea continua, ¿qué significa?",
+    "opciones": {
+      "a": "Proximidad de un paso a nivel.",
+      "b": "Indica el comienzo de un carril reservado para determinados vehículos.",
+      "c": "Indica una zona de detención.",
+      "d": "Indica que no se puede entrar con un vehículo en dicha zona."
+    },
+    "correcta": "d",
+    "explicacion": "Según el Reglamento General de Circulación (RD 1428/2003, marca vial de cebreado / franjas oblicuas paralelas enmarcadas por línea continua), ningún conductor debe entrar con su vehículo ni circular sobre dicha zona (salvo en los casos excepcionales previstos para carriles/zonas específicas)."
+  },
+  {
+    "id": 99,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿En qué casos realizaremos un \"barrido a ciegas\" cuando haya una dificultad para conseguir una insuflación efectiva en una niña de 5 años?",
+    "opciones": {
+      "a": "Tras abrir la vía aérea.",
+      "b": "No se realizan \"barridos a ciegas\" con el dedo.",
+      "c": "Tras 5 insuflaciones de rescate.",
+      "d": "Antes de realizar la maniobra de tracción mandibular."
+    },
+    "correcta": "b",
+    "explicacion": "Según el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 17, guías ERC 2021), no se deben realizar 'barridos a ciegas' con el dedo; solo debe extraerse un cuerpo extraño si es visible y accesible."
+  },
+  {
+    "id": 100,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Conforme a lo previsto en el Marco Estratégico del Departamento de Salud 2021-2024 las enfermedades neurodegenerativas y neuromusculares son:",
+    "opciones": {
+      "a": "Crónicas",
+      "b": "Progresivas.",
+      "c": "Incurables.",
+      "d": "Son correctas todas las anteriores respuestas."
+    },
+    "correcta": "d",
+    "explicacion": "Las enfermedades neurodegenerativas y neuromusculares se caracterizan por ser procesos crónicos, progresivos y, en su mayoría, incurables (requiriendo abordaje multidisciplinar, rehabilitación y cuidados paliativos/de soporte)."
+  },
+  {
+    "id": 101,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Acudís de emergencia a un intento autolítico con una persona que ha ingerido diazepam en grandes cantidades. ¿Qué medicamento podemos utilizar como antagonista?",
+    "opciones": {
+      "a": "Flumazenil.",
+      "b": "Naloxona.",
+      "c": "Metilprednisolona.",
+      "d": "Fentanilo."
+    },
+    "correcta": "a",
+    "explicacion": "El flumazenil es el antagonista específico de los receptores GABA-benzodiacepínicos utilizado para revertir los efectos sedantes de las benzodiacepinas como el diazepam (mientras que la naloxona es antagonista de opioides)."
+  },
+  {
+    "id": 102,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuáles son las complicaciones más frecuentes ante las que nos enfrentamos cuando manejamos fracturas?",
+    "opciones": {
+      "a": "Incremento de la posible hemorragia, sufrimiento de síncope por dolor y riesgo de infección.",
+      "b": "Una fractura cerrada se puede transformar en una fractura abierta.",
+      "c": "Infección generalizada y retraso en la consolidación del hueso.",
+      "d": "Paraplejia o hemiplejia."
+    },
+    "correcta": "a",
+    "explicacion": "El manejo inadecuado o la falta de inmovilización de una fractura puede agravar el sangrado local/hemorragia, provocar dolor intenso con respuesta vasovagal/síncope o favorecer infecciones (especialmente si se produce lesión cutánea)."
+  },
+  {
+    "id": 103,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de explorar a una persona paciente con una disnea y según el protocolo asistencial en caso de disnea SVB, cuando evaluamos los síntomas de gravedad, tenemos que tener en cuenta los siguientes aspectos:",
+    "opciones": {
+      "a": "Si tiene cefalea.",
+      "b": "Si estaba realizando deporte.",
+      "c": "Si le ha picado un insecto.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "En el Protocolo Asistencial de Disnea SVB de Osakidetza Emergentziak (p. 10), dentro de 'Evaluar síntomas de gravedad' se recoge expresamente si la disnea 'Comienza tras la ingesta de algún medicamento o le ha picado un insecto' (por riesgo de anafilaxia/edema laríngeo)."
+  },
+  {
+    "id": 104,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de valorar la respiración en una persona adulta inconsciente, ante la presencia de boqueadas infrecuentes, lentas y ruidosas, ¿cuál será nuestra actuación?:",
+    "opciones": {
+      "a": "Dejarla en la posición en la que fue encontrada, siempre que no exista mayor peligro.",
+      "b": "Colocarla en Posición Lateral de Seguridad.",
+      "c": "Revaluar con regularidad sin iniciar RCP.",
+      "d": "Prepararse para iniciar RCP."
+    },
+    "correcta": "d",
+    "explicacion": "Según el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 4, guías ERC 2021), las boqueadas infrecuentes, lentas y ruidosas (respiración agónica/gasping) no deben confundirse con respiración normal y obligan a actuar como si no fuera normal e iniciar RCP."
+  },
+  {
+    "id": 105,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Cuando se circula sobre suelo mojado, la banda de rodadura actúa como una bomba rompiendo la película y evacuándola a través del dibujo esculpido en ella. El caudal aumenta a medida que aumenta la velocidad del neumático y puede generar una presión en el agua que se está evacuando. Cuando la presión aplicada en los surcos de la escultura iguala a la presión específica de la huella de la banda de rodadura sobre el suelo, se produce la flotación del neumático con la consiguiente pérdida de tracción y dirección. Por tanto, para evitar este fenómeno es imprescindible que:",
+    "opciones": {
+      "a": "La banda de rodadura se encuentre en perfecto estado, no sobrepasar el límite de desgaste establecido, mantener la presión de inflado correcta y circular a velocidad moderada cuando se den circunstancias de suelo mojado.",
+      "b": "La banda de rodadura no esté rota, no sobrepasar el límite de desgaste establecido, mantener alta la presión de inflado y circular a velocidad moderada cuando se den circunstancias de suelo mojado.",
+      "c": "El estado de la banda de rodadura sea aceptable, no sobrepasar el límite de desgaste establecido, mantener la presión de inflado correcta y parar cuando se den circunstancias de suelo mojado.",
+      "d": "La banda de rodadura se encuentre en perfecto estado, no sobrepasar el límite de desgaste establecido, mantener alta la presión de inflado y parar cuando se den circunstancias de suelo mojado."
+    },
+    "correcta": "a",
+    "explicacion": "Para prevenir el aquaplaning (flotación del neumático sobre agua), es necesario conservar una profundidad de dibujo adecuada (sin rebasar el límite legal de 1,6 mm ni el desgaste de la banda), mantener la presión correcta recomendada y moderar la velocidad en suelo mojado."
+  },
+  {
+    "id": 106,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Son unos orificios dispuestos en el circuito de refrigeración taponados con tornillos metálicos o de plástico, que sirven para poder extraer el aire del circuito a través de ellos y así evitar bolsas que provocarían un incorrecto funcionamiento del sistema de refrigeración del motor:",
+    "opciones": {
+      "a": "Manguitos.",
+      "b": "Botella de expansión.",
+      "c": "Purgadores.",
+      "d": "Ventiladores."
+    },
+    "correcta": "c",
+    "explicacion": "Los purgadores son tornillos o válvulas situados en puntos altos del circuito de refrigeración para liberar el aire atrapado durante el llenado y evitar bolsas de aire (puntos calientes o circulación deficiente)."
+  },
+  {
+    "id": 107,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los principales agentes externos que pueden afectar a la fisiopatología de la persona paciente trasladada son:",
+    "opciones": {
+      "a": "Los movimientos y las vibraciones del vehículo.",
+      "b": "Las fuerzas de aceleración y desaceleración.",
+      "c": "La temperatura del interior del habitáculo.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "Durante el transporte sanitario, las aceleraciones/desaceleraciones, las vibraciones y los movimientos del vehículo, así como la temperatura del habitáculo, influyen directamente en la hemodinámica, la PIC, la termorregulación y el confort del paciente."
+  },
+  {
+    "id": 108,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Para que un vehículo se desplace, además de un motor que genera la fuerza, son necesarias una serie de elementos que se encarguen de transmitir el movimiento del motor hacia las ruedas; los elementos encargados de esta misión pertenecen al sistema de transmisión y son los siguientes:",
+    "opciones": {
+      "a": "Embrague, palieres y bujes.",
+      "b": "Válvula de descarga, cárter y bomba de aceite.",
+      "c": "Caja de cambios, árboles de transmisión y grupos diferenciales.",
+      "d": "a) y c) son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "El sistema de transmisión comprende el embrague, la caja de cambios, el árbol de transmisión (cuando existe), el grupo diferencial y los palieres/semiejes que transmiten el par motor a las ruedas."
+  },
+  {
+    "id": 109,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En cuanto a la presión de inflado, un exceso de presión provoca el efecto:",
+    "opciones": {
+      "a": "Pérdida de estabilidad.",
+      "b": "Pérdida de adherencia.",
+      "c": "Desgaste más acusado en la parte central de la banda de rodadura.",
+      "d": "Posible rotura de telas."
+    },
+    "correcta": "c",
+    "explicacion": "El exceso de presión abomba la zona central de la banda de rodadura, reduciendo la superficie de contacto efectiva y provocando un desgaste más pronunciado en el centro del neumático, además de menor confort."
+  },
+  {
+    "id": 110,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cómo se denomina el dispositivo de aislamiento de la vía aérea que ofrece una solución para la oxigenación pasiva, que consiste en la insuflación de oxígeno de forma constante en los pulmones de la persona paciente ejerciendo una presión intrapulmonar controlada?",
+    "opciones": {
+      "a": "Respirador.",
+      "b": "Sistema RCP Boussignac®.",
+      "c": "TET.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "b",
+    "explicacion": "El tubo/sistema Boussignac (CPAP/oxigenación insuflada continua) genera una presión positiva continua mediante microcanales con flujo constante de oxígeno, permitiendo oxigenación y presión intrapulmonar controlada."
+  },
+  {
+    "id": 111,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cómo se denomina la posición en la que la persona paciente se encuentra tumbada sobre su abdomen con la camilla en plano horizontal y la cabeza descansa girada hacia uno de los lados?",
+    "opciones": {
+      "a": "Posición de decúbito dorsal.",
+      "b": "Posición de decúbito prono.",
+      "c": "Posición de decúbito supino.",
+      "d": "Posición de decúbito lateral."
+    },
+    "correcta": "b",
+    "explicacion": "El decúbito prono (o ventral) consiste en estar tumbado boca abajo (sobre el abdomen), habitualmente con la cabeza girada hacia un lado para facilitar la vía aérea."
+  },
+  {
+    "id": 112,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿A qué se denomina distancia de detención o de parada técnica?",
+    "opciones": {
+      "a": "Distancia que recorre el vehículo durante el tiempo de reacción.",
+      "b": "Distancia que recorre el vehículo desde que la persona conductora ve el obstáculo hasta que consigue detenerlo.",
+      "c": "Distancia que recorre el vehículo desde que la persona conductora acciona el freno hasta que detiene el vehículo.",
+      "d": "Distancia que recorre el vehículo desde que la persona conductora ve el obstáculo hasta que acciona el freno."
+    },
+    "correcta": "b",
+    "explicacion": "La distancia de detención es la suma de la distancia de reacción (desde que se percibe el estímulo/obstáculo hasta que se actúa sobre el freno) más la distancia de frenado (desde que actúan los frenos hasta la detención total)."
+  },
+  {
+    "id": 113,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los frenos de disco están compuestos por:",
+    "opciones": {
+      "a": "Dos discos de freno solidarios al buje del cual toma movimiento, dos pinzas de freno, dos actuadores hidráulicos y pastillas de freno.",
+      "b": "Dos discos de freno solidarios al buje del cual toma movimiento, una pinza de freno, un actuador hidráulico y pastillas de freno.",
+      "c": "Un disco de freno solidario al buje del cual toma movimiento, dos pinzas de freno, dos actuadores hidráulicos y pastillas de freno.",
+      "d": "Un disco de freno solidario al buje del cual toma movimiento, una pinza de freno, un actuador hidráulico y pastillas de freno."
+    },
+    "correcta": "d",
+    "explicacion": "En una rueda equipada con freno de disco convencional, el conjunto consta de un disco solidario al buje, una pinza (mordaza) de freno, su actuador hidráulico (pistón/cilindro) y las pastillas de freno."
+  },
+  {
+    "id": 114,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La dotación de personal mínima de los vehículos destinados a la prestación de los servicios de transporte sanitario es:",
+    "opciones": {
+      "a": "Las ambulancias asistenciales de clase B, deberán contar, al menos, con una persona conductora que esté en posesión del título de formación profesional de técnico/a en emergencias sanitarias, previsto en el Real Decreto 1397/2007, de 29 de octubre, o correspondiente título extranjero homologado o reconocido y otra persona en funciones de ayudante que ostente, como mínimo, la misma titulación.",
+      "b": "Las ambulancias asistenciales de clase Aly A2, deberán contar, al menos, con una persona conductora que esté en posesión del título de formación profesional de técnico/a en emergencias sanitarias, previsto en el Real Decreto 1397/2007, de 29 de octubre, o correspondiente título extranjero homologado o reconocido y otra persona en funciones de ayudante que ostente, como mínimo, la misma titulación.",
+      "c": "Las ambulancias asistenciales de clase C, deberán contar, al menos, con una persona conductora que esté en posesión del título de formación profesional de técnico/a en emergencias sanitarias, previsto en el Real Decreto 1397/2007, de 29 de octubre, o correspondiente título extranjero homologado o reconocido y otro en funciones de ayudante que ostente, como mínimo, la misma titulación.",
+      "d": "a) y b) son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "Según el artículo 4 del Real Decreto 836/2012, las ambulancias asistenciales de clase B requieren al menos un conductor y un ayudante que ostenten el título de FP de Técnico en Emergencias Sanitarias (RD 1397/2007) o equivalente reconocido/homologado (las clases A1 y A2 son no asistenciales)."
+  },
+  {
+    "id": 115,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La autorización de transporte sanitario habilitará a los vehículos que se hayan vinculado mediante:",
+    "opciones": {
+      "a": "La inscripción de su número de bastidor en el Registro de Empresas y Actividades de Transporte.",
+      "b": "La inscripción del CIF de empresa en el Registro de Empresas y Actividades de Transporte.",
+      "c": "La inscripción de su matrícula en el Registro de Empresas y Actividades de Transporte.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, la vinculación del vehículo a la autorización de transporte sanitario se realiza mediante la inscripción de su matrícula en el Registro de Empresas y Actividades de Transporte."
+  },
+  {
+    "id": 116,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Tendrán consideración de infracción grave:",
+    "opciones": {
+      "a": "Conductas referidas a la conducción negligente.",
+      "b": "Conductas referidas a la conducción diligente.",
+      "c": "Conductas referidas a la conducción temeraria.",
+      "d": "a) y c) son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "Según el artículo 76 del Texto Refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015), la conducción negligente constituye infracción grave, mientras que la conducción temeraria constituye infracción muy grave (art. 77)."
+  },
+  {
+    "id": 117,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las autorizaciones de transporte otorgadas conforme a la orden PRE/1435/2013:",
+    "opciones": {
+      "a": "Habilitan para realizar transporte en todo el territorio de la Comunidad Autónoma.",
+      "b": "Habilitan para realizar transporte en todo el territorio del Estado, sin limitaciones respecto a su radio de acción.",
+      "c": "Habilitan para realizar transporte en todo el territorio del Estado, con limitaciones respecto a su radio de acción",
+      "d": "Habilitan para realizar transporte en todo el territorio de la Unión Europea, sin limitaciones respecto a su radio de acción."
+    },
+    "correcta": "b",
+    "explicacion": "De acuerdo con la Orden PRE/1435/2013, las autorizaciones de transporte sanitario habilitan para realizar servicios en todo el territorio del Estado, sin limitaciones respecto a su radio de acción."
+  },
+  {
+    "id": 118,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los vehículos de transporte sanitario deben cumplir las siguientes exigencias en relación al vehículo:",
+    "opciones": {
+      "a": "Neumáticos de invierno, o en su defecto cadenas para hielo y nieve, al menos para el periodo comprendido entre octubre y marzo, ambos incluidos.",
+      "b": "Vehículo con potencia fiscal, suspensión y sistemas de freno adaptados a la reglamentación vigente para el transporte de personas.",
+      "c": "Indicadores intermitentes de movimiento.",
+      "d": "Todas son incorrectas."
+    },
+    "correcta": "b",
+    "explicacion": "Según el Anexo I del Real Decreto 836/2012, los vehículos de transporte sanitario deben contar con potencia fiscal, suspensión y sistemas de freno adaptados a la reglamentación vigente para el transporte de personas."
+  },
+  {
+    "id": 119,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las funciones que cumple el circuito de engrase en el motor son las siguientes: (Indique la respuesta correcta)",
+    "opciones": {
+      "a": "Disminuir el rozamiento entre los órganos mecánicos móviles con el fin de alargar la vida útil del motor y de evitar pérdidas de potencia por rozamiento.",
+      "b": "Asegurar la limpieza del motor impidiendo la formación de depósitos y arrastrando las micropartículas que se desprenden del funcionamiento particular del motor.",
+      "c": "Colaborar con los segmentos en la acción de sellado del cilindro evitando pérdidas de potencia por fugas de compresión.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "El aceite del circuito de engrase lubrica (reduce rozamiento y desgaste), refrigera/evacua calor, limpia arrastrando partículas y contribuye a la estanqueidad/sellado entre pistón, segmentos y cilindro."
+  },
+  {
+    "id": 120,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las características principales de las baterías están marcadas en su exterior. Analizando 12V/200 A/40 Ah, deducimos que:",
+    "opciones": {
+      "a": "12V hace referencia al voltaje de la batería.",
+      "b": "200A indica la capacidad mínima de corriente que puede suministrar.",
+      "c": "40 Ah indica la capacidad de corriente nominal que puede suministrar durante un período continuado de un minuto.",
+      "d": "a) y c) son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "En el marcado de una batería de automoción, 12V indica su tensión/voltaje nominal, el valor en amperios (A) suele corresponder a la intensidad de descarga/arranque y los amperios-hora (Ah) expresan la capacidad nominal de carga (régimen de descarga habitual de 20 horas, no de un minuto)."
+  },
+  {
+    "id": 121,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Antes de la elección del tablero espinal para la inmovilización y traslado de una persona paciente, ¿qué recomendación tenemos que tener en cuenta?",
+    "opciones": {
+      "a": "Su utilización en traslados no se puede prolongar mucho en el tiempo, ya que puede favorecer la aparición de lesiones por compresión.",
+      "b": "No está permitida su utilización en edades pediátricas, ya que pueden producir lesiones.",
+      "c": "No se puede utilizar en mujeres embarazadas, al ser muy duro. Se inmovilizará siempre con colchón de vacío.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "El tablero espinal es un dispositivo rígido de extracción e inmovilización temporal; prolongar su uso durante traslados largos favorece la aparición de úlceras o lesiones por presión/compresión, por lo que para el traslado prolongado se prefiere el colchón de vacío."
+  },
+  {
+    "id": 122,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La persona técnica aplicará una solución antiséptica en caso de realizar una toracocentesis con catéter en una persona adulta durante una emergencia. ¿Podrías indicar cuál es la vía principal de acceso para realizar esta técnica?",
+    "opciones": {
+      "a": "3º espacio intercostal a nivel de la línea media esternal.",
+      "b": "2º espacio intercostal a nivel de la línea media clavicular.",
+      "c": "2º espacio intercostal a nivel de la línea media axilar.",
+      "d": "3º espacio intercostal a nivel de la línea media clavicular."
+    },
+    "correcta": "b",
+    "explicacion": "En la descompresión torácica con aguja/catéter en adultos ante neumotórax a tensión, el abordaje clásico descrito es el 2.º espacio intercostal en la línea medioclavicular (borde superior de la costilla inferior para evitar el paquete vasculonervioso intercostal), junto con el 4.º-5.º espacio intercostal en línea axilar anterior/media según guías."
+  },
+  {
+    "id": 123,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿En qué posición se debe encontrar una persona al que hay que colocarle un collarín cervical?",
+    "opciones": {
+      "a": "Decúbito prono o decúbito supino.",
+      "b": "Decúbito supino o decúbito lateral.",
+      "c": "Sedestación o decúbito supino.",
+      "d": "Decúbito supino exclusivamente."
+    },
+    "correcta": "c",
+    "explicacion": "La colocación de un collarín cervical se realiza manteniendo la alineación neutra del raquis cervical, pudiendo efectuarse en decúbito supino o en sedestación (por ejemplo, en el interior de un vehículo o sentado con control manual de la cabeza) antes de la movilización en bloque."
+  },
+  {
+    "id": 124,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En la clasificación de la Red de Carreteras del País Vasco, la Red Funcional se compone de tres tipos de redes, según su funcionalidad:",
+    "opciones": {
+      "a": "Red de Interés Preferente, Red Básica y Red Comarcal.",
+      "b": "Red Nacional, Red Comarcal y Red Local.",
+      "c": "Red de Interés Preferente, Red de Interés Secundario y Red de Interés terciario.",
+      "d": "Red de Interés General, Red Básica y Red Comarcal."
+    },
+    "correcta": "a",
+    "explicacion": "Según el Tercer Plan General de Carreteras del País Vasco 2017-2028 (Capítulo 2, apartado 2.1), la Red Funcional se divide en Red de Interés Preferente, Red Básica y Red Comarcal."
+  },
+  {
+    "id": 125,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El modo GATEWAY de la emisora del vehículo, en caso de un IMV, nos va a permitir:",
+    "opciones": {
+      "a": "Que la emisora del vehículo ejerza de repetidor y de esta manera suplir posibles carencias de cobertura.",
+      "b": "Que la emisora pueda indicar, por medio de coordenadas, la localización del incidente.",
+      "c": "Tener una comunicación directa con el Centro Coordinador (CC), mediante la creación de un PATCH.",
+      "d": "Localizar el canal correspondiente en el talkie dependiendo de la responsabilidad a desempeñar en el IMV y según instrucciones del CC."
+    },
+    "correcta": "a",
+    "explicacion": "En radiocomunicaciones de emergencia (TETRA/emisoras de vehículo), el modo Gateway permite que la emisora móvil del vehículo actúe como pasarela/repetidor entre los terminales portátiles (talkies) en zona con baja cobertura y la red/Centro Coordinador."
+  },
+  {
+    "id": 126,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué luz de un semáforo significa que los vehículos deben detenerse, a no ser que cuando se encienda el vehículo esté tan cerca del lugar de retención que no pueda detenerse antes del semáforo en condiciones de seguridad?",
+    "opciones": {
+      "a": "Una luz roja intermitente.",
+      "b": "Una luz roja no intermitente.",
+      "c": "Una luz amarilla intermitente.",
+      "d": "Una luz amarilla no intermitente."
+    },
+    "correcta": "d",
+    "explicacion": "De acuerdo con el artículo 146 del Reglamento General de Circulación (RD 1428/2003), una luz amarilla no intermitente significa que los vehículos deben detenerse en las mismas condiciones que si se tratara de una luz roja fija, a no ser que al encenderse el vehículo esté tan cerca del lugar de detención que no pueda hacerlo en condiciones de seguridad suficientes."
+  },
+  {
+    "id": 127,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Si tenemos que realizar la valoración inicial en una niña o un niño de 4 años según el protocolo asistencial general SVB, seguiremos el siguiente protocolo:",
+    "opciones": {
+      "a": "Realizaríamos el ABCDE.",
+      "b": "Realizaríamos el ECG.",
+      "c": "Realizaríamos el ABC.",
+      "d": "Realizaríamos el TEP."
+    },
+    "correcta": "d",
+    "explicacion": "Según el Protocolo Asistencial General SVB de Osakidetza Emergentziak (p. 17) y el Protocolo de Emergencias Pediátricas SVB (p. 29), la valoración inicial en niños incluye la aplicación del Triángulo de Evaluación Pediátrica (TEP) para determinar la impresión general/gravedad."
+  },
+  {
+    "id": 128,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La función del disco de embrague:",
+    "opciones": {
+      "a": "Se encarga de presionar el diafragma del embrague cuando la persona conductora pisa el pedal.",
+      "b": "Empujar al plato contra el disco o liberarlo cuando se acciona el pedal.",
+      "c": "Transmitir el movimiento del motor a la caja.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "El disco de embrague, interpuesto por fricción entre el volante motor y el plato de presión, transmite el giro del motor hacia el eje primario de la caja de cambios (mientras que el mecanismo de presión/diafragma y cojinete de empuje realizan el acoplamiento y desacoplamiento)."
+  },
+  {
+    "id": 129,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Las ambulancias clase C son:",
+    "opciones": {
+      "a": "Aquellas destinadas a proporcionar soporte vital avanzado.",
+      "b": "Aquellas destinadas a proporcionar soporte vital básico y atención sanitaria inicial.",
+      "c": "Aquellas destinadas al transporte de pacientes en camilla.",
+      "d": "Aquellas destinadas al transporte colectivo, acondicionadas para el transporte conjunto de personas enfermas cuyo traslado no revista carácter de urgencia."
+    },
+    "correcta": "a",
+    "explicacion": "Conforme al artículo 2 del Real Decreto 836/2012, de 25 de mayo, las ambulancias asistenciales de clase C están acondicionadas para permitir asistencia sanitaria de soporte vital avanzado."
+  },
+  {
+    "id": 130,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Será INCOMPATIBLE con la obligatoria atención permanente a la conducción el uso, por parte de quien conduce con el vehículo en movimiento, de...",
+    "opciones": {
+      "a": "Monitores para la visión de acceso o bajada de peatones.",
+      "b": "Las cámaras de maniobra trasera.",
+      "c": "El dispositivo GPS aunque no se manipule.",
+      "d": "Pantallas con acceso a internet."
+    },
+    "correcta": "d",
+    "explicacion": "Según el artículo 18 del Reglamento General de Circulación (RD 1428/2003, y reformas de seguridad vial), el uso de pantallas con acceso a internet u otras aplicaciones incompatibles con la atención permanente a la conducción mientras el vehículo está en movimiento está prohibido."
+  },
+  {
+    "id": 131,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Es fundamental que los vehículos que estén circulando tengan constancia de nuestra presencia y maniobras. Para ello, el automóvil dispone de:",
+    "opciones": {
+      "a": "Claxon y luces de posición delanteras y traseras.",
+      "b": "Luces de intermitencia, luces de freno y marcha atrás.",
+      "c": "a) y b) son correctas.",
+      "d": "a) y b) son falsas."
+    },
+    "correcta": "c",
+    "explicacion": "El automóvil cuenta con señalización acústica (claxon/avisador acústico) y señalización óptica/luminosa (luces de posición, intermitentes, freno y marcha atrás) para advertir su presencia y sus maniobras al resto de usuarios."
+  },
+  {
+    "id": 132,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Es un requisito para el otorgamiento de la certificación técnico-sanitaria:",
+    "opciones": {
+      "a": "El vehículo deberá estar matriculado y habilitado para circular y no podrá superar la antigüedad de ocho años, contados desde su primera matriculación.",
+      "b": "Deberán hallarse vigentes las dos últimas inspecciones técnicas periódicas que, con arreglo a las normas vigentes en materia de industria, legalmente corresponda realizar en relación con el vehículo.",
+      "c": "El vehículo deberá cumplir las condiciones técnico sanitarias que para la clase de vehículos sanitarios a que pertenezca se exigen en el Real Decreto 836/2012, de 25 de mayo.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "Para otorgar la certificación técnico-sanitaria conforme a la Orden PRE/1435/2013 y el RD 836/2012, el vehículo debe cumplir las condiciones técnico-sanitarias exigidas para su clase en el RD 836/2012, estar habilitado para circular y no superar la antigüedad máxima establecida (10 años desde la primera matriculación)."
+  },
+  {
+    "id": 133,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Señala la respuesta INCORRECTA. Los reductores de frenada más habituales son los siguientes:",
+    "opciones": {
+      "a": "Reductores de presión dependientes de la deceleración.",
+      "b": "Reductores de presión dependientes de la carga.",
+      "c": "Reductores de presión dependientes de la velocidad.",
+      "d": "Reductores de presión dependientes de la presión."
+    },
+    "correcta": "c",
+    "explicacion": "Los limitadores/reductores de presión de frenado (habitualmente en el eje trasero para evitar el bloqueo precoz por transferencia de masas) actúan en función de la carga (compensadores sensibles a la carga) o de la deceleración/presión hidráulica, no en función de la velocidad."
+  },
+  {
+    "id": 134,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué es la cilindrada de motor?",
+    "opciones": {
+      "a": "Es la capacidad volumétrica que tiene la suma de todos sus cilindros.",
+      "b": "Es la diferencia que existe en este tiempo con respecto al motor de explosión.",
+      "c": "Es el volumen unitario de un solo cilindro.",
+      "d": "Es la relación de compresión expresada con un número."
+    },
+    "correcta": "a",
+    "explicacion": "La cilindrada total de un motor es el volumen desplazado por el pistón entre el Punto Muerto Inferior (PMI) y el Punto Muerto Superior (PMS) en un cilindro multiplicado por el número total de cilindros."
+  },
+  {
+    "id": 135,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Señala la respuesta INCORRECTA. El circuito de encendido tiene como función producir una chispa eléctrica en cada una de las bujías en el momento oportuno y con la suficiente energía para inflamar la mezcla del interior del cilindro. Está compuesto por:",
+    "opciones": {
+      "a": "Bujías.",
+      "b": "Sistema de mando.",
+      "c": "Batería.",
+      "d": "Relé."
+    },
+    "correcta": "d",
+    "explicacion": "El circuito de encendido de los motores de ciclo Otto/explosión cuenta con alimentación (batería), sistema de mando/control, bobina(s) de alta tensión y bujías; un relé no es un componente característico o definitorio propio del circuito de encendido."
+  },
+  {
+    "id": 136,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La canalización de una vía venosa periférica consiste en la punción transcutánea de la vena, ¿con qué material?",
+    "opciones": {
+      "a": "Con una aguja tipo angiocatéter.",
+      "b": "Con una aguja rígida, tipo angiocatéter, mariposa o aguja conectada a una jeringuilla.",
+      "c": "Con una aguja rígida, tipo angiocatéter, mariposa o Abbocath.",
+      "d": "Con una aguja tipo angiocatéter o mariposa."
+    },
+    "correcta": "c",
+    "explicacion": "La canalización venosa periférica mediante punción transcutánea puede realizarse con catéteres sobre aguja/angiocatéter (tipo Abbocath), agujas rígidas o palomillas/mariposas según el procedimiento y calibre requerido."
+  },
+  {
+    "id": 137,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En relación con los motores de corriente continua brushless, ¿cuál de las siguientes afirmaciones es correcta?:",
+    "opciones": {
+      "a": "El rotor está formado por bobinas alimentadas directamente por corriente continua.",
+      "b": "El estator incorpora imanes permanentes y el rotor bobinas alimentadas por corriente alterna.",
+      "c": "El rotor incorpora imanes permanentes y el estator contiene bobinas alimentadas por impulsos de corriente continua.",
+      "d": "El funcionamiento se basa en escobillas que transmiten la corriente al rotor."
+    },
+    "correcta": "c",
+    "explicacion": "Los motores sin escobillas (brushless / BLDC) carecen de escobillas y delgas: habitualmente incorporan imanes permanentes en el rotor y devanados/bobinas en el estator conmutados electrónicamente (mediante impulsos/corriente trifásica controlada por inversor)."
+  },
+  {
+    "id": 138,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los turismos se pueden clasificar por tipos, según su modalidad. ¿Cuáles son las distintas modalidades que se conocen?",
+    "opciones": {
+      "a": "Coupé, Familiar, Limusina, Cabriolet, Berlina, Todoterreno, Sport, Monovolumen, Compacto y Pick-up.",
+      "b": "Coupé, Cabriolet, Berlina, Todoterreno, Biplaza, Monovolumen, Compacto, Limusina y Pick-up.",
+      "c": "Familiar, Limusina, Cabriolet, Berlina, Todoterreno, Sport, Monovolumen, Compacto, Ambulancia y Pick-up.",
+      "d": "Coupé, Familiar, Limusina, Cabriolet, Berlingo, Todoterreno, Sport, Monovolumen, Compacto y Pick-up."
+    },
+    "correcta": "a",
+    "explicacion": "En la clasificación de modalidades de turismos de la bibliografía técnica del automóvil (Águeda Casado et al., 'Fundamentos tecnológicos del automóvil'), figuran modalidades como berlina, coupé, cabriolet, familiar, monovolumen, compacto, todoterreno, sport, limusina y pick-up."
+  },
+  {
+    "id": 139,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Según el protocolo asistencial en hipoglucemia SVB, ¿cuáles son las posibles complicaciones que podemos encontrar cuando atendemos a una persona paciente?",
+    "opciones": {
+      "a": "Convulsiones, focalidad neurológica, arritmia cardiaca y aspiración.",
+      "b": "ACVA e insuficiencia respiratoria.",
+      "c": "IAM y ACVA.",
+      "d": "Ninguna es correcta."
+    },
+    "correcta": "a",
+    "explicacion": "El Protocolo Asistencial de Hipoglucemia SVB de Osakidetza Emergentziak (p. 20) recoge expresamente como posibles complicaciones las convulsiones, la focalidad neurológica, las arritmias cardíacas y la aspiración."
+  },
+  {
+    "id": 140,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué ventajas tiene la colocación de una vía intraósea sobre una vía intravenosa?",
+    "opciones": {
+      "a": "No tiene ventajas, sino desventajas, ya que no se puede perfundir sangre.",
+      "b": "No tiene ninguna ventaja la colocación de una sobre la otra.",
+      "c": "Tiene la ventaja de ser de fácil colocación ya que se puede insertar en cualquier hueso y en cualquier zona en caso de emergencia.",
+      "d": "Tiene la ventaja de no colapsar en situaciones de hipovolemia o vasoconstricción periférica."
+    },
+    "correcta": "d",
+    "explicacion": "La cavidad medular ósea cuenta con un plexo venoso no colapsable, por lo que el acceso intraóseo permite una infusión rápida y segura de líquidos, fármacos y hemoderivados incluso en situaciones de shock, hipovolemia o intensa vasoconstricción periférica."
+  },
+  {
+    "id": 141,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Ante una obstrucción grave de la vía aérea por cuerpo extraño en una/un lactante, con tos inefectiva y consciente, tras los golpes en la espalda, nuestra actuación será la siguiente:",
+    "opciones": {
+      "a": "5 compresiones torácicas.",
+      "b": "5 compresiones abdominales.",
+      "c": "Comprobación de la respiración.",
+      "d": "Iniciar RCP."
+    },
+    "correcta": "a",
+    "explicacion": "Según el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 20, guías ERC 2021), en lactantes conscientes con OVACE grave (tos inefectiva) se alternan 5 golpes en la espalda con 5 compresiones torácicas (nunca compresiones abdominales por el riesgo de lesión visceral)."
+  },
+  {
+    "id": 142,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cómo se denomina la carretera entre Cruces y Erletxe que discurre por el Puente Rontegi?",
+    "opciones": {
+      "a": "N-635.",
+      "b": "N-636.",
+      "c": "N-637.",
+      "d": "N-638."
+    },
+    "correcta": "c",
+    "explicacion": "En la clasificación de la Red de Carreteras del País Vasco (Tercer Plan General de Carreteras del País Vasco 2017-2028, Capítulo 2), el eje entre Cruces y Erletxe por el Puente de Rontegi corresponde a la N-637 (con propuesta de nomenclatura BI-30)."
+  },
+  {
+    "id": 143,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿En qué casos está contraindicado el sondaje gástrico?",
+    "opciones": {
+      "a": "En pacientes que hayan ingerido sustancias medicamentosas.",
+      "b": "En pacientes con disminución del nivel de consciencia, sin aislar la vía aérea previamente.",
+      "c": "En pacientes con lesión medular.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "b",
+    "explicacion": "El sondaje nasogástrico/orogástrico está contraindicado o requiere precaución extrema/aislamiento previo de la vía aérea en pacientes con disminución del nivel de consciencia sin protección de la vía aérea (por alto riesgo de broncoaspiración), así como ante sospecha de fractura de base de cráneo (vía nasal) o ingesta de cáusticos/corrosivos."
+  },
+  {
+    "id": 144,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Conduciendo un vehículo por una vía que tiene situado su límite máximo de velocidad en 90 kilómetros por hora a más de 162 kms por hora, incurrirá en una multa y pérdida de puntos:",
+    "opciones": {
+      "a": "Multa de 600 € y 4 puntos.",
+      "b": "Multa de 500 € y 6 puntos.",
+      "c": "Multa de 400 € y 6 puntos.",
+      "d": "Multa de 600 € y 6 puntos."
+    },
+    "correcta": "d",
+    "explicacion": "Según la tabla de sanciones por exceso de velocidad del Anexo IV y el artículo 77 del Texto Refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015), circular a más de 162 km/h en una vía limitada a 90 km/h (superando en más de 70 km/h el límite de 90) constituye infracción muy grave sancionada con multa de 600 € y detracción de 6 puntos."
+  },
+  {
+    "id": 145,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En caso de un IMV en el metro de Bilbao, si tenemos que acceder a los túneles para atender a las víctimas, sólo se intervendrá si:",
+    "opciones": {
+      "a": "La información de Metro-Bilbao sobre las catenarias y evacuación de gases y humos es favorable.",
+      "b": "Si la persona al mando del cuerpo de bomberos considera la zona como segura.",
+      "c": "Nunca accederemos a los túneles en un IMV.",
+      "d": "a) y b) son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "Corregida según clave oficial del Tribunal (Examen 21/11/2026, Modelo B nº 19): opción C."
+  },
+  {
+    "id": 146,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "El automóvil puede llegar a disponer de los siguientes airbags:",
+    "opciones": {
+      "a": "De la persona que conduce y copiloto.",
+      "b": "De las personas pasajeras de los asientos traseros.",
+      "c": "De techo y laterales.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "Los vehículos modernos pueden equipar múltiples airbags de seguridad pasiva: frontales para conductor y acompañante, laterales, de cortina/techo y airbags para plazas traseras."
+  },
+  {
+    "id": 147,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La REVOCACIÓN de la certificación técnico-sanitaria procederá cuando se produzca alguna de las siguientes circunstancias.",
+    "opciones": {
+      "a": "Que el vehículo supere la antigüedad de ocho años.",
+      "b": "Que el vehículo no cumpla las condiciones técnico sanitarias que para la clase de vehículos sanitarios a que pertenezca se exigen en el Real Decreto 836/2012, de 25 de mayo.",
+      "c": "a) y b) son correctas.",
+      "d": "a) y b) son incorrectas."
+    },
+    "correcta": "b",
+    "explicacion": "Conforme a la Orden PRE/1435/2013, procede la revocación de la certificación técnico-sanitaria cuando el vehículo deja de cumplir las condiciones técnico-sanitarias exigidas por el Real Decreto 836/2012 para su clase (la antigüedad máxima de referencia en la norma es de 10 años desde la primera matriculación)."
+  },
+  {
+    "id": 148,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es el tipo de verificación de motores eléctricos en la que se realiza el diagnóstico sin desmontar ningún componente del vehículo, con el vehículo en reposo en el taller, contacto conectado y mediante conexión al sistema OBDII (On-Board Diagnostics II)?",
+    "opciones": {
+      "a": "Verificación dinámica en banco de pruebas",
+      "b": "Verificación estática con aparato de diagnóstico",
+      "c": "Verificación mecánica por desmontaje",
+      "d": "Verificación funcional en carretera"
+    },
+    "correcta": "b",
+    "explicacion": "La diagnosis con el vehículo detenido/en reposo, contacto puesto y mediante equipo conectado al puerto/sistema OBDII corresponde a una verificación estática con aparato de diagnóstico (lectura de códigos de avería, parámetros y estados de unidades de control)."
+  },
+  {
+    "id": 149,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La actuación de los equipos de los servicios de urgencia:",
+    "opciones": {
+      "a": "Deberá procurar en todo momento la menor afectación posible sobre el resto de la circulación.",
+      "b": "Ocupará el mínimo posible de la calzada.",
+      "c": "Seguirá las instrucciones que imparta el organismo autónomo Jefatura Central de Tráfico o, en su caso, la autoridad autonómica o local responsable de la regulación del tráfico.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "Según el artículo 69 del Reglamento General de Circulación (RD 1428/2003), los equipos de urgencia deben procurar la menor afectación a la circulación, ocupar lo mínimo posible la calzada y seguir las instrucciones de la autoridad de tráfico correspondiente."
+  },
+  {
+    "id": 150,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de diseñar las carrocerías, aparte de los criterios puramente estéticos, ¿qué otros criterios mucho más importantes acerca de la seguridad se deben tener en cuenta?",
+    "opciones": {
+      "a": "Vibraciones, durabilidad, aerodinámica, deformabilidad y rigidez.",
+      "b": "Rigidez, ruptura, vibraciones, durabilidad y aerodinámica.",
+      "c": "Fragilidad, aerodinámica, vibraciones, deformabilidad y rigidez.",
+      "d": "Fragilidad, aerodinámica, oscilaciones, deformabilidad y rigidez."
+    },
+    "correcta": "a",
+    "explicacion": "En el diseño de carrocerías de automoción se combinan criterios de resistencia estructural y seguridad (rigidez del habitáculo y deformabilidad programada en zonas de impacto), durabilidad, comportamiento frente a vibraciones y aerodinámica."
+  },
+  {
+    "id": 151,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Para que el sistema de la dirección funcione correctamente, las ruedas directrices deben cumplir determinadas condiciones geométricas denominadas normalmente cotas de la dirección. Las cotas del sistema de la dirección son las siguientes:",
+    "opciones": {
+      "a": "Ángulo de caída, de freno, de avance y divergencia.",
+      "b": "Ángulo de salida, de subida, de avance y concurrencia.",
+      "c": "Ángulo de caída, de salida, de avance y convergencia.",
+      "d": "Ángulo de avance, de freno, de caída y convergencia."
+    },
+    "correcta": "c",
+    "explicacion": "Las cotas geométricas básicas de la dirección en automoción son el ángulo de caída (camber), el ángulo de salida (KPI), el ángulo de avance (caster) y la convergencia/divergencia (toe)."
+  },
+  {
+    "id": 152,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los vehículos de transporte sanitario deben cumplir las siguientes exigencias en relación de la célula sanitaria:",
+    "opciones": {
+      "a": "Medidas de isotermia e insonorización aplicadas al habitáculo de la persona que conduce.",
+      "b": "Puerta lateral izquierda y puerta trasera con apertura suficiente para permitir el fácil acceso de la persona paciente.",
+      "c": "Lunas translúcidas. En el caso de los vehículos de transporte colectivo podrán optar por otro dispositivo que asegure eventualmente la intimidad de la persona paciente.",
+      "d": "a) y c) son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "Según el Anexo I del Real Decreto 836/2012, la célula sanitaria debe contar con lunas translúcidas (o dispositivo que asegure la intimidad del paciente en transporte colectivo), entre otros requisitos propios de la célula sanitaria."
+  },
+  {
+    "id": 153,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En caso de circular por una carretera convencional con nuestra ambulancia y no se pueda alcanzar la velocidad mínima exigida y exista peligro de alcance, ¿qué deberemos de hacer?",
+    "opciones": {
+      "a": "Abandonar el vial en la primera salida.",
+      "b": "Está prohibido, con lo que tendremos que circular siempre a la velocidad indicada.",
+      "c": "Se deben utilizar la luz o señal de emergencia.",
+      "d": "Se deberá estacionar el vehículo en el arcén y tomar las medidas oportunas."
+    },
+    "correcta": "c",
+    "explicacion": "Conforme al artículo 109 del Reglamento General de Circulación (RD 1428/2003), los vehículos que no puedan alcanzar la velocidad mínima exigida y exista peligro de alcance deben emplear la señal luminosa de emergencia (y en su caso circular por el arcén si es practicable y procede según la vía)."
+  },
+  {
+    "id": 154,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué tipo de documento es el informe de asistencia?",
+    "opciones": {
+      "a": "Documento con toda la información clínica de la persona paciente.",
+      "b": "No es un solo documento sino varios.",
+      "c": "Toda la documentación que se genera durante la prestación del servicio, incluyendo también la que no hace referencia a la asistencia sanitaria prestada.",
+      "d": "b) y c) son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "El informe de asistencia sanitaria recoge los datos clínicos, valoración, constantes, procedimientos/tratamiento y evolución o transferencia del paciente durante la atención prestada."
+  },
+  {
+    "id": 155,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿En qué dos posiciones podemos colocar a una persona que tiene problemas respiratorios?",
+    "opciones": {
+      "a": "Posición de Fowler y Morestín.",
+      "b": "Posición de Trendelemburg y Morestín.",
+      "c": "Posición de Anti-Trendelemburg y Morestín.",
+      "d": "Posición de Fowler y Sims."
+    },
+    "correcta": "a",
+    "explicacion": "En pacientes con dificultad respiratoria, la elevación del tronco/cabecera mediante la posición de Fowler o de Morestin (decúbito supino con el plano inclinado elevando la cabeza respecto a los pies) favorece la mecánica ventilatoria."
+  },
+  {
+    "id": 156,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Señala la respuesta INCORRECTA. Para la obtención de la certificación técnico sanitaria será necesario presentar:",
+    "opciones": {
+      "a": "Permiso de circulación del vehículo.",
+      "b": "Número de bastidor del vehículo.",
+      "c": "Ficha de inspección técnica del vehículo.",
+      "d": "Memoria referida al vehículo en la que consten sus características técnicas y equipamiento técnico-sanitario y dotación de personal."
+    },
+    "correcta": "b",
+    "explicacion": "De acuerdo con la Orden PRE/1435/2013, para solicitar la certificación técnico-sanitaria se presentan el impreso oficial normalizado, el permiso de circulación, la ficha de inspección técnica y la memoria descriptiva de características técnicas, equipamiento sanitario y dotación de personal (no se exige aportar como documento separado el número de bastidor)."
+  },
+  {
+    "id": 157,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Señale la afirmación correcta:",
+    "opciones": {
+      "a": "Tendrán la consideración de infracción grave arrojar a la vía o en sus inmediaciones cualquier objeto que pueda dar lugar a la producción de incendios.",
+      "b": "Tendrán la consideración de infracción muy grave arrojar a la vía o en sus inmediaciones cualquier objeto que pueda dar lugar a la producción de incendios.",
+      "c": "Tendrán la consideración de infracción muy grave arrojar a la vía o en sus inmediaciones cualquier objeto que, en general, pueda poner en peligro la seguridad vial.",
+      "d": "Tendrán la consideración de infracción leve arrojar a la vía o en sus inmediaciones cualquier objeto que en general, pueda poner en peligro la seguridad vial."
+    },
+    "correcta": "b",
+    "explicacion": "Según el artículo 77 del Texto Refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015), arrojar a la vía o en sus inmediaciones objetos que puedan dar lugar a la producción de incendios o poner en peligro grave la seguridad vial es infracción muy grave."
+  },
+  {
+    "id": 158,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Mientras realizamos la RCP y a la hora de realizar la ventilación en un niño o una niña de 2 años, la insuflación tendrá una duración de:",
+    "opciones": {
+      "a": "1 segundo.",
+      "b": "0,5 segundos, para minimizar el tiempo sin realizar masaje cardiaco.",
+      "c": "2 segundos.",
+      "d": "1,5-2 segundos."
+    },
+    "correcta": "b",
+    "explicacion": "Corregida según clave oficial del Tribunal (Examen 21/11/2026, Modelo B nº 24): opción B."
+  },
+  {
+    "id": 159,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Si tenemos que valorar a un niño o una niña de 5 años según el Índice de Trauma Pediátrico (ITP) en el protocolo asistencial en trauma grave SVB, ¿qué puntos tendremos que tener en cuenta?",
+    "opciones": {
+      "a": "Vía aérea, TAS, SNC y heridas.",
+      "b": "Vía aérea, TAS, SNC, heridas, fracturas y peso.",
+      "c": "Vía aérea, TAS, SNC, heridas, fracturas, peso y edad.",
+      "d": "Vía aérea, heridas, fracturas y peso."
+    },
+    "correcta": "b",
+    "explicacion": "Según el Protocolo de Emergencias Pediátricas: Politraumatismo / Trauma Grave SVB de Osakidetza Emergentziak (p. 30), el Índice de Trauma Pediátrico (ITP) evalúa 6 parámetros: peso, vía aérea, TAS, SNC, heridas y fracturas."
+  },
+  {
+    "id": 160,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En cuanto a la identificación del neumático, la medida \"155/70 R 13\" indica:",
+    "opciones": {
+      "a": "El primer número (155) indica el ancho del neumático en milímetros. El segundo número (70) indica que la distancia de la cubierta desde la banda de rodadura hasta el talón es de un 70% de la anchura del neumático. La letra R indica que se trata de una llanta con estructura circular. El número 13 indica el radio de la llanta medido desde los asientos de los talones y expresado en milímetros.",
+      "b": "El primer número (155) indica el ancho del neumático en milímetros. El segundo número (70) indica que la distancia de la cubierta desde la banda de rodadura hasta el talón es de un 70% de la anchura del neumático. La letra R indica que se trata de una cubierta con estructura radial. El número 13 indica el diámetro de la llanta medido desde los asientos de los talones y expresado en pulgadas.",
+      "c": "El primer número (155) indica el ancho del neumático en pulgadas. El segundo número (70) indica que la distancia de la cubierta desde la banda de rodadura hasta el talón es de un 70% de la largura del neumático. La letra R indica que se trata de una llanta con estructura radial. El número 13 indica el radio de la llanta medido desde los asientos de los talones y expresado en milímetros.",
+      "d": "El primer número (155) indica el ancho del neumático en pulgadas. El segundo número (70) indica que la distancia de la cubierta desde la banda de rodadura hasta el talón es de un 70% de la largura del neumático. La letra R indica que se trata de una cubierta con estructura circular. El número 13 indica el diámetro de la llanta medido desde los asientos de los talones y expresado en pulgadas."
+    },
+    "correcta": "b",
+    "explicacion": "En el marcaje '155/70 R 13', '155' es la anchura nominal en mm, '70' es la serie o relación porcentual de altura del perfil respecto a la anchura, 'R' indica construcción radial de la carcasa y '13' es el diámetro nominal de la llanta en pulgadas."
+  },
+  {
+    "id": 161,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En las certificaciones técnico-sanitarias deberá constar:",
+    "opciones": {
+      "a": "La titularidad, domicilio indicado en el permiso de circulación, matrícula, clase y antigüedad del vehículo a que estén referidas.",
+      "b": "La titularidad, titulación acreditativa del personal y matrícula del vehículo.",
+      "c": "La titularidad, titulación acreditativa del personal, matrícula, clase y antigüedad del vehículo a que estén referidas, así como la fecha de expedición y renovación del certificado.",
+      "d": "La titularidad, domicilio indicado en el permiso de circulación, matrícula, número de bastidor, clase y antigüedad del vehículo a que estén referidas, así como la fecha de expedición y renovación del certificado."
+    },
+    "correcta": "d",
+    "explicacion": "Corregida según clave oficial del Tribunal (Examen 21/11/2026, Modelo B nº 107): opción D."
+  },
+  {
+    "id": 162,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Para que un vehículo pueda ser adscrito a una autorización de transporte sanitario, deberá resultar acreditado que se encuentra provisto de:",
+    "opciones": {
+      "a": "Certificación técnico-sanitaria en vigor y que su titular dispone de un vehículo, que puede ser en propiedad o arrendamiento financiero.",
+      "b": "Certificación de transporte en vigor y que su titular dispone de un vehículo, que puede ser en propiedad o arrendamiento financiero.",
+      "c": "Certificación técnico-sanitaria en vigor y que su titular dispone de un vehículo, en propiedad. No se pueden adscribir los vehículos en arrendamiento financiero.",
+      "d": "Certificación de transporte en vigor y que su titular dispone de un vehículo, en propiedad. No se pueden adscribir los vehículos en arrendamiento financiero."
+    },
+    "correcta": "a",
+    "explicacion": "Según la Orden PRE/1435/2013, la adscripción de un vehículo a una autorización de transporte sanitario requiere certificación técnico-sanitaria en vigor y disponibilidad del vehículo por el titular (en propiedad, arrendamiento financiero u otro régimen admitido)."
+  },
+  {
+    "id": 163,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cómo se denomina el método no invasivo que se utiliza para valorar la eficacia de la ventilación alveolar, midiendo la concentración de dióxido de carbono en el aire exhalado?",
+    "opciones": {
+      "a": "Capnometría.",
+      "b": "Cooximetría.",
+      "c": "SpMet.",
+      "d": "SpO."
+    },
+    "correcta": "a",
+    "explicacion": "La capnometría (y capnografía cuando representa la onda en el tiempo) mide de forma no invasiva la concentración o presión parcial de CO2 en el aire espirado (ETCO2) para evaluar la ventilación y la perfusión."
+  },
+  {
+    "id": 164,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A una persona paciente que haya que colocarle una sonda nasogástrica, utilizaremos la siguiente postura:",
+    "opciones": {
+      "a": "Posición de Morestín.",
+      "b": "Decúbito dorsal.",
+      "c": "Posición de Fowler.",
+      "d": "Posición de Roser."
+    },
+    "correcta": "c",
+    "explicacion": "La inserción de una sonda nasogástrica suele realizarse en posición de Fowler o semifowler (incorporado), lo que facilita el avance de la sonda hacia el esófago y reduce el riesgo de reflujo o broncoaspiración."
+  },
+  {
+    "id": 165,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de hacer un RCP y al situar el talón de la mano sobre el pecho, ¿cuál es el sitio correcto?",
+    "opciones": {
+      "a": "Sobre las costillas.",
+      "b": "Sobre la mitad inferior del esternón.",
+      "c": "Sobre la mitad superior del esternón.",
+      "d": "En el centro del esternón."
+    },
+    "correcta": "b",
+    "explicacion": "Según el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 5, guías ERC 2021), el talón de la mano se coloca en el centro del pecho, correspondiente a la mitad inferior del esternón."
+  },
+  {
+    "id": 166,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Como norma general, ¿para qué sirve la luz de gálibo?",
+    "opciones": {
+      "a": "Indica la altura del vehículo.",
+      "b": "Indica la anchura del vehículo.",
+      "c": "Indica la largura del vehículo.",
+      "d": "Indican la presencia del vehículo mediante la reflexión de luz."
+    },
+    "correcta": "b",
+    "explicacion": "De acuerdo con el Reglamento General de Vehículos (RD 2822/1998, Anexo X), las luces de gálibo están destinadas a indicar, junto con las luces de posición, la anchura total del vehículo en determinados vehículos/dimensiones."
+  },
+  {
+    "id": 167,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La certificación técnico sanitaria provisional tendrá una validez máxima de:",
+    "opciones": {
+      "a": "Nueve meses.",
+      "b": "Tres meses.",
+      "c": "Un año.",
+      "d": "Dos años."
+    },
+    "correcta": "b",
+    "explicacion": "Según la Orden PRE/1435/2013, de 23 de julio, la certificación técnico-sanitaria provisional se otorga con una validez máxima de tres meses."
+  },
+  {
+    "id": 168,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué acciones debemos de realizar para reducir los efectos del viento lateral mientras conducimos?",
+    "opciones": {
+      "a": "Sujetar el volante con firmeza y tirar de él a favor del viento.",
+      "b": "Situarnos de manera lateral a un vehículo voluminoso que nos pueda hacer de pantalla.",
+      "c": "Sujetar el volante con firmeza y tirar de él contra el viento.",
+      "d": "Aumentar la velocidad si el viento nos hace contra."
+    },
+    "correcta": "c",
+    "explicacion": "Ante viento lateral racheado o fuerte, se debe sujetar firmemente el volante, corregir ligeramente hacia el lado de donde sopla el viento (contra el viento) para compensar el desplazamiento lateral y moderar la velocidad."
+  },
+  {
+    "id": 169,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Quién realiza el triaje básico en un IMV?",
+    "opciones": {
+      "a": "El personal de enfermería.",
+      "b": "El personal de medicina: responsable del tratamiento y Nagusi.",
+      "c": "La persona técnica del equipo de emergencias si es la primera persona en llegar.",
+      "d": "Ninguna es correcta."
+    },
+    "correcta": "c",
+    "explicacion": "En un Incidente de Múltiples Víctimas (IMV), el triaje básico o inicial rápido (como SHORT o START) es realizado por el primer equipo/personal sanitario que llega al lugar (incluido el TES) para clasificar rápidamente las prioridades mientras llegan más recursos."
+  },
+  {
+    "id": 170,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Antes de movilizar a una persona paciente es necesario tener en cuenta los siguientes aspectos:",
+    "opciones": {
+      "a": "El personal con el que se cuenta para realizar la movilización de la persona paciente.",
+      "b": "El lugar y la posición de la persona paciente, la situación y la gravedad de las lesiones que presenta.",
+      "c": "La valoración de la escena y la aplicación de la conducta PAS.",
+      "d": "Todas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "Antes de movilizar a un paciente deben valorarse la seguridad de la escena (PAS), la ubicación y postura del paciente, el estado y gravedad de sus lesiones y la disponibilidad de medios y personal suficiente."
+  },
+  {
+    "id": 171,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué dos tipos de refrigeración existen?",
+    "opciones": {
+      "a": "Refrigeración por aceite y refrigeración mediante valvulina.",
+      "b": "Refrigeración por aire y refrigeración mediante líquido refrigerante.",
+      "c": "Refrigeración por aire y refrigeración mediante valvulina.",
+      "d": "Refrigeración por aceite y refrigeración mediante líquido refrigerante."
+    },
+    "correcta": "b",
+    "explicacion": "En los motores de combustión interna, los dos sistemas principales de refrigeración son por aire (directa o forzada) y por líquido refrigerante (circuito cerrado con radiador y bomba)."
+  },
+  {
+    "id": 172,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los vehículos de transporte sanitario deben cumplir las siguientes exigencias en relación a la identificación y señalización:",
+    "opciones": {
+      "a": "La inscripción trasera en caso de que exista, se realizará en sentido inverso para que pueda ser leído por reflexión.",
+      "b": "Señalización luminosa y acústica de preferencia de paso ajustada a lo dispuesto en la reglamentación vigente.",
+      "c": "Identificación exterior que permita distinguir claramente que se trata de una ambulancia, mediante la inscripción de la palabra «Ambulancia en el lateral del vehículo.",
+      "d": "a) y b) son correctas."
+    },
+    "correcta": "b",
+    "explicacion": "Según el Anexo I del Real Decreto 836/2012, los vehículos de transporte sanitario deben contar con señalización luminosa y acústica de preferencia de paso ajustada a la normativa vigente (la inscripción en sentido inverso para lectura en espejo corresponde a la parte delantera)."
+  },
+  {
+    "id": 173,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿De qué tres partes consta la biela?",
+    "opciones": {
+      "a": "El brazo, el cuerpo y la cabeza.",
+      "b": "El brazo, el cuerpo y el pie.",
+      "c": "El pie, el cuerpo y la cabeza.",
+      "d": "El pie, la cabeza y el pistón."
+    },
+    "correcta": "c",
+    "explicacion": "La biela, encargada de enlazar el bulón del pistón con la muñequilla del cigüeñal, consta de tres partes: el pie (unido al bulón del pistón), el cuerpo o vástago y la cabeza (unida al cigüeñal)."
+  },
+  {
+    "id": 174,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es el lugar más peligroso para la producción de accidentes en las carreteras?",
+    "opciones": {
+      "a": "Se producen más accidentes en rectas que en curvas.",
+      "b": "Se producen más accidentes en curvas que en rectas.",
+      "c": "Se producen tantos accidentes en rectas como en curvas.",
+      "d": "Se producen más accidentes en autovías que en carreteras convencionales."
+    },
+    "correcta": "a",
+    "explicacion": "En la estadística vial, aunque las curvas entrañan mayor riesgo puntual por pérdida de adherencia o salida de vía si se aborda mal, en número absoluto se producen más accidentes en rectas (por su mayor longitud en la red viaria y factores como distracciones o velocidad excesiva)."
+  },
+  {
+    "id": 175,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Qué acciones sanitarias están permitidas realizar sobre los heridos en un IMV no convencional, en la zona roja, de acceso restringido a grupo de seguridad?",
+    "opciones": {
+      "a": "Ninguna hasta que la escena sea segura.",
+      "b": "Colocación de cintas de colores para realizar el triaje.",
+      "c": "Exclusivamente colocación de apósitos hemostáticos para cohibir hemorragias exsanguinantes.",
+      "d": "Torniquetes, Posición Lateral de Seguridad o uso de cánulas oro o nasofaríngeas."
+    },
+    "correcta": "a",
+    "explicacion": "En incidentes no convencionales/NRBQ o escenarios de amenaza activa, la zona caliente/roja está restringida a los equipos especializados con EPI/seguridad y, como norma general de autoprotección, no se accede ni realizan actuaciones sanitarias hasta que la escena sea segura o se disponga de los medios y autorización de seguridad correspondientes."
+  },
+  {
+    "id": 176,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La función de los trapecios es:",
+    "opciones": {
+      "a": "Mejorar el guiado neumático.",
+      "b": "Limitar las fuerzas laterales y mejorar la adherencia.",
+      "c": "Limitar los movimientos longitudinales en los elementos elásticos cuando se producen aceleraciones y retenciones.",
+      "d": "Evitar el balanceo del vehículo en su paso por curvas."
+    },
+    "correcta": "c",
+    "explicacion": "Los trapecios o brazos de suspensión articulan la mangueta con el bastidor/subchasis y contribuyen a absorber y limitar los desplazamientos longitudinales y transversales durante aceleraciones, frenadas y esfuerzos de marcha."
+  },
+  {
+    "id": 177,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cuál es la definición de permeación cuando hablamos de un medicamento?",
+    "opciones": {
+      "a": "Es la absorción de un medicamento a través de las capas de la piel y su acceso al torrente sanguíneo atravesando la membrana de un vaso sanguíneo.",
+      "b": "Es el paso del medicamento por el hígado antes de su excreción.",
+      "c": "Es la administración del medicamento directamente dentro del organismo, bien de forma intravenosa, bien de forma extravasal.",
+      "d": "Cuando la absorción se produce, exclusivamente, por difusión pasiva a través de las membranas de los bronquios, bronquiolos y alvéolos."
+    },
+    "correcta": "a",
+    "explicacion": "En farmacología/absorción (especialmente transdérmica), la permeación hace referencia al paso del principio activo a través de las capas/barreras tisulares (como la piel) hasta alcanzar la microcirculación/torrente sanguíneo."
+  },
+  {
+    "id": 178,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "A la hora de realizar la valoración de una persona paciente con un trauma grave sangrante y siguiendo el protocolo asistencial en el trauma grave sangrante SVB, este se realizará siguiendo el siguiente orden:",
+    "opciones": {
+      "a": "Circulación - Valoración Neurológica - Exposición.",
+      "b": "Control hemorragias externas masivas  Vía aérea + Control cervical Ventilación",
+      "c": "Vía aérea+Control cervical  Ventilación  Circulación  Exposición.",
+      "d": "Vía aérea+control cervical  Ventilación  Circulación+Control hemorragias externas masivas - Valoración Neurológica - Exposición."
+    },
+    "correcta": "b",
+    "explicacion": "Según el Protocolo Asistencial Politrauma/Trauma Grave Sangrante SVB de Osakidetza Emergentziak (p. 26), en las acciones primarias se prioriza el control de hemorragias externas masivas, seguido de vía aérea + control de columna cervical, ventilación, circulación, valoración neurológica y exposición."
+  },
+  {
+    "id": 179,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Durante una RCP en una persona adulta, en la secuencia de uso de un DEA, en el momento de colocar los parches, cuando hay dos personas reanimadoras, ¿cuál es la opción correcta?",
+    "opciones": {
+      "a": "Se deben detener las maniobras de RCP mientras se colocan los parches.",
+      "b": "Es necesario que nadie toque a la víctima mientras se colocan los parches.",
+      "c": "Se deben continuar las maniobras de RCP mientras se colocan los parches.",
+      "d": "a) y b) son correctas."
+    },
+    "correcta": "c",
+    "explicacion": "Según el manual de RCP de Osakidetza ('Apuntes para actuar ante una Parada Cardíaca Extrahospitalaria', p. 10, guías ERC 2021) y el protocolo de PCR SVB (p. 23), si hay más de un reanimador, las compresiones torácicas deben continuarse mientras se colocan los parches del DEA (deteniéndose solo durante el análisis del ritmo o descarga)."
+  },
+  {
+    "id": 180,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Los tipos de taqués existentes son los siguientes:",
+    "opciones": {
+      "a": "Taqués fijos y taqués hidráulicos.",
+      "b": "Taqués fijos, taqués con reglaje de altura y taqués hidráulicos.",
+      "c": "Taqués fijos, taqués sin reglaje y taqués hidráulicos",
+      "d": "Taqués fijos y taqués con reglaje de anchura"
+    },
+    "correcta": "b",
+    "explicacion": "En los sistemas de distribución de automoción se distinguen taqués fijos, taqués regulables o con reglaje (de altura/holgura) y taqués hidráulicos (que compensan automáticamente la holgura de válvulas mediante la presión del aceite)."
+  },
+  {
+    "id": 181,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Señala la respuesta INCORRECTA. Los vehículos de transporte sanitario, en cuanto a documentos obligatorios, deberán cumplir las siguientes exigencias:",
+    "opciones": {
+      "a": "Registro de desinfecciones del habitáculo.",
+      "b": "Registro de desinfecciones del equipamiento.",
+      "c": "Libro de protocolos de actuación vigente.",
+      "d": "Libro de reclamaciones."
+    },
+    "correcta": "c",
+    "explicacion": "El Anexo I del Real Decreto 836/2012 exige llevar a bordo el libro de reclamaciones y el registro de desinfecciones del habitáculo y del equipamiento, pero no establece como documento obligatorio a bordo un 'libro de protocolos de actuación vigente'."
+  },
+  {
+    "id": 182,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La suspensión por eje rígido, suspensión por eje semirrígido y suspensión independiente son los tipos de suspensión que se recogen dentro de:",
+    "opciones": {
+      "a": "La suspensión delantera.",
+      "b": "La suspensión trasera.",
+      "c": "La suspensión hidroneumática.",
+      "d": "La suspensión inteligente."
+    },
+    "correcta": "b",
+    "explicacion": "En la clasificación de los sistemas de suspensión trasera de automoción (Águeda Casado et al., 'Fundamentos tecnológicos del automóvil'), se contemplan las configuraciones de eje rígido, eje semirrígido/torsión y suspensión independiente."
+  },
+  {
+    "id": 183,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Conduciendo un vehículo a una velocidad de 90 kms por hora, la distancia de reacción en metros en 1 segundo ¿es de?",
+    "opciones": {
+      "a": "25 metros.",
+      "b": "22 metros.",
+      "c": "20 metros.",
+      "d": "18 metros."
+    },
+    "correcta": "a",
+    "explicacion": "A 90 km/h, la velocidad en m/s es 90 / 3,6 = 25 m/s; por tanto, en 1 segundo de tiempo de reacción el vehículo recorre 25 metros."
+  },
+  {
+    "id": 184,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Ante una mujer embarazada con preeclampsia que se encuentra en coma y empieza a sufrir convulsiones, ¿qué medicación podemos utilizar para tratar la eclampsia?",
+    "opciones": {
+      "a": "Lidocaína.",
+      "b": "Manitol.",
+      "c": "Meperidina.",
+      "d": "Sulfato de magnesio."
+    },
+    "correcta": "d",
+    "explicacion": "El sulfato de magnesio es el fármaco de elección para prevenir y tratar las crisis convulsivas en la eclampsia (y profilaxis en preeclampsia grave)."
+  },
+  {
+    "id": 185,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Si conduciendo una ambulancia un/una agente te solicita que te sometas a una prueba de detección alcohólica o drogas:",
+    "opciones": {
+      "a": "Puedo negarme mientras esté de servicio.",
+      "b": "No puedo negarme si me requiere un/una agente.",
+      "c": "Puedo realizarlo acudiendo a un hospital.",
+      "d": "Puedo realizarlo al finalizar el servicio."
+    },
+    "correcta": "b",
+    "explicacion": "Según el artículo 21 del Reglamento General de Circulación (RD 1428/2003) y el RDLeg 6/2015, todos los conductores de vehículos (incluidos los de servicios de urgencia) tienen obligación de someterse a las pruebas de detección de alcohol y drogas cuando sean requeridos por los agentes de la autoridad."
+  },
+  {
+    "id": 186,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Quienes hubieran creado sobre la vía algún obstáculo o peligro:",
+    "opciones": {
+      "a": "Adoptarán las medidas necesarias para que pueda ser advertido por los demás personas usuarias.",
+      "b": "a) y c) son correctas.",
+      "c": "Deberán hacerlo desaparecer lo antes posible.",
+      "d": "Deberán alejarse del obstáculo o peligro y esperar a que lo gestione el organismo autónomo."
+    },
+    "correcta": "b",
+    "explicacion": "Conforme al artículo 5 del Reglamento General de Circulación (RD 1428/2003), quien cree un obstáculo o peligro en la vía debe hacerlo desaparecer lo antes posible y, entretanto, adoptar las medidas necesarias para que pueda ser advertido por los demás usuarios."
+  },
+  {
+    "id": 187,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Dentro del material de movilización de una persona paciente encontramos la lona de rescate. Este material tiene las siguientes características:",
+    "opciones": {
+      "a": "Puede ser rígido o flexible, dependiendo de si se le pueden adherir partes rígidas.",
+      "b": "Cuenta con un mecanismo de tijera que permite plegar la estructura cuando no se utiliza.",
+      "c": "Está formado únicamente por una lona de plástico sin partes rígidas.",
+      "d": "Se utiliza para transportar a lesionados de columna y pelvis. También se le conoce como colchón de vacío."
+    },
+    "correcta": "a",
+    "explicacion": "Las lonas/camillas de rescate pueden actuar de forma flexible o incorporar tablillas/listones rígidos o semirrígidos para aportar mayor estabilidad y sujeción durante evacuaciones en espacios estrechos o complejos."
+  },
+  {
+    "id": 188,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La dotación de personal mínima de los vehículos destinados a la prestación de los servicios de transporte sanitario es:",
+    "opciones": {
+      "a": "Las ambulancias no asistenciales de clases A1, deberán contar, al menos, con una persona conductora que ostente, como mínimo, el certificado de profesionalidad de transporte sanitario previsto en el Real Decreto 710/2011, de 20 de mayo y, cuando el tipo de servicio lo requiera, otra persona en funciones de ayudante con la misma cualificación.",
+      "b": "Las ambulancias asistenciales de clase C, deberán contar, al menos, con una persona conductora que ostente, como mínimo, el certificado de profesionalidad de transporte sanitario previsto en el Real Decreto 710/2011, de 20 de mayo y, cuando el tipo de servicio lo requiera, otra persona en funciones de ayudante con la misma cualificación.",
+      "c": "Las ambulancias no asistenciales de clases A2, deberán contar, al menos, con una persona conductora que ostente, como mínimo, el certificado de profesionalidad de transporte sanitario previsto en el Real Decreto 710/2011, de 20 de mayo y, cuando el tipo de servicio lo requiera, otra persona en funciones de ayudante con la misma cualificación.",
+      "d": "a) y c) son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "Según el artículo 4 del Real Decreto 836/2012, las ambulancias no asistenciales de clases A1 y A2 requieren al menos un conductor con certificado de profesionalidad de transporte sanitario (RD 710/2011) o título de TES y, cuando el servicio lo requiera, un ayudante con la misma cualificación."
+  },
+  {
+    "id": 189,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Son los elementos que rozan sobre el disco para reducir su velocidad:",
+    "opciones": {
+      "a": "Pastillas de freno.",
+      "b": "Pinzas de freno.",
+      "c": "Discos de freno.",
+      "d": "Actuador hidráulico."
+    },
+    "correcta": "a",
+    "explicacion": "En un freno de disco, las pastillas de freno (dotadas de material de fricción) son presionadas por la pinza/actuador contra ambas caras del disco giratorio para transformar la energía cinética en calor y frenar la rueda."
+  },
+  {
+    "id": 190,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La varilla de nivel:",
+    "opciones": {
+      "a": "Todas son correctas.",
+      "b": "Dispone de marcas que indican el máximo y mínimo nivel recomendable de aceite.",
+      "c": "Se introduce en el motor y su extremo queda sumergido en el cárter.",
+      "d": "Se encuentra en todos los vehículos."
+    },
+    "correcta": "b",
+    "explicacion": "La varilla de medición del aceite se introduce hasta el cárter para comprobar el nivel de lubricante mediante marcas de máximo y mínimo (no todos los vehículos modernos incorporan varilla física, ya que muchos emplean sensores electrónicos en el cuadro)."
+  },
+  {
+    "id": 191,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Indique la respuesta correcta con respecto a la vigencia de las autorizaciones de transporte público:",
+    "opciones": {
+      "a": "El visado se realizará cada dos años por el órgano competente para otorgar la autorización, conforme a lo previsto en esta orden y de acuerdo con el calendario que determine la Dirección General de Transporte Terrestre.",
+      "b": "El visado se realizará cada tres años por el órgano competente para otorgar la autorización, conforme a lo previsto en esta orden y de acuerdo con el calendario que determine la Dirección General de Transporte Terrestre.",
+      "c": "El visado se realizará cada año por el órgano competente para otorgar la autorización, conforme a lo previsto en esta orden y de acuerdo con el calendario que determine la Dirección General de Transporte Terrestre.",
+      "d": "El visado se realizará cada cuatro años por el órgano competente para otorgar la autorización, conforme a lo previsto en esta orden y de acuerdo con el calendario que determine la Dirección General de Transporte Terrestre."
+    },
+    "correcta": "a",
+    "explicacion": "Conforme a la Orden PRE/1435/2013 y la normativa reguladora de las autorizaciones de transporte terrestre (ROTT), el visado de las autorizaciones de transporte se realiza cada dos años conforme al calendario establecido."
+  },
+  {
+    "id": 192,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿Cómo se denomina la carretera de acceso al Aeropuerto de Foronda (Vitoria-Gasteiz), desde la glorieta de Foronda?",
+    "opciones": {
+      "a": "N-624.",
+      "b": "N-622.",
+      "c": "N-621.",
+      "d": "N-623."
+    },
+    "correcta": "a",
+    "explicacion": "Según la clasificación de la Red de Carreteras del País Vasco (Tercer Plan General de Carreteras del País Vasco 2017-2028, Capítulo 2), el acceso al Aeropuerto de Foronda desde la glorieta de Foronda corresponde a la N-624."
+  },
+  {
+    "id": 193,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En un vehículo moderno, ¿qué función tiene cada UCE?",
+    "opciones": {
+      "a": "Generar la energía eléctrica necesaria para todo el vehículo.",
+      "b": "Controlar y gestionar una parte específica del sistema del vehículo.",
+      "c": "Almacenar combustible y regular su distribución al motor.",
+      "d": "Transformar la energía mecánica en energía eléctrica."
+    },
+    "correcta": "b",
+    "explicacion": "Una UCE (Unidad de Control Electrónica / ECU) recibe señales de sensores, procesa algoritmos de control y gobierna actuadores de un subsistema concreto del vehículo (motor, ABS/ESP, airbag, carrocería, propulsión eléctrica/híbrida, etc.)."
+  },
+  {
+    "id": 194,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En relación con las conexiones y sistemas de alimentación de los motores eléctricos, indica qué tipo de motor es el más utilizado actualmente en los sistemas de tracción de vehículos eléctricos e híbridos:",
+    "opciones": {
+      "a": "Motores eléctricos monofásicos.",
+      "b": "Motores eléctricos trifásicos.",
+      "c": "Motores eléctricos bifásicos.",
+      "d": "Motores eléctricos tetrafásicos."
+    },
+    "correcta": "b",
+    "explicacion": "En los sistemas de propulsión de vehículos eléctricos e híbridos (como se recoge en 'Vehículos eléctricos e híbridos' de la bibliografía), los motores eléctricos trifásicos (síncronos de imanes permanentes o asíncronos/inducción) son los más empleados por su eficiencia, densidad de potencia y control mediante inversor."
+  },
+  {
+    "id": 195,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "En el Modo II de funcionamiento de un motor eléctrico de un vehículo:",
+    "opciones": {
+      "a": "El vehículo avanza con revoluciones positivas y el par actúa en el mismo sentido.",
+      "b": "El vehículo permanece detenido sin generación de par motor.",
+      "c": "El vehículo retrocede, presentando revoluciones negativas y el par se ejerce en sentido contrario.",
+      "d": "El vehículo solo funciona con energía almacenada en la batería sin movimiento del motor."
+    },
+    "correcta": "c",
+    "explicacion": "En los cuadrantes/modos de operación de tracción eléctrica (avance/retroceso y par motor/frenada regenerativa según la bibliografía de vehículos eléctricos e híbridos), cuando el vehículo retrocede el sentido de giro (revoluciones) es opuesto al avance y el par se ejerce en sentido contrario al avance."
+  },
+  {
+    "id": 196,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La tensión eléctrica se define como:",
+    "opciones": {
+      "a": "La cantidad de electrones que circulan por un conductor en un segundo.",
+      "b": "La oposición que presenta un material al paso de la corriente eléctrica.",
+      "c": "La diferencia de potencial eléctrico que existe entre dos puntos de un circuito.",
+      "d": "La energía total consumida por un aparato eléctrico en funcionamiento."
+    },
+    "correcta": "c",
+    "explicacion": "La tensión o voltaje eléctrico (medido en voltios, V) es la diferencia de potencial eléctrico entre dos puntos de un circuito, responsable de impulsar las cargas eléctricas (la intensidad es la carga por unidad de tiempo y la resistencia es la oposición al paso de corriente)."
+  },
+  {
+    "id": 197,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La ley de Ohm es una ley fundamental de la electricidad que relaciona:",
+    "opciones": {
+      "a": "La tensión, intensidad y resistencia.",
+      "b": "La tensión, potencia y energía.",
+      "c": "La tensión e intensidad.",
+      "d": "La tensión y resistencia."
+    },
+    "correcta": "a",
+    "explicacion": "La ley de Ohm establece la relación lineal entre la tensión (V), la intensidad de corriente (I) y la resistencia eléctrica (R) en un conductor o circuito: V = I · R."
+  },
+  {
+    "id": 198,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "Si una batería de 12V y con una capacidad de 60 Ah, si está cargada al 100%, ¿cuánto es capaz de suministrar?",
+    "opciones": {
+      "a": "130 amperios durante una hora.",
+      "b": "60 amperios durante 1 hora.",
+      "c": "10 amperios durante 4 horas.",
+      "d": "5 amperios durante 5 horas."
+    },
+    "correcta": "b",
+    "explicacion": "Una capacidad nominal de 60 Ah (amperios-hora) equivale teóricamente al suministro de 60 amperios durante 1 hora (o, por ejemplo, 10 A durante 6 horas o 5 A durante 12 horas)."
+  },
+  {
+    "id": 199,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "¿En qué principio se basa el funcionamiento del rotor en un motor eléctrico asíncrono?",
+    "opciones": {
+      "a": "En corrientes eléctricas estáticas presentes en el rotor y el estator.",
+      "b": "El principio de inducción electromagnética descrito por Faraday.",
+      "c": "En campos magnéticos permanentes del rotor.",
+      "d": "En la conversión directa de energía térmica en energía mecánica."
+    },
+    "correcta": "b",
+    "explicacion": "En un motor asíncrono o de inducción, el campo magnético giratorio generado por las corrientes trifásicas del estator induce corrientes en los conductores del rotor según la ley de inducción electromagnética de Faraday, creando un par motor."
+  },
+  {
+    "id": 200,
+    "bloque": "Conductor/a Vehículos Emergencias",
+    "pregunta": "La base de funcionamiento de los motores eléctricos reside en:",
+    "opciones": {
+      "a": "Las leyes de termodinámica.",
+      "b": "Las leyes de electromagnetismo.",
+      "c": "Las leyes de la electrostática.",
+      "d": "Ninguna respuesta es correcta."
+    },
+    "correcta": "b",
+    "explicacion": "El funcionamiento de los motores eléctricos se fundamenta en las leyes del electromagnetismo (interacción entre corrientes eléctricas y campos magnéticos que produce fuerzas y par mecánico)."
+  }
+]
