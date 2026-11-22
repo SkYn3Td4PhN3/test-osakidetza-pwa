@@ -1,26 +1,14 @@
 [
   {
-    "file": "osakidetza_modelo_b_preguntas.json",
-    "label": "Examen Oficial Modelo B (110 preg.)"
-  },
-  {
-    "file": "osakidetza_modelo_a_preguntas.json",
-    "label": "Examen Oficial Modelo A (110 preg.)"
+    "file": "banco_500.json",
+    "label": "Batería Completa (500 preg.: 300 Común + 200 Conductor/a)"
   },
   {
     "file": "preguntas_temario_comun_001_300_completo.json",
-    "label": "Batería Temario Común (300 preg.)"
+    "label": "Temario Común (300 preg.)"
   },
   {
     "file": "CVE.json",
-    "label": "Batería Conductor/a Emergencias · CVE (200 preg.)"
-  },
-  {
-    "file": "temario_comun.json",
-    "label": "Extracto Examen: Temario Común (33 preg.)"
-  },
-  {
-    "file": "conductor_emergencias.json",
-    "label": "Extracto Examen: Conductor/a Emergencias (77 preg.)"
+    "label": "Conductor/a Emergencias · CVE (200 preg.)"
   }
 ]
