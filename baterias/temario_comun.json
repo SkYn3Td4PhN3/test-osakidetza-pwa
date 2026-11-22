@@ -1,0 +1,497 @@
+[
+  {
+    "id": 1,
+    "num_modelo_b": 37,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Con la finalidad de facilitar la observancia de los requisitos previstos en la normativa vigente para ejercer las profesiones sanitarias (señálese la afirmación que sea falsa):",
+    "opciones": {
+      "a": "Los juzgados y tribunales deberán remitir aquellos datos necesarios referentes a las sentencias firmes de inhabilitación o suspensión para el ejercicio profesional al Ministerio de Sanidad, Servicios Sociales e Igualdad en la forma que reglamentariamente se establezca.",
+      "b": "Las administraciones públicas con competencias sancionadoras sobre el personal sanitario a su servicio deberán remitir las resoluciones sancionadoras que afecten a la situación de suspensión o habilitación de dicho personal.",
+      "c": "Las corporaciones colegiales deberán remitir al Ministerio de Sanidad, Servicios Sociales e Igualdad copia de las resoluciones sancionadoras que suspendan o inhabiliten para el ejercicio profesional impuestas por ellos, cuando una ley estatal establezca para este ejercicio la obligación de colegiación siempre que la persona colegiada no se oponga explícitamente.",
+      "d": "El Ministerio de Sanidad, Servicios Sociales e Igualdad comunicará a las entidades mencionadas en las opciones b) y c) anteriores, las resoluciones sancionadoras que reciba."
+    },
+    "correcta": "c",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal (señalando la afirmación falsa), la opción marcada como correcta es la C."
+  },
+  {
+    "id": 2,
+    "num_modelo_b": 38,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "De acuerdo con las normas generales de ordenación de las profesiones sanitarias, el ejercicio del derecho del personal profesional sanitario a la renuncia a la atención a una persona paciente queda condicionado a que (señálese la respuesta incorrecta):",
+    "opciones": {
+      "a": "Su renuncia no conlleve desatención de la persona paciente.",
+      "b": "La renuncia se ejerza de acuerdo con procedimientos regulares.",
+      "c": "Quede constancia, aunque no sea formal, de la renuncia.",
+      "d": "La renuncia se ejerza de acuerdo con procedimientos establecidos y explícitos."
+    },
+    "correcta": "c",
+    "explicacion": "El artículo 5.1.c de la Ley 44/2003 exige que no suponga desatención y que se realice de acuerdo con los procedimientos establecidos y explícitos (no de forma informal o sin constancia debida)."
+  },
+  {
+    "id": 3,
+    "num_modelo_b": 39,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "De acuerdo con la Ley 44/2003, de 21 de noviembre, de ordenación de las profesiones sanitarias, corresponde al personal con la titulación de Licenciatura o Grado en Medicina la indicación y realización de las actividades dirigidas a (señálese la respuesta incorrecta):",
+    "opciones": {
+      "a": "La promoción y mantenimiento de la salud de las personas pacientes.",
+      "b": "La dispensación de los medicamentos a las personas pacientes.",
+      "c": "La prevención de las enfermedades y al diagnóstico, tratamiento, terapéutica y rehabilitación de las personas pacientes.",
+      "d": "El enjuiciamiento y pronóstico de los procesos objeto de atención."
+    },
+    "correcta": "b",
+    "explicacion": "El artículo 6.2.a de la Ley 44/2003 atribuye al personal médico la promoción de la salud, prevención, diagnóstico, tratamiento, terapéutica, rehabilitación, enjuiciamiento y pronóstico; la dispensación de medicamentos corresponde a las oficinas de farmacia/farmacéuticos."
+  },
+  {
+    "id": 4,
+    "num_modelo_b": 40,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según la Ley 44/2003, de 21 de noviembre, de ordenación de las profesiones sanitarias, señale cuál de estas afirmaciones es incorrecta:",
+    "opciones": {
+      "a": "Los equipos de profesionales, una vez constituidos y aprobados en el seno de organizaciones o instituciones sanitarias, serán reconocidos y apoyados, y sus actuaciones facilitadas, por los órganos directivos y gestores de las mismas.",
+      "b": "La responsabilidad de la capacidad del personal profesional para realizar una correcta actuación, en las tareas y funciones que les sean encomendadas en el proceso de distribución del trabajo en equipo, recaerá sobre los centros e instituciones en los que desempeñen su actividad.",
+      "c": "Dentro de un equipo de profesionales, será posible la delegación de actuaciones si las condiciones bajo las que se producirá tal delegación están previamente establecidas dentro del equipo.",
+      "d": "La responsabilidad de un equipo de profesionales recaerá en aquellas personas integrantes que hayan adquirido las tareas y funciones que hayan causado la responsabilidad, siempre que las condiciones de la delegación se adecúen a lo establecido."
+    },
+    "correcta": "d",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal (señalando la afirmación incorrecta), la opción marcada como correcta es la D."
+  },
+  {
+    "id": 5,
+    "num_modelo_b": 41,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "De acuerdo con la Ley 44/2003, de 21 de noviembre, de ordenación de las profesiones sanitarias, señálese la afirmación incorrecta:",
+    "opciones": {
+      "a": "Los centros sanitarios acreditados para la formación especializada deberán contar con una comisión de docencia.",
+      "b": "Los centros sanitarios acreditados para la formación especializada deberán contar con jefaturas de estudios y con la coordinación docente que resulten adecuados en función de su capacidad docente.",
+      "c": "Los centros sanitarios acreditados para la formación especializada deberán contar con el personal tutor de la formación que resulte adecuado en función de su capacidad docente.",
+      "d": "Los centros sanitarios acreditados para la formación especializada deberán contar con jefaturas de estudios, coordinación docente y personal tutor de la formación que resulten adecuados en función de su capacidad docente, pero no con una comisión de docencia."
+    },
+    "correcta": "d",
+    "explicacion": "La Ley 44/2003 establece que los centros acreditados para formación sanitaria especializada contarán con Comisión de Docencia, jefaturas de estudios/coordinación docente y tutores."
+  },
+  {
+    "id": 6,
+    "num_modelo_b": 42,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según dispone la Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud, la cartera común básica de servicios asistenciales del Sistema Nacional de Salud:",
+    "opciones": {
+      "a": "Se acordará en el seno del Consejo Interterritorial del Sistema Nacional de Salud y se aprobará en la Ley General de Presupuestos del Estado.",
+      "b": "Se acordará en el seno del Consejo Interterritorial del Sistema Nacional de Salud y se aprobará mediante Real Decreto.",
+      "c": "Se acordará en el seno del Consejo Interterritorial del Sistema Nacional de Salud y se aprobará en las normas autonómicas correspondientes.",
+      "d": "Se acordará en el seno de la Conferencia de Presidentes de las Comunidades Autónomas y se aprobará en las normas autonómicas correspondientes."
+    },
+    "correcta": "b",
+    "explicacion": "Conforme al artículo 8 bis / 20 de la Ley 16/2003, la cartera común básica de servicios asistenciales se acuerda en el Consejo Interterritorial del SNS y se aprueba mediante Real Decreto."
+  },
+  {
+    "id": 7,
+    "num_modelo_b": 43,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según dispone la Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud, la exclusión de una técnica, tecnología o procedimiento actualmente incluido en la cartera de servicios se llevará a cabo cuando:",
+    "opciones": {
+      "a": "Se evidencie su falta de eficacia, efectividad o eficiencia, o que el balance entre beneficio y riesgo sea significativamente desfavorable.",
+      "b": "Requiera una formación para la que no exista la especialidad médica correspondiente.",
+      "c": "Hayan cambiado las condiciones económicas de su implantación.",
+      "d": "Todas las respuestas anteriores son correctas."
+    },
+    "correcta": "a",
+    "explicacion": "La Ley 16/2003 prevé la exclusión de técnicas o tecnologías cuando se evidencie falta de eficacia, efectividad, eficiencia o seguridad, o un balance beneficio-riesgo desfavorable."
+  },
+  {
+    "id": 8,
+    "num_modelo_b": 44,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "A los efectos de la Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud, la competencia profesional es:",
+    "opciones": {
+      "a": "La acreditación de formación continuada a lo largo del desempeño de su carrera profesional.",
+      "b": "La competencia acreditada por el título correspondiente acreditativo de la adquisición de conocimientos requeridos para el desempeño del puesto designado.",
+      "c": "La aptitud del personal profesional sanitario para integrar y aplicar los conocimientos, habilidades y actitudes asociados a las buenas prácticas de su profesión para resolver los problemas que se le plantean.",
+      "d": "La superación del proceso selectivo oficial convocado por la autoridad competente para la adquisición del vínculo estatutario con los servicios sanitarios."
+    },
+    "correcta": "c",
+    "explicacion": "La Ley 16/2003 define la competencia profesional como la aptitud para integrar y aplicar conocimientos, habilidades y actitudes propios de la buena práctica profesional."
+  },
+  {
+    "id": 9,
+    "num_modelo_b": 45,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "El objeto de la Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud es:",
+    "opciones": {
+      "a": "Establecer las bases reguladoras de la relación funcionarial especial del personal estatutario de los servicios de salud que conforman el Sistema Nacional de Salud.",
+      "b": "Establecer el Estatuto Marco del personal estatutario vinculado por una relación laboral especial a los servicios de salud que integran el Sistema Nacional de Salud.",
+      "c": "Establecer las bases reguladoras de la relación funcionarial del personal estatutario de los servicios de salud que conforman el Sistema Nacional de Salud.",
+      "d": "Ninguna de las anteriores respuestas es correcta."
+    },
+    "correcta": "a",
+    "explicacion": "El artículo 1 de la Ley 55/2003 establece el objeto de regular las bases de la relación funcionarial especial del personal estatutario de los servicios de salud del SNS."
+  },
+  {
+    "id": 10,
+    "num_modelo_b": 46,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "La condición de personal estatutario fijo se adquiere, tal y como prevé la Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud, por el cumplimiento de los siguientes requisitos:",
+    "opciones": {
+      "a": "Incorporación a una plaza de servicio, institución o centro que corresponda en el plazo fijado en la convocatoria tras la superación de las pruebas de selección.",
+      "b": "Superación de las pruebas de selección; nombramiento conferido por el órgano competente; e incorporación a una plaza del servicio, institución o centro que corresponda en el plazo de un mes.",
+      "c": "Superación de las pruebas de selección; nombramiento conferido por el órgano competente; e incorporación, previo cumplimiento de los requisitos formales en cada caso establecidos, a una plaza del servicio, institución o centro que corresponda en el plazo determinado en la convocatoria.",
+      "d": "Superación de las pruebas de selección; nombramiento conferido por el órgano competente; e incorporación a una plaza del servicio, institución o centro que corresponda en todo caso en el plazo determinado en la convocatoria."
+    },
+    "correcta": "c",
+    "explicacion": "Según el artículo 20 de la Ley 55/2003, se adquiere mediante superación de pruebas de selección, nombramiento por órgano competente e incorporación, cumplidos los requisitos formales, en el plazo fijado en la convocatoria."
+  },
+  {
+    "id": 11,
+    "num_modelo_b": 47,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "En materia de retribuciones, la Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud, prevé que:",
+    "opciones": {
+      "a": "El sistema retributivo del personal estatutario se estructura en retribuciones básicas y retribuciones complementarias.",
+      "b": "La evaluación del personal estatutario a efectos de determinación de una parte de la retribuciones complementarias se establecerá a través de procedimientos fundados en los principios igualdad, objetividad y transparencia.",
+      "c": "El sistema retributivo del personal estatutario responde a los principios de cualificación técnica y profesional.",
+      "d": "Todas las respuestas son correctas."
+    },
+    "correcta": "d",
+    "explicacion": "La Ley 55/2003 estructura las retribuciones en básicas y complementarias, vincula parte de las complementarias a criterios de evaluación con igualdad, objetividad y transparencia y atiende a la cualificación."
+  },
+  {
+    "id": 12,
+    "num_modelo_b": 48,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "En el supuesto del personal estatutario de los servicios de salud:",
+    "opciones": {
+      "a": "El período de localización es aquel período de tiempo en el que el personal se encuentra únicamente en situación de disponibilidad.",
+      "b": "Se considera período de descanso todo período de tiempo que no sea tiempo de trabajo.",
+      "c": "El trabajo por turnos es una forma de organización del trabajo en equipo con arreglo al ritmo rotatorio y siempre de tipo continuo.",
+      "d": "El período de localización es aquel período de tiempo en el que el personal se encuentra en situación de disponibilidad a los solos efectos de asegurar su posible localización."
+    },
+    "correcta": "b",
+    "explicacion": "En la regulación de jornada y tiempos de trabajo (Ley 55/2003 y normativa de jornada/descanso), todo período que no sea tiempo de trabajo efectivo computa como período de descanso."
+  },
+  {
+    "id": 13,
+    "num_modelo_b": 49,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según establece la Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud:",
+    "opciones": {
+      "a": "Resulta incompatible para el personal estatutario de los servicios de salud el ejercicio de las funciones sanitarias con cualquier otro tipo de funciones.",
+      "b": "Al personal estatutario de los servicios de salud le resulta aplicable el mismo régimen de incompatibilidades establecido para el personal funcionario.",
+      "c": "Atendiendo a lo que establezca la legislación vigente, el personal estatutario de los servicios de salud podrá compatibilizar las funciones sanitarias y docente.",
+      "d": "Para el personal licenciado sanitario el complemento específico resulta irrenunciable."
+    },
+    "correcta": "c",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la C."
+  },
+  {
+    "id": 14,
+    "num_modelo_b": 50,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "La Ley 8/1997, de 26 de junio, de ordenación Sanitaria de Euskadi, establece que la Administración sanitaria vasca debe garantizar la tutela general de la salud pública a través de:",
+    "opciones": {
+      "a": "Medidas preventivas.",
+      "b": "Promoción de la salud.",
+      "c": "Prestaciones sanitarias individuales.",
+      "d": "Son correctas todas las respuestas."
+    },
+    "correcta": "d",
+    "explicacion": "La Ley 8/1997 de Ordenación Sanitaria de Euskadi encomienda la tutela de la salud pública mediante promoción de la salud, prevención y atención/prestaciones sanitarias."
+  },
+  {
+    "id": 15,
+    "num_modelo_b": 51,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Osakidetza-Servicio Vasco de Salud se constituye como:",
+    "opciones": {
+      "a": "Ente público con personalidad jurídica propia y adscrito al Departamento de la Administración General competente en materia de salud.",
+      "b": "Ente público de derecho privado con personalidad jurídica propia.",
+      "c": "Ente público de derecho público al que se le atribuye personalidad jurídica propia.",
+      "d": "Ninguna respuesta es correcta."
+    },
+    "correcta": "b",
+    "explicacion": "De acuerdo con la Ley 8/1997 (art. 20), Osakidetza es un ente público de derecho privado con personalidad jurídica propia."
+  },
+  {
+    "id": 16,
+    "num_modelo_b": 52,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Señale cuál de los siguientes criterios no está contemplado en la Ley 8/1997, de 26 de junio, de Ordenación Sanitaria de Euskadi para la clasificación de las infracciones en leves, graves o muy graves:",
+    "opciones": {
+      "a": "La cuantía de la indemnización solicitada.",
+      "b": "Los riesgos para la salud.",
+      "c": "El grado de intencionalidad.",
+      "d": "La gravedad de la alteración sanitaria y social producida."
+    },
+    "correcta": "a",
+    "explicacion": "Los criterios de graduación de infracciones sanitarias atienden al riesgo para la salud, intencionalidad/negligencia, gravedad de la alteración sanitaria y social y reincidencia, no a la cuantía indemnizatoria solicitada."
+  },
+  {
+    "id": 17,
+    "num_modelo_b": 53,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "La función de convocar, presidir, suspender y levantar las sesiones, arbitrar las deliberaciones del Consejo de Administración del ente público Osakidetza Servicio vasco de salud y decidir los empates con su voto de calidad corresponderá a:",
+    "opciones": {
+      "a": "La Dirección General.",
+      "b": "La Presidencia.",
+      "c": "La persona de mayor antigüedad del Consejo de Administración.",
+      "d": "Ninguna de las anteriores."
+    },
+    "correcta": "b",
+    "explicacion": "Corresponde a la Presidencia del Consejo de Administración convocar, presidir y dirigir las sesiones, así como dirimir empates con voto de calidad."
+  },
+  {
+    "id": 18,
+    "num_modelo_b": 54,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según el Decreto 100/2018 de las organizaciones sanitarias integradas del ente público Osakidetza-Servicio Vasco de Salud, para que una OSI sea clasificada como de Tipo III debe integrar, junto con servicios de atención primaria, un hospital de carácter general y tener una base poblacional atendida inferior a:",
+    "opciones": {
+      "a": "500.000 habitantes.",
+      "b": "200.000 habitantes.",
+      "c": "300.000 habitantes.",
+      "d": "100.000 habitantes."
+    },
+    "correcta": "c",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la C (300.000 habitantes)."
+  },
+  {
+    "id": 19,
+    "num_modelo_b": 55,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según el Decreto 147/2015, de 21 de julio, por el que se aprueba la Declaración sobre Derechos y Deberes de las personas en el sistema sanitario de Euskadi, la persona paciente o usuaria tiene derecho:",
+    "opciones": {
+      "a": "A recibir información sobre los recursos sanitarios y socio-sanitarios disponibles, actuaciones y prestaciones del sistema sanitario de Euskadi, su calidad y requisitos de acceso a los mismos.",
+      "b": "A recibir información sobre los recursos sanitarios y socio-sanitarios disponibles, actuaciones y prestaciones del sistema sanitario de Euskadi, su calidad y requisitos de acceso a los mismos, de manera individualizada o a través de medios que garanticen su accesibilidad a toda la ciudadanía.",
+      "c": "A recibir información sobre los recursos sanitarios y socio-sanitarios disponibles, actuaciones y prestaciones del sistema sanitario de Euskadi, su calidad y requisitos de acceso a los mismos, así como los disponibles en otros sistemas sanitarios para facilitar que pueda optar por solicitarlos también fuera del sistema sanitario de Euskadi.",
+      "d": "A recibir información sobre los recursos sanitarios y socio-sanitarios disponibles, actuaciones y prestaciones del sistema sanitario de Euskadi, su calidad, coste y requisitos de acceso a los mismos."
+    },
+    "correcta": "a",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la A."
+  },
+  {
+    "id": 20,
+    "num_modelo_b": 56,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según dispone la Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, cuando la persona paciente, según el criterio del personal facultativo que le asiste, carezca de capacidad para entender la información a causa de su estado físico o psíquico:",
+    "opciones": {
+      "a": "La información se pondrá en conocimiento de las personas vinculadas a la persona paciente por razones familiares o de hecho si así lo dispone la autoridad judicial.",
+      "b": "La información se pondrá en conocimiento de las personas vinculadas a la persona paciente por razones familiares o de hecho, después de haber consultado al Comité de Ética Asistencial de Centro.",
+      "c": "La información se pondrá en conocimiento de las personas vinculadas a la persona paciente por razones familiares o de hecho después de haber consultado con la dirección del centro.",
+      "d": "La información se pondrá en conocimiento de las personas vinculadas a la persona paciente por razones familiares o de hecho."
+    },
+    "correcta": "d",
+    "explicacion": "Según el artículo 5.1 de la Ley 41/2002, si el paciente carece de capacidad para entender la información, esta se pondrá en conocimiento de las personas vinculadas a él por razones familiares o de hecho."
+  },
+  {
+    "id": 21,
+    "num_modelo_b": 57,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según dispone la Ley 7/2002, de 12 de diciembre, de las voluntades anticipadas en el ámbito de la sanidad, la voluntad de la persona prevalece sobre las instrucciones contenidas en el documento de voluntades anticipadas ante cualquier intervención clínica siempre que:",
+    "opciones": {
+      "a": "La persona otorgante conserve su capacidad y su libertad de actuación.",
+      "b": "La persona otorgante conserve su capacidad, su libertad de actuación y la posibilidad de expresarse.",
+      "c": "La persona otorgante conserve su capacidad, su libertad de actuación y la posibilidad de expresarse de manera inequívoca.",
+      "d": "La persona otorgante conserve su capacidad, su libertad de actuación y la posibilidad de expresarse de manera inequívoca o a través de la persona interlocutora designada al efecto."
+    },
+    "correcta": "b",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B."
+  },
+  {
+    "id": 22,
+    "num_modelo_b": 58,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "Según dispone la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, podrán tener acceso a los datos personales de las personas fallecidas:",
+    "opciones": {
+      "a": "Las personas vinculadas a la persona fallecida por razones familiares o de hecho así como quienes ostenten la condición de herederas, en todo caso.",
+      "b": "Solo las personas vinculadas a la persona fallecida por razones familiares siempre que lo hubiera autorizado expresamente la persona fallecida.",
+      "c": "Las personas vinculadas a la persona fallecida por razones familiares o de hecho así como quienes ostenten la condición de herederas, salvo que la persona fallecida lo hubiese prohibido expresamente.",
+      "d": "En caso de que la persona fallecida fuera menor de edad, el acceso podrá ejercerse también por sus representantes legales o por el Ministerio Fiscal que siempre actuará de oficio."
+    },
+    "correcta": "c",
+    "explicacion": "El artículo 3 de la LOPDGDD permite el acceso a datos de personas fallecidas a personas vinculadas por razones familiares o de hecho y herederos, salvo prohibición expresa del fallecido."
+  },
+  {
+    "id": 23,
+    "num_modelo_b": 59,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "De acuerdo con lo establecido en el artículo 54 del texto refundido de la Ley para la Igualdad de Mujeres y Hombres y Vidas Libres de Violencia Machista contra las Mujeres, aprobado por el Decreto Legislativo 1/2023, de 16 de marzo, ¿cómo se define la \"violencia machista contra las mujeres\"?:",
+    "opciones": {
+      "a": "Solo la violencia fisica en el hogar.",
+      "b": "Una violación de los derechos humanos y un problema de salud pública de primer orden.",
+      "c": "Únicamente los delitos contra la libertad sexual.",
+      "d": "Un conflicto de convivencia familiar."
+    },
+    "correcta": "b",
+    "explicacion": "El Decreto Legislativo 1/2023 define la violencia machista contra las mujeres como una vulneración de los derechos humanos y un grave problema estructural y de salud pública."
+  },
+  {
+    "id": 24,
+    "num_modelo_b": 60,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "¿A qué hace referencia el acrónimo AVAD en el Plan de Salud Euskadi 2030?:",
+    "opciones": {
+      "a": "Áreas de Valoración de la Atención al Dependiente.",
+      "b": "Años de Vida Activa Desaprovechados.",
+      "c": "Años de Vida sana perdidos Ajustados por Discapacidad.",
+      "d": "Atención Vasca a la Adicción a Drogas."
+    },
+    "correcta": "d",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la D."
+  },
+  {
+    "id": 25,
+    "num_modelo_b": 61,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "¿Qué órganos fueron responsables de la dirección y elaboración del Plan de Salud Euskadi 2030, según el documento?:",
+    "opciones": {
+      "a": "El Consejo de Gobierno y el Departamento de Hacienda.",
+      "b": "Un Comité de Dirección y un Comité Estratégico.",
+      "c": "La Dirección General de Osakidetza y Lehendakaritza.",
+      "d": "El Observatorio de Salud y la consultora LKS S Coop."
+    },
+    "correcta": "b",
+    "explicacion": "La gobernanza y elaboración del Plan de Salud Euskadi 2030 se articuló mediante su Comité de Dirección y Comité Estratégico."
+  },
+  {
+    "id": 26,
+    "num_modelo_b": 62,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "¿Cuál es la visión del Plan de Salud Euskadi 2030 sobre el uso de la evidencia científica en la toma de decisiones políticas?:",
+    "opciones": {
+      "a": "Es un elemento opcional supeditado a la oportunidad política.",
+      "b": "Es la base fundamental para el diseño, implementación y evaluación de las políticas de salud.",
+      "c": "Solo se debe aplicar en casos de alertas sanitarias internacionales.",
+      "d": "Se reserva exclusivamente para el ámbito académico, no para el legislativo."
+    },
+    "correcta": "b",
+    "explicacion": "El Plan de Salud Euskadi 2030 sitúa la evidencia científica y el conocimiento epidemiológico como pilar para diseñar, ejecutar y evaluar políticas sanitarias."
+  },
+  {
+    "id": 27,
+    "num_modelo_b": 63,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "En relación con la Línea Estratégica 06 sobre \"Cronicidad\" del Pacto Vasco de Salud, ¿qué objetivo se persigue primordialmente?:",
+    "opciones": {
+      "a": "Institucionalizar a todas las personas con enfermedades crónicas en centros especializados.",
+      "b": "Reforzar la autonomía y corresponsabilidad de las personas con enfermedades crónicas.",
+      "c": "Sustituir las consultas médicas presenciales por seguimiento telefónico automático.",
+      "d": "Reducir la cobertura de medicamentos para patologías de larga duración."
+    },
+    "correcta": "b",
+    "explicacion": "El abordaje de la cronicidad promueve la atención integrada, proactiva y la autonomía/corresponsabilidad de la persona paciente."
+  },
+  {
+    "id": 28,
+    "num_modelo_b": 64,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "La Línea Estratégica 24 sobre \"Derechos Lingüísticos\" del Pacto Vasco de Salud tiene como fin:",
+    "opciones": {
+      "a": "Garantizar que las personas pacientes puedan ser atendidas en la lengua oficial de su elección.",
+      "b": "Obligar a toda la ciudadanía a realizar sus consultas médicas exclusivamente en euskera.",
+      "c": "Eliminar el uso de lenguas extranjeras en la formación médica especializada.",
+      "d": "Centralizar los servicios de traducción en una única sede en Vitoria-Gasteiz."
+    },
+    "correcta": "a",
+    "explicacion": "Los derechos lingüísticos en el sistema sanitario vasco garantizan la atención en la lengua oficial (euskera o castellano) elegida por la ciudadanía."
+  },
+  {
+    "id": 29,
+    "num_modelo_b": 65,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "¿Cuáles son las dos nuevas Líneas de Acción incorporadas en la \"Estrategia de Seguridad del Paciente 20-30\" que responden a una necesidad percibida por las personas expertas?:",
+    "opciones": {
+      "a": "Seguridad en Pediatría y Buenas Prácticas en el Uso de Biológicos.",
+      "b": "Atención en Cuidados Paliativos y Seguridad Domiciliaria.",
+      "c": "La Seguridad de Paciente en Emergencias y la Prevención del Suicidio.",
+      "d": "Seguridad en Salud Mental y Prevención de las Úlceras por Presión."
+    },
+    "correcta": "c",
+    "explicacion": "La Estrategia de Seguridad del Paciente 20-30 incorpora líneas específicas de Seguridad del Paciente en Emergencias y Prevención del Suicidio."
+  },
+  {
+    "id": 30,
+    "num_modelo_b": 66,
+    "es_reserva": false,
+    "bloque": "Temario Común",
+    "pregunta": "¿Qué institución aprueba el II Plan para la Igualdad de Mujeres y Hombres en Osakidetza (2025-2028)?:",
+    "opciones": {
+      "a": "Mesa Sectorial de Sanidad.",
+      "b": "Emakunde.",
+      "c": "Consejo de Administración de Osakidetza.",
+      "d": "Dirección General de Osakidetza."
+    },
+    "correcta": "c",
+    "explicacion": "El Consejo de Administración de Osakidetza es el órgano de gobierno competente para aprobar los planes de igualdad de la organización."
+  },
+  {
+    "id": 31,
+    "num_modelo_b": 108,
+    "es_reserva": true,
+    "bloque": "Temario Común",
+    "pregunta": "Conforme al III Plan de Normalización del Uso del Euskera en Osakidetza 2022-2028, en las relaciones con empresas proveedoras, entidades financieras y organismos privados:",
+    "opciones": {
+      "a": "Se designarán interlocutores o interlocutoras vasco-hablantes y se notificará el deseo de Osakidetza de relacionarse en euskera.",
+      "b": "En la comunicación escrita siempre debe utilizarse las dos lenguas oficiales.",
+      "c": "Osakidetza solicitará a las entidades proveedoras que sus productos que tengan como personas destinatarias a profesionales de Osakidetza estén en euskera.",
+      "d": "Ninguna de las anteriores respuestas es correcta."
+    },
+    "correcta": "a",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la A."
+  },
+  {
+    "id": 32,
+    "num_modelo_b": 109,
+    "es_reserva": true,
+    "bloque": "Temario Común",
+    "pregunta": "Según el Artículo 5 de la Ley Orgánica 3/2021, de 24 de marzo, de regulación de la eutanasia, ¿cuál es la condición que debe padecer la persona paciente para solicitar la prestación de ayuda para morir?:",
+    "opciones": {
+      "a": "Padecer una enfermedad incurable en fase terminal o un deterioro funcional grave.",
+      "b": "Sufrir una enfermedad que limite gravemente su autonomía.",
+      "c": "Padecer una enfermedad grave e incurable o un padecimiento grave, crónico e imposibilitante, causantes de un sufrimiento intolerable.",
+      "d": "Sufrir un dolor fisico o psíquico que no puede ser tratado con paliativos."
+    },
+    "correcta": "c",
+    "explicacion": "El artículo 5.1.c de la LO 3/2021 exige padecer una enfermedad grave e incurable o un padecimiento grave, crónico e imposibilitante que cause sufrimiento físico o psíquico constante e intolerable."
+  },
+  {
+    "id": 33,
+    "num_modelo_b": 110,
+    "es_reserva": true,
+    "bloque": "Temario Común",
+    "pregunta": "¿Cuál es el principio general que establece la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas?:",
+    "opciones": {
+      "a": "La incompatibilidad para desempeñar más de un puesto en el sector público, salvo excepciones.",
+      "b": "La compatibilidad automática entre empleo público y privado.",
+      "c": "La libre acumulación de empleos públicos.",
+      "d": "La compatibilidad solo en el ámbito sanitario."
+    },
+    "correcta": "b",
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B."
+  }
+]

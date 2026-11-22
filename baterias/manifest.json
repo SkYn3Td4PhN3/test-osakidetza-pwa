@@ -6,5 +6,13 @@
   {
     "file": "osakidetza_modelo_a_preguntas.json",
     "label": "Examen Oficial Modelo A (110 preg.)"
+  },
+  {
+    "file": "temario_comun.json",
+    "label": "Bloque: Temario Común (33 preg.)"
+  },
+  {
+    "file": "conductor_emergencias.json",
+    "label": "Bloque: Conductor/a Emergencias (77 preg.)"
   }
 ]

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v1.9.0 - Test Oposición Osakidetza PWA (Examen Modelo B 90 min, Plantillas Separadas, Historial y Exportación de Resultados) -->
+<!-- v1.9.1 - Test Oposición Osakidetza PWA (Examen Modelo B 90 min, Plantillas Separadas, Historial y Exportación de Resultados) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -884,7 +884,7 @@
         <div class="app-logo" aria-hidden="true">112</div>
         <div>
           <h1 class="app-title">Test Oposición Osakidetza</h1>
-          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.9.0</span> · Offline</p>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.9.1</span> · Offline</p>
         </div>
       </div>
       <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
@@ -3229,7 +3229,7 @@
     const TEMPLATES_STORAGE_KEY = "osakidetza_ope_plantillas_v1";
     const ATTEMPTS_STORAGE_KEY = "osakidetza_ope_intentos_v1";
 
-    const APP_VERSION = "v1.9.0";
+    const APP_VERSION = "v1.9.1";
     const OFFICIAL_EXAM_DURATION_SEC = 90 * 60; // 90 minutos (5400 s)
 
     let allQuestions = [];
@@ -3329,7 +3329,7 @@
 
       if ("serviceWorker" in navigator) {
         const swCode = `
-          const CACHE_NAME = 'osakidetza-test-pwa-v190';
+          const CACHE_NAME = 'osakidetza-test-pwa-v191';
           self.addEventListener('install', (event) => {
             self.skipWaiting();
             event.waitUntil(
@@ -3530,15 +3530,23 @@
     }
 
     function loadTemplates() {
+      const defaults = [plantillaInicialSeparada, plantillaOficialA, plantillaOficialB];
       try {
         const raw = JSON.parse(localStorage.getItem(TEMPLATES_STORAGE_KEY) || "null");
         if (Array.isArray(raw) && raw.length > 0) {
-          savedTemplates = raw;
+          const byId = new Map();
+          defaults.forEach((d) => byId.set(d.id_plantilla, d));
+          raw.forEach((item) => {
+            if (item && item.id_plantilla) {
+              byId.set(item.id_plantilla, item);
+            }
+          });
+          savedTemplates = Array.from(byId.values());
         } else {
-          savedTemplates = [plantillaInicialSeparada, plantillaOficialA, plantillaOficialB];
+          savedTemplates = defaults;
         }
       } catch {
-        savedTemplates = [plantillaInicialSeparada];
+        savedTemplates = defaults;
       }
       renderTemplatesDropdown();
     }
@@ -3708,9 +3716,15 @@
        ========================================================================== */
     function evaluateSeparatedTemplate(tplObj, includeReserve = false) {
       const ansMap = tplObj?.respuestas || {};
-      const pool = allQuestions.filter((q) => Boolean(q.num_modelo_b) && (includeReserve ? true : !q.es_reserva));
+      const isModelA = String(tplObj?.modelo || "").toLowerCase().includes("modelo a");
+      const numField = isModelA ? "num_modelo_a" : "num_modelo_b";
+
+      const pool = allQuestions
+        .filter((q) => Boolean(q[numField]) && (includeReserve ? true : !q.es_reserva))
+        .sort((a, b) => a[numField] - b[numField]);
+
       if (!pool.length) {
-        alert("No hay preguntas del Modelo B cargadas para comprobar la plantilla.");
+        alert(`No hay preguntas del ${isModelA ? "Modelo A" : "Modelo B"} cargadas para comprobar la plantilla.`);
         return;
       }
 
@@ -3726,7 +3740,7 @@
       failedQuestions = [];
 
       pool.forEach((q) => {
-        const numKey = String(q.num_modelo_b);
+        const numKey = String(q[numField]);
         const rawChosen = ansMap[numKey] ?? ansMap[Number(numKey)] ?? null;
         const chosen = rawChosen ? String(rawChosen).trim().toLowerCase() : null;
         userAnswers.push(chosen);
@@ -4319,6 +4333,25 @@
             return;
           }
           const json = await resp.json();
+          if (json && typeof json === "object" && !Array.isArray(json) && json.respuestas && typeof json.respuestas === "object") {
+            const cleanResp = {};
+            Object.entries(json.respuestas).forEach(([k, v]) => {
+              if (v && ["a", "b", "c", "d"].includes(String(v).trim().toLowerCase())) {
+                cleanResp[String(k).trim()] = String(v).trim().toLowerCase();
+              }
+            });
+            const newTpl = {
+              id_plantilla: json.id_plantilla || `tpl_repo_${Date.now()}`,
+              nombre: json.nombre || labelName,
+              modelo: json.modelo || (labelName.toLowerCase().includes("modelo_a") ? "Modelo A" : "Modelo B"),
+              respuestas: cleanResp
+            };
+            savedTemplates = [newTpl, ...savedTemplates.filter((t) => t.id_plantilla !== newTpl.id_plantilla)];
+            saveTemplates();
+            document.getElementById("saved-templates-select").value = "0";
+            alert(`Plantilla "${newTpl.nombre}" importada desde el repositorio (${Object.keys(cleanResp).length} respuestas).`);
+            return;
+          }
           if (!validateQuestionsArray(json)) {
             alert("El JSON descargado del repositorio no tiene la estructura esperada.");
             return;
@@ -4496,8 +4529,7 @@
             return `${tag} -> ${p.estado} | Marcada: ${(p.tu_respuesta || "—").toUpperCase()} | Correcta: ${p.correcta.toUpperCase()}`;
           })
         ];
-        triggerDownloadFile("informe_acertadas_suspensas.txt", lines.join("
-"), "text/plain;charset=utf-8");
+        triggerDownloadFile("informe_acertadas_suspensas.txt", lines.join("\n"), "text/plain;charset=utf-8");
       });
 
       // Selección de bloque
