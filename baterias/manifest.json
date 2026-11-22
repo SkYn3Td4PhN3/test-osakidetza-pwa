@@ -1,0 +1,10 @@
+[
+  {
+    "file": "osakidetza_modelo_b_preguntas.json",
+    "label": "Examen Oficial Modelo B (110 preg.)"
+  },
+  {
+    "file": "osakidetza_modelo_a_preguntas.json",
+    "label": "Examen Oficial Modelo A (110 preg.)"
+  }
+]

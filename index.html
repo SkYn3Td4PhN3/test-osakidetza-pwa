@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v1.8.0 - Test Oposición Osakidetza PWA (Examen Modelo B 90 min, Plantillas Separadas, Historial y Exportación de Resultados) -->
+<!-- v1.9.0 - Test Oposición Osakidetza PWA (Examen Modelo B 90 min, Plantillas Separadas, Historial y Exportación de Resultados) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -884,7 +884,7 @@
         <div class="app-logo" aria-hidden="true">112</div>
         <div>
           <h1 class="app-title">Test Oposición Osakidetza</h1>
-          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.8.0</span> · Offline</p>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v1.9.0</span> · Offline</p>
         </div>
       </div>
       <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
@@ -1068,6 +1068,22 @@
         </div>
       </section>
 
+      <section class="card" id="repo-folder-card">
+        <h2 class="section-label">Baterías en carpeta del repositorio GitHub</h2>
+        <p class="mode-help-text" style="margin:0 0 10px;">
+          Aloja tus archivos <code>.json</code> en una carpeta del repo (por ejemplo <code>baterias/</code>) y cárgalos directamente desde GitHub Pages o servidor HTTP.
+        </p>
+        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px; margin-bottom:10px;">
+          <input type="text" id="repo-folder-path" class="num-input" style="width:100%; text-align:left;" value="baterias" placeholder="Carpeta en repo (ej. baterias)" />
+          <button type="button" id="btn-scan-repo-folder" class="btn btn-outlined btn-sm">Buscar índice</button>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
+          <input type="text" id="repo-json-filename" class="num-input" style="width:100%; text-align:left;" value="osakidetza_modelo_b_preguntas.json" placeholder="Nombre del .json (ej. tema1.json)" />
+          <button type="button" id="btn-fetch-repo-json" class="btn btn-tonal btn-sm">Importar desde repo</button>
+        </div>
+        <select id="repo-manifest-select" class="template-select hidden" style="margin-top:10px; margin-bottom:0;"></select>
+      </section>
+
       <section class="card">
         <div class="import-bar">
           <span class="import-status" id="import-status">Batería integrada cargada en memoria.</span>
@@ -1208,8 +1224,7 @@
       "d": "A-15."
     },
     "correcta": "d",
-    "explicacion": "En la Red de Carreteras de Interés Preferente (como la AP-15 / A-15 vinculada al corredor de Navarra y Gipuzkoa), la Autopista de Navarra / corredor Navarra-Gipuzkoa corresponde a la nomenclatura A-15 / AP-15.",
-    "num_modelo_a": 35
+    "explicacion": "En la Red de Carreteras de Interés Preferente (como la AP-15 / A-15 vinculada al corredor de Navarra y Gipuzkoa), la Autopista de Navarra / corredor Navarra-Gipuzkoa corresponde a la nomenclatura A-15 / AP-15."
   },
   {
     "id": 2,
@@ -1224,8 +1239,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "d",
-    "explicacion": "La posición de Fowler (semisentado, cabecera elevada ~45º) facilita la expansión torácica en problemas respiratorios y cardíacos y resulta adecuada para procedimientos como la colocación de sondas nasogástricas.",
-    "num_modelo_a": 36
+    "explicacion": "La posición de Fowler (semisentado, cabecera elevada ~45º) facilita la expansión torácica en problemas respiratorios y cardíacos y resulta adecuada para procedimientos como la colocación de sondas nasogástricas."
   },
   {
     "id": 3,
@@ -1240,8 +1254,7 @@
       "d": "Manguitos y bieletas de dirección."
     },
     "correcta": "a",
-    "explicacion": "El sistema de dirección incluye el volante, la columna de dirección, la caja/engranaje de dirección, brazos/bieletas y rótulas. Los palieres y el árbol de transmisión pertenecen a la transmisión.",
-    "num_modelo_a": 37
+    "explicacion": "El sistema de dirección incluye el volante, la columna de dirección, la caja/engranaje de dirección, brazos/bieletas y rótulas. Los palieres y el árbol de transmisión pertenecen a la transmisión."
   },
   {
     "id": 4,
@@ -1256,8 +1269,7 @@
       "d": "Tres años para vehículos nuevos y anual a partir del segundo año de antigüedad."
     },
     "correcta": "c",
-    "explicacion": "La certificación técnico-sanitaria de los vehículos de transporte sanitario se otorga con vigencia de dos años para vehículos nuevos y revisión anual a partir del tercer año de antigüedad.",
-    "num_modelo_a": 38
+    "explicacion": "Según la respuesta oficial del Tribunal en este examen, la certificación técnico-sanitaria se otorga por dos años para vehículos nuevos y anual a partir del segundo año de antigüedad."
   },
   {
     "id": 5,
@@ -1272,8 +1284,7 @@
       "d": "Los muelles."
     },
     "correcta": "a",
-    "explicacion": "Las rótulas permiten el giro angular y articulación elástica sin holguras entre los elementos de dirección y la mangueta.",
-    "num_modelo_a": 39
+    "explicacion": "Las rótulas permiten el giro angular y articulación elástica sin holguras entre los elementos de dirección y la mangueta."
   },
   {
     "id": 6,
@@ -1288,8 +1299,7 @@
       "d": "Antes de realizar la maniobra de tracción mandibular."
     },
     "correcta": "b",
-    "explicacion": "En soporte vital pediátrico (SVB) no deben realizarse barridos digitales a ciegas por el riesgo de impactar más profundamente un cuerpo extraño o lesionar tejidos orofaríngeos.",
-    "num_modelo_a": 40
+    "explicacion": "En soporte vital pediátrico (SVB) no deben realizarse barridos digitales a ciegas por el riesgo de impactar más profundamente un cuerpo extraño o lesionar tejidos orofaríngeos."
   },
   {
     "id": 7,
@@ -1304,8 +1314,7 @@
       "d": "Fentanilo."
     },
     "correcta": "a",
-    "explicacion": "El flumazenil es el antagonista específico de las benzodiacepinas (como el diazepam); la naloxona antagoniza opioides.",
-    "num_modelo_a": 41
+    "explicacion": "El flumazenil es el antagonista específico de las benzodiacepinas (como el diazepam); la naloxona antagoniza opioides."
   },
   {
     "id": 8,
@@ -1320,8 +1329,7 @@
       "d": "Revaluar con regularidad sin iniciar RCP."
     },
     "correcta": "c",
-    "explicacion": "Las boqueadas infrecuentes, lentas y ruidosas corresponden a respiración agónica (gasping), que no es respiración normal y debe tratarse como parada cardiorrespiratoria iniciando RCP.",
-    "num_modelo_a": 42
+    "explicacion": "Las boqueadas infrecuentes, lentas y ruidosas corresponden a respiración agónica (gasping), que no es respiración normal y debe tratarse como parada cardiorrespiratoria iniciando RCP."
   },
   {
     "id": 9,
@@ -1336,8 +1344,7 @@
       "d": "La banda de rodadura se encuentre en perfecto estado, no sobrepasar el límite de desgaste establecido, mantener alta la presión de inflado y parar cuando se den circunstancias de suelo mojado."
     },
     "correcta": "a",
-    "explicacion": "Para prevenir el aquaplaning hay que conservar el dibujo en buen estado sin superar el límite legal de desgaste, mantener la presión correcta recomendada por el fabricante y moderar la velocidad en calzada mojada.",
-    "num_modelo_a": 43
+    "explicacion": "Para prevenir el aquaplaning hay que conservar el dibujo en buen estado sin superar el límite legal de desgaste, mantener la presión correcta recomendada por el fabricante y moderar la velocidad en calzada mojada."
   },
   {
     "id": 10,
@@ -1352,8 +1359,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "d",
-    "explicacion": "Durante el transporte sanitario, las vibraciones, las aceleraciones/desaceleraciones (fuerzas G) y la temperatura del habitáculo influyen en la fisiopatología del paciente.",
-    "num_modelo_a": 44
+    "explicacion": "Durante el transporte sanitario, las vibraciones, las aceleraciones/desaceleraciones (fuerzas G) y la temperatura del habitáculo influyen en la fisiopatología del paciente."
   },
   {
     "id": 11,
@@ -1368,8 +1374,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "c",
-    "explicacion": "Los vehículos vinculados a una autorización de transporte sanitario se identifican y habilitan mediante la inscripción de su matrícula en el Registro de Empresas y Actividades de Transporte.",
-    "num_modelo_a": 45
+    "explicacion": "Los vehículos vinculados a una autorización de transporte sanitario se identifican y habilitan mediante la inscripción de su matrícula en el Registro de Empresas y Actividades de Transporte."
   },
   {
     "id": 12,
@@ -1384,8 +1389,7 @@
       "d": "Habilitan para realizar transporte en todo el territorio de la Unión Europea, sin limitaciones respecto a su radio de acción."
     },
     "correcta": "b",
-    "explicacion": "Conforme a la Orden PRE/1435/2013, las autorizaciones de transporte sanitario habilitan para prestar servicio en todo el territorio nacional sin limitación de radio de acción.",
-    "num_modelo_a": 46
+    "explicacion": "Conforme a la Orden PRE/1435/2013, las autorizaciones de transporte sanitario habilitan para prestar servicio en todo el territorio nacional sin limitación de radio de acción."
   },
   {
     "id": 13,
@@ -1400,8 +1404,7 @@
       "d": "a) y c) son correctas."
     },
     "correcta": "a",
-    "explicacion": "12V indica la tensión/voltaje nominal, el valor en amperios (A) la intensidad de arranque/descarga y Ah (amperios-hora) la capacidad de carga a lo largo de 20 horas (no de un minuto).",
-    "num_modelo_a": 47
+    "explicacion": "12V indica la tensión/voltaje nominal, el valor en amperios (A) la intensidad de arranque/descarga y Ah (amperios-hora) la capacidad de carga a lo largo de 20 horas (no de un minuto)."
   },
   {
     "id": 14,
@@ -1416,8 +1419,7 @@
       "d": "Localizar el canal correspondiente en el talkie dependiendo de la responsabilidad a desempeñar en el IMV y según instrucciones del CC."
     },
     "correcta": "a",
-    "explicacion": "El modo Gateway permite enlazar/repetir señales entre terminales portátiles y la red/emisora del vehículo para ampliar la cobertura en zonas con sombra o interiores.",
-    "num_modelo_a": 48
+    "explicacion": "El modo Gateway permite enlazar/repetir señales entre terminales portátiles y la red/emisora del vehículo para ampliar la cobertura en zonas con sombra o interiores."
   },
   {
     "id": 15,
@@ -1432,8 +1434,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "c",
-    "explicacion": "El disco de embrague se interpone entre el volante motor y el plato de presión para acoplar o desacoplar y transmitir el par/movimiento del motor a la caja de cambios.",
-    "num_modelo_a": 49
+    "explicacion": "El disco de embrague se interpone entre el volante motor y el plato de presión para acoplar o desacoplar y transmitir el par/movimiento del motor a la caja de cambios."
   },
   {
     "id": 16,
@@ -1448,8 +1449,7 @@
       "d": "a) y b) son falsas."
     },
     "correcta": "c",
-    "explicacion": "Tanto las señales acústicas (claxon) y luces de posición como los intermitentes, luces de freno y marcha atrás advierten de la presencia y maniobras del vehículo.",
-    "num_modelo_a": 50
+    "explicacion": "Tanto las señales acústicas (claxon) y luces de posición como los intermitentes, luces de freno y marcha atrás advierten de la presencia y maniobras del vehículo."
   },
   {
     "id": 17,
@@ -1464,8 +1464,7 @@
       "d": "Relé."
     },
     "correcta": "d",
-    "explicacion": "El circuito de encendido clásico/electrónico consta de alimentación (batería), sistema de mando/control, bobina(s) de alta tensión, distribuidor (si aplica) y bujías; un relé genérico no es un elemento constitutivo esencial de la chispa.",
-    "num_modelo_a": 51
+    "explicacion": "El circuito de encendido clásico/electrónico consta de alimentación (batería), sistema de mando/control, bobina(s) de alta tensión, distribuidor (si aplica) y bujías; un relé genérico no es un elemento constitutivo esencial de la chispa."
   },
   {
     "id": 18,
@@ -1480,8 +1479,7 @@
       "d": "Ninguna es correcta."
     },
     "correcta": "b",
-    "explicacion": "La neuroglucopenia y descarga adrenérgica en una hipoglucemia pueden desencadenar convulsiones, déficits neurológicos focales, arritmias cardíacas y broncoaspiración si hay alteración del nivel de conciencia.",
-    "num_modelo_a": 52
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B (IAM y ACVA)."
   },
   {
     "id": 19,
@@ -1496,8 +1494,7 @@
       "d": "Nunca accederemos a los túneles en un IMV."
     },
     "correcta": "d",
-    "explicacion": "En incidentes en túneles ferroviarios/metro solo se accede con seguridad garantizada: corte/control de catenaria y ventilación/humos favorables informados por el operador y zona asegurada bajo mando de bomberos.",
-    "num_modelo_a": 53
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la D (Nunca accederemos a los túneles en un IMV)."
   },
   {
     "id": 20,
@@ -1512,8 +1509,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "d",
-    "explicacion": "Los servicios de urgencia deben minimizar la perturbación al tráfico, ocupar lo imprescindible de la calzada y acatar las indicaciones de la autoridad de tráfico.",
-    "num_modelo_a": 54
+    "explicacion": "Los servicios de urgencia deben minimizar la perturbación al tráfico, ocupar lo imprescindible de la calzada y acatar las indicaciones de la autoridad de tráfico."
   },
   {
     "id": 21,
@@ -1528,8 +1524,7 @@
       "d": "Fragilidad, aerodinámica, oscilaciones, deformabilidad y rigidez."
     },
     "correcta": "a",
-    "explicacion": "En el diseño estructural de carrocerías se equilibran rigidez (habitáculo indeformable) y deformabilidad programada (zonas de absorción), junto con vibraciones, durabilidad y aerodinámica.",
-    "num_modelo_a": 55
+    "explicacion": "En el diseño estructural de carrocerías se equilibran rigidez (habitáculo indeformable) y deformabilidad programada (zonas de absorción), junto con vibraciones, durabilidad y aerodinámica."
   },
   {
     "id": 22,
@@ -1544,8 +1539,7 @@
       "d": "b) y c) son correctas."
     },
     "correcta": "a",
-    "explicacion": "El informe de asistencia recoge la valoración clínica, actuaciones sanitarias y evolución de la persona paciente durante la atención/traslado.",
-    "num_modelo_a": 56
+    "explicacion": "El informe de asistencia recoge la valoración clínica, actuaciones sanitarias y evolución de la persona paciente durante la atención/traslado."
   },
   {
     "id": 23,
@@ -1560,8 +1554,7 @@
       "d": "Posición de Fowler y Sims."
     },
     "correcta": "a",
-    "explicacion": "Tanto la posición de Fowler (incorporado) como la posición de Morestín / anti-Trendelenburg (cabeza más alta que los pies) favorecen la mecánica ventilatoria y reducen la presión abdominal sobre el diafragma.",
-    "num_modelo_a": 57
+    "explicacion": "Tanto la posición de Fowler (incorporado) como la posición de Morestín / anti-Trendelenburg (cabeza más alta que los pies) favorecen la mecánica ventilatoria y reducen la presión abdominal sobre el diafragma."
   },
   {
     "id": 24,
@@ -1576,8 +1569,7 @@
       "d": "1,5-2 segundos."
     },
     "correcta": "a",
-    "explicacion": "En RCP pediátrica, cada insuflación de rescate debe administrarse durante aproximadamente 1 segundo, con volumen suficiente para hacer elevar visiblemente el tórax.",
-    "num_modelo_a": 58
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la A (0,5 segundos, para minimizar el tiempo sin realizar masaje cardiaco)."
   },
   {
     "id": 25,
@@ -1592,8 +1584,7 @@
       "d": "SpO2."
     },
     "correcta": "a",
-    "explicacion": "La capnometría (y capnografía) mide el CO2 al final de la espiración (ETCO2) y refleja la ventilación alveolar y el metabolismo/perfusión.",
-    "num_modelo_a": 59
+    "explicacion": "La capnometría (y capnografía) mide el CO2 al final de la espiración (ETCO2) y refleja la ventilación alveolar y el metabolismo/perfusión."
   },
   {
     "id": 26,
@@ -1608,8 +1599,7 @@
       "d": "Aumentar la velocidad si el viento nos hace contra."
     },
     "correcta": "c",
-    "explicacion": "Ante viento lateral, hay que sujetar firmemente el volante, corregir ligeramente hacia el lado de donde sopla el viento (contra el viento) para mantener la trayectoria y moderar la marcha.",
-    "num_modelo_a": 60
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la C (Situarnos de manera lateral a un vehículo voluminoso que nos pueda hacer de pantalla)."
   },
   {
     "id": 27,
@@ -1624,8 +1614,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "d",
-    "explicacion": "Antes de movilizar a un paciente deben evaluarse la seguridad/PAS, los recursos humanos disponibles, el espacio/posición y la gravedad lesional.",
-    "num_modelo_a": 61
+    "explicacion": "Antes de movilizar a un paciente deben evaluarse la seguridad/PAS, los recursos humanos disponibles, el espacio/posición y la gravedad lesional."
   },
   {
     "id": 28,
@@ -1640,8 +1629,7 @@
       "d": "a) y b) son correctas."
     },
     "correcta": "b",
-    "explicacion": "El RD 836/2012 y la normativa de tráfico exigen identificación exterior (como la palabra «Ambulancia» en especular/inverso en el frontal y/o trasera según corresponda) y señalización luminosa y acústica homologada.",
-    "num_modelo_a": 62
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B (Señalización luminosa y acústica de preferencia de paso ajustada a lo dispuesto en la reglamentación vigente)."
   },
   {
     "id": 29,
@@ -1656,8 +1644,7 @@
       "d": "El pie, la cabeza y el pistón."
     },
     "correcta": "c",
-    "explicacion": "Las tres partes de una biela son el pie (unido al bulón del pistón), el cuerpo (vástago central) y la cabeza (unida a la muñequilla del cigüeñal).",
-    "num_modelo_a": 63
+    "explicacion": "Las tres partes de una biela son el pie (unido al bulón del pistón), el cuerpo (vástago central) y la cabeza (unida a la muñequilla del cigüeñal)."
   },
   {
     "id": 30,
@@ -1672,8 +1659,7 @@
       "d": "Cuando la absorción se produce, exclusivamente, por difusión pasiva a través de las membranas de los bronquios, bronquiolos y alvéolos."
     },
     "correcta": "a",
-    "explicacion": "La permeación describe el tránsito/absorción de un principio activo a través de capas tisulares (como las capas cutáneas hasta alcanzar la circulación sistémica).",
-    "num_modelo_a": 64
+    "explicacion": "La permeación describe el tránsito/absorción de un principio activo a través de capas tisulares (como las capas cutáneas hasta alcanzar la circulación sistémica)."
   },
   {
     "id": 31,
@@ -1688,8 +1674,7 @@
       "d": "Taqués fijos y taqués con reglaje de anchura."
     },
     "correcta": "b",
-    "explicacion": "En la distribución de motores se distinguen fundamentalmente taqués mecánicos/fijos (con o sin ajuste de holgura) y taqués hidráulicos.",
-    "num_modelo_a": 65
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B (Taqués fijos, taqués sin reglaje y taqués hidráulicos)."
   },
   {
     "id": 32,
@@ -1704,8 +1689,7 @@
       "d": "La suspensión inteligente."
     },
     "correcta": "b",
-    "explicacion": "En la clasificación clásica de suspensiones de automoción (especialmente en el tren trasero), se diferencian eje rígido, eje semirrígido (torsión) y suspensión independiente.",
-    "num_modelo_a": 66
+    "explicacion": "En la clasificación clásica de suspensiones de automoción (especialmente en el tren trasero), se diferencian eje rígido, eje semirrígido (torsión) y suspensión independiente."
   },
   {
     "id": 33,
@@ -1720,8 +1704,7 @@
       "d": "18 metros."
     },
     "correcta": "a",
-    "explicacion": "90 km/h equivalen a 90.000 m / 3.600 s = 25 m/s; por tanto, en 1 segundo se recorren 25 metros.",
-    "num_modelo_a": 67
+    "explicacion": "90 km/h equivalen a 90.000 m / 3.600 s = 25 m/s; por tanto, en 1 segundo se recorren 25 metros."
   },
   {
     "id": 34,
@@ -1736,8 +1719,7 @@
       "d": "Puedo realizarlo al finalizar el servicio."
     },
     "correcta": "b",
-    "explicacion": "Todo conductor de vehículo está obligado a someterse a las pruebas de detección de alcohol y drogas cuando sea requerido por los agentes de la autoridad encargados de la vigilancia del tráfico.",
-    "num_modelo_a": 68
+    "explicacion": "Todo conductor de vehículo está obligado a someterse a las pruebas de detección de alcohol y drogas cuando sea requerido por los agentes de la autoridad encargados de la vigilancia del tráfico."
   },
   {
     "id": 35,
@@ -1752,8 +1734,7 @@
       "d": "a) y c) son correctas."
     },
     "correcta": "d",
-    "explicacion": "Según el RD 836/2012, las ambulancias no asistenciales (A1 y A2) requieren conductor con cualificación/certificado de profesionalidad (o título de TES) y ayudante con la misma cualificación cuando el servicio lo requiera; la clase C requiere además médico y enfermero.",
-    "num_modelo_a": 69
+    "explicacion": "Según el RD 836/2012, las ambulancias no asistenciales (A1 y A2) requieren conductor con cualificación/certificado de profesionalidad (o título de TES) y ayudante con la misma cualificación cuando el servicio lo requiera; la clase C requiere además médico y enfermero."
   },
   {
     "id": 36,
@@ -1768,8 +1749,7 @@
       "d": "Actuador hidráulico."
     },
     "correcta": "a",
-    "explicacion": "En un freno de disco, las pastillas de freno son presionadas por la pinza contra el disco giratorio para generar fricción y frenar.",
-    "num_modelo_a": 70
+    "explicacion": "En un freno de disco, las pastillas de freno son presionadas por la pinza contra el disco giratorio para generar fricción y frenar."
   },
   {
     "id": 1,
@@ -1784,8 +1764,7 @@
       "d": "El Ministerio de Sanidad, Servicios Sociales e Igualdad comunicará a las entidades mencionadas en las opciones b) y c) anteriores, las resoluciones sancionadoras que reciba."
     },
     "correcta": "c",
-    "explicacion": "Conforme a la Ley 44/2003 (LOPS), el registro/comunicación de inhabilitaciones y suspensiones se remite al Ministerio de Sanidad y se comunica a los registros/colegios o administraciones correspondientes según proceda, no condicionándose a la oposición del sancionado ni respondiendo a la redacción falsa de la opción d).",
-    "num_modelo_a": 71
+    "explicacion": "Según la clave oficial aprobada por el Tribunal (señalando la afirmación falsa), la opción marcada como correcta es la C."
   },
   {
     "id": 2,
@@ -1800,8 +1779,7 @@
       "d": "La renuncia se ejerza de acuerdo con procedimientos establecidos y explícitos."
     },
     "correcta": "c",
-    "explicacion": "El artículo 5.1.c de la Ley 44/2003 exige que no suponga desatención y que se realice de acuerdo con los procedimientos establecidos y explícitos (no de forma informal o sin constancia debida).",
-    "num_modelo_a": 72
+    "explicacion": "El artículo 5.1.c de la Ley 44/2003 exige que no suponga desatención y que se realice de acuerdo con los procedimientos establecidos y explícitos (no de forma informal o sin constancia debida)."
   },
   {
     "id": 3,
@@ -1816,8 +1794,7 @@
       "d": "El enjuiciamiento y pronóstico de los procesos objeto de atención."
     },
     "correcta": "b",
-    "explicacion": "El artículo 6.2.a de la Ley 44/2003 atribuye al personal médico la promoción de la salud, prevención, diagnóstico, tratamiento, terapéutica, rehabilitación, enjuiciamiento y pronóstico; la dispensación de medicamentos corresponde a las oficinas de farmacia/farmacéuticos.",
-    "num_modelo_a": 73
+    "explicacion": "El artículo 6.2.a de la Ley 44/2003 atribuye al personal médico la promoción de la salud, prevención, diagnóstico, tratamiento, terapéutica, rehabilitación, enjuiciamiento y pronóstico; la dispensación de medicamentos corresponde a las oficinas de farmacia/farmacéuticos."
   },
   {
     "id": 4,
@@ -1832,8 +1809,7 @@
       "d": "La responsabilidad de un equipo de profesionales recaerá en aquellas personas integrantes que hayan adquirido las tareas y funciones que hayan causado la responsabilidad, siempre que las condiciones de la delegación se adecúen a lo establecido."
     },
     "correcta": "d",
-    "explicacion": "Según el artículo 9 de la Ley 44/2003, la responsabilidad de cada profesional por su propia actuación no se diluye ni recae genéricamente sobre el centro por la mera distribución del trabajo en equipo.",
-    "num_modelo_a": 74
+    "explicacion": "Según la clave oficial aprobada por el Tribunal (señalando la afirmación incorrecta), la opción marcada como correcta es la D."
   },
   {
     "id": 5,
@@ -1848,8 +1824,7 @@
       "d": "Los centros sanitarios acreditados para la formación especializada deberán contar con jefaturas de estudios, coordinación docente y personal tutor de la formación que resulten adecuados en función de su capacidad docente, pero no con una comisión de docencia."
     },
     "correcta": "d",
-    "explicacion": "La Ley 44/2003 establece que los centros acreditados para formación sanitaria especializada contarán con Comisión de Docencia, jefaturas de estudios/coordinación docente y tutores.",
-    "num_modelo_a": 75
+    "explicacion": "La Ley 44/2003 establece que los centros acreditados para formación sanitaria especializada contarán con Comisión de Docencia, jefaturas de estudios/coordinación docente y tutores."
   },
   {
     "id": 6,
@@ -1864,8 +1839,7 @@
       "d": "Se acordará en el seno de la Conferencia de Presidentes de las Comunidades Autónomas y se aprobará en las normas autonómicas correspondientes."
     },
     "correcta": "b",
-    "explicacion": "Conforme al artículo 8 bis / 20 de la Ley 16/2003, la cartera común básica de servicios asistenciales se acuerda en el Consejo Interterritorial del SNS y se aprueba mediante Real Decreto.",
-    "num_modelo_a": 76
+    "explicacion": "Conforme al artículo 8 bis / 20 de la Ley 16/2003, la cartera común básica de servicios asistenciales se acuerda en el Consejo Interterritorial del SNS y se aprueba mediante Real Decreto."
   },
   {
     "id": 7,
@@ -1880,8 +1854,7 @@
       "d": "Todas las respuestas anteriores son correctas."
     },
     "correcta": "a",
-    "explicacion": "La Ley 16/2003 prevé la exclusión de técnicas o tecnologías cuando se evidencie falta de eficacia, efectividad, eficiencia o seguridad, o un balance beneficio-riesgo desfavorable.",
-    "num_modelo_a": 77
+    "explicacion": "La Ley 16/2003 prevé la exclusión de técnicas o tecnologías cuando se evidencie falta de eficacia, efectividad, eficiencia o seguridad, o un balance beneficio-riesgo desfavorable."
   },
   {
     "id": 8,
@@ -1896,8 +1869,7 @@
       "d": "La superación del proceso selectivo oficial convocado por la autoridad competente para la adquisición del vínculo estatutario con los servicios sanitarios."
     },
     "correcta": "c",
-    "explicacion": "La Ley 16/2003 define la competencia profesional como la aptitud para integrar y aplicar conocimientos, habilidades y actitudes propios de la buena práctica profesional.",
-    "num_modelo_a": 78
+    "explicacion": "La Ley 16/2003 define la competencia profesional como la aptitud para integrar y aplicar conocimientos, habilidades y actitudes propios de la buena práctica profesional."
   },
   {
     "id": 9,
@@ -1912,8 +1884,7 @@
       "d": "Ninguna de las anteriores respuestas es correcta."
     },
     "correcta": "a",
-    "explicacion": "El artículo 1 de la Ley 55/2003 establece el objeto de regular las bases de la relación funcionarial especial del personal estatutario de los servicios de salud del SNS.",
-    "num_modelo_a": 79
+    "explicacion": "El artículo 1 de la Ley 55/2003 establece el objeto de regular las bases de la relación funcionarial especial del personal estatutario de los servicios de salud del SNS."
   },
   {
     "id": 10,
@@ -1928,8 +1899,7 @@
       "d": "Superación de las pruebas de selección; nombramiento conferido por el órgano competente; e incorporación a una plaza del servicio, institución o centro que corresponda en todo caso en el plazo determinado en la convocatoria."
     },
     "correcta": "c",
-    "explicacion": "Según el artículo 20 de la Ley 55/2003, se adquiere mediante superación de pruebas de selección, nombramiento por órgano competente e incorporación, cumplidos los requisitos formales, en el plazo fijado en la convocatoria.",
-    "num_modelo_a": 80
+    "explicacion": "Según el artículo 20 de la Ley 55/2003, se adquiere mediante superación de pruebas de selección, nombramiento por órgano competente e incorporación, cumplidos los requisitos formales, en el plazo fijado en la convocatoria."
   },
   {
     "id": 11,
@@ -1944,8 +1914,7 @@
       "d": "Todas las respuestas son correctas."
     },
     "correcta": "d",
-    "explicacion": "La Ley 55/2003 estructura las retribuciones en básicas y complementarias, vincula parte de las complementarias a criterios de evaluación con igualdad, objetividad y transparencia y atiende a la cualificación.",
-    "num_modelo_a": 81
+    "explicacion": "La Ley 55/2003 estructura las retribuciones en básicas y complementarias, vincula parte de las complementarias a criterios de evaluación con igualdad, objetividad y transparencia y atiende a la cualificación."
   },
   {
     "id": 12,
@@ -1960,8 +1929,7 @@
       "d": "El período de localización es aquel período de tiempo en el que el personal se encuentra en situación de disponibilidad a los solos efectos de asegurar su posible localización."
     },
     "correcta": "b",
-    "explicacion": "En la regulación de jornada y tiempos de trabajo (Ley 55/2003 y normativa de jornada/descanso), todo período que no sea tiempo de trabajo efectivo computa como período de descanso.",
-    "num_modelo_a": 82
+    "explicacion": "En la regulación de jornada y tiempos de trabajo (Ley 55/2003 y normativa de jornada/descanso), todo período que no sea tiempo de trabajo efectivo computa como período de descanso."
   },
   {
     "id": 13,
@@ -1976,8 +1944,7 @@
       "d": "Para el personal licenciado sanitario el complemento específico resulta irrenunciable."
     },
     "correcta": "c",
-    "explicacion": "El artículo 77 de la Ley 55/2003 remite al régimen general de incompatibilidades del personal al servicio de las Administraciones Públicas / personal funcionario.",
-    "num_modelo_a": 83
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la C."
   },
   {
     "id": 14,
@@ -1992,8 +1959,7 @@
       "d": "Son correctas todas las respuestas."
     },
     "correcta": "d",
-    "explicacion": "La Ley 8/1997 de Ordenación Sanitaria de Euskadi encomienda la tutela de la salud pública mediante promoción de la salud, prevención y atención/prestaciones sanitarias.",
-    "num_modelo_a": 84
+    "explicacion": "La Ley 8/1997 de Ordenación Sanitaria de Euskadi encomienda la tutela de la salud pública mediante promoción de la salud, prevención y atención/prestaciones sanitarias."
   },
   {
     "id": 15,
@@ -2008,8 +1974,7 @@
       "d": "Ninguna respuesta es correcta."
     },
     "correcta": "b",
-    "explicacion": "De acuerdo con la Ley 8/1997 (art. 20), Osakidetza es un ente público de derecho privado con personalidad jurídica propia.",
-    "num_modelo_a": 85
+    "explicacion": "De acuerdo con la Ley 8/1997 (art. 20), Osakidetza es un ente público de derecho privado con personalidad jurídica propia."
   },
   {
     "id": 16,
@@ -2024,8 +1989,7 @@
       "d": "La gravedad de la alteración sanitaria y social producida."
     },
     "correcta": "a",
-    "explicacion": "Los criterios de graduación de infracciones sanitarias atienden al riesgo para la salud, intencionalidad/negligencia, gravedad de la alteración sanitaria y social y reincidencia, no a la cuantía indemnizatoria solicitada.",
-    "num_modelo_a": 86
+    "explicacion": "Los criterios de graduación de infracciones sanitarias atienden al riesgo para la salud, intencionalidad/negligencia, gravedad de la alteración sanitaria y social y reincidencia, no a la cuantía indemnizatoria solicitada."
   },
   {
     "id": 17,
@@ -2040,8 +2004,7 @@
       "d": "Ninguna de las anteriores."
     },
     "correcta": "b",
-    "explicacion": "Corresponde a la Presidencia del Consejo de Administración convocar, presidir y dirigir las sesiones, así como dirimir empates con voto de calidad.",
-    "num_modelo_a": 87
+    "explicacion": "Corresponde a la Presidencia del Consejo de Administración convocar, presidir y dirigir las sesiones, así como dirimir empates con voto de calidad."
   },
   {
     "id": 18,
@@ -2056,8 +2019,7 @@
       "d": "100.000 habitantes."
     },
     "correcta": "c",
-    "explicacion": "El Decreto 100/2018 clasifica las OSIs en tipologías según hospital y población asignada (Tipo III: hospital general y población inferior a 200.000 habitantes).",
-    "num_modelo_a": 88
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la C (300.000 habitantes)."
   },
   {
     "id": 19,
@@ -2072,8 +2034,7 @@
       "d": "A recibir información sobre los recursos sanitarios y socio-sanitarios disponibles, actuaciones y prestaciones del sistema sanitario de Euskadi, su calidad, coste y requisitos de acceso a los mismos."
     },
     "correcta": "a",
-    "explicacion": "El Decreto 147/2015 reconoce el derecho a información accesible y adecuada sobre los recursos sanitarios y sociosanitarios, prestaciones, calidad y condiciones de acceso.",
-    "num_modelo_a": 89
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la A."
   },
   {
     "id": 20,
@@ -2088,8 +2049,7 @@
       "d": "La información se pondrá en conocimiento de las personas vinculadas a la persona paciente por razones familiares o de hecho."
     },
     "correcta": "d",
-    "explicacion": "Según el artículo 5.1 de la Ley 41/2002, si el paciente carece de capacidad para entender la información, esta se pondrá en conocimiento de las personas vinculadas a él por razones familiares o de hecho.",
-    "num_modelo_a": 90
+    "explicacion": "Según el artículo 5.1 de la Ley 41/2002, si el paciente carece de capacidad para entender la información, esta se pondrá en conocimiento de las personas vinculadas a él por razones familiares o de hecho."
   },
   {
     "id": 21,
@@ -2104,8 +2064,7 @@
       "d": "La persona otorgante conserve su capacidad, su libertad de actuación y la posibilidad de expresarse de manera inequívoca o a través de la persona interlocutora designada al efecto."
     },
     "correcta": "b",
-    "explicacion": "La voluntad actual de la persona prevalece sobre el documento de voluntades anticipadas cuando conserve su capacidad, libertad de actuación y pueda expresarse de manera inequívoca.",
-    "num_modelo_a": 91
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B."
   },
   {
     "id": 22,
@@ -2120,8 +2079,7 @@
       "d": "En caso de que la persona fallecida fuera menor de edad, el acceso podrá ejercerse también por sus representantes legales o por el Ministerio Fiscal que siempre actuará de oficio."
     },
     "correcta": "c",
-    "explicacion": "El artículo 3 de la LOPDGDD permite el acceso a datos de personas fallecidas a personas vinculadas por razones familiares o de hecho y herederos, salvo prohibición expresa del fallecido.",
-    "num_modelo_a": 92
+    "explicacion": "El artículo 3 de la LOPDGDD permite el acceso a datos de personas fallecidas a personas vinculadas por razones familiares o de hecho y herederos, salvo prohibición expresa del fallecido."
   },
   {
     "id": 23,
@@ -2136,8 +2094,7 @@
       "d": "Un conflicto de convivencia familiar."
     },
     "correcta": "b",
-    "explicacion": "El Decreto Legislativo 1/2023 define la violencia machista contra las mujeres como una vulneración de los derechos humanos y un grave problema estructural y de salud pública.",
-    "num_modelo_a": 93
+    "explicacion": "El Decreto Legislativo 1/2023 define la violencia machista contra las mujeres como una vulneración de los derechos humanos y un grave problema estructural y de salud pública."
   },
   {
     "id": 24,
@@ -2152,8 +2109,7 @@
       "d": "Atención Vasca a la Adicción a Drogas."
     },
     "correcta": "d",
-    "explicacion": "En salud pública y epidemiología (Plan de Salud), AVAD / DALY corresponde a Años de Vida Ajustados por Discapacidad (o pérdida de años de vida saludable).",
-    "num_modelo_a": 94
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la D."
   },
   {
     "id": 25,
@@ -2168,8 +2124,7 @@
       "d": "El Observatorio de Salud y la consultora LKS S Coop."
     },
     "correcta": "b",
-    "explicacion": "La gobernanza y elaboración del Plan de Salud Euskadi 2030 se articuló mediante su Comité de Dirección y Comité Estratégico.",
-    "num_modelo_a": 95
+    "explicacion": "La gobernanza y elaboración del Plan de Salud Euskadi 2030 se articuló mediante su Comité de Dirección y Comité Estratégico."
   },
   {
     "id": 26,
@@ -2184,8 +2139,7 @@
       "d": "Se reserva exclusivamente para el ámbito académico, no para el legislativo."
     },
     "correcta": "b",
-    "explicacion": "El Plan de Salud Euskadi 2030 sitúa la evidencia científica y el conocimiento epidemiológico como pilar para diseñar, ejecutar y evaluar políticas sanitarias.",
-    "num_modelo_a": 96
+    "explicacion": "El Plan de Salud Euskadi 2030 sitúa la evidencia científica y el conocimiento epidemiológico como pilar para diseñar, ejecutar y evaluar políticas sanitarias."
   },
   {
     "id": 27,
@@ -2200,8 +2154,7 @@
       "d": "Reducir la cobertura de medicamentos para patologías de larga duración."
     },
     "correcta": "b",
-    "explicacion": "El abordaje de la cronicidad promueve la atención integrada, proactiva y la autonomía/corresponsabilidad de la persona paciente.",
-    "num_modelo_a": 97
+    "explicacion": "El abordaje de la cronicidad promueve la atención integrada, proactiva y la autonomía/corresponsabilidad de la persona paciente."
   },
   {
     "id": 28,
@@ -2216,8 +2169,7 @@
       "d": "Centralizar los servicios de traducción en una única sede en Vitoria-Gasteiz."
     },
     "correcta": "a",
-    "explicacion": "Los derechos lingüísticos en el sistema sanitario vasco garantizan la atención en la lengua oficial (euskera o castellano) elegida por la ciudadanía.",
-    "num_modelo_a": 98
+    "explicacion": "Los derechos lingüísticos en el sistema sanitario vasco garantizan la atención en la lengua oficial (euskera o castellano) elegida por la ciudadanía."
   },
   {
     "id": 29,
@@ -2232,8 +2184,7 @@
       "d": "Seguridad en Salud Mental y Prevención de las Úlceras por Presión."
     },
     "correcta": "c",
-    "explicacion": "La Estrategia de Seguridad del Paciente 20-30 incorpora líneas específicas de Seguridad del Paciente en Emergencias y Prevención del Suicidio.",
-    "num_modelo_a": 99
+    "explicacion": "La Estrategia de Seguridad del Paciente 20-30 incorpora líneas específicas de Seguridad del Paciente en Emergencias y Prevención del Suicidio."
   },
   {
     "id": 30,
@@ -2248,8 +2199,7 @@
       "d": "Dirección General de Osakidetza."
     },
     "correcta": "c",
-    "explicacion": "El Consejo de Administración de Osakidetza es el órgano de gobierno competente para aprobar los planes de igualdad de la organización.",
-    "num_modelo_a": 100
+    "explicacion": "El Consejo de Administración de Osakidetza es el órgano de gobierno competente para aprobar los planes de igualdad de la organización."
   },
   {
     "id": 37,
@@ -2264,8 +2214,7 @@
       "d": "Infracción leve."
     },
     "correcta": "a",
-    "explicacion": "La conducción temeraria constituye infracción muy grave conforme a la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015).",
-    "num_modelo_a": 1
+    "explicacion": "La conducción temeraria constituye infracción muy grave conforme a la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial (RDLeg 6/2015)."
   },
   {
     "id": 38,
@@ -2280,8 +2229,7 @@
       "d": "Las tres afirmaciones son falsas."
     },
     "correcta": "c",
-    "explicacion": "La regulación y ordenación del estacionamiento/ubicación operativa en la vía corresponde a la autoridad responsable de tráfico o agentes competentes.",
-    "num_modelo_a": 2
+    "explicacion": "La regulación y ordenación del estacionamiento/ubicación operativa en la vía corresponde a la autoridad responsable de tráfico o agentes competentes."
   },
   {
     "id": 39,
@@ -2296,8 +2244,7 @@
       "d": "En el lugar más cercano a la posterior actuación."
     },
     "correcta": "b",
-    "explicacion": "La detención o estacionamiento de vehículos de urgencia debe evitar crear nuevos peligros y minimizar el obstáculo a la circulación.",
-    "num_modelo_a": 3
+    "explicacion": "La detención o estacionamiento de vehículos de urgencia debe evitar crear nuevos peligros y minimizar el obstáculo a la circulación."
   },
   {
     "id": 40,
@@ -2312,8 +2259,7 @@
       "d": "RCP inmediata y desfibrilación temprana como componentes fundamentales."
     },
     "correcta": "b",
-    "explicacion": "En la cadena de supervivencia asistencial, tras el reconocimiento/alerta y RCP + desfibrilación precoz, entra el soporte vital avanzado y los cuidados post-resucitación.",
-    "num_modelo_a": 4
+    "explicacion": "En la cadena de supervivencia asistencial, tras el reconocimiento/alerta y RCP + desfibrilación precoz, entra el soporte vital avanzado y los cuidados post-resucitación."
   },
   {
     "id": 41,
@@ -2328,8 +2274,7 @@
       "d": "Certificación técnico-sanitaria en vigor y que su titular dispone de un vehículo, que puede ser en propiedad o arrendamiento financiero."
     },
     "correcta": "d",
-    "explicacion": "Para adscribir el vehículo a la autorización se requiere certificación técnico-sanitaria en vigor y disponibilidad del vehículo en propiedad, arrendamiento financiero u otro título admitido.",
-    "num_modelo_a": 5
+    "explicacion": "Para adscribir el vehículo a la autorización se requiere certificación técnico-sanitaria en vigor y disponibilidad del vehículo en propiedad, arrendamiento financiero u otro título admitido."
   },
   {
     "id": 42,
@@ -2344,8 +2289,7 @@
       "d": "Por el órgano competente para la expedición de las autorizaciones del ministerio de Fomento, Sanidad y Consumo."
     },
     "correcta": "a",
-    "explicacion": "Conforme a la Orden PRE/1435/2013, las autorizaciones de transporte sanitario se otorgan por el órgano competente en materia de transporte discrecional interurbano.",
-    "num_modelo_a": 6
+    "explicacion": "Conforme a la Orden PRE/1435/2013, las autorizaciones de transporte sanitario se otorgan por el órgano competente en materia de transporte discrecional interurbano."
   },
   {
     "id": 43,
@@ -2360,8 +2304,7 @@
       "d": "Custodiarse en las oficinas de la empresa titular del vehículo."
     },
     "correcta": "c",
-    "explicacion": "La certificación técnico-sanitaria en vigor debe llevarse a bordo junto con la documentación del vehículo.",
-    "num_modelo_a": 7
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la C."
   },
   {
     "id": 44,
@@ -2376,8 +2319,7 @@
       "d": "La admisión de un motor diésel admite aire y aceite."
     },
     "correcta": "b",
-    "explicacion": "En un motor diésel, durante el tiempo de admisión solo entra aire limpio al cilindro; el combustible se inyecta directamente al final de la compresión.",
-    "num_modelo_a": 8
+    "explicacion": "En un motor diésel, durante el tiempo de admisión solo entra aire limpio al cilindro; el combustible se inyecta directamente al final de la compresión."
   },
   {
     "id": 45,
@@ -2392,8 +2334,7 @@
       "d": "a) y b) son falsas."
     },
     "correcta": "c",
-    "explicacion": "La certificación técnico-sanitaria se pierde o extingue si se modifica/recalifica el vehículo perdiendo su condición o si no se renueva en plazo.",
-    "num_modelo_a": 9
+    "explicacion": "La certificación técnico-sanitaria se pierde o extingue si se modifica/recalifica el vehículo perdiendo su condición o si no se renueva en plazo."
   },
   {
     "id": 46,
@@ -2408,8 +2349,7 @@
       "d": "Todas las anteriores son ciertas."
     },
     "correcta": "d",
-    "explicacion": "El RD 836/2012 regula conjuntamente las características técnico-sanitarias, el equipamiento sanitario y la dotación mínima de personal de las ambulancias.",
-    "num_modelo_a": 10
+    "explicacion": "El RD 836/2012 regula conjuntamente las características técnico-sanitarias, el equipamiento sanitario y la dotación mínima de personal de las ambulancias."
   },
   {
     "id": 47,
@@ -2424,8 +2364,7 @@
       "d": "Libro de reclamaciones y partes asistenciales."
     },
     "correcta": "a",
-    "explicacion": "El anexo del RD 836/2012 establece la obligatoriedad de contar con libro de reclamaciones y registro de limpieza/desinfección del vehículo y material.",
-    "num_modelo_a": 11
+    "explicacion": "El anexo del RD 836/2012 establece la obligatoriedad de contar con libro de reclamaciones y registro de limpieza/desinfección del vehículo y material."
   },
   {
     "id": 48,
@@ -2440,8 +2379,7 @@
       "d": "Al menos, con una persona conductora que esté en posesión del título de FP de Técnico en Emergencias Sanitarias y con una persona enfermera que ostente el título de Grado."
     },
     "correcta": "b",
-    "explicacion": "Para las ambulancias asistenciales de clase B, el RD 836/2012 exige al menos un conductor y un ayudante con la titulación de FP de Técnico en Emergencias Sanitarias (o equivalente homologado).",
-    "num_modelo_a": 12
+    "explicacion": "Para las ambulancias asistenciales de clase B, el RD 836/2012 exige al menos un conductor y un ayudante con la titulación de FP de Técnico en Emergencias Sanitarias (o equivalente homologado)."
   },
   {
     "id": 49,
@@ -2456,8 +2394,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "c",
-    "explicacion": "El ASR (control de tracción) es un sistema de seguridad activa porque actúa durante la marcha para evitar la pérdida de adherencia; los airbags y barras laterales son seguridad pasiva.",
-    "num_modelo_a": 13
+    "explicacion": "El ASR (control de tracción) es un sistema de seguridad activa porque actúa durante la marcha para evitar la pérdida de adherencia; los airbags y barras laterales son seguridad pasiva."
   },
   {
     "id": 50,
@@ -2472,8 +2409,7 @@
       "d": "A los sistemas ABS, ASR y ASP que están diseñados con el fin de evitar situaciones que pudieran ocasionar accidentes."
     },
     "correcta": "a",
-    "explicacion": "La seguridad preventiva engloba los factores y sistemas orientados a evitar que se produzca el accidente (visibilidad, ergonomía, frenos, neumáticos, conducción preventiva).",
-    "num_modelo_a": 14
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la A."
   },
   {
     "id": 51,
@@ -2488,8 +2424,7 @@
       "d": "Todas son correctas."
     },
     "correcta": "a",
-    "explicacion": "Los segmentos (de compresión y rascador/engrase) mantienen la estanqueidad de gases, rascan el exceso de aceite de las paredes del cilindro y disipan calor hacia el cilindro.",
-    "num_modelo_a": 15
+    "explicacion": "Los segmentos (de compresión y rascador/engrase) mantienen la estanqueidad de gases, rascan el exceso de aceite de las paredes del cilindro y disipan calor hacia el cilindro."
   },
   {
     "id": 52,
@@ -2504,8 +2439,7 @@
       "d": "Radiador, botella de expansión y líquido lubricante."
     },
     "correcta": "c",
-    "explicacion": "El circuito de refrigeración incluye radiador, manguitos, bomba de agua, termostato, vaso/botella de expansión, purgadores y líquido refrigerante.",
-    "num_modelo_a": 16
+    "explicacion": "El circuito de refrigeración incluye radiador, manguitos, bomba de agua, termostato, vaso/botella de expansión, purgadores y líquido refrigerante."
   },
   {
     "id": 53,
@@ -2520,8 +2454,7 @@
       "d": "En los vehículos con motor delantero y tracción trasera y en los vehículos de tracción total."
     },
     "correcta": "d",
-    "explicacion": "El árbol de transmisión transmite el giro desde la caja de cambios hacia el eje motriz en configuraciones de propulsión trasera o tracción total (4x4/AWD).",
-    "num_modelo_a": 17
+    "explicacion": "El árbol de transmisión transmite el giro desde la caja de cambios hacia el eje motriz en configuraciones de propulsión trasera o tracción total (4x4/AWD)."
   },
   {
     "id": 54,
@@ -2536,8 +2469,7 @@
       "d": "Los amortiguadores evitan el balanceo del vehículo en su paso por las curvas."
     },
     "correcta": "c",
-    "explicacion": "Los amortiguadores frenan y amortiguan las oscilaciones de los muelles/resortes manteniendo el contacto del neumático con el firme y la estabilidad del vehículo.",
-    "num_modelo_a": 18
+    "explicacion": "Los amortiguadores frenan y amortiguan las oscilaciones de los muelles/resortes manteniendo el contacto del neumático con el firme y la estabilidad del vehículo."
   },
   {
     "id": 55,
@@ -2552,8 +2484,7 @@
       "d": "Dar a la mangueta una inclinación para que la rueda no apoye totalmente perpendicular al suelo."
     },
     "correcta": "b",
-    "explicacion": "Las bieletas/tirantes de dirección conectan la cremallera/caja de dirección con la mangueta mediante rótulas para transmitir el giro y permitir el ajuste de convergencia/alineación.",
-    "num_modelo_a": 19
+    "explicacion": "Las bieletas/tirantes de dirección conectan la cremallera/caja de dirección con la mangueta mediante rótulas para transmitir el giro y permitir el ajuste de convergencia/alineación."
   },
   {
     "id": 56,
@@ -2568,8 +2499,7 @@
       "d": "Un alternador, una batería y un regulador."
     },
     "correcta": "d",
-    "explicacion": "El circuito de carga se compone básicamente del alternador (genera corriente alterna/rectificada), el regulador de tensión y la batería.",
-    "num_modelo_a": 20
+    "explicacion": "El circuito de carga se compone básicamente del alternador (genera corriente alterna/rectificada), el regulador de tensión y la batería."
   },
   {
     "id": 57,
@@ -2584,8 +2514,7 @@
       "d": "Una luz roja intermitente obliga a las personas que conducen a extremar la precaución."
     },
     "correcta": "a",
-    "explicacion": "Según el Reglamento General de Circulación (art. 146), una luz amarilla intermitente obliga a circular con extrema precaución y, en su caso, ceder el paso.",
-    "num_modelo_a": 21
+    "explicacion": "Según el Reglamento General de Circulación (art. 146), una luz amarilla intermitente obliga a circular con extrema precaución y, en su caso, ceder el paso."
   },
   {
     "id": 58,
@@ -2600,8 +2529,7 @@
       "d": "La a) y la c) son correctas."
     },
     "correcta": "b",
-    "explicacion": "Por inercia, la tendencia del vehículo es seguir en línea recta, lo que se manifiesta como una fuerza centrífuga hacia el exterior de la curva.",
-    "num_modelo_a": 22
+    "explicacion": "Por inercia, la tendencia del vehículo es seguir en línea recta, lo que se manifiesta como una fuerza centrífuga hacia el exterior de la curva."
   },
   {
     "id": 59,
@@ -2616,8 +2544,7 @@
       "d": "Disponer de un dispositivo de aislamiento de la vía aérea que ofrece una solución para la oxigenación pasiva."
     },
     "correcta": "a",
-    "explicacion": "El Airtraq es un videolaringoscopio/laringoscopio óptico con canal guía y visor/óptica iluminada que facilita la visión de las estructuras glóticas y entrada traqueal sin hiperextensión cervical marcada.",
-    "num_modelo_a": 23
+    "explicacion": "El Airtraq es un videolaringoscopio/laringoscopio óptico con canal guía y visor/óptica iluminada que facilita la visión de las estructuras glóticas y entrada traqueal sin hiperextensión cervical marcada."
   },
   {
     "id": 60,
@@ -2632,8 +2559,7 @@
       "d": "Los métodos no invasivos pueden ser con intubación o sin intubación."
     },
     "correcta": "b",
-    "explicacion": "La ventilación mecánica invasiva se aplica mediante vía aérea definitiva (tubo endotraqueal o cánula de traqueostomía) y la no invasiva mediante mascarilla facial o nasal.",
-    "num_modelo_a": 24
+    "explicacion": "La ventilación mecánica invasiva se aplica mediante vía aérea definitiva (tubo endotraqueal o cánula de traqueostomía) y la no invasiva mediante mascarilla facial o nasal."
   },
   {
     "id": 61,
@@ -2648,8 +2574,7 @@
       "d": "Monitoriza todas las constantes y realiza la desfibrilación solamente."
     },
     "correcta": "c",
-    "explicacion": "Los monitores-desfibriladores de emergencias integran desfibrilación (manual/DEA), cardioversión sincronizada y estimulación mediante marcapasos transcutáneo/externo.",
-    "num_modelo_a": 25
+    "explicacion": "Los monitores-desfibriladores de emergencias integran desfibrilación (manual/DEA), cardioversión sincronizada y estimulación mediante marcapasos transcutáneo/externo."
   },
   {
     "id": 62,
@@ -2664,8 +2589,7 @@
       "d": "Succinilcolina."
     },
     "correcta": "d",
-    "explicacion": "La succinilcolina (suxametonio) es un bloqueante neuromuscular despolarizante de inicio ultrarrápido y duración corta empleado clásicamente en secuencia rápida de intubación (salvo contraindicaciones).",
-    "num_modelo_a": 26
+    "explicacion": "La succinilcolina (suxametonio) es un bloqueante neuromuscular despolarizante de inicio ultrarrápido y duración corta empleado clásicamente en secuencia rápida de intubación (salvo contraindicaciones)."
   },
   {
     "id": 63,
@@ -2680,8 +2604,7 @@
       "d": "Vía intravenosa, subcutánea, oral, inhalatoria y endotraqueal."
     },
     "correcta": "b",
-    "explicacion": "La adrenalina puede administrarse por vía intravenosa/intraósea, intramuscular/subcutánea, inhalada/nebulizada o endotraqueal en situaciones específicas (siendo la IM el estándar en anafilaxia y IV/IO en PCR).",
-    "num_modelo_a": 27
+    "explicacion": "La adrenalina puede administrarse por vía intravenosa/intraósea, intramuscular/subcutánea, inhalada/nebulizada o endotraqueal en situaciones específicas (siendo la IM el estándar en anafilaxia y IV/IO en PCR)."
   },
   {
     "id": 64,
@@ -2696,8 +2619,7 @@
       "d": "Un máximo de 8 segundos."
     },
     "correcta": "a",
-    "explicacion": "La valoración de la respiración normal en adultos y niños inconscientes (ver, oír y sentir) no debe superar los 10 segundos.",
-    "num_modelo_a": 28
+    "explicacion": "La valoración de la respiración normal en adultos y niños inconscientes (ver, oír y sentir) no debe superar los 10 segundos."
   },
   {
     "id": 65,
@@ -2712,8 +2634,7 @@
       "d": "Supervisará el trabajo de los equipos que colaboran en el área asistencial."
     },
     "correcta": "c",
-    "explicacion": "El responsable de transporte/evacuación coordina con el Centro Coordinador los recursos de evacuación y el hospital/centro de destino para las víctimas ya estabilizadas y clasificadas.",
-    "num_modelo_a": 29
+    "explicacion": "El responsable de transporte/evacuación coordina con el Centro Coordinador los recursos de evacuación y el hospital/centro de destino para las víctimas ya estabilizadas y clasificadas."
   },
   {
     "id": 66,
@@ -2728,8 +2649,7 @@
       "d": "Se realizará siempre por carretera, para evitar la altitud, que puede ser perjudicial."
     },
     "correcta": "a",
-    "explicacion": "Los neonatos presentan alto riesgo de hipotermia por su relación superficie/masa y escasa termorregulación, por lo que el control térmico de la incubadora y del entorno es crítico.",
-    "num_modelo_a": 30
+    "explicacion": "Los neonatos presentan alto riesgo de hipotermia por su relación superficie/masa y escasa termorregulación, por lo que el control térmico de la incubadora y del entorno es crítico."
   },
   {
     "id": 67,
@@ -2744,8 +2664,7 @@
       "d": "Decúbito lateral izquierdo."
     },
     "correcta": "d",
-    "explicacion": "El decúbito lateral izquierdo (o ligera inclinación lateral izquierda / elevación de cadera derecha) evita la compresión de la vena cava inferior por el útero grávido y mejora el retorno venoso y gasto cardíaco.",
-    "num_modelo_a": 31
+    "explicacion": "El decúbito lateral izquierdo (o ligera inclinación lateral izquierda / elevación de cadera derecha) evita la compresión de la vena cava inferior por el útero grávido y mejora el retorno venoso y gasto cardíaco."
   },
   {
     "id": 68,
@@ -2760,8 +2679,7 @@
       "d": "Varias crisis repetidas que sí permiten recuperación entre ellas."
     },
     "correcta": "c",
-    "explicacion": "El estatus epiléptico se caracteriza por crisis convulsivas prolongadas o crisis repetidas sin recuperación completa del nivel de conciencia entre episodios.",
-    "num_modelo_a": 32
+    "explicacion": "El estatus epiléptico se caracteriza por crisis convulsivas prolongadas o crisis repetidas sin recuperación completa del nivel de conciencia entre episodios."
   },
   {
     "id": 69,
@@ -2776,8 +2694,7 @@
       "d": "Signos de shock con ausencia de taquicardia, piel seca y caliente."
     },
     "correcta": "d",
-    "explicacion": "Por pérdida del tono simpático en el shock neurogénico (lesión medular alta), suele cursar con hipotensión sin taquicardia compensadora (a menudo bradicardia) y piel caliente/seca por vasodilatación periférica.",
-    "num_modelo_a": 33
+    "explicacion": "Por pérdida del tono simpático en el shock neurogénico (lesión medular alta), suele cursar con hipotensión sin taquicardia compensadora (a menudo bradicardia) y piel caliente/seca por vasodilatación periférica."
   },
   {
     "id": 70,
@@ -2792,8 +2709,7 @@
       "d": "N-634."
     },
     "correcta": "c",
-    "explicacion": "La Autovía del Cantábrico corresponde a la nomenclatura A-8.",
-    "num_modelo_a": 34
+    "explicacion": "La Autovía del Cantábrico corresponde a la nomenclatura A-8."
   },
   {
     "id": 71,
@@ -2808,8 +2724,7 @@
       "d": "N-623."
     },
     "correcta": "a",
-    "explicacion": "La carretera N-624 constituye el acceso directo al Aeropuerto de Vitoria (Foronda).",
-    "num_modelo_a": 101
+    "explicacion": "La carretera N-624 constituye el acceso directo al Aeropuerto de Vitoria (Foronda)."
   },
   {
     "id": 72,
@@ -2824,8 +2739,7 @@
       "d": "Transformar la energía mecánica en energía eléctrica."
     },
     "correcta": "b",
-    "explicacion": "Cada Unidad de Control Electrónico (UCE / ECU) recibe señales de sensores, procesa información y gobierna actuadores de un subsistema concreto del vehículo.",
-    "num_modelo_a": 102
+    "explicacion": "Cada Unidad de Control Electrónico (UCE / ECU) recibe señales de sensores, procesa información y gobierna actuadores de un subsistema concreto del vehículo."
   },
   {
     "id": 73,
@@ -2840,8 +2754,7 @@
       "d": "El vehículo solo funciona con energía almacenada en la batería sin movimiento del motor."
     },
     "correcta": "c",
-    "explicacion": "En los cuadrantes/modos de tracción-frenado del motor eléctrico, el régimen negativo con par opuesto corresponde a marcha atrás/frenado regenerativo en sentido contrario.",
-    "num_modelo_a": 103
+    "explicacion": "En los cuadrantes/modos de tracción-frenado del motor eléctrico, el régimen negativo con par opuesto corresponde a marcha atrás/frenado regenerativo en sentido contrario."
   },
   {
     "id": 74,
@@ -2856,8 +2769,7 @@
       "d": "La tensión y resistencia."
     },
     "correcta": "a",
-    "explicacion": "La Ley de Ohm establece la relación V = I · R entre tensión (V), intensidad de corriente (I) y resistencia eléctrica (R).",
-    "num_modelo_a": 104
+    "explicacion": "La Ley de Ohm establece la relación V = I · R entre tensión (V), intensidad de corriente (I) y resistencia eléctrica (R)."
   },
   {
     "id": 75,
@@ -2872,8 +2784,7 @@
       "d": "5 amperios durante 5 horas."
     },
     "correcta": "b",
-    "explicacion": "Una capacidad nominal de 60 Ah equivale teóricamente a suministrar 60 amperios durante 1 hora (o por ejemplo 3 A durante 20 horas).",
-    "num_modelo_a": 105
+    "explicacion": "Una capacidad nominal de 60 Ah equivale teóricamente a suministrar 60 amperios durante 1 hora (o por ejemplo 3 A durante 20 horas)."
   },
   {
     "id": 76,
@@ -2888,8 +2799,7 @@
       "d": "Ninguna respuesta es correcta."
     },
     "correcta": "b",
-    "explicacion": "Los motores eléctricos basan su funcionamiento en los principios del electromagnetismo (interacción entre campos magnéticos y corrientes eléctricas que generan par mecánico).",
-    "num_modelo_a": 106
+    "explicacion": "Los motores eléctricos basan su funcionamiento en los principios del electromagnetismo (interacción entre campos magnéticos y corrientes eléctricas que generan par mecánico)."
   },
   {
     "id": 77,
@@ -2904,8 +2814,7 @@
       "d": "La titularidad, domicilio indicado en el permiso de circulación, matrícula, número de bastidor, clase y antigüedad del vehículo a que estén referidas, así como la fecha de expedición y renovación del certificado."
     },
     "correcta": "d",
-    "explicacion": "En la certificación técnico-sanitaria constan la titularidad, el domicilio del permiso de circulación, la matrícula, la clase y la antigüedad del vehículo.",
-    "num_modelo_a": 107
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la D."
   },
   {
     "id": 31,
@@ -2920,8 +2829,7 @@
       "d": "Ninguna de las anteriores respuestas es correcta."
     },
     "correcta": "a",
-    "explicacion": "El Plan de Normalización del Uso del Euskera en Osakidetza impulsa que los productos, manuales o comunicaciones dirigidos a profesionales y centros de Osakidetza se dispongan en euskera.",
-    "num_modelo_a": 108
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la A."
   },
   {
     "id": 32,
@@ -2936,8 +2844,7 @@
       "d": "Sufrir un dolor fisico o psíquico que no puede ser tratado con paliativos."
     },
     "correcta": "c",
-    "explicacion": "El artículo 5.1.c de la LO 3/2021 exige padecer una enfermedad grave e incurable o un padecimiento grave, crónico e imposibilitante que cause sufrimiento físico o psíquico constante e intolerable.",
-    "num_modelo_a": 109
+    "explicacion": "El artículo 5.1.c de la LO 3/2021 exige padecer una enfermedad grave e incurable o un padecimiento grave, crónico e imposibilitante que cause sufrimiento físico o psíquico constante e intolerable."
   },
   {
     "id": 33,
@@ -2952,14 +2859,249 @@
       "d": "La compatibilidad solo en el ámbito sanitario."
     },
     "correcta": "b",
-    "explicacion": "La Ley 53/1984 establece como regla general la incompatibilidad para desempeñar más de un puesto o actividad en el sector público, salvo los supuestos expresamente exceptuados.",
-    "num_modelo_a": 110
+    "explicacion": "Según la clave oficial aprobada por el Tribunal en este ejercicio, la opción marcada como correcta es la B."
   }
 ];
 
     /* ==========================================================================
        PLANTILLA DE RESPUESTAS SEPARADA INICIAL (Hoja Scan 118929 Modelo B)
        ========================================================================== */
+    const plantillaOficialA = {
+  "id_plantilla": "oficial_osakidetza_modelo_a",
+  "nombre": "Plantilla Oficial Osakidetza · Modelo A (21/11/2026)",
+  "modelo": "Modelo A",
+  "respuestas": {
+    "1": "a",
+    "2": "c",
+    "3": "b",
+    "4": "b",
+    "5": "d",
+    "6": "a",
+    "7": "c",
+    "8": "b",
+    "9": "c",
+    "10": "d",
+    "11": "a",
+    "12": "b",
+    "13": "c",
+    "14": "b",
+    "15": "a",
+    "16": "c",
+    "17": "d",
+    "18": "c",
+    "19": "b",
+    "20": "d",
+    "21": "a",
+    "22": "b",
+    "23": "a",
+    "24": "b",
+    "25": "c",
+    "26": "d",
+    "27": "b",
+    "28": "a",
+    "29": "c",
+    "30": "a",
+    "31": "d",
+    "32": "c",
+    "33": "d",
+    "34": "c",
+    "35": "d",
+    "36": "d",
+    "37": "a",
+    "38": "c",
+    "39": "a",
+    "40": "b",
+    "41": "a",
+    "42": "c",
+    "43": "a",
+    "44": "d",
+    "45": "c",
+    "46": "b",
+    "47": "a",
+    "48": "a",
+    "49": "c",
+    "50": "c",
+    "51": "d",
+    "52": "b",
+    "53": "d",
+    "54": "d",
+    "55": "a",
+    "56": "a",
+    "57": "a",
+    "58": "b",
+    "59": "a",
+    "60": "c",
+    "61": "d",
+    "62": "b",
+    "63": "c",
+    "64": "a",
+    "65": "b",
+    "66": "b",
+    "67": "a",
+    "68": "b",
+    "69": "d",
+    "70": "a",
+    "71": "c",
+    "72": "c",
+    "73": "c",
+    "74": "b",
+    "75": "d",
+    "76": "b",
+    "77": "a",
+    "78": "c",
+    "79": "a",
+    "80": "c",
+    "81": "d",
+    "82": "b",
+    "83": "c",
+    "84": "d",
+    "85": "b",
+    "86": "a",
+    "87": "b",
+    "88": "c",
+    "89": "a",
+    "90": "d",
+    "91": "b",
+    "92": "c",
+    "93": "b",
+    "94": "d",
+    "95": "b",
+    "96": "b",
+    "97": "b",
+    "98": "a",
+    "99": "c",
+    "100": "c",
+    "101": "a",
+    "102": "b",
+    "103": "c",
+    "104": "a",
+    "105": "b",
+    "106": "b",
+    "107": "d",
+    "108": "a",
+    "109": "c",
+    "110": "b"
+  }
+};
+
+    const plantillaOficialB = {
+  "id_plantilla": "oficial_osakidetza_modelo_b",
+  "nombre": "Plantilla Oficial Osakidetza · Modelo B (21/11/2026)",
+  "modelo": "Modelo B",
+  "respuestas": {
+    "1": "d",
+    "2": "d",
+    "3": "a",
+    "4": "c",
+    "5": "a",
+    "6": "b",
+    "7": "a",
+    "8": "c",
+    "9": "a",
+    "10": "d",
+    "11": "c",
+    "12": "b",
+    "13": "a",
+    "14": "a",
+    "15": "c",
+    "16": "c",
+    "17": "d",
+    "18": "b",
+    "19": "d",
+    "20": "d",
+    "21": "a",
+    "22": "a",
+    "23": "a",
+    "24": "a",
+    "25": "a",
+    "26": "c",
+    "27": "d",
+    "28": "b",
+    "29": "c",
+    "30": "a",
+    "31": "b",
+    "32": "b",
+    "33": "a",
+    "34": "b",
+    "35": "d",
+    "36": "a",
+    "37": "c",
+    "38": "c",
+    "39": "b",
+    "40": "d",
+    "41": "d",
+    "42": "b",
+    "43": "a",
+    "44": "c",
+    "45": "a",
+    "46": "c",
+    "47": "d",
+    "48": "b",
+    "49": "c",
+    "50": "d",
+    "51": "b",
+    "52": "a",
+    "53": "b",
+    "54": "c",
+    "55": "a",
+    "56": "d",
+    "57": "b",
+    "58": "c",
+    "59": "b",
+    "60": "d",
+    "61": "b",
+    "62": "b",
+    "63": "b",
+    "64": "a",
+    "65": "c",
+    "66": "c",
+    "67": "a",
+    "68": "c",
+    "69": "b",
+    "70": "b",
+    "71": "d",
+    "72": "a",
+    "73": "c",
+    "74": "b",
+    "75": "c",
+    "76": "d",
+    "77": "a",
+    "78": "b",
+    "79": "c",
+    "80": "a",
+    "81": "a",
+    "82": "c",
+    "83": "d",
+    "84": "c",
+    "85": "b",
+    "86": "d",
+    "87": "a",
+    "88": "b",
+    "89": "a",
+    "90": "b",
+    "91": "c",
+    "92": "d",
+    "93": "b",
+    "94": "a",
+    "95": "c",
+    "96": "a",
+    "97": "d",
+    "98": "c",
+    "99": "d",
+    "100": "c",
+    "101": "a",
+    "102": "b",
+    "103": "c",
+    "104": "a",
+    "105": "b",
+    "106": "b",
+    "107": "d",
+    "108": "a",
+    "109": "c",
+    "110": "b"
+  }
+};
+
     const plantillaInicialSeparada = {
   "id_plantilla": "scan_118929_modelo_b",
   "nombre": "Hoja Scan 118929 (Modelo B · 21/11/2026)",
@@ -3087,7 +3229,7 @@
     const TEMPLATES_STORAGE_KEY = "osakidetza_ope_plantillas_v1";
     const ATTEMPTS_STORAGE_KEY = "osakidetza_ope_intentos_v1";
 
-    const APP_VERSION = "v1.8.0";
+    const APP_VERSION = "v1.9.0";
     const OFFICIAL_EXAM_DURATION_SEC = 90 * 60; // 90 minutos (5400 s)
 
     let allQuestions = [];
@@ -3187,7 +3329,7 @@
 
       if ("serviceWorker" in navigator) {
         const swCode = `
-          const CACHE_NAME = 'osakidetza-test-pwa-v180';
+          const CACHE_NAME = 'osakidetza-test-pwa-v190';
           self.addEventListener('install', (event) => {
             self.skipWaiting();
             event.waitUntil(
@@ -3393,7 +3535,7 @@
         if (Array.isArray(raw) && raw.length > 0) {
           savedTemplates = raw;
         } else {
-          savedTemplates = [plantillaInicialSeparada];
+          savedTemplates = [plantillaInicialSeparada, plantillaOficialA, plantillaOficialB];
         }
       } catch {
         savedTemplates = [plantillaInicialSeparada];
@@ -4166,6 +4308,80 @@
       }
 
       updateMenuCounts(true);
+
+
+      // Importar JSON almacenado en una carpeta del repositorio GitHub (ej. baterias/archivo.json)
+      const fetchJsonFromRepoUrl = async (url, labelName) => {
+        try {
+          const resp = await fetch(url, { cache: "no-store" });
+          if (!resp.ok) {
+            alert(`No se pudo descargar "${url}" (HTTP ${resp.status}). Verifica que exista en el repositorio y se sirva por HTTP/HTTPS.`);
+            return;
+          }
+          const json = await resp.json();
+          if (!validateQuestionsArray(json)) {
+            alert("El JSON descargado del repositorio no tiene la estructura esperada.");
+            return;
+          }
+          const map = new Map();
+          [...allQuestions, ...json].forEach((q) => {
+            map.set(getQuestionUniqueKey(q), q);
+          });
+          allQuestions = Array.from(map.values());
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions));
+          } catch {}
+          document.getElementById("import-status").textContent = `✓ Cargado desde repo (${labelName}) · ${allQuestions.length} preg.`;
+          updateMenuCounts(true);
+        } catch {
+          alert("Error de red o CORS/protocolo al acceder al JSON del repositorio.");
+        }
+      };
+
+      document.getElementById("btn-fetch-repo-json").addEventListener("click", () => {
+        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
+        const fname = (document.getElementById("repo-json-filename").value || "").trim().replace(/^\/+/g, "");
+        if (!fname) {
+          alert("Indica el nombre del archivo .json (por ejemplo: baterias_extra.json).");
+          return;
+        }
+        const fullPath = folder ? `${folder}/${fname}` : fname;
+        fetchJsonFromRepoUrl(fullPath, fullPath);
+      });
+
+      document.getElementById("btn-scan-repo-folder").addEventListener("click", async () => {
+        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
+        const manifestUrl = folder ? `${folder}/manifest.json` : "manifest.json";
+        const sel = document.getElementById("repo-manifest-select");
+        try {
+          const resp = await fetch(manifestUrl, { cache: "no-store" });
+          if (!resp.ok) {
+            alert(`No se encontró "${manifestUrl}". Puedes escribir directamente el nombre del archivo .json y pulsar "Importar desde repo".`);
+            return;
+          }
+          const list = await resp.json();
+          if (!Array.isArray(list) || list.length === 0) {
+            alert("El manifest.json está vacío.");
+            return;
+          }
+          sel.innerHTML = "";
+          list.forEach((entry) => {
+            const opt = document.createElement("option");
+            const fileVal = typeof entry === "string" ? entry : entry.file;
+            const titleVal = typeof entry === "string" ? entry : (entry.label || entry.file);
+            opt.value = fileVal;
+            opt.textContent = titleVal;
+            sel.appendChild(opt);
+          });
+          sel.classList.remove("hidden");
+          document.getElementById("repo-json-filename").value = sel.value;
+          sel.onchange = () => {
+            document.getElementById("repo-json-filename").value = sel.value;
+          };
+        } catch {
+          alert("No se pudo leer el índice de la carpeta del repositorio.");
+        }
+      });
 
       // Examen oficial Modelo A (90 minutos)
       document.getElementById("btn-start-official-modelo-a").addEventListener("click", () => {
