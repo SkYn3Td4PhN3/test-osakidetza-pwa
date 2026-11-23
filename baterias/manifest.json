@@ -1,14 +1,18 @@
 [
   {
-    "file": "banco_500.json",
-    "label": "Batería Completa (500 preg.: 300 Común + 200 Conductor/a)"
-  },
-  {
     "file": "preguntas_temario_comun_001_300_completo.json",
     "label": "Temario Común (300 preg.)"
   },
   {
     "file": "CVE.json",
     "label": "Conductor/a Emergencias · CVE (200 preg.)"
+  },
+  {
+    "file": "osakidetza_modelo_a_preguntas.json",
+    "label": "Modelo A (100 ord. + 10 res.)"
+  },
+  {
+    "file": "osakidetza_modelo_b_preguntas.json",
+    "label": "Modelo B (100 ord. + 10 res.)"
   }
 ]
