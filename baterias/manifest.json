@@ -1,38 +1,14 @@
-{
-  "temarios": [
-    {
-      "file": "temario_comun_300.json",
-      "label": "Temario Común (300 preguntas corregidas)"
-    },
-    {
-      "file": "conductor_emergencias_200.json",
-      "label": "Conductor/a Emergencias · CVE (200 preguntas corregidas)"
-    }
-  ],
-  "modelos_examen": [
-    {
-      "file": "examen_modelo_a.json",
-      "planilla": "planilla_correctora_modelo_a.json",
-      "label": "Examen Oficial Modelo A (100 + 10 reserva)"
-    },
-    {
-      "file": "examen_modelo_b.json",
-      "planilla": "planilla_correctora_modelo_b.json",
-      "label": "Examen Oficial Modelo B (100 + 10 reserva)"
-    }
-  ],
-  "planillas_correctoras": [
-    {
-      "file": "planilla_correctora_modelo_a.json",
-      "label": "Planilla Correctora Oficial · Modelo A"
-    },
-    {
-      "file": "planilla_correctora_modelo_b.json",
-      "label": "Planilla Correctora Oficial · Modelo B"
-    },
-    {
-      "file": "planilla_respuestas_ejemplo_118929.json",
-      "label": "Planilla de Respuestas Ejemplo (Cód. 118929)"
-    }
-  ]
-}
+[
+  {
+    "file": "banco_500.json",
+    "label": "Batería Completa (500 preg.: 300 Común + 200 Conductor/a)"
+  },
+  {
+    "file": "preguntas_temario_comun_001_300_completo.json",
+    "label": "Temario Común (300 preg.)"
+  },
+  {
+    "file": "CVE.json",
+    "label": "Conductor/a Emergencias · CVE (200 preg.)"
+  }
+]
