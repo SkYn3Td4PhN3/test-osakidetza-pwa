@@ -1,6 +1,6 @@
 # Test Oposición Osakidetza — Conductor/a de Vehículos de Emergencias (OPE)
 
-Aplicación web progresiva (**PWA**) para practicar la batería de oposiciones de Osakidetza (**300 preguntas de Temario Común** + **200 preguntas de Conductor/a de Emergencias**) y realizar simulacros cronometrados de **90 minutos** compuestos por **100 preguntas ordinarias + 10 preguntas de reserva**.
+Aplicación web progresiva (**PWA**, versión `v2.0.5`) para practicar la batería de oposiciones de Osakidetza (**300 preguntas de Temario Común** + **200 preguntas de Conductor/a de Emergencias**) y realizar simulacros cronometrados de **90 minutos** compuestos por **100 preguntas ordinarias + 10 preguntas de reserva**.
 
 ## Para qué sirve esta aplicación
 
@@ -12,7 +12,7 @@ Aplicación web progresiva (**PWA**) para practicar la batería de oposiciones d
 
 ## Contenido del repositorio
 
-- `index.html`: Aplicación web progresiva completa (`v2.0.4`) con la lógica de estudio, simulacros de 100 preguntas + 10 reservas, corrección de plantillas, historial, exportación y zona protegida **Ajustes** (código `112`).
+- `index.html`: Aplicación web progresiva completa (`v2.0.5`) con la lógica de estudio, simulacros de 100 preguntas + 10 reservas, corrección de plantillas, historial, exportación y zona protegida **Ajustes** (código `112`).
 - `baterias/`: Carpeta con las baterías y recursos en `.json`:
   - `preguntas_temario_comun_001_300_completo.json`: 300 preguntas de *Temario Común*.
   - `CVE.json`: 200 preguntas de *Conductor/a de Emergencias*.

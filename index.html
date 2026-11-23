@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v2.0.4 - Test Oposición Osakidetza PWA (Examen Modelo B 90 min, Plantillas Separadas, Historial y Exportación de Resultados) -->
+<!-- v2.0.5 - Test Oposición Osakidetza PWA (Examen Modelo B 90 min, Plantillas Separadas, Historial y Exportación de Resultados) -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -435,7 +435,6 @@
       color: var(--md-on-surface-variant);
     }
 
-    /* Pantalla realización del test y cronómetro 90 min */
     .quiz-header {
       display: flex;
       flex-direction: column;
@@ -665,7 +664,6 @@
       padding-top: 12px;
     }
 
-    /* Resultados, plantillas separadas e historial */
     .score-hero {
       text-align: center;
       padding: 10px 0 6px;
@@ -884,15 +882,12 @@
         <div class="app-logo" aria-hidden="true">112</div>
         <div>
           <h1 class="app-title">Test Oposición Osakidetza</h1>
-          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v2.0.4</span> · Offline</p>
+          <p class="app-subtitle" id="header-subtitle">Entrenamiento OPE · <span id="app-version-label">v2.0.5</span> · Offline</p>
         </div>
       </div>
       <button type="button" id="btn-abort-quiz" class="btn btn-outlined btn-sm hidden">Salir</button>
     </header>
 
-    <!-- =====================================================================
-         1. PANTALLA DE CONFIGURACIÓN INICIAL (MENÚ)
-         ===================================================================== -->
     <main id="screen-menu">
       <section class="card" style="border-color: var(--md-primary);">
         <div class="exam-pool-header">
@@ -996,7 +991,6 @@
         </div>
       </section>
 
-      <!-- CONSTRUCTOR DE EXAMEN PERSONALIZADO CON PREGUNTAS SELECCIONADAS -->
       <section class="card" id="custom-exam-builder-card">
         <div class="exam-pool-header">
           <h2 class="section-label" style="margin:0;">3. Examen con preguntas seleccionadas</h2>
@@ -1040,7 +1034,6 @@
         </div>
       </section>
 
-      <!-- PLANTILLAS DE RESPUESTAS SEPARADAS Y GUARDADO DE INTENTOS -->
       <section class="card" id="templates-and-history-card">
         <h2 class="section-label">4. Plantillas de respuestas e historial</h2>
         <p class="mode-help-text" style="margin:0 0 10px;">
@@ -1068,7 +1061,6 @@
         </div>
       </section>
 
-      <!-- ZONA PROTEGIDA: AJUSTES (PLANILLAS, CARGA DE PREGUNTAS Y GESTIÓN) -->
       <section class="card" id="ajustes-protected-card" style="border-style: dashed;">
         <div class="exam-pool-header">
           <h2 class="section-label" style="margin:0;">🔒 Ajustes (zona protegida)</h2>
@@ -1096,81 +1088,80 @@
           <div style="display:flex; justify-content:flex-end; margin-bottom:10px;">
             <button type="button" id="btn-lock-ajustes" class="btn btn-tonal btn-sm">🔒 Bloquear Ajustes</button>
           </div>
-      <section class="card" id="question-manager-card">
-        <div class="exam-pool-header">
-          <h2 class="section-label" style="margin:0;">5. Gestionar preguntas almacenadas</h2>
-          <span class="exam-pool-badge" id="manager-total-badge">0 preg.</span>
-        </div>
-        <p class="mode-help-text" style="margin:0 0 10px;">
-          Busca una pregunta por palabra clave o número, edita su respuesta/enunciado si detectas algún error, bórrala o restablece la batería original.
-        </p>
-        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px; margin-bottom:10px;">
-          <input type="text" id="manager-search-input" class="num-input" style="width:100%; text-align:left;" placeholder="Buscar por texto, ley o nº..." />
-          <button type="button" id="btn-reset-bank-default" class="btn btn-outlined btn-sm">Restablecer base</button>
-        </div>
-        <div id="manager-results-list" style="max-height: 360px; overflow-y: auto;"></div>
 
-        <div id="question-edit-modal" class="random-config hidden" style="margin-top:12px; border-color: var(--md-primary);">
-          <h3 class="section-label" style="margin-bottom:8px;">Editar pregunta</h3>
-          <div class="range-field" style="margin-bottom:8px;">
-            <label for="edit-q-statement">Enunciado</label>
-            <textarea id="edit-q-statement" rows="3" style="width:100%; border:none; background:transparent; color:var(--md-on-surface); font-family:inherit; font-size:0.95rem; resize:vertical;"></textarea>
-          </div>
-          <div class="range-grid" style="margin-bottom:8px;">
-            <div class="range-field"><label for="edit-opt-a">Opción A</label><input type="text" id="edit-opt-a" /></div>
-            <div class="range-field"><label for="edit-opt-b">Opción B</label><input type="text" id="edit-opt-b" /></div>
-          </div>
-          <div class="range-grid" style="margin-bottom:8px;">
-            <div class="range-field"><label for="edit-opt-c">Opción C</label><input type="text" id="edit-opt-c" /></div>
-            <div class="range-field"><label for="edit-opt-d">Opción D</label><input type="text" id="edit-opt-d" /></div>
-          </div>
-          <div class="num-input-row" style="margin-bottom:8px;">
-            <label for="edit-q-correct">Respuesta correcta:</label>
-            <select id="edit-q-correct" class="template-select" style="width:120px; margin-bottom:0;">
-              <option value="a">A</option>
-              <option value="b">B</option>
-              <option value="c">C</option>
-              <option value="d">D</option>
-            </select>
-          </div>
-          <div class="range-field" style="margin-bottom:10px;">
-            <label for="edit-q-explanation">Explicación</label>
-            <textarea id="edit-q-explanation" rows="2" style="width:100%; border:none; background:transparent; color:var(--md-on-surface); font-family:inherit; font-size:0.9rem; resize:vertical;"></textarea>
-          </div>
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
-            <button type="button" id="btn-save-edited-question" class="btn btn-primary btn-sm">Guardar cambios</button>
-            <button type="button" id="btn-cancel-edit-question" class="btn btn-outlined btn-sm">Cancelar</button>
-          </div>
-        </div>
-      </section>
+          <section class="card" id="question-manager-card">
+            <div class="exam-pool-header">
+              <h2 class="section-label" style="margin:0;">5. Gestionar preguntas almacenadas</h2>
+              <span class="exam-pool-badge" id="manager-total-badge">0 preg.</span>
+            </div>
+            <p class="mode-help-text" style="margin:0 0 10px;">
+              Busca una pregunta por palabra clave o número, edita su respuesta/enunciado si detectas algún error, bórrala o restablece la batería original.
+            </p>
+            <div style="display:grid; grid-template-columns: 1fr auto; gap:8px; margin-bottom:10px;">
+              <input type="text" id="manager-search-input" class="num-input" style="width:100%; text-align:left;" placeholder="Buscar por texto, ley o nº..." />
+              <button type="button" id="btn-reset-bank-default" class="btn btn-outlined btn-sm">Restablecer base</button>
+            </div>
+            <div id="manager-results-list" style="max-height: 360px; overflow-y: auto;"></div>
 
-      <section class="card" id="repo-folder-card">
-        <h2 class="section-label">Baterías en carpeta del repositorio GitHub</h2>
-        <p class="mode-help-text" style="margin:0 0 10px;">
-          Aloja tus archivos <code>.json</code> en una carpeta del repo (por ejemplo <code>baterias/</code>) y cárgalos directamente desde GitHub Pages o servidor HTTP.
-        </p>
-        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px; margin-bottom:10px;">
-          <input type="text" id="repo-folder-path" class="num-input" style="width:100%; text-align:left;" value="baterias" placeholder="Carpeta en repo (ej. baterias)" />
-          <button type="button" id="btn-scan-repo-folder" class="btn btn-outlined btn-sm">Buscar índice</button>
-        </div>
-        <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
-          <input type="text" id="repo-json-filename" class="num-input" style="width:100%; text-align:left;" value="osakidetza_modelo_b_preguntas.json" placeholder="Nombre del .json (ej. tema1.json)" />
-          <button type="button" id="btn-fetch-repo-json" class="btn btn-tonal btn-sm">Importar desde repo</button>
-        </div>
-        <select id="repo-manifest-select" class="template-select hidden" style="margin-top:10px; margin-bottom:0;"></select>
-      </section>
+            <div id="question-edit-modal" class="random-config hidden" style="margin-top:12px; border-color: var(--md-primary);">
+              <h3 class="section-label" style="margin-bottom:8px;">Editar pregunta</h3>
+              <div class="range-field" style="margin-bottom:8px;">
+                <label for="edit-q-statement">Enunciado</label>
+                <textarea id="edit-q-statement" rows="3" style="width:100%; border:none; background:transparent; color:var(--md-on-surface); font-family:inherit; font-size:0.95rem; resize:vertical;"></textarea>
+              </div>
+              <div class="range-grid" style="margin-bottom:8px;">
+                <div class="range-field"><label for="edit-opt-a">Opción A</label><input type="text" id="edit-opt-a" /></div>
+                <div class="range-field"><label for="edit-opt-b">Opción B</label><input type="text" id="edit-opt-b" /></div>
+              </div>
+              <div class="range-grid" style="margin-bottom:8px;">
+                <div class="range-field"><label for="edit-opt-c">Opción C</label><input type="text" id="edit-opt-c" /></div>
+                <div class="range-field"><label for="edit-opt-d">Opción D</label><input type="text" id="edit-opt-d" /></div>
+              </div>
+              <div class="num-input-row" style="margin-bottom:8px;">
+                <label for="edit-q-correct">Respuesta correcta:</label>
+                <select id="edit-q-correct" class="template-select" style="width:120px; margin-bottom:0;">
+                  <option value="a">A</option>
+                  <option value="b">B</option>
+                  <option value="c">C</option>
+                  <option value="d">D</option>
+                </select>
+              </div>
+              <div class="range-field" style="margin-bottom:10px;">
+                <label for="edit-q-explanation">Explicación</label>
+                <textarea id="edit-q-explanation" rows="2" style="width:100%; border:none; background:transparent; color:var(--md-on-surface); font-family:inherit; font-size:0.9rem; resize:vertical;"></textarea>
+              </div>
+              <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+                <button type="button" id="btn-save-edited-question" class="btn btn-primary btn-sm">Guardar cambios</button>
+                <button type="button" id="btn-cancel-edit-question" class="btn btn-outlined btn-sm">Cancelar</button>
+              </div>
+            </div>
+          </section>
 
-      <section class="card">
-        <div class="import-bar">
-          <span class="import-status" id="import-status">Batería integrada cargada en memoria.</span>
-          <label for="json-file-input" class="btn btn-outlined btn-sm" style="cursor:pointer;">
-            📂 Importar preguntas .json
-          </label>
-          <input type="file" id="json-file-input" accept=".json,application/json" class="hidden" />
-        </div>
-      </section>
+          <section class="card" id="repo-folder-card">
+            <h2 class="section-label">Baterías en carpeta del repositorio GitHub</h2>
+            <p class="mode-help-text" style="margin:0 0 10px;">
+              Aloja tus archivos <code>.json</code> en una carpeta del repo (por ejemplo <code>baterias/</code>) y cárgalos directamente desde GitHub Pages o servidor HTTP.
+            </p>
+            <div style="display:grid; grid-template-columns: 1fr auto; gap:8px; margin-bottom:10px;">
+              <input type="text" id="repo-folder-path" class="num-input" style="width:100%; text-align:left;" value="baterias" placeholder="Carpeta en repo (ej. baterias)" />
+              <button type="button" id="btn-scan-repo-folder" class="btn btn-outlined btn-sm">Buscar índice</button>
+            </div>
+            <div style="display:grid; grid-template-columns: 1fr auto; gap:8px;">
+              <input type="text" id="repo-json-filename" class="num-input" style="width:100%; text-align:left;" value="osakidetza_modelo_b_preguntas.json" placeholder="Nombre del .json (ej. tema1.json)" />
+              <button type="button" id="btn-fetch-repo-json" class="btn btn-tonal btn-sm">Importar desde repo</button>
+            </div>
+            <select id="repo-manifest-select" class="template-select hidden" style="margin-top:10px; margin-bottom:0;"></select>
+          </section>
 
-
+          <section class="card">
+            <div class="import-bar">
+              <span class="import-status" id="import-status">Batería integrada cargada en memoria.</span>
+              <label for="json-file-input" class="btn btn-outlined btn-sm" style="cursor:pointer;">
+                📂 Importar preguntas .json
+              </label>
+              <input type="file" id="json-file-input" accept=".json,application/json" class="hidden" />
+            </div>
+          </section>
         </div>
       </section>
 
@@ -1181,14 +1172,12 @@
         </p>
         <button type="button" id="btn-install-pwa" class="btn btn-tonal btn-sm">Instalar aplicación (PWA)</button>
       </section>
+
       <div class="sticky-footer">
         <button type="button" id="btn-start-test" class="btn btn-primary">Comenzar Test</button>
       </div>
     </main>
 
-    <!-- =====================================================================
-         2. PANTALLA DE REALIZACIÓN DEL TEST
-         ===================================================================== -->
     <main id="screen-quiz" class="hidden">
       <div class="quiz-header">
         <div class="quiz-stats-row">
@@ -1233,9 +1222,6 @@
       </div>
     </main>
 
-    <!-- =====================================================================
-         3. PANTALLA DE RESULTADOS FINALES Y REPASO
-         ===================================================================== -->
     <main id="screen-results" class="hidden">
       <section class="card">
         <h2 class="section-label" style="text-align:center;" id="results-session-label">Resultado de la sesión</h2>
@@ -1286,9 +1272,6 @@
   </div>
 
   <script>
-    /* ==========================================================================
-       BANCO DE PREGUNTAS INTEGRADO (Modelo B 21/11/2026: 1-100 + 101-110 reserva)
-       ========================================================================== */
     const bancoPreguntas = [
   {
     "id": 1,
@@ -9292,245 +9275,6 @@
   }
 ];
 
-    /* ==========================================================================
-       PLANTILLA DE RESPUESTAS SEPARADA INICIAL (Hoja Scan 118929 Modelo B)
-       ========================================================================== */
-    const plantillaOficialA = {
-  "id_plantilla": "oficial_osakidetza_modelo_a",
-  "nombre": "Plantilla Oficial Osakidetza · Modelo A (21/11/2026)",
-  "modelo": "Modelo A",
-  "respuestas": {
-    "1": "a",
-    "2": "c",
-    "3": "b",
-    "4": "b",
-    "5": "d",
-    "6": "a",
-    "7": "c",
-    "8": "b",
-    "9": "c",
-    "10": "d",
-    "11": "a",
-    "12": "b",
-    "13": "c",
-    "14": "b",
-    "15": "a",
-    "16": "c",
-    "17": "d",
-    "18": "c",
-    "19": "b",
-    "20": "d",
-    "21": "a",
-    "22": "b",
-    "23": "a",
-    "24": "b",
-    "25": "c",
-    "26": "d",
-    "27": "b",
-    "28": "a",
-    "29": "c",
-    "30": "a",
-    "31": "d",
-    "32": "c",
-    "33": "d",
-    "34": "c",
-    "35": "d",
-    "36": "d",
-    "37": "a",
-    "38": "c",
-    "39": "a",
-    "40": "b",
-    "41": "a",
-    "42": "c",
-    "43": "a",
-    "44": "d",
-    "45": "c",
-    "46": "b",
-    "47": "a",
-    "48": "a",
-    "49": "c",
-    "50": "c",
-    "51": "d",
-    "52": "b",
-    "53": "d",
-    "54": "d",
-    "55": "a",
-    "56": "a",
-    "57": "a",
-    "58": "b",
-    "59": "a",
-    "60": "c",
-    "61": "d",
-    "62": "b",
-    "63": "c",
-    "64": "a",
-    "65": "b",
-    "66": "b",
-    "67": "a",
-    "68": "b",
-    "69": "d",
-    "70": "a",
-    "71": "c",
-    "72": "c",
-    "73": "c",
-    "74": "b",
-    "75": "d",
-    "76": "b",
-    "77": "a",
-    "78": "c",
-    "79": "a",
-    "80": "c",
-    "81": "d",
-    "82": "b",
-    "83": "c",
-    "84": "d",
-    "85": "b",
-    "86": "a",
-    "87": "b",
-    "88": "c",
-    "89": "a",
-    "90": "d",
-    "91": "b",
-    "92": "c",
-    "93": "b",
-    "94": "d",
-    "95": "b",
-    "96": "b",
-    "97": "b",
-    "98": "a",
-    "99": "c",
-    "100": "c",
-    "101": "a",
-    "102": "b",
-    "103": "c",
-    "104": "a",
-    "105": "b",
-    "106": "b",
-    "107": "d",
-    "108": "a",
-    "109": "c",
-    "110": "b"
-  }
-};
-
-    const plantillaOficialB = {
-  "id_plantilla": "oficial_osakidetza_modelo_b",
-  "nombre": "Plantilla Oficial Osakidetza · Modelo B (21/11/2026)",
-  "modelo": "Modelo B",
-  "respuestas": {
-    "1": "d",
-    "2": "d",
-    "3": "a",
-    "4": "c",
-    "5": "a",
-    "6": "b",
-    "7": "a",
-    "8": "c",
-    "9": "a",
-    "10": "d",
-    "11": "c",
-    "12": "b",
-    "13": "a",
-    "14": "a",
-    "15": "c",
-    "16": "c",
-    "17": "d",
-    "18": "b",
-    "19": "d",
-    "20": "d",
-    "21": "a",
-    "22": "a",
-    "23": "a",
-    "24": "a",
-    "25": "a",
-    "26": "c",
-    "27": "d",
-    "28": "b",
-    "29": "c",
-    "30": "a",
-    "31": "b",
-    "32": "b",
-    "33": "a",
-    "34": "b",
-    "35": "d",
-    "36": "a",
-    "37": "c",
-    "38": "c",
-    "39": "b",
-    "40": "d",
-    "41": "d",
-    "42": "b",
-    "43": "a",
-    "44": "c",
-    "45": "a",
-    "46": "c",
-    "47": "d",
-    "48": "b",
-    "49": "c",
-    "50": "d",
-    "51": "b",
-    "52": "a",
-    "53": "b",
-    "54": "c",
-    "55": "a",
-    "56": "d",
-    "57": "b",
-    "58": "c",
-    "59": "b",
-    "60": "d",
-    "61": "b",
-    "62": "b",
-    "63": "b",
-    "64": "a",
-    "65": "c",
-    "66": "c",
-    "67": "a",
-    "68": "c",
-    "69": "b",
-    "70": "b",
-    "71": "d",
-    "72": "a",
-    "73": "c",
-    "74": "b",
-    "75": "c",
-    "76": "d",
-    "77": "a",
-    "78": "b",
-    "79": "c",
-    "80": "a",
-    "81": "a",
-    "82": "c",
-    "83": "d",
-    "84": "c",
-    "85": "b",
-    "86": "d",
-    "87": "a",
-    "88": "b",
-    "89": "a",
-    "90": "b",
-    "91": "c",
-    "92": "d",
-    "93": "b",
-    "94": "a",
-    "95": "c",
-    "96": "a",
-    "97": "d",
-    "98": "c",
-    "99": "d",
-    "100": "c",
-    "101": "a",
-    "102": "b",
-    "103": "c",
-    "104": "a",
-    "105": "b",
-    "106": "b",
-    "107": "d",
-    "108": "a",
-    "109": "c",
-    "110": "b"
-  }
-};
-
     const plantillaInicialSeparada = {
   "id_plantilla": "scan_118929_modelo_b",
   "nombre": "Hoja Scan 118929 (Modelo B · 21/11/2026)",
@@ -9649,82 +9393,359 @@
   }
 };
 
-    /* ==========================================================================
-       ESTADO DE LA APLICACIÓN
-       ========================================================================== */
-    const STORAGE_KEY = "osakidetza_ope_preguntas_v1";
-    const PROGRESS_STORAGE_KEY = "osakidetza_ope_progreso_v1";
-    const EXAM_POOL_STORAGE_KEY = "osakidetza_ope_examen_pool_v1";
-    const TEMPLATES_STORAGE_KEY = "osakidetza_ope_plantillas_v1";
-    const ATTEMPTS_STORAGE_KEY = "osakidetza_ope_intentos_v1";
-
-    const APP_VERSION = "v2.0.4";
-    const OFFICIAL_EXAM_DURATION_SEC = 90 * 60; // 90 minutos (5400 s)
-
-    let allQuestions = [];
-    let selectedBlock = "comun";
-    let orderMode = "secuencial";
-    let evaluationMode = "estudio";
-    let examOrderMode = "selection";
-
-    let sessionQuestions = [];
-    let sessionTitle = "Entrenamiento OPE";
-    let sessionReserveStartIndex = null;
-    let isSequentialTrackableSession = false;
-    let sessionRangeStart1Based = 1;
-    let isOfficialModeloBSession = false;
-
-    let userAnswers = [];
-    let currentIndex = 0;
-    let hitsCount = 0;
-    let missesCount = 0;
-    let failedQuestions = [];
-    let pendingStudyChoice = null;
-    let answeredCurrent = false;
-    let reviewFilter = "failures";
-
-    let customExamPoolKeys = [];
-    let savedTemplates = [];
-    let savedAttempts = [];
-
-    // Temporizador 90 min
-    let timerIntervalId = null;
-    let remainingSeconds = OFFICIAL_EXAM_DURATION_SEC;
-    let timerActive = false;
-
-    /* ==========================================================================
-       PWA SETUP
-       ========================================================================== */
-    function initPWA() {
-      const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <rect width="512" height="512" rx="112" fill="#006874"/>
-        <circle cx="256" cy="256" r="185" fill="#97f0ff" opacity="0.18"/>
-        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-              font-family="sans-serif" font-weight="800" font-size="168" fill="#ffffff">112</text>
-      </svg>`;
-      const iconDataUri = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgIcon);
-      document.getElementById("pwa-icon").setAttribute("href", iconDataUri);
-      const appleIconEl = document.getElementById("apple-touch-icon");
-      if (appleIconEl) appleIconEl.setAttribute("href", iconDataUri);
-
-      const manifestObj = {
-        name: "Test Oposición Osakidetza",
-        short_name: "Test Osakidetza",
-        description: "Simulador tipo test OPE Osakidetza con corrección y repaso de fallos",
-        start_url: "./",
-        display: "standalone",
-        orientation: "any",
-        background_color: "#f5fafb",
-        theme_color: "#006874",
-        icons: [
-          {
-            src: iconDataUri,
-            sizes: "512x512",
-            type: "image/svg+xml",
-            purpose: "any maskable"
-          }
-        ]
-      };
+    const plantillasPorDefecto = [
+      {
+  "id_plantilla": "scan_118929_modelo_b",
+  "nombre": "Hoja Scan 118929 (Modelo B · 21/11/2026)",
+  "modelo": "Modelo B",
+  "respuestas": {
+    "1": "a",
+    "2": "d",
+    "3": "a",
+    "4": "c",
+    "5": "b",
+    "6": "b",
+    "7": "a",
+    "8": "c",
+    "9": "a",
+    "10": "d",
+    "11": "c",
+    "12": "b",
+    "13": "a",
+    "14": "a",
+    "15": "d",
+    "16": "c",
+    "17": "d",
+    "18": "c",
+    "19": "a",
+    "20": "d",
+    "21": "a",
+    "22": "d",
+    "23": "a",
+    "24": "b",
+    "25": "a",
+    "26": "c",
+    "27": "d",
+    "28": "b",
+    "29": "d",
+    "30": "a",
+    "31": "b",
+    "32": "b",
+    "33": "a",
+    "34": "b",
+    "35": "d",
+    "36": "a",
+    "37": "d",
+    "38": "d",
+    "39": "b",
+    "40": "b",
+    "41": "d",
+    "42": "b",
+    "43": "d",
+    "44": "c",
+    "45": "a",
+    "46": "c",
+    "47": "d",
+    "48": "b",
+    "49": "b",
+    "50": "d",
+    "51": "a",
+    "52": "a",
+    "53": "b",
+    "54": "d",
+    "55": "c",
+    "56": "c",
+    "57": "d",
+    "58": "c",
+    "59": "b",
+    "60": "a",
+    "61": "b",
+    "62": "b",
+    "63": "b",
+    "64": "a",
+    "65": "c",
+    "66": "a",
+    "67": "a",
+    "68": "c",
+    "69": "b",
+    "70": "b",
+    "71": "d",
+    "72": "a",
+    "73": "c",
+    "74": "b",
+    "75": "c",
+    "76": "d",
+    "77": "a",
+    "78": "b",
+    "79": "c",
+    "80": "b",
+    "81": "a",
+    "82": "c",
+    "83": "d",
+    "84": "c",
+    "85": "a",
+    "86": "d",
+    "87": "a",
+    "88": "b",
+    "89": "a",
+    "90": "b",
+    "91": "c",
+    "92": "a",
+    "93": "b",
+    "94": "b",
+    "95": "c",
+    "96": "a",
+    "97": "d",
+    "98": "c",
+    "99": "d",
+    "100": "b",
+    "101": "c",
+    "102": "b",
+    "103": "c",
+    "104": "a",
+    "105": "b",
+    "106": "b",
+    "107": "a",
+    "108": "b",
+    "109": "c",
+    "110": "b"
+  }
+},
+      {
+  "id_plantilla": "oficial_osakidetza_modelo_a",
+  "nombre": "Plantilla Oficial Osakidetza · Modelo A (21/11/2026)",
+  "modelo": "Modelo A",
+  "respuestas": {
+    "1": "a",
+    "2": "c",
+    "3": "b",
+    "4": "b",
+    "5": "d",
+    "6": "a",
+    "7": "c",
+    "8": "b",
+    "9": "c",
+    "10": "d",
+    "11": "a",
+    "12": "b",
+    "13": "c",
+    "14": "b",
+    "15": "a",
+    "16": "c",
+    "17": "d",
+    "18": "c",
+    "19": "b",
+    "20": "d",
+    "21": "a",
+    "22": "b",
+    "23": "a",
+    "24": "b",
+    "25": "c",
+    "26": "d",
+    "27": "b",
+    "28": "a",
+    "29": "c",
+    "30": "a",
+    "31": "d",
+    "32": "c",
+    "33": "d",
+    "34": "c",
+    "35": "d",
+    "36": "d",
+    "37": "a",
+    "38": "c",
+    "39": "a",
+    "40": "b",
+    "41": "a",
+    "42": "c",
+    "43": "a",
+    "44": "d",
+    "45": "c",
+    "46": "b",
+    "47": "a",
+    "48": "a",
+    "49": "c",
+    "50": "c",
+    "51": "d",
+    "52": "b",
+    "53": "d",
+    "54": "d",
+    "55": "a",
+    "56": "a",
+    "57": "a",
+    "58": "b",
+    "59": "a",
+    "60": "c",
+    "61": "d",
+    "62": "b",
+    "63": "c",
+    "64": "a",
+    "65": "b",
+    "66": "b",
+    "67": "a",
+    "68": "b",
+    "69": "d",
+    "70": "a",
+    "71": "c",
+    "72": "c",
+    "73": "c",
+    "74": "b",
+    "75": "d",
+    "76": "b",
+    "77": "a",
+    "78": "c",
+    "79": "a",
+    "80": "c",
+    "81": "d",
+    "82": "b",
+    "83": "c",
+    "84": "d",
+    "85": "b",
+    "86": "a",
+    "87": "b",
+    "88": "c",
+    "89": "a",
+    "90": "d",
+    "91": "b",
+    "92": "c",
+    "93": "b",
+    "94": "d",
+    "95": "b",
+    "96": "b",
+    "97": "b",
+    "98": "a",
+    "99": "c",
+    "100": "c",
+    "101": "a",
+    "102": "b",
+    "103": "c",
+    "104": "a",
+    "105": "b",
+    "106": "b",
+    "107": "d",
+    "108": "a",
+    "109": "c",
+    "110": "b"
+  }
+},
+      {
+  "id_plantilla": "oficial_osakidetza_modelo_b",
+  "nombre": "Plantilla Oficial Osakidetza · Modelo B (21/11/2026)",
+  "modelo": "Modelo B",
+  "respuestas": {
+    "1": "d",
+    "2": "d",
+    "3": "a",
+    "4": "c",
+    "5": "a",
+    "6": "b",
+    "7": "a",
+    "8": "c",
+    "9": "a",
+    "10": "d",
+    "11": "c",
+    "12": "b",
+    "13": "a",
+    "14": "a",
+    "15": "c",
+    "16": "c",
+    "17": "d",
+    "18": "b",
+    "19": "d",
+    "20": "d",
+    "21": "a",
+    "22": "a",
+    "23": "a",
+    "24": "a",
+    "25": "a",
+    "26": "c",
+    "27": "d",
+    "28": "b",
+    "29": "c",
+    "30": "a",
+    "31": "b",
+    "32": "b",
+    "33": "a",
+    "34": "b",
+    "35": "d",
+    "36": "a",
+    "37": "c",
+    "38": "c",
+    "39": "b",
+    "40": "d",
+    "41": "d",
+    "42": "b",
+    "43": "a",
+    "44": "c",
+    "45": "a",
+    "46": "c",
+    "47": "d",
+    "48": "b",
+    "49": "c",
+    "50": "d",
+    "51": "b",
+    "52": "a",
+    "53": "b",
+    "54": "c",
+    "55": "a",
+    "56": "d",
+    "57": "b",
+    "58": "c",
+    "59": "b",
+    "60": "d",
+    "61": "b",
+    "62": "b",
+    "63": "b",
+    "64": "a",
+    "65": "c",
+    "66": "c",
+    "67": "a",
+    "68": "c",
+    "69": "b",
+    "70": "b",
+    "71": "d",
+    "72": "a",
+    "73": "c",
+    "74": "b",
+    "75": "c",
+    "76": "d",
+    "77": "a",
+    "78": "b",
+    "79": "c",
+    "80": "a",
+    "81": "a",
+    "82": "c",
+    "83": "d",
+    "84": "c",
+    "85": "b",
+    "86": "d",
+    "87": "a",
+    "88": "b",
+    "89": "a",
+    "90": "b",
+    "91": "c",
+    "92": "d",
+    "93": "b",
+    "94": "a",
+    "95": "c",
+    "96": "a",
+    "97": "d",
+    "98": "c",
+    "99": "d",
+    "100": "c",
+    "101": "a",
+    "102": "b",
+    "103": "c",
+    "104": "a",
+    "105": "b",
+    "106": "b",
+    "107": "d",
+    "108": "a",
+    "109": "c",
+    "110": "b"
+  }
+}
+    ];
 
     const EXAMEN_MODELO_A_110 = [
   {
@@ -13032,95 +13053,432 @@
   }
 ];
 
-    /* ==========================================================================
-       CORRECCIÓN DE PLANTILLA SEPARADA SOBRE EXAMEN MODELO B
-       ========================================================================== */
-        let reserveHitsCount = 0;
+    const STORAGE_KEY = "osakidetza_ope_preguntas_v1";
+    const PROGRESS_STORAGE_KEY = "osakidetza_ope_progreso_v1";
+    const EXAM_POOL_STORAGE_KEY = "osakidetza_ope_examen_pool_v1";
+    const TEMPLATES_STORAGE_KEY = "osakidetza_ope_plantillas_v1";
+    const ATTEMPTS_STORAGE_KEY = "osakidetza_ope_intentos_v1";
+    const AJUSTES_PIN_KEY = "osakidetza_ajustes_unlocked_v1";
+    const AJUSTES_CODE = "112";
+    const APP_VERSION = "v2.0.5";
+    const OFFICIAL_EXAM_DURATION_SEC = 90 * 60;
+
+    let allQuestions = [];
+    let selectedBlock = "comun";
+    let orderMode = "secuencial";
+    let evaluationMode = "estudio";
+    let examOrderMode = "selection";
+
+    let sessionQuestions = [];
+    let sessionTitle = "Entrenamiento OPE";
+    let sessionReserveStartIndex = null;
+    let isSequentialTrackableSession = false;
+    let sessionRangeStart1Based = 1;
+    let isOfficialModeloBSession = false;
+
+    let userAnswers = [];
+    let currentIndex = 0;
+    let hitsCount = 0;
+    let missesCount = 0;
+    let reserveHitsCount = 0;
     let reserveMissesCount = 0;
     let reserveTotalCount = 0;
     let annulledQuestionNumbers = [];
+    let failedQuestions = [];
+    let pendingStudyChoice = null;
+    let answeredCurrent = false;
+    let reviewFilter = "failures";
+    let editingQuestionRef = null;
+    let deferredInstallPrompt = null;
 
-    function computeOfficialScore(questionsList, answersList, annulledNums = []) {
-      const annulledSet = new Set(
-        (Array.isArray(annulledNums) ? annulledNums : [])
-          .map((n) => Number(n))
-          .filter((n) => Number.isInteger(n) && n >= 1 && n <= 100)
-          .slice(0, 10)
-      );
+    let customExamPoolKeys = [];
+    let savedTemplates = [];
+    let savedAttempts = [];
 
-      const ordinaryItems = questionsList.filter((q, idx) => {
-        const num = q.num_modelo_a ?? q.num_modelo_b ?? (idx + 1);
-        return !q.es_reserva && num >= 1 && num <= 100;
-      });
+    let timerIntervalId = null;
+    let remainingSeconds = OFFICIAL_EXAM_DURATION_SEC;
+    let timerActive = false;
 
-      const reserveItems = questionsList.filter((q, idx) => {
-        const num = q.num_modelo_a ?? q.num_modelo_b ?? (idx + 1);
-        return Boolean(q.es_reserva) || num > 100;
-      });
+    function initPWA() {
+      const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <rect width="512" height="512" rx="112" fill="#006874"/>
+        <circle cx="256" cy="256" r="185" fill="#97f0ff" opacity="0.18"/>
+        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+              font-family="sans-serif" font-weight="800" font-size="168" fill="#ffffff">112</text>
+      </svg>`;
+      const iconDataUri = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgIcon);
+      document.getElementById("pwa-icon").setAttribute("href", iconDataUri);
+      const appleIconEl = document.getElementById("apple-touch-icon");
+      if (appleIconEl) appleIconEl.setAttribute("href", iconDataUri);
 
-      let resHits = 0;
-      let resMisses = 0;
-      reserveItems.forEach((q) => {
-        const qIdx = questionsList.indexOf(q);
-        const chosen = answersList[qIdx];
-        const correct = String(q.correcta || "").toLowerCase();
-        if (chosen && chosen === correct) resHits++;
-        else resMisses++;
-      });
-
-      let activeOrdinary = [];
-      let replacementCursor = 0;
-      ordinaryItems.forEach((q) => {
-        const qIdx = questionsList.indexOf(q);
-        const num = q.num_modelo_a ?? q.num_modelo_b ?? (qIdx + 1);
-        if (annulledSet.has(num) && replacementCursor < reserveItems.length) {
-          const repQ = reserveItems[replacementCursor++];
-          const repIdx = questionsList.indexOf(repQ);
-          activeOrdinary.push({ question: repQ, chosen: answersList[repIdx], replacedFrom: num });
-        } else if (!annulledSet.has(num)) {
-          activeOrdinary.push({ question: q, chosen: answersList[qIdx], replacedFrom: null });
-        }
-      });
-
-      let ordHits = 0;
-      let ordMisses = 0;
-      const ordFailed = [];
-      activeOrdinary.forEach((item) => {
-        const correct = String(item.question.correcta || "").toLowerCase();
-        if (item.chosen && item.chosen === correct) {
-          ordHits++;
-        } else {
-          ordMisses++;
-          ordFailed.push({ question: item.question, userAnswer: item.chosen || null });
-        }
-      });
-
-      return {
-        ordinaryTotal: activeOrdinary.length,
-        ordinaryHits: ordHits,
-        ordinaryMisses: ordMisses,
-        ordinaryFailed: ordFailed,
-        reserveTotal: reserveItems.length,
-        reserveHits: resHits,
-        reserveMisses: resMisses
+      const manifestObj = {
+        name: "Test Oposición Osakidetza",
+        short_name: "Test Osakidetza",
+        description: "Simulador tipo test OPE Osakidetza con corrección y repaso de fallos",
+        start_url: "./",
+        display: "standalone",
+        orientation: "any",
+        background_color: "#f5fafb",
+        theme_color: "#006874",
+        icons: [
+          {
+            src: iconDataUri,
+            sizes: "512x512",
+            type: "image/svg+xml",
+            purpose: "any maskable"
+          }
+        ]
       };
+      const manifestBlob = new Blob([JSON.stringify(manifestObj)], { type: "application/manifest+json" });
+      const manifestUrl = URL.createObjectURL(manifestBlob);
+      document.getElementById("pwa-manifest").setAttribute("href", manifestUrl);
+
+      if ("serviceWorker" in navigator && (window.location.protocol === "https:" || window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+        const swCode = `
+          const CACHE_NAME = "osakidetza-test-v205";
+          self.addEventListener("install", (event) => {
+            self.skipWaiting();
+          });
+          self.addEventListener("activate", (event) => {
+            event.waitUntil(
+              caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+            );
+            self.clients.claim();
+          });
+          self.addEventListener("fetch", (event) => {
+            if (event.request.method !== "GET") return;
+            event.respondWith(
+              fetch(event.request).then((resp) => {
+                const copy = resp.clone();
+                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => {});
+                return resp;
+              }).catch(() => caches.match(event.request))
+            );
+          });
+        `;
+        const swBlob = new Blob([swCode], { type: "application/javascript" });
+        const swUrl = URL.createObjectURL(swBlob);
+        navigator.serviceWorker.register(swUrl).catch(() => {});
+      }
     }
 
-    function gradeExamSession() {
+    function fisherYatesShuffle(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function normalizeBlockName(rawBlock) {
+      const s = String(rawBlock || "").toLowerCase();
+      if (s.includes("comun") || s.includes("común")) return "Temario Común";
+      return "Conductor/a Emergencias";
+    }
+
+    function validateQuestionsArray(data) {
+      if (!Array.isArray(data) || data.length === 0) return false;
+      return data.every((q) =>
+        q &&
+        typeof q.pregunta === "string" &&
+        q.pregunta.trim().length > 0 &&
+        q.opciones &&
+        typeof q.opciones === "object" &&
+        ["a", "b", "c", "d"].includes(String(q.correcta || "").toLowerCase())
+      );
+    }
+
+    function getFilteredQuestions(blockFilter = selectedBlock) {
+      if (blockFilter === "comun") {
+        return allQuestions.filter((q) => normalizeBlockName(q.bloque) === "Temario Común");
+      }
+      if (blockFilter === "conductor") {
+        return allQuestions.filter((q) => normalizeBlockName(q.bloque) === "Conductor/a Emergencias");
+      }
+      return [...allQuestions];
+    }
+
+    function getQuestionKey(q) {
+      return `${normalizeBlockName(q.bloque)}::${q.id ?? ""}::${String(q.pregunta || "").slice(0, 60)}`;
+    }
+
+    function loadCustomExamPool() {
+      try {
+        const raw = localStorage.getItem(EXAM_POOL_STORAGE_KEY);
+        const arr = raw ? JSON.parse(raw) : [];
+        customExamPoolKeys = Array.isArray(arr) ? arr : [];
+      } catch {
+        customExamPoolKeys = [];
+      }
+    }
+
+    function saveCustomExamPool() {
+      try {
+        localStorage.setItem(EXAM_POOL_STORAGE_KEY, JSON.stringify(customExamPoolKeys));
+      } catch {}
+    }
+
+    function loadTemplates() {
+      try {
+        const raw = localStorage.getItem(TEMPLATES_STORAGE_KEY);
+        const arr = raw ? JSON.parse(raw) : null;
+        if (Array.isArray(arr) && arr.length > 0) {
+          savedTemplates = arr;
+        } else {
+          savedTemplates = [...plantillasPorDefecto];
+        }
+      } catch {
+        savedTemplates = [...plantillasPorDefecto];
+      }
+      renderTemplateSelect();
+    }
+
+    function saveTemplates() {
+      try {
+        localStorage.setItem(TEMPLATES_STORAGE_KEY, JSON.stringify(savedTemplates));
+      } catch {}
+      renderTemplateSelect();
+    }
+
+    function renderTemplateSelect() {
+      const sel = document.getElementById("saved-templates-select");
+      if (!sel) return;
+      sel.innerHTML = "";
+      savedTemplates.forEach((tpl, i) => {
+        const opt = document.createElement("option");
+        opt.value = String(i);
+        const totalResp = Object.keys(tpl.respuestas || {}).length;
+        opt.textContent = `${tpl.nombre || "Plantilla"} (${tpl.modelo || "Modelo"} · ${totalResp} resp.)`;
+        sel.appendChild(opt);
+      });
+    }
+
+    function loadAttempts() {
+      try {
+        const raw = localStorage.getItem(ATTEMPTS_STORAGE_KEY);
+        const arr = raw ? JSON.parse(raw) : [];
+        savedAttempts = Array.isArray(arr) ? arr : [];
+      } catch {
+        savedAttempts = [];
+      }
+      renderMenuAttemptsHistory();
+    }
+
+    function saveCurrentAttemptToHistory() {
+      const ordinaryTotal = Math.min(100, sessionQuestions.filter((q) => !q.es_reserva).length || sessionQuestions.length);
+      const gradeOver10 = ordinaryTotal > 0 ? (hitsCount / ordinaryTotal) * 10 : 0;
+      const pct = ordinaryTotal > 0 ? (hitsCount / ordinaryTotal) * 100 : 0;
+      const entry = {
+        id: "att_" + Date.now(),
+        fecha: new Date().toLocaleString("es-ES"),
+        titulo: sessionTitle,
+        nota: gradeOver10.toFixed(2),
+        porcentaje: pct.toFixed(1),
+        aciertos: hitsCount,
+        fallos: missesCount,
+        totalOrdinarias: ordinaryTotal,
+        reservasAciertos: reserveHitsCount,
+        reservasTotal: reserveTotalCount
+      };
+      savedAttempts = [entry, ...savedAttempts].slice(0, 25);
+      try {
+        localStorage.setItem(ATTEMPTS_STORAGE_KEY, JSON.stringify(savedAttempts));
+      } catch {}
+      renderMenuAttemptsHistory();
+    }
+
+    function renderMenuAttemptsHistory() {
+      const box = document.getElementById("menu-attempts-history");
+      if (!box) return;
+      if (!savedAttempts.length) {
+        box.innerHTML = `<p class="mode-help-text">Aún no hay intentos guardados.</p>`;
+        return;
+      }
+      box.innerHTML = savedAttempts.slice(0, 8).map((a) => `
+        <div class="attempt-row">
+          <div class="attempt-row-top">
+            <span class="attempt-title">${a.titulo}</span>
+            <span class="badge badge-ok">${a.nota} / 10 (${a.porcentaje}%)</span>
+          </div>
+          <div class="attempt-meta">
+            ${a.fecha} · Ord.: ${a.aciertos} aciertos / ${a.fallos} fallos de ${a.totalOrdinarias} · Reservas: ${a.reservasAciertos ?? 0}/${a.reservasTotal ?? 0}
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function updateCustomExamBuilderUI() {
+      const badge = document.getElementById("exam-pool-count-badge");
+      const controls = document.getElementById("custom-exam-controls");
+      const count = customExamPoolKeys.length;
+      if (badge) badge.textContent = `${count} seleccionada${count === 1 ? "" : "s"}`;
+      if (controls) controls.classList.toggle("hidden", count === 0);
+
+      const titInput = document.getElementById("exam-titulares-qty");
+      const hasResCheck = document.getElementById("exam-has-reserve");
+      const resRow = document.getElementById("exam-reserve-qty-row");
+      const resInput = document.getElementById("exam-reserve-qty");
+      const startCustomBtn = document.getElementById("btn-start-custom-exam");
+
+      if (!titInput || !hasResCheck || !resRow || !resInput || !startCustomBtn) return;
+
+      resRow.classList.toggle("hidden", !hasResCheck.checked);
+      const maxTit = Math.max(1, count);
+      titInput.max = maxTit;
+      if (Number(titInput.value) > maxTit) titInput.value = maxTit;
+      if (Number(titInput.value) < 1) titInput.value = 1;
+
+      const titVal = Number(titInput.value) || 1;
+      const resVal = hasResCheck.checked ? Math.max(1, Number(resInput.value) || 1) : 0;
+      startCustomBtn.textContent = resVal > 0
+        ? `Iniciar examen (${titVal} + ${resVal} res.)`
+        : `Iniciar examen (${titVal} preg.)`;
+    }
+
+    function syncSequentialRangeControls(resetToFull = false) {
+      const available = getFilteredQuestions(selectedBlock).length;
+      const startInput = document.getElementById("range-start");
+      const endInput = document.getElementById("range-end");
+      const summaryEl = document.getElementById("range-summary-text");
+      const resumeBanner = document.getElementById("resume-container");
+
+      if (available === 0) {
+        startInput.value = 0;
+        endInput.value = 0;
+        summaryEl.textContent = "No hay preguntas disponibles en este temario.";
+        resumeBanner.classList.add("hidden");
+        return { start: 0, end: 0, count: 0 };
+      }
+
+      startInput.min = 1;
+      startInput.max = available;
+      endInput.min = 1;
+      endInput.max = available;
+
+      if (resetToFull) {
+        startInput.value = 1;
+        endInput.value = available;
+      }
+
+      let s = parseInt(startInput.value, 10);
+      let e = parseInt(endInput.value, 10);
+      if (Number.isNaN(s) || s < 1) s = 1;
+      if (s > available) s = available;
+      if (Number.isNaN(e) || e < s) e = s;
+      if (e > available) e = available;
+
+      startInput.value = s;
+      endInput.value = e;
+
+      const count = e - s + 1;
+      summaryEl.textContent = `Seleccionadas: ${count} pregunta${count === 1 ? "" : "s"} (del ${s} al ${e} de ${available}).`;
+
+      try {
+        const progMap = JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || "{}");
+        const lastReached = progMap[selectedBlock];
+        if (lastReached && lastReached > 1 && lastReached < available) {
+          document.getElementById("resume-info-text").textContent = `Última vez llegaste hasta la nº ${lastReached} de ${available}.`;
+          document.getElementById("btn-continue-last").textContent = `Continuar desde nº ${lastReached}`;
+          resumeBanner.classList.remove("hidden");
+        } else {
+          resumeBanner.classList.add("hidden");
+        }
+      } catch {
+        resumeBanner.classList.add("hidden");
+      }
+
+      return { start: s, end: e, count };
+    }
+
+    function updateMenuCounts(resetRange = false) {
+      const comunCount = getFilteredQuestions("comun").length;
+      const conductorCount = getFilteredQuestions("conductor").length;
+      const totalCount = allQuestions.length;
+
+      document.getElementById("count-comun").textContent = `${comunCount} pregunta${comunCount === 1 ? "" : "s"}`;
+      document.getElementById("count-conductor").textContent = `${conductorCount} pregunta${conductorCount === 1 ? "" : "s"}`;
+      document.getElementById("count-todos").textContent = `${totalCount} pregunta${totalCount === 1 ? "" : "s"}`;
+
+      const available = getFilteredQuestions(selectedBlock).length;
+      const maxLabel = document.getElementById("max-qty-label");
+      const customInput = document.getElementById("custom-qty");
+      const startBtn = document.getElementById("btn-start-test");
+
+      maxLabel.textContent = Math.max(1, available);
+      customInput.max = Math.max(1, available);
+
+      if (available > 0 && Number(customInput.value) > available) customInput.value = available;
+      else if (available > 0 && Number(customInput.value) < 1) customInput.value = 1;
+
+      const rangeInfo = syncSequentialRangeControls(resetRange);
+
+      startBtn.disabled = available === 0;
+      if (available === 0) {
+        startBtn.textContent = "No hay preguntas en este bloque";
+      } else if (orderMode === "secuencial") {
+        startBtn.textContent = `Comenzar Test (${rangeInfo.count} preg. · ${rangeInfo.start} a ${rangeInfo.end})`;
+      } else {
+        const rndCount = Math.min(available, Math.max(1, Number(customInput.value) || 1));
+        startBtn.textContent = `Comenzar Test (${rndCount} preg. aleatorias)`;
+      }
+
+      updateCustomExamBuilderUI();
+      renderQuestionManager();
+    }
+
+    function switchScreen(screenId) {
+      ["screen-menu", "screen-quiz", "screen-results"].forEach((id) => {
+        document.getElementById(id).classList.toggle("hidden", id !== screenId);
+      });
+      document.getElementById("btn-abort-quiz").classList.toggle("hidden", screenId !== "screen-quiz");
+    }
+
+    function formatTimeMMSS(totalSec) {
+      const safe = Math.max(0, Math.floor(totalSec));
+      const mm = String(Math.floor(safe / 60)).padStart(2, "0");
+      const ss = String(safe % 60).padStart(2, "0");
+      return `${mm}:${ss}`;
+    }
+
+    function updateTimerBadgeUI() {
+      const badge = document.getElementById("quiz-timer-badge");
+      if (!badge) return;
+      if (!timerActive) {
+        badge.classList.add("hidden");
+        badge.classList.remove("urgent");
+        return;
+      }
+      badge.classList.remove("hidden");
+      badge.textContent = `⏱ ${formatTimeMMSS(remainingSeconds)}`;
+      badge.classList.toggle("urgent", remainingSeconds <= 300);
+    }
+
+    function stopTimer() {
+      if (timerIntervalId) {
+        clearInterval(timerIntervalId);
+        timerIntervalId = null;
+      }
+      timerActive = false;
+      updateTimerBadgeUI();
+    }
+
+    function startOfficialExamTimer(durationSec = OFFICIAL_EXAM_DURATION_SEC) {
       stopTimer();
-      const score = computeOfficialScore(sessionQuestions, userAnswers, annulledQuestionNumbers);
-      hitsCount = score.ordinaryHits;
-      missesCount = score.ordinaryMisses;
-      failedQuestions = score.ordinaryFailed;
-      reserveTotalCount = score.reserveTotal;
-      reserveHitsCount = score.reserveHits;
-      reserveMissesCount = score.reserveMisses;
+      remainingSeconds = durationSec;
+      timerActive = true;
+      updateTimerBadgeUI();
+      timerIntervalId = setInterval(() => {
+        remainingSeconds--;
+        updateTimerBadgeUI();
+        if (remainingSeconds <= 0) {
+          stopTimer();
+          gradeExamSession();
+          saveCurrentAttemptToHistory();
+          showResults(true);
+        }
+      }, 1000);
     }
-
-        let reserveHitsCount = 0;
-    let reserveMissesCount = 0;
-    let reserveTotalCount = 0;
-    let annulledQuestionNumbers = [];
 
     function computeOfficialScore(questionsList, answersList, annulledNums = []) {
       const annulledSet = new Set(
@@ -13231,154 +13589,6 @@
       showResults(false);
     }
 
-    /* ==========================================================================
-       ACTUALIZACIÓN DE UI DEL MENÚ Y LOTES
-       ========================================================================== */
-    function updateCustomExamBuilderUI() {
-      const resolved = getResolvedCustomExamQuestions();
-      const totalSelected = resolved.length;
-
-      document.getElementById("exam-pool-count-badge").textContent =
-        `${totalSelected} seleccionada${totalSelected === 1 ? "" : "s"}`;
-
-      const controls = document.getElementById("custom-exam-controls");
-      if (totalSelected === 0) {
-        controls.classList.add("hidden");
-        return;
-      }
-
-      controls.classList.remove("hidden");
-
-      const titularesInput = document.getElementById("exam-titulares-qty");
-      const hasReserveCheck = document.getElementById("exam-has-reserve");
-      const reserveRow = document.getElementById("exam-reserve-qty-row");
-      const reserveInput = document.getElementById("exam-reserve-qty");
-
-      titularesInput.max = totalSelected;
-      if (Number(titularesInput.value) > totalSelected) titularesInput.value = totalSelected;
-      if (Number(titularesInput.value) < 1) titularesInput.value = 1;
-
-      const titularesVal = Number(titularesInput.value) || 1;
-      const remainingForReserve = Math.max(0, totalSelected - titularesVal);
-
-      if (hasReserveCheck.checked) {
-        reserveRow.classList.remove("hidden");
-        reserveInput.max = Math.max(0, remainingForReserve);
-        if (remainingForReserve === 0) {
-          reserveInput.value = 0;
-        } else if (Number(reserveInput.value) > remainingForReserve) {
-          reserveInput.value = remainingForReserve;
-        } else if (Number(reserveInput.value) < 1) {
-          reserveInput.value = Math.min(5, remainingForReserve);
-        }
-      } else {
-        reserveRow.classList.add("hidden");
-      }
-
-      const resVal = hasReserveCheck.checked ? (Number(reserveInput.value) || 0) : 0;
-      const startCustomBtn = document.getElementById("btn-start-custom-exam");
-      startCustomBtn.textContent = resVal > 0
-        ? `Iniciar examen (${titularesVal} + ${resVal} res.)`
-        : `Iniciar examen (${titularesVal} preg.)`;
-    }
-
-    function syncSequentialRangeControls(resetToFull = false) {
-      const available = getFilteredQuestions(selectedBlock).length;
-      const startInput = document.getElementById("range-start");
-      const endInput = document.getElementById("range-end");
-      const summaryEl = document.getElementById("range-summary-text");
-      const resumeBanner = document.getElementById("resume-container");
-
-      if (available === 0) {
-        startInput.value = 0;
-        endInput.value = 0;
-        summaryEl.textContent = "No hay preguntas disponibles en este temario.";
-        resumeBanner.classList.add("hidden");
-        return { start: 0, end: 0, count: 0 };
-      }
-
-      startInput.min = 1;
-      startInput.max = available;
-      endInput.min = 1;
-      endInput.max = available;
-
-      if (resetToFull) {
-        startInput.value = 1;
-        endInput.value = available;
-      } else {
-        let s = Math.max(1, Math.min(available, parseInt(startInput.value, 10) || 1));
-        let e = Math.max(s, Math.min(available, parseInt(endInput.value, 10) || available));
-        startInput.value = s;
-        endInput.value = e;
-      }
-
-      const sFinal = Number(startInput.value);
-      const eFinal = Number(endInput.value);
-      const count = eFinal - sFinal + 1;
-      summaryEl.textContent = `Seleccionadas: ${count} pregunta${count === 1 ? "" : "s"} (de la nº ${sFinal} a la nº ${eFinal} de ${available}).`;
-
-      const progressMap = getSavedProgressMap();
-      const savedEntry = progressMap[selectedBlock];
-      if (savedEntry && savedEntry.lastPosition >= 1 && savedEntry.lastPosition < available) {
-        const nextPos = savedEntry.lastPosition + 1;
-        document.getElementById("resume-info-text").textContent =
-          `Última vez te quedaste en la pregunta nº ${savedEntry.lastPosition} de ${available}.`;
-        const contBtn = document.getElementById("btn-continue-last");
-        contBtn.textContent = `Continuar desde la ${nextPos}`;
-        contBtn.dataset.nextPos = String(nextPos);
-        resumeBanner.classList.remove("hidden");
-      } else {
-        resumeBanner.classList.add("hidden");
-      }
-
-      return { start: sFinal, end: eFinal, count };
-    }
-
-    function updateMenuCounts(resetRange = false) {
-      const comunCount = getFilteredQuestions("comun").length;
-      const conductorCount = getFilteredQuestions("conductor").length;
-      const totalCount = allQuestions.length;
-
-      document.getElementById("count-comun").textContent = `${comunCount} pregunta${comunCount === 1 ? "" : "s"}`;
-      document.getElementById("count-conductor").textContent = `${conductorCount} pregunta${conductorCount === 1 ? "" : "s"}`;
-      document.getElementById("count-todos").textContent = `${totalCount} pregunta${totalCount === 1 ? "" : "s"}`;
-
-      const available = getFilteredQuestions(selectedBlock).length;
-      const maxLabel = document.getElementById("max-qty-label");
-      const customInput = document.getElementById("custom-qty");
-      const startBtn = document.getElementById("btn-start-test");
-
-      maxLabel.textContent = Math.max(1, available);
-      customInput.max = Math.max(1, available);
-
-      if (available > 0 && Number(customInput.value) > available) customInput.value = available;
-      else if (available > 0 && Number(customInput.value) < 1) customInput.value = 1;
-
-      const rangeInfo = syncSequentialRangeControls(resetRange);
-
-      startBtn.disabled = available === 0;
-      if (available === 0) {
-        startBtn.textContent = "No hay preguntas en este bloque";
-      } else if (orderMode === "secuencial") {
-        startBtn.textContent = `Comenzar Test (${rangeInfo.count} preg. · ${rangeInfo.start} a ${rangeInfo.end})`;
-      } else {
-        const rndCount = Math.min(available, Math.max(1, Number(customInput.value) || 1));
-        startBtn.textContent = `Comenzar Test (${rndCount} preg. aleatorias)`;
-      }
-
-      updateCustomExamBuilderUI();
-    }
-
-    function switchScreen(screenId) {
-      ["screen-menu", "screen-quiz", "screen-results"].forEach((id) => {
-        document.getElementById(id).classList.toggle("hidden", id !== screenId);
-      });
-      document.getElementById("btn-abort-quiz").classList.toggle("hidden", screenId !== "screen-quiz");
-    }
-
-    /* ==========================================================================
-       LÓGICA DEL TEST
-       ========================================================================== */
     function startQuiz(customQuestionList = null, options = {}) {
       stopTimer();
       sessionReserveStartIndex = options.reserveStartIndex ?? null;
@@ -13417,6 +13627,9 @@
       currentIndex = 0;
       hitsCount = 0;
       missesCount = 0;
+      reserveHitsCount = 0;
+      reserveMissesCount = 0;
+      reserveTotalCount = 0;
       failedQuestions = [];
       pendingStudyChoice = null;
       answeredCurrent = false;
@@ -13437,342 +13650,402 @@
       document.getElementById("live-misses").textContent = `Modo Examen`;
     }
 
-    function updateBookmarkButtonUI(q) {
-      const btn = document.getElementById("btn-toggle-exam-bookmark");
-      const marked = isQuestionInExamPool(q);
-      btn.classList.toggle("marked", marked);
-      btn.textContent = marked ? "★ En mi examen" : "☆ Añadir a examen";
+    function updateStudyLiveCounters() {
+      document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
+      document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
     }
 
     function renderCurrentQuestion() {
-      answeredCurrent = false;
-      pendingStudyChoice = null;
-
-      const total = sessionQuestions.length;
       const q = sessionQuestions[currentIndex];
-      const isExam = evaluationMode === "examen";
-
-      const reserveBanner = document.getElementById("reserve-banner-quiz");
-      if (sessionReserveStartIndex !== null && currentIndex >= sessionReserveStartIndex) {
-        const resNum = currentIndex - sessionReserveStartIndex + 1;
-        reserveBanner.textContent = `Pregunta de Reserva nº ${resNum}`;
-        reserveBanner.classList.remove("hidden");
-      } else {
-        reserveBanner.classList.add("hidden");
-      }
+      const total = sessionQuestions.length;
 
       document.getElementById("quiz-progress-text").textContent = `Pregunta ${currentIndex + 1} de ${total}`;
-      if (isExam) {
-        updateExamLiveCounters();
-      } else {
-        document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
-        document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
-      }
       document.getElementById("quiz-progress-bar").style.width = `${((currentIndex + 1) / total) * 100}%`;
 
-      const modelNum = sessionTitle.includes("Modelo A") ? q.num_modelo_a : (q.num_modelo_b ?? q.num_modelo_a);
-      const modelTag = sessionTitle.includes("Modelo A") ? "Modelo A" : "Modelo B";
-      const numLabel = (isOfficialModeloBSession && modelNum)
-        ? `${modelTag} nº ${modelNum} (${q.bloque} #${q.id})`
-        : (isSequentialTrackableSession ? `#${sessionRangeStart1Based + currentIndex}` : `#${q.id ?? currentIndex + 1}`);
+      const reserveBanner = document.getElementById("reserve-banner-quiz");
+      const isReserveNow = Boolean(q.es_reserva) || (sessionReserveStartIndex !== null && currentIndex >= sessionReserveStartIndex);
+      reserveBanner.classList.toggle("hidden", !isReserveNow);
 
-      document.getElementById("q-block-badge").textContent = `${q.bloque || "General"} · ${numLabel}${isExam ? " · Examen" : ""}`;
+      const numTag = q.num_modelo_b ? ` · Mod.B #${q.num_modelo_b}` : (q.num_modelo_a ? ` · Mod.A #${q.num_modelo_a}` : "");
+      document.getElementById("q-block-badge").textContent = `${normalizeBlockName(q.bloque)} · #${q.id ?? (currentIndex + 1)}${numTag}`;
       document.getElementById("q-statement").textContent = q.pregunta;
-      updateBookmarkButtonUI(q);
+
+      const bookmarkBtn = document.getElementById("btn-toggle-exam-bookmark");
+      const qKey = getQuestionKey(q);
+      const isBookmarked = customExamPoolKeys.includes(qKey);
+      bookmarkBtn.classList.toggle("marked", isBookmarked);
+      bookmarkBtn.textContent = isBookmarked ? "★ En examen" : "☆ Añadir a examen";
 
       const optionsContainer = document.getElementById("q-options-container");
-      optionsContainer.innerHTML = "";
-      const savedChoice = isExam ? userAnswers[currentIndex] : null;
-
-      ["a", "b", "c", "d"].forEach((key) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "option-btn";
-        if (isExam && savedChoice === key) {
-          btn.classList.add("selected-exam");
-        }
-        btn.dataset.option = key;
-        btn.innerHTML = `
-          <span class="option-letter">${key.toUpperCase()}</span>
-          <span class="option-text">${escapeHTML(q.opciones[key])}</span>
-        `;
-        btn.addEventListener("click", () => handleAnswerSelection(key));
-        optionsContainer.appendChild(btn);
-      });
-
       const feedbackBox = document.getElementById("q-feedback-box");
+      const nextBtn = document.getElementById("btn-next-question");
+      const prevBtn = document.getElementById("btn-prev-question");
+      const navRow = document.getElementById("quiz-nav-row");
+
+      optionsContainer.innerHTML = "";
       feedbackBox.classList.add("hidden");
 
-      const navRow = document.getElementById("quiz-nav-row");
-      const prevBtn = document.getElementById("btn-prev-question");
-      const nextBtn = document.getElementById("btn-next-question");
+      const letters = ["a", "b", "c", "d"];
+      const validLetters = letters.filter((l) => q.opciones && typeof q.opciones[l] === "string" && q.opciones[l].trim().length > 0);
 
-      if (isExam) {
-        navRow.classList.remove("single-col");
-        prevBtn.classList.remove("hidden");
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = false;
-        nextBtn.textContent = currentIndex === total - 1 ? "Enviar examen" : "Siguiente pregunta";
-      } else {
-        navRow.classList.add("single-col");
-        prevBtn.classList.add("hidden");
-        nextBtn.disabled = true;
-        nextBtn.textContent = "Comprobar respuesta";
-      }
-    }
-
-    function handleAnswerSelection(selectedKey) {
       if (evaluationMode === "examen") {
-        userAnswers[currentIndex] = selectedKey;
-        const buttons = document.querySelectorAll("#q-options-container .option-btn");
-        buttons.forEach((btn) => {
-          btn.classList.toggle("selected-exam", btn.dataset.option === selectedKey);
-        });
+        prevBtn.classList.toggle("hidden", currentIndex === 0);
+        navRow.classList.toggle("single-col", currentIndex === 0);
         updateExamLiveCounters();
-        return;
+
+        const selectedOpt = userAnswers[currentIndex];
+        validLetters.forEach((letter) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "option-btn" + (selectedOpt === letter ? " selected-exam" : "");
+          btn.innerHTML = `
+            <span class="option-letter">${letter.toUpperCase()}</span>
+            <span class="option-text">${q.opciones[letter]}</span>
+          `;
+          btn.addEventListener("click", () => {
+            userAnswers[currentIndex] = letter;
+            renderCurrentQuestion();
+          });
+          optionsContainer.appendChild(btn);
+        });
+
+        nextBtn.disabled = false;
+        nextBtn.textContent = currentIndex === total - 1 ? "Finalizar examen" : "Siguiente →";
+      } else {
+        prevBtn.classList.add("hidden");
+        navRow.classList.add("single-col");
+        updateStudyLiveCounters();
+
+        const savedAnswer = userAnswers[currentIndex];
+        answeredCurrent = Boolean(savedAnswer);
+        pendingStudyChoice = savedAnswer || null;
+        const correctLetter = String(q.correcta).toLowerCase();
+
+        validLetters.forEach((letter) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "option-btn";
+          btn.disabled = answeredCurrent;
+
+          if (answeredCurrent) {
+            if (letter === correctLetter) btn.classList.add("correct");
+            else if (letter === savedAnswer && savedAnswer !== correctLetter) btn.classList.add("wrong");
+          } else if (pendingStudyChoice === letter) {
+            btn.classList.add("selected-exam");
+          }
+
+          btn.innerHTML = `
+            <span class="option-letter">${letter.toUpperCase()}</span>
+            <span class="option-text">${q.opciones[letter]}</span>
+          `;
+
+          btn.addEventListener("click", () => {
+            if (answeredCurrent) return;
+            pendingStudyChoice = letter;
+            optionsContainer.querySelectorAll(".option-btn").forEach((b) => b.classList.remove("selected-exam"));
+            btn.classList.add("selected-exam");
+            nextBtn.disabled = false;
+            nextBtn.textContent = "Comprobar respuesta";
+          });
+
+          optionsContainer.appendChild(btn);
+        });
+
+        if (answeredCurrent) {
+          const isRight = savedAnswer === correctLetter;
+          feedbackBox.classList.remove("hidden");
+          document.getElementById("q-feedback-title").textContent = isRight
+            ? "✓ ¡Respuesta correcta!"
+            : `✕ Incorrecta — Respuesta correcta: ${correctLetter.toUpperCase()}`;
+          document.getElementById("q-feedback-text").textContent =
+            q.explicacion || "Sin explicación adicional registrada para esta pregunta.";
+          nextBtn.disabled = false;
+          nextBtn.textContent = currentIndex === total - 1 ? "Ver resultados" : "Siguiente pregunta →";
+        } else {
+          nextBtn.disabled = !pendingStudyChoice;
+          nextBtn.textContent = "Comprobar respuesta";
+        }
       }
 
-      if (answeredCurrent) return;
-
-      pendingStudyChoice = selectedKey;
-      const buttons = document.querySelectorAll("#q-options-container .option-btn");
-      buttons.forEach((btn) => {
-        btn.classList.toggle("selected-exam", btn.dataset.option === selectedKey);
-      });
-
-      const nextBtn = document.getElementById("btn-next-question");
-      nextBtn.disabled = false;
-      nextBtn.textContent = "Comprobar respuesta";
+      if (isSequentialTrackableSession && selectedBlock !== "todos") {
+        try {
+          const progMap = JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || "{}");
+          const currentPos1Based = sessionRangeStart1Based + currentIndex;
+          if (!progMap[selectedBlock] || currentPos1Based > progMap[selectedBlock]) {
+            progMap[selectedBlock] = currentPos1Based;
+            localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progMap));
+          }
+        } catch {}
+      }
     }
 
-    function confirmStudyAnswer() {
-      if (answeredCurrent || !pendingStudyChoice) return;
-      answeredCurrent = true;
-
-      const selectedKey = pendingStudyChoice;
+    function confirmCurrentStudyAnswer() {
       const q = sessionQuestions[currentIndex];
-      const correctKey = String(q.correcta).toLowerCase();
-      const isCorrect = selectedKey === correctKey;
+      const chosen = pendingStudyChoice;
+      if (!chosen || answeredCurrent) return;
 
-      const buttons = document.querySelectorAll("#q-options-container .option-btn");
-      buttons.forEach((btn) => {
-        btn.disabled = true;
-        btn.classList.remove("selected-exam");
-        const opt = btn.dataset.option;
-        if (opt === correctKey) {
-          btn.classList.add("correct");
-        } else if (opt === selectedKey && !isCorrect) {
-          btn.classList.add("wrong");
-        }
-      });
+      answeredCurrent = true;
+      userAnswers[currentIndex] = chosen;
+      const correctLetter = String(q.correcta).toLowerCase();
 
-      if (isCorrect) {
+      if (chosen === correctLetter) {
         hitsCount++;
-        document.getElementById("live-hits").textContent = `✓ ${hitsCount}`;
       } else {
         missesCount++;
-        document.getElementById("live-misses").textContent = `✕ ${missesCount}`;
-        failedQuestions.push({
-          question: q,
-          userAnswer: selectedKey
-        });
+        failedQuestions.push({ question: q, userAnswer: chosen });
       }
 
-      if (isSequentialTrackableSession) {
-        saveBlockLastPosition(selectedBlock, sessionRangeStart1Based + currentIndex);
-      }
-
-      const feedbackBox = document.getElementById("q-feedback-box");
-      const feedbackTitle = document.getElementById("q-feedback-title");
-      const feedbackText = document.getElementById("q-feedback-text");
-
-      feedbackTitle.textContent = isCorrect ? "¡Respuesta correcta!" : `Incorrecta · La correcta es la ${correctKey.toUpperCase()}`;
-      feedbackTitle.style.color = isCorrect ? "var(--md-success)" : "var(--md-error)";
-      feedbackText.textContent = q.explicacion || "Sin explicación adicional disponible.";
-      feedbackBox.classList.remove("hidden");
-
-      const nextBtn = document.getElementById("btn-next-question");
-      nextBtn.disabled = false;
-      nextBtn.textContent = currentIndex === sessionQuestions.length - 1
-        ? "Finalizar y ver resultados"
-        : "Siguiente pregunta";
+      updateStudyLiveCounters();
+      renderCurrentQuestion();
     }
 
-    function gradeExamSession() {
-      stopTimer();
-      hitsCount = 0;
-      missesCount = 0;
-      failedQuestions = [];
-
-      sessionQuestions.forEach((q, idx) => {
-        const chosen = userAnswers[idx];
-        const correctKey = String(q.correcta).toLowerCase();
-        if (chosen && chosen === correctKey) {
-          hitsCount++;
-        } else {
-          missesCount++;
-          failedQuestions.push({
-            question: q,
-            userAnswer: chosen || null
-          });
-        }
-      });
-    }
-
-    /* ==========================================================================
-       RESULTADOS, REVISIÓN Y DESCARGA DE PLANTILLA DE RESULTADOS
-       ========================================================================== */
-    function renderReviewItems() {
-      const failuresList = document.getElementById("failures-list");
+    function renderReviewList() {
+      const listContainer = document.getElementById("failures-list");
       const titleEl = document.getElementById("review-section-title");
-      failuresList.innerHTML = "";
+      const tabFail = document.getElementById("btn-tab-failures");
+      const tabAll = document.getElementById("btn-tab-all");
 
-      if (reviewFilter === "all") {
-        titleEl.textContent = "Revisión de todas las respuestas";
-        sessionQuestions.forEach((q, idx) => {
-          const cKey = String(q.correcta).toLowerCase();
-          const uKey = evaluationMode === "examen"
-            ? userAnswers[idx]
-            : (failedQuestions.find((f) => f.question === q)?.userAnswer ?? cKey);
-          const isRight = uKey === cKey;
-          const isReserve = sessionReserveStartIndex !== null && idx >= sessionReserveStartIndex;
-          const inPool = isQuestionInExamPool(q);
-          const refLabel = q.num_modelo_b ? `Modelo B nº ${q.num_modelo_b} · ${q.bloque} #${q.id}` : `${q.bloque} #${q.id}`;
+      document.getElementById("fail-list-count").textContent = failedQuestions.length;
+      document.getElementById("all-list-count").textContent = sessionQuestions.length;
 
-          const article = document.createElement("article");
-          article.className = "review-card-item";
-          article.innerHTML = `
-            <div class="question-meta-row">
-              <span class="question-meta">${isReserve ? `Reserva ${idx - sessionReserveStartIndex + 1} · ` : ""}${escapeHTML(refLabel)}</span>
-              <button type="button" class="bookmark-exam-btn ${inPool ? "marked" : ""}" data-review-idx="${idx}">
-                ${inPool ? "★ En mi examen" : "☆ Añadir a examen"}
-              </button>
-            </div>
-            <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
-            <div class="fail-ans ${isRight ? "real-right" : "user-wrong"}">${isRight ? "✓" : "✕"} Tu respuesta (${uKey ? uKey.toUpperCase() : "—"}): ${uKey ? escapeHTML(q.opciones[uKey]) : "Sin responder"}</div>
-            ${!isRight ? `<div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>` : ""}
-            <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
+      if (reviewFilter === "failures") {
+        tabFail.className = "btn btn-tonal btn-sm";
+        tabAll.className = "btn btn-outlined btn-sm";
+        titleEl.textContent = "Revisión de fallos";
+
+        if (failedQuestions.length === 0) {
+          listContainer.innerHTML = `<p class="import-status">¡Enhorabuena! No has tenido fallos en esta sesión.</p>`;
+          return;
+        }
+
+        listContainer.innerHTML = failedQuestions.map((item, idx) => {
+          const q = item.question;
+          const correctKey = String(q.correcta).toLowerCase();
+          const userKey = item.userAnswer ? String(item.userAnswer).toLowerCase() : null;
+          const userText = userKey && q.opciones[userKey]
+            ? `${userKey.toUpperCase()}) ${q.opciones[userKey]}`
+            : "Sin responder";
+          const rightText = q.opciones[correctKey]
+            ? `${correctKey.toUpperCase()}) ${q.opciones[correctKey]}`
+            : correctKey.toUpperCase();
+
+          return `
+            <article class="fail-item">
+              <p class="fail-q">${idx + 1}. [${normalizeBlockName(q.bloque)}] ${q.pregunta}</p>
+              <div class="fail-ans user-wrong">Tu respuesta: ${userText}</div>
+              <div class="fail-ans real-right">Respuesta correcta: ${rightText}</div>
+              <p class="fail-exp"><strong>Explicación:</strong> ${q.explicacion || "Sin explicación disponible."}</p>
+            </article>
           `;
-          article.querySelector("[data-review-idx]").addEventListener("click", (ev) => {
-            toggleQuestionInExamPool(q);
-            const nowMarked = isQuestionInExamPool(q);
-            ev.currentTarget.classList.toggle("marked", nowMarked);
-            ev.currentTarget.textContent = nowMarked ? "★ En mi examen" : "☆ Añadir a examen";
-          });
-          failuresList.appendChild(article);
-        });
-        return;
+        }).join("");
+      } else {
+        tabFail.className = "btn btn-outlined btn-sm";
+        tabAll.className = "btn btn-tonal btn-sm";
+        titleEl.textContent = "Todas las respuestas de la sesión";
+
+        listContainer.innerHTML = sessionQuestions.map((q, idx) => {
+          const chosen = userAnswers[idx];
+          const correctKey = String(q.correcta).toLowerCase();
+          const isOk = chosen && chosen === correctKey;
+          const chosenLabel = chosen && q.opciones[chosen]
+            ? `${chosen.toUpperCase()}) ${q.opciones[chosen]}`
+            : "Sin responder";
+          const rightLabel = q.opciones[correctKey]
+            ? `${correctKey.toUpperCase()}) ${q.opciones[correctKey]}`
+            : correctKey.toUpperCase();
+
+          return `
+            <article class="review-card-item">
+              <p class="fail-q">${idx + 1}. [${normalizeBlockName(q.bloque)}] ${q.pregunta}</p>
+              <div class="fail-ans ${isOk ? "real-right" : "user-wrong"}">
+                ${isOk ? "✓ Acertada" : "✕ Fallada"} · Tu respuesta: ${chosenLabel}
+              </div>
+              ${!isOk ? `<div class="fail-ans real-right">Respuesta correcta: ${rightLabel}</div>` : ""}
+              <p class="fail-exp"><strong>Explicación:</strong> ${q.explicacion || "Sin explicación disponible."}</p>
+            </article>
+          `;
+        }).join("");
       }
-
-      titleEl.textContent = "Revisión de fallos";
-      failedQuestions.forEach((item, idx) => {
-        const q = item.question;
-        const uKey = item.userAnswer;
-        const cKey = String(q.correcta).toLowerCase();
-        const inPool = isQuestionInExamPool(q);
-        const refLabel = q.num_modelo_b ? `Modelo B nº ${q.num_modelo_b} · ${q.bloque} #${q.id}` : `${q.bloque} #${q.id}`;
-
-        const article = document.createElement("article");
-        article.className = "fail-item";
-        article.innerHTML = `
-          <div class="question-meta-row">
-            <span class="question-meta">Fallo #${idx + 1} · ${escapeHTML(refLabel)}</span>
-            <button type="button" class="bookmark-exam-btn ${inPool ? "marked" : ""}">
-              ${inPool ? "★ En mi examen" : "☆ Añadir a examen"}
-            </button>
-          </div>
-          <p class="fail-q">${idx + 1}. ${escapeHTML(q.pregunta)}</p>
-          <div class="fail-ans user-wrong">✕ Tu respuesta (${uKey ? uKey.toUpperCase() : "—"}): ${uKey ? escapeHTML(q.opciones[uKey]) : "Sin responder"}</div>
-          <div class="fail-ans real-right">✓ Respuesta correcta (${cKey.toUpperCase()}): ${escapeHTML(q.opciones[cKey])}</div>
-          <p class="fail-exp"><strong>Explicación:</strong> ${escapeHTML(q.explicacion || "Sin explicación registrada.")}</p>
-        `;
-        article.querySelector(".bookmark-exam-btn").addEventListener("click", (ev) => {
-          toggleQuestionInExamPool(q);
-          const nowMarked = isQuestionInExamPool(q);
-          ev.currentTarget.classList.toggle("marked", nowMarked);
-          ev.currentTarget.textContent = nowMarked ? "★ En mi examen" : "☆ Añadir a examen";
-        });
-        failuresList.appendChild(article);
-      });
     }
 
-    function showResults(shouldSaveAttempt = true) {
+    function showResults(timedOut = false) {
       stopTimer();
-      updateTimerBadgeUI();
-
-      if (shouldSaveAttempt) {
-        saveCurrentAttemptToHistory();
-      }
+      switchScreen("screen-results");
 
       const ordinaryTotal = Math.min(100, sessionQuestions.filter((q) => !q.es_reserva).length || sessionQuestions.length);
       const pct = ordinaryTotal > 0 ? (hitsCount / ordinaryTotal) * 100 : 0;
       const gradeOver10 = ordinaryTotal > 0 ? (hitsCount / ordinaryTotal) * 10 : 0;
 
       document.getElementById("results-session-label").textContent =
-        `${sessionTitle} · Reservas aparte: ${reserveHitsCount}/${reserveTotalCount} aciertos (${reserveMissesCount} fallos)`;
+        `${sessionTitle}${timedOut ? " (Tiempo agotado)" : ""} · Reservas aparte: ${reserveHitsCount}/${reserveTotalCount} aciertos (${reserveMissesCount} fallos)`;
       document.getElementById("res-grade").textContent = `${gradeOver10.toFixed(2)} / 10`;
       document.getElementById("res-percentage").textContent = `${pct.toFixed(1)}% de aciertos (100 ord.)`;
       document.getElementById("res-total").textContent = ordinaryTotal;
       document.getElementById("res-hits").textContent = hitsCount;
       document.getElementById("res-misses").textContent = missesCount;
 
-      const failuresSection = document.getElementById("failures-section");
+      reviewFilter = "failures";
+      renderReviewList();
+
       const retryBtn = document.getElementById("btn-retry-failed");
+      retryBtn.disabled = failedQuestions.length === 0;
+      retryBtn.textContent = failedQuestions.length > 0
+        ? `Repetir solo preguntas falladas (${failedQuestions.length})`
+        : "No hay preguntas falladas que repetir";
+    }
 
-      document.getElementById("fail-list-count").textContent = failedQuestions.length;
-      document.getElementById("all-list-count").textContent = total;
+    function triggerFileDownload(filename, content, mimeType = "application/json;charset=utf-8") {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
 
-      if (failedQuestions.length === 0) {
-        retryBtn.classList.add("hidden");
-        reviewFilter = "all";
-      } else {
-        retryBtn.classList.remove("hidden");
-        reviewFilter = "failures";
+    function downloadAnswerSheetJson() {
+      const respMap = {};
+      sessionQuestions.forEach((q, idx) => {
+        const num = q.num_modelo_b ?? q.num_modelo_a ?? (idx + 1);
+        respMap[String(num)] = userAnswers[idx] || null;
+      });
+      const payload = {
+        id_plantilla: "intento_" + Date.now(),
+        nombre: `${sessionTitle} (${new Date().toLocaleDateString("es-ES")})`,
+        modelo: sessionTitle.toLowerCase().includes("modelo a") ? "Modelo A" : "Modelo B",
+        respuestas: respMap
+      };
+      triggerFileDownload(`plantilla_respuestas_${Date.now()}.json`, JSON.stringify(payload, null, 2));
+    }
+
+    function downloadReportTxt() {
+      const lines = [
+        `INFORME DE RESULTADOS - ${sessionTitle}`,
+        `Fecha: ${new Date().toLocaleString("es-ES")}`,
+        `Aciertos ordinarias: ${hitsCount} | Fallos ordinarias: ${missesCount}`,
+        `Reservas aparte: ${reserveHitsCount}/${reserveTotalCount} aciertos`,
+        "=========================================="
+      ];
+      sessionQuestions.forEach((q, idx) => {
+        const chosen = userAnswers[idx] || "-";
+        const ok = chosen === String(q.correcta).toLowerCase();
+        lines.push(`${idx + 1}. [${ok ? "ACIERTO" : "FALLO"}] Tu resp.: ${chosen.toUpperCase()} | Correcta: ${String(q.correcta).toUpperCase()}`);
+      });
+      triggerFileDownload(`informe_resultados_${Date.now()}.txt`, lines.join("\n"), "text/plain;charset=utf-8");
+    }
+
+    function renderQuestionManager() {
+      const badge = document.getElementById("manager-total-badge");
+      const listEl = document.getElementById("manager-results-list");
+      const searchInp = document.getElementById("manager-search-input");
+      if (!badge || !listEl) return;
+
+      badge.textContent = `${allQuestions.length} preg.`;
+      const query = (searchInp ? searchInp.value : "").trim().toLowerCase();
+
+      const matches = allQuestions
+        .map((q, idx) => ({ q, idx }))
+        .filter(({ q, idx }) => {
+          if (!query) return idx < 15;
+          const hay = `${q.id ?? ""} ${q.bloque ?? ""} ${q.pregunta ?? ""} ${q.explicacion ?? ""} ${Object.values(q.opciones || {}).join(" ")}`.toLowerCase();
+          return hay.includes(query);
+        })
+        .slice(0, 30);
+
+      if (!matches.length) {
+        listEl.innerHTML = `<p class="mode-help-text">No se encontraron preguntas con ese filtro.</p>`;
+        return;
       }
 
-      document.getElementById("btn-tab-failures").className = `btn btn-sm ${reviewFilter === "failures" ? "btn-tonal" : "btn-outlined"}`;
-      document.getElementById("btn-tab-all").className = `btn btn-sm ${reviewFilter === "all" ? "btn-tonal" : "btn-outlined"}`;
+      listEl.innerHTML = matches.map(({ q, idx }) => `
+        <div class="attempt-row">
+          <div class="attempt-row-top">
+            <span class="attempt-title">#${q.id ?? (idx + 1)} · ${normalizeBlockName(q.bloque)} (Correcta: ${String(q.correcta).toUpperCase()})</span>
+            <div style="display:flex; gap:6px;">
+              <button type="button" class="btn btn-tonal btn-sm" data-edit-idx="${idx}">Editar</button>
+              <button type="button" class="btn btn-outlined btn-sm" data-del-idx="${idx}">Borrar</button>
+            </div>
+          </div>
+          <div class="attempt-meta">${q.pregunta}</div>
+        </div>
+      `).join("");
 
-      failuresSection.classList.remove("hidden");
-      renderReviewItems();
-
-      switchScreen("screen-results");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    function buildResultsSheetData() {
-      const items = sessionQuestions.map((q, idx) => {
-        const cKey = String(q.correcta).toLowerCase();
-        const uKey = evaluationMode === "examen"
-          ? userAnswers[idx]
-          : (failedQuestions.find((f) => f.question === q)?.userAnswer ?? cKey);
-        const acertada = Boolean(uKey && uKey === cKey);
-        return {
-          orden: idx + 1,
-          num_modelo_b: q.num_modelo_b ?? null,
-          bloque: q.bloque,
-          id_bloque: q.id,
-          es_reserva: Boolean(q.es_reserva),
-          tu_respuesta: uKey || null,
-          correcta: cKey,
-          estado: acertada ? "ACERTADA" : "SUSPENSA/FALLADA"
-        };
+      listEl.querySelectorAll("[data-edit-idx]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const idx = Number(btn.getAttribute("data-edit-idx"));
+          const target = allQuestions[idx];
+          if (!target) return;
+          editingQuestionRef = idx;
+          document.getElementById("edit-q-statement").value = target.pregunta || "";
+          document.getElementById("edit-opt-a").value = target.opciones?.a || "";
+          document.getElementById("edit-opt-b").value = target.opciones?.b || "";
+          document.getElementById("edit-opt-c").value = target.opciones?.c || "";
+          document.getElementById("edit-opt-d").value = target.opciones?.d || "";
+          document.getElementById("edit-q-correct").value = String(target.correcta || "a").toLowerCase();
+          document.getElementById("edit-q-explanation").value = target.explicacion || "";
+          document.getElementById("question-edit-modal").classList.remove("hidden");
+        });
       });
 
-      return {
-        titulo: sessionTitle,
-        fecha: new Date().toLocaleString("es-ES"),
-        total: sessionQuestions.length,
-        aciertos: hitsCount,
-        fallos: missesCount,
-        nota_sobre_10: sessionQuestions.length > 0 ? Number(((hitsCount / sessionQuestions.length) * 10).toFixed(2)) : 0,
-        preguntas: items
-      };
+      listEl.querySelectorAll("[data-del-idx]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const idx = Number(btn.getAttribute("data-del-idx"));
+          allQuestions.splice(idx, 1);
+          try { localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions)); } catch {}
+          updateMenuCounts(false);
+        });
+      });
     }
 
-    /* ==========================================================================
-       EVENTOS E INICIALIZACIÓN
-       ========================================================================== */
+    function saveEditedQuestion() {
+      if (editingQuestionRef === null || !allQuestions[editingQuestionRef]) return;
+      const target = allQuestions[editingQuestionRef];
+      target.pregunta = document.getElementById("edit-q-statement").value.trim();
+      target.opciones = {
+        a: document.getElementById("edit-opt-a").value,
+        b: document.getElementById("edit-opt-b").value,
+        c: document.getElementById("edit-opt-c").value,
+        d: document.getElementById("edit-opt-d").value
+      };
+      target.correcta = document.getElementById("edit-q-correct").value;
+      target.explicacion = document.getElementById("edit-q-explanation").value;
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions)); } catch {}
+      editingQuestionRef = null;
+      document.getElementById("question-edit-modal").classList.add("hidden");
+      updateMenuCounts(false);
+    }
+
+    function resetBankToDefault() {
+      allQuestions = bancoPreguntas.map((q) => ({ ...q, opciones: { ...(q.opciones || {}) } }));
+      try { localStorage.removeItem(STORAGE_KEY); } catch {}
+      document.getElementById("import-status").textContent = `Batería base restaurada (${allQuestions.length} preg.).`;
+      updateMenuCounts(true);
+    }
+
+    function handleAbortQuiz() {
+      stopTimer();
+      switchScreen("screen-menu");
+      updateMenuCounts(false);
+    }
+
+    function setAjustesUnlocked(unlocked) {
+      const panel = document.getElementById("ajustes-unlocked-panel");
+      const pinBox = document.getElementById("ajustes-pin-box");
+      const lockHelp = document.getElementById("ajustes-lock-help");
+      const toggleBtn = document.getElementById("btn-toggle-ajustes");
+      if (panel) panel.classList.toggle("hidden", !unlocked);
+      if (pinBox) pinBox.classList.add("hidden");
+      if (lockHelp) lockHelp.classList.toggle("hidden", unlocked);
+      if (toggleBtn) toggleBtn.textContent = unlocked ? "Desbloqueado" : "Desbloquear Ajustes";
+      try {
+        if (unlocked) sessionStorage.setItem(AJUSTES_PIN_KEY, "1");
+        else sessionStorage.removeItem(AJUSTES_PIN_KEY);
+      } catch {}
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       initPWA();
       loadCustomExamPool();
@@ -13798,624 +14071,11 @@
 
       updateMenuCounts(true);
 
-
-      // Importar JSON almacenado en una carpeta del repositorio GitHub (ej. baterias/archivo.json)
-      const fetchJsonFromRepoUrl = async (url, labelName) => {
-        try {
-          const resp = await fetch(url, { cache: "no-store" });
-          if (!resp.ok) {
-            alert(`No se pudo descargar "${url}" (HTTP ${resp.status}). Verifica que exista en el repositorio y se sirva por HTTP/HTTPS.`);
-            return;
-          }
-          const json = await resp.json();
-          if (json && typeof json === "object" && !Array.isArray(json) && json.respuestas && typeof json.respuestas === "object") {
-            const cleanResp = {};
-            Object.entries(json.respuestas).forEach(([k, v]) => {
-              if (v && ["a", "b", "c", "d"].includes(String(v).trim().toLowerCase())) {
-                cleanResp[String(k).trim()] = String(v).trim().toLowerCase();
-              }
-            });
-            const newTpl = {
-              id_plantilla: json.id_plantilla || `tpl_repo_${Date.now()}`,
-              nombre: json.nombre || labelName,
-              modelo: json.modelo || (labelName.toLowerCase().includes("modelo_a") ? "Modelo A" : "Modelo B"),
-              respuestas: cleanResp
-            };
-            savedTemplates = [newTpl, ...savedTemplates.filter((t) => t.id_plantilla !== newTpl.id_plantilla)];
-            saveTemplates();
-            document.getElementById("saved-templates-select").value = "0";
-            alert(`Plantilla "${newTpl.nombre}" importada desde el repositorio (${Object.keys(cleanResp).length} respuestas).`);
-            return;
-          }
-          if (!validateQuestionsArray(json)) {
-            alert("El JSON descargado del repositorio no tiene la estructura esperada.");
-            return;
-          }
-          const map = new Map();
-          [...allQuestions, ...json].forEach((q) => {
-            map.set(getQuestionUniqueKey(q), q);
-          });
-          allQuestions = Array.from(map.values());
-          try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions));
-          } catch {}
-          document.getElementById("import-status").textContent = `✓ Cargado desde repo (${labelName}) · ${allQuestions.length} preg.`;
-          updateMenuCounts(true);
-        } catch {
-          alert("Error de red o CORS/protocolo al acceder al JSON del repositorio.");
+      try {
+        if (sessionStorage.getItem(AJUSTES_PIN_KEY) === "1") {
+          setAjustesUnlocked(true);
         }
-      };
-
-      document.getElementById("btn-fetch-repo-json").addEventListener("click", () => {
-        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
-        const fname = (document.getElementById("repo-json-filename").value || "").trim().replace(/^\/+/g, "");
-        if (!fname) {
-          alert("Indica el nombre del archivo .json (por ejemplo: baterias_extra.json).");
-          return;
-        }
-        const fullPath = folder ? `${folder}/${fname}` : fname;
-        fetchJsonFromRepoUrl(fullPath, fullPath);
-      });
-
-      document.getElementById("btn-scan-repo-folder").addEventListener("click", async () => {
-        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
-        const manifestUrl = folder ? `${folder}/manifest.json` : "manifest.json";
-        const sel = document.getElementById("repo-manifest-select");
-        try {
-          const resp = await fetch(manifestUrl, { cache: "no-store" });
-          if (!resp.ok) {
-            alert(`No se encontró "${manifestUrl}". Puedes escribir directamente el nombre del archivo .json y pulsar "Importar desde repo".`);
-            return;
-          }
-          const list = await resp.json();
-          if (!Array.isArray(list) || list.length === 0) {
-            alert("El manifest.json está vacío.");
-            return;
-          }
-          sel.innerHTML = "";
-          list.forEach((entry) => {
-            const opt = document.createElement("option");
-            const fileVal = typeof entry === "string" ? entry : entry.file;
-            const titleVal = typeof entry === "string" ? entry : (entry.label || entry.file);
-            opt.value = fileVal;
-            opt.textContent = titleVal;
-            sel.appendChild(opt);
-          });
-          sel.classList.remove("hidden");
-          document.getElementById("repo-json-filename").value = sel.value;
-          sel.onchange = () => {
-            document.getElementById("repo-json-filename").value = sel.value;
-          };
-        } catch {
-          alert("No se pudo leer el índice de la carpeta del repositorio.");
-        }
-      });
-
-
-      // Gestor de preguntas almacenadas: buscar, editar, borrar y restablecer batería
-      let editingQuestionKey = null;
-
-      const persistQuestionsBank = () => {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions));
-        } catch {}
-        updateMenuCounts(false);
-        renderQuestionManagerList();
-      };
-
-      const renderQuestionManagerList = () => {
-        const listEl = document.getElementById("manager-results-list");
-        const badgeEl = document.getElementById("manager-total-badge");
-        const query = String(document.getElementById("manager-search-input")?.value || "").trim().toLowerCase();
-
-        if (!listEl || !badgeEl) return;
-        badgeEl.textContent = `${allQuestions.length} preg.`;
-
-        const filtered = allQuestions.filter((q) => {
-          if (!query) return true;
-          const numMatch = String(q.id || "").includes(query)
-            || String(q.num_modelo_a || "").includes(query)
-            || String(q.num_modelo_b || "").includes(query);
-          const txtMatch = String(q.pregunta || "").toLowerCase().includes(query)
-            || String(q.bloque || "").toLowerCase().includes(query)
-            || Object.values(q.opciones || {}).some((v) => String(v).toLowerCase().includes(query));
-          return numMatch || txtMatch;
-        });
-
-        const shown = filtered.slice(0, 25);
-        listEl.innerHTML = "";
-
-        if (!shown.length) {
-          listEl.innerHTML = `<p class="mode-help-text">No hay preguntas que coincidan con el filtro.</p>`;
-          return;
-        }
-
-        shown.forEach((q) => {
-          const qKey = getQuestionUniqueKey(q);
-          const row = document.createElement("div");
-          row.className = "attempt-row";
-          const tags = [
-            `${q.bloque} #${q.id}`,
-            q.num_modelo_a ? `Mod.A nº${q.num_modelo_a}` : null,
-            q.num_modelo_b ? `Mod.B nº${q.num_modelo_b}` : null,
-            `Correcta: ${String(q.correcta).toUpperCase()}`
-          ].filter(Boolean).join(" · ");
-
-          row.innerHTML = `
-            <div class="attempt-meta" style="margin-bottom:4px;"><strong>${escapeHTML(tags)}</strong></div>
-            <div class="attempt-title" style="font-size:0.9rem; margin-bottom:8px;">${escapeHTML(q.pregunta)}</div>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-              <button type="button" class="btn btn-tonal btn-sm" data-edit-q="${escapeHTML(qKey)}">✏️ Editar</button>
-              <button type="button" class="btn btn-outlined btn-sm" style="color:var(--md-error); border-color:var(--md-error);" data-del-q="${escapeHTML(qKey)}">🗑️ Borrar</button>
-            </div>
-          `;
-
-          row.querySelector("[data-edit-q]").addEventListener("click", () => {
-            editingQuestionKey = qKey;
-            document.getElementById("edit-q-statement").value = q.pregunta || "";
-            document.getElementById("edit-opt-a").value = q.opciones?.a || "";
-            document.getElementById("edit-opt-b").value = q.opciones?.b || "";
-            document.getElementById("edit-opt-c").value = q.opciones?.c || "";
-            document.getElementById("edit-opt-d").value = q.opciones?.d || "";
-            document.getElementById("edit-q-correct").value = String(q.correcta || "a").toLowerCase();
-            document.getElementById("edit-q-explanation").value = q.explicacion || "";
-            document.getElementById("question-edit-modal").classList.remove("hidden");
-          });
-
-          row.querySelector("[data-del-q]").addEventListener("click", () => {
-            if (!confirm("¿Seguro que deseas borrar esta pregunta de la batería almacenada?")) return;
-            allQuestions = allQuestions.filter((item) => getQuestionUniqueKey(item) !== qKey);
-            if (editingQuestionKey === qKey) {
-              editingQuestionKey = null;
-              document.getElementById("question-edit-modal").classList.add("hidden");
-            }
-            persistQuestionsBank();
-          });
-
-          listEl.appendChild(row);
-        });
-
-        if (filtered.length > 25) {
-          const moreNote = document.createElement("p");
-          moreNote.className = "mode-help-text";
-          moreNote.textContent = `Mostrando las primeras 25 de ${filtered.length} coincidencias. Escribe más palabras para filtrar.`;
-          listEl.appendChild(moreNote);
-        }
-      };
-
-      document.getElementById("manager-search-input")?.addEventListener("input", renderQuestionManagerList);
-
-      document.getElementById("btn-save-edited-question")?.addEventListener("click", () => {
-        if (!editingQuestionKey) return;
-        const target = allQuestions.find((item) => getQuestionUniqueKey(item) === editingQuestionKey);
-        if (!target) return;
-
-        target.pregunta = document.getElementById("edit-q-statement").value.trim() || target.pregunta;
-        target.opciones = {
-          a: document.getElementById("edit-opt-a").value.trim(),
-          b: document.getElementById("edit-opt-b").value.trim(),
-          c: document.getElementById("edit-opt-c").value.trim(),
-          d: document.getElementById("edit-opt-d").value.trim()
-        };
-        target.correcta = document.getElementById("edit-q-correct").value;
-        target.explicacion = document.getElementById("edit-q-explanation").value.trim();
-
-        editingQuestionKey = null;
-        document.getElementById("question-edit-modal").classList.add("hidden");
-        persistQuestionsBank();
-        alert("Pregunta actualizada correctamente.");
-      });
-
-      document.getElementById("btn-cancel-edit-question")?.addEventListener("click", () => {
-        editingQuestionKey = null;
-        document.getElementById("question-edit-modal").classList.add("hidden");
-      });
-
-      document.getElementById("btn-reset-bank-default")?.addEventListener("click", () => {
-        if (!confirm("¿Restablecer la batería de preguntas a la versión integrada por defecto?")) return;
-        allQuestions = bancoPreguntas.map((q) => ({ ...q, opciones: { ...(q.opciones || {}) } }));
-        editingQuestionKey = null;
-        document.getElementById("question-edit-modal").classList.add("hidden");
-        persistQuestionsBank();
-      });
-
-      renderQuestionManagerList();
-
-      // Examen oficial Modelo A (90 minutos: 100 ordinarias + 10 reserva)
-      document.getElementById("btn-start-official-modelo-a").addEventListener("click", () => {
-        const modeloAQuestions = EXAMEN_MODELO_A_110.slice(0, 110);
-        const reserveIdx = modeloAQuestions.findIndex((q) => Boolean(q.es_reserva) || (q.num_modelo_a >= 101));
-        evalExamBtn.classList.add("active");
-        evalStudyBtn.classList.remove("active");
-        startQuiz(modeloAQuestions, {
-          forceExamMode: true,
-          officialModeloB: true,
-          reserveStartIndex: reserveIdx >= 0 ? reserveIdx : 100,
-          durationSeconds: OFFICIAL_EXAM_DURATION_SEC,
-          sessionTitle: "Examen Oficial Modelo A (21/11/2026)"
-        });
-      });
-
-      // Examen oficial Modelo B (90 minutos: 100 ordinarias + 10 reserva)
-      document.getElementById("btn-start-official-modelo-b").addEventListener("click", () => {
-        const modeloBQuestions = EXAMEN_MODELO_B_110.slice(0, 110);
-        const reserveIdx = modeloBQuestions.findIndex((q) => Boolean(q.es_reserva) || (q.num_modelo_b >= 101));
-        evalExamBtn.classList.add("active");
-        evalStudyBtn.classList.remove("active");
-        startQuiz(modeloBQuestions, {
-          forceExamMode: true,
-          officialModeloB: true,
-          reserveStartIndex: reserveIdx >= 0 ? reserveIdx : 100,
-          durationSeconds: OFFICIAL_EXAM_DURATION_SEC,
-          sessionTitle: "Examen Oficial Modelo B (21/11/2026)"
-        });
-      });
-
-      // Corregir plantilla de respuestas seleccionada
-      const runTemplateCheck = () => {
-        const idx = Number(document.getElementById("saved-templates-select").value) || 0;
-        const tpl = savedTemplates[idx] || plantillaInicialSeparada;
-        evaluateSeparatedTemplate(tpl, true);
-      };
-
-      document.getElementById("btn-eval-template-now").addEventListener("click", runTemplateCheck);
-      document.getElementById("btn-check-selected-template").addEventListener("click", runTemplateCheck);
-
-      // Añadir plantilla de respuestas .json separada
-      document.getElementById("template-file-input").addEventListener("change", (event) => {
-        const file = event.target.files?.[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          try {
-            const parsed = JSON.parse(String(e.target?.result || ""));
-            const respMap = parsed.respuestas && typeof parsed.respuestas === "object" ? parsed.respuestas : parsed;
-            if (!respMap || typeof respMap !== "object") {
-              alert("Formato de plantilla .json no válido.");
-              return;
-            }
-            const cleanResp = {};
-            Object.entries(respMap).forEach(([k, v]) => {
-              if (v && ["a", "b", "c", "d"].includes(String(v).trim().toLowerCase())) {
-                cleanResp[String(k).trim()] = String(v).trim().toLowerCase();
-              }
-            });
-            savedTemplates.unshift({
-              id_plantilla: parsed.id_plantilla || `tpl_${Date.now()}`,
-              nombre: parsed.nombre || file.name.replace(/\.json$/i, ""),
-              modelo: parsed.modelo || "Modelo B",
-              respuestas: cleanResp
-            });
-            saveTemplates();
-            document.getElementById("saved-templates-select").value = "0";
-            alert(`Plantilla "${file.name}" añadida con ${Object.keys(cleanResp).length} respuestas.`);
-          } catch {
-            alert("Error al leer el archivo .json de la plantilla.");
-          } finally {
-            event.target.value = "";
-          }
-        };
-        reader.readAsText(file, "UTF-8");
-      });
-
-      // Descargar plantilla seleccionada .json
-      document.getElementById("btn-export-selected-template").addEventListener("click", () => {
-        const idx = Number(document.getElementById("saved-templates-select").value) || 0;
-        const tpl = savedTemplates[idx] || plantillaInicialSeparada;
-        triggerDownloadFile(`${(tpl.id_plantilla || "plantilla")}.json`, JSON.stringify(tpl, null, 2), "application/json");
-      });
-
-      // Descargar plantilla de resultados (.json) e informe de acertadas/suspensas (.txt)
-      document.getElementById("btn-download-answer-sheet-json").addEventListener("click", () => {
-        const sheet = buildResultsSheetData();
-        triggerDownloadFile("plantilla_resultados_osakidetza.json", JSON.stringify(sheet, null, 2), "application/json");
-      });
-
-      document.getElementById("btn-download-report-txt").addEventListener("click", () => {
-        const sheet = buildResultsSheetData();
-        const lines = [
-          `RESULTADO: ${sheet.titulo}`,
-          `Fecha: ${sheet.fecha}`,
-          `Nota: ${sheet.nota_sobre_10.toFixed(2)} / 10 (${sheet.aciertos} aciertos, ${sheet.fallos} fallos de ${sheet.total})`,
-          "------------------------------------------------------------",
-          ...sheet.preguntas.map((p) => {
-            const tag = p.num_modelo_b ? `P${p.num_modelo_b} [${p.bloque} #${p.id_bloque}]` : `P${p.orden} [${p.bloque} #${p.id_bloque}]`;
-            return `${tag} -> ${p.estado} | Marcada: ${(p.tu_respuesta || "—").toUpperCase()} | Correcta: ${p.correcta.toUpperCase()}`;
-          })
-        ];
-        triggerDownloadFile("informe_acertadas_suspensas.txt", lines.join("\n"), "text/plain;charset=utf-8");
-      });
-
-      // Selección de bloque
-      document.querySelectorAll("#block-selector .radio-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          document.querySelectorAll("#block-selector .radio-card").forEach((c) => c.classList.remove("selected"));
-          card.classList.add("selected");
-          card.querySelector("input").checked = true;
-          selectedBlock = card.dataset.block;
-          updateMenuCounts(true);
-        });
-      });
-
-      // Selector Por orden/Lotes vs Aleatorio
-      const modeSeqBtn = document.getElementById("mode-seq-btn");
-      const modeRndBtn = document.getElementById("mode-rnd-btn");
-      const seqPanel = document.getElementById("sequential-options-panel");
-      const randomPanel = document.getElementById("random-options-panel");
-
-      modeSeqBtn.addEventListener("click", () => {
-        orderMode = "secuencial";
-        modeSeqBtn.classList.add("active");
-        modeRndBtn.classList.remove("active");
-        seqPanel.classList.remove("hidden");
-        randomPanel.classList.add("hidden");
-        updateMenuCounts(false);
-      });
-
-      modeRndBtn.addEventListener("click", () => {
-        orderMode = "aleatorio";
-        modeRndBtn.classList.add("active");
-        modeSeqBtn.classList.remove("active");
-        randomPanel.classList.remove("hidden");
-        seqPanel.classList.add("hidden");
-        updateMenuCounts(false);
-      });
-
-      document.querySelectorAll("#batch-presets .chip-btn").forEach((chip) => {
-        chip.addEventListener("click", () => {
-          document.querySelectorAll("#batch-presets .chip-btn").forEach((c) => c.classList.remove("active"));
-          chip.classList.add("active");
-          const available = getFilteredQuestions(selectedBlock).length;
-          const mode = chip.dataset.batch;
-          const startInput = document.getElementById("range-start");
-          const endInput = document.getElementById("range-end");
-
-          if (mode === "all") {
-            startInput.value = 1;
-            endInput.value = available;
-          } else {
-            const size = Number(mode);
-            const currentStart = Math.max(1, Math.min(available, Number(startInput.value) || 1));
-            startInput.value = currentStart;
-            endInput.value = Math.min(available, currentStart + size - 1);
-          }
-          updateMenuCounts(false);
-        });
-      });
-
-      document.getElementById("range-start").addEventListener("change", () => updateMenuCounts(false));
-      document.getElementById("range-end").addEventListener("change", () => updateMenuCounts(false));
-
-      document.getElementById("btn-continue-last").addEventListener("click", (e) => {
-        const available = getFilteredQuestions(selectedBlock).length;
-        const nextPos = Math.min(available, Math.max(1, Number(e.currentTarget.dataset.nextPos) || 1));
-        document.getElementById("range-start").value = nextPos;
-        document.getElementById("range-end").value = available;
-        updateMenuCounts(false);
-        startQuiz();
-      });
-
-      document.querySelectorAll("#quick-chips .chip-btn").forEach((chip) => {
-        chip.addEventListener("click", () => {
-          document.querySelectorAll("#quick-chips .chip-btn").forEach((c) => c.classList.remove("active"));
-          chip.classList.add("active");
-          const maxAvail = Math.max(1, getFilteredQuestions(selectedBlock).length);
-          const qty = Math.min(maxAvail, Number(chip.dataset.qty));
-          document.getElementById("custom-qty").value = qty;
-          updateMenuCounts(false);
-        });
-      });
-
-      document.getElementById("custom-qty").addEventListener("input", (e) => {
-        document.querySelectorAll("#quick-chips .chip-btn").forEach((c) => {
-          c.classList.toggle("active", Number(c.dataset.qty) === Number(e.target.value));
-        });
-        updateMenuCounts(false);
-      });
-
-      document.getElementById("json-file-input").addEventListener("change", (event) => {
-        const file = event.target.files?.[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          try {
-            let text = String(e.target?.result || "").trim();
-            if (text.startsWith("//")) {
-              text = text.replace(/^\/\/.*$/gm, "").trim();
-            }
-            const json = JSON.parse(text);
-            if (!validateQuestionsArray(json)) {
-              alert("El archivo JSON no tiene la estructura esperada (id, bloque, pregunta, opciones {a,b,c,d}, correcta, explicacion).");
-              return;
-            }
-
-            const map = new Map();
-            [...allQuestions, ...json].forEach((q) => {
-              const key = getQuestionUniqueKey(q);
-              map.set(key, q);
-            });
-            allQuestions = Array.from(map.values());
-
-            try {
-              localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions));
-            } catch {}
-
-            document.getElementById("import-status").textContent = `✓ Importadas (${allQuestions.length} preguntas totales).`;
-            updateMenuCounts(true);
-          } catch {
-            alert("Error al leer el archivo JSON. Verifica que sea un formato JSON válido.");
-          } finally {
-            event.target.value = "";
-          }
-        };
-        reader.readAsText(file, "UTF-8");
-      });
-
-      const evalStudyBtn = document.getElementById("eval-study-btn");
-      const evalExamBtn = document.getElementById("eval-exam-btn");
-      const evalModeDesc = document.getElementById("eval-mode-desc");
-
-      evalStudyBtn.addEventListener("click", () => {
-        evaluationMode = "estudio";
-        evalStudyBtn.classList.add("active");
-        evalExamBtn.classList.remove("active");
-        evalModeDesc.innerHTML = "<strong>Estudio:</strong> Seleccionas una opción y pulsas <em>Comprobar respuesta</em> para evitar toques accidentales.";
-      });
-
-      evalExamBtn.addEventListener("click", () => {
-        evaluationMode = "examen";
-        evalExamBtn.classList.add("active");
-        evalStudyBtn.classList.remove("active");
-        evalModeDesc.innerHTML = "<strong>Examen:</strong> Sin corrección durante el test; puedes volver atrás, cambiar respuestas y revisar todas al enviar.";
-      });
-
-      document.getElementById("exam-titulares-qty").addEventListener("input", updateCustomExamBuilderUI);
-      document.getElementById("exam-has-reserve").addEventListener("change", updateCustomExamBuilderUI);
-      document.getElementById("exam-reserve-qty").addEventListener("input", updateCustomExamBuilderUI);
-
-      document.querySelectorAll("[data-exam-order]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.querySelectorAll("[data-exam-order]").forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-          examOrderMode = btn.dataset.examOrder;
-        });
-      });
-
-      document.getElementById("btn-clear-exam-pool").addEventListener("click", () => {
-        customExamPoolKeys = [];
-        saveCustomExamPool();
-        updateCustomExamBuilderUI();
-      });
-
-      document.getElementById("btn-start-custom-exam").addEventListener("click", () => {
-        const resolved = getResolvedCustomExamQuestions();
-        if (resolved.length === 0) return;
-
-        let orderedPool = [...resolved];
-        if (examOrderMode === "temario") {
-          const indexMap = new Map();
-          allQuestions.forEach((q, idx) => indexMap.set(getQuestionUniqueKey(q), idx));
-          orderedPool.sort((a, b) => (indexMap.get(getQuestionUniqueKey(a)) ?? 0) - (indexMap.get(getQuestionUniqueKey(b)) ?? 0));
-        } else if (examOrderMode === "random") {
-          orderedPool = fisherYatesShuffle(orderedPool);
-        }
-
-        const titularesQty = Math.min(orderedPool.length, Math.max(1, Number(document.getElementById("exam-titulares-qty").value) || 1));
-        const hasReserve = document.getElementById("exam-has-reserve").checked;
-        const maxReserve = Math.max(0, orderedPool.length - titularesQty);
-        const reserveQty = hasReserve ? Math.min(maxReserve, Math.max(0, Number(document.getElementById("exam-reserve-qty").value) || 0)) : 0;
-
-        const finalQuestions = orderedPool.slice(0, titularesQty + reserveQty);
-        const reserveStartIdx = reserveQty > 0 ? titularesQty : null;
-
-        evaluationMode = "examen";
-        evalExamBtn.classList.add("active");
-        evalStudyBtn.classList.remove("active");
-
-        startQuiz(finalQuestions, {
-          reserveStartIndex: reserveStartIdx,
-          forceExamMode: true,
-          sessionTitle: "Examen Seleccionado"
-        });
-      });
-
-      document.getElementById("btn-toggle-exam-bookmark").addEventListener("click", () => {
-        const q = sessionQuestions[currentIndex];
-        if (!q) return;
-        toggleQuestionInExamPool(q);
-        updateBookmarkButtonUI(q);
-      });
-
-      document.getElementById("btn-start-test").addEventListener("click", () => startQuiz());
-
-      document.getElementById("btn-prev-question").addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          renderCurrentQuestion();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
-
-      document.getElementById("btn-next-question").addEventListener("click", () => {
-        if (evaluationMode === "estudio" && !answeredCurrent) {
-          confirmStudyAnswer();
-          return;
-        }
-
-        if (currentIndex < sessionQuestions.length - 1) {
-          currentIndex++;
-          renderCurrentQuestion();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } else {
-          if (evaluationMode === "examen") {
-            gradeExamSession();
-          }
-          showResults(true);
-        }
-      });
-
-      document.getElementById("btn-tab-failures").addEventListener("click", () => {
-        reviewFilter = "failures";
-        document.getElementById("btn-tab-failures").className = "btn btn-tonal btn-sm";
-        document.getElementById("btn-tab-all").className = "btn btn-outlined btn-sm";
-        renderReviewItems();
-      });
-
-      document.getElementById("btn-tab-all").addEventListener("click", () => {
-        reviewFilter = "all";
-        document.getElementById("btn-tab-all").className = "btn btn-tonal btn-sm";
-        document.getElementById("btn-tab-failures").className = "btn btn-outlined btn-sm";
-        renderReviewItems();
-      });
-
-      function handleAbortQuiz() {
-        try { stopTimer(); } catch (e) {}
-        try { updateTimerBadgeUI(); } catch (e) {}
-        const quizEl = document.getElementById("screen-quiz");
-        const resultsEl = document.getElementById("screen-results");
-        const menuEl = document.getElementById("screen-menu");
-        const abortBtn = document.getElementById("btn-abort-quiz");
-        if (quizEl) quizEl.classList.add("hidden");
-        if (resultsEl) resultsEl.classList.add("hidden");
-        if (menuEl) menuEl.classList.remove("hidden");
-        if (abortBtn) abortBtn.classList.add("hidden");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        try { updateMenuCounts(false); } catch (e) {}
-      }
-
-      document.getElementById("btn-abort-quiz").addEventListener("click", (ev) => {
-        ev.preventDefault();
-        ev.stopPropagation();
-        handleAbortQuiz();
-      });
-
-      document.addEventListener("click", (ev) => {
-        const targetBtn = ev.target && ev.target.closest ? ev.target.closest("#btn-abort-quiz") : null;
-        if (targetBtn) {
-          ev.preventDefault();
-          handleAbortQuiz();
-        }
-      });
-
-      // Lógica zona protegida "Ajustes"
-      const AJUSTES_PIN_KEY = "osakidetza_ajustes_unlocked_v1";
-      const AJUSTES_CODE = "112";
-
-      function setAjustesUnlocked(unlocked) {
-        const panel = document.getElementById("ajustes-unlocked-panel");
-        const pinBox = document.getElementById("ajustes-pin-box");
-        const lockHelp = document.getElementById("ajustes-lock-help");
-        const toggleBtn = document.getElementById("btn-toggle-ajustes");
-        if (panel) panel.classList.toggle("hidden", !unlocked);
-        if (pinBox) pinBox.classList.add("hidden");
-        if (lockHelp) lockHelp.classList.toggle("hidden", unlocked);
-        if (toggleBtn) toggleBtn.textContent = unlocked ? "Desbloqueado" : "Desbloquear Ajustes";
-        try {
-          if (unlocked) sessionStorage.setItem(AJUSTES_PIN_KEY, "1");
-          else sessionStorage.removeItem(AJUSTES_PIN_KEY);
-        } catch (e) {}
-      }
+      } catch {}
 
       document.getElementById("btn-toggle-ajustes").addEventListener("click", () => {
         const panel = document.getElementById("ajustes-unlocked-panel");
@@ -14444,6 +14104,13 @@
         }
       });
 
+      document.getElementById("ajustes-pin-input").addEventListener("keydown", (ev) => {
+        if (ev.key === "Enter") {
+          ev.preventDefault();
+          document.getElementById("btn-confirm-ajustes-pin").click();
+        }
+      });
+
       document.getElementById("btn-cancel-ajustes-pin").addEventListener("click", () => {
         const pinBox = document.getElementById("ajustes-pin-box");
         const errEl = document.getElementById("ajustes-pin-error");
@@ -14455,22 +14122,438 @@
         setAjustesUnlocked(false);
       });
 
-      try {
-        if (sessionStorage.getItem(AJUSTES_PIN_KEY) === "1") {
-          setAjustesUnlocked(true);
-        }
-      } catch (e) {}
+      document.querySelectorAll("#block-selector .radio-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          document.querySelectorAll("#block-selector .radio-card").forEach((c) => c.classList.remove("selected"));
+          card.classList.add("selected");
+          const radio = card.querySelector('input[type="radio"]');
+          if (radio) radio.checked = true;
+          selectedBlock = card.getAttribute("data-block") || "comun";
+          updateMenuCounts(true);
+        });
+      });
 
-      document.getElementById("btn-retry-failed").addEventListener("click", () => {
-        const onlyFailed = failedQuestions.map((item) => item.question);
-        if (onlyFailed.length > 0) {
-          startQuiz(onlyFailed, { sessionTitle: "Repaso de fallos" });
+      document.getElementById("mode-seq-btn").addEventListener("click", () => {
+        orderMode = "secuencial";
+        document.getElementById("mode-seq-btn").classList.add("active");
+        document.getElementById("mode-rnd-btn").classList.remove("active");
+        document.getElementById("sequential-options-panel").classList.remove("hidden");
+        document.getElementById("random-options-panel").classList.add("hidden");
+        updateMenuCounts(false);
+      });
+
+      document.getElementById("mode-rnd-btn").addEventListener("click", () => {
+        orderMode = "aleatorio";
+        document.getElementById("mode-rnd-btn").classList.add("active");
+        document.getElementById("mode-seq-btn").classList.remove("active");
+        document.getElementById("random-options-panel").classList.remove("hidden");
+        document.getElementById("sequential-options-panel").classList.add("hidden");
+        updateMenuCounts(false);
+      });
+
+      document.querySelectorAll("#batch-presets .chip-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("#batch-presets .chip-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const available = getFilteredQuestions(selectedBlock).length;
+          const batch = btn.getAttribute("data-batch");
+          const startInp = document.getElementById("range-start");
+          const endInp = document.getElementById("range-end");
+          startInp.value = 1;
+          if (batch === "50") endInp.value = Math.min(available, 50);
+          else if (batch === "100") endInp.value = Math.min(available, 100);
+          else endInp.value = available;
+          updateMenuCounts(false);
+        });
+      });
+
+      ["range-start", "range-end"].forEach((id) => {
+        document.getElementById(id).addEventListener("input", () => updateMenuCounts(false));
+      });
+
+      document.getElementById("btn-continue-last").addEventListener("click", () => {
+        try {
+          const progMap = JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || "{}");
+          const available = getFilteredQuestions(selectedBlock).length;
+          const lastReached = Math.max(1, Math.min(available, Number(progMap[selectedBlock]) || 1));
+          document.getElementById("range-start").value = lastReached;
+          document.getElementById("range-end").value = available;
+          updateMenuCounts(false);
+          startQuiz(null, { trackSequentialProgress: true, rangeStart1Based: lastReached });
+        } catch {}
+      });
+
+      document.querySelectorAll("#quick-chips .chip-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("#quick-chips .chip-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById("custom-qty").value = Number(btn.getAttribute("data-qty")) || 10;
+          updateMenuCounts(false);
+        });
+      });
+
+      document.getElementById("custom-qty").addEventListener("input", () => updateMenuCounts(false));
+
+      document.getElementById("eval-study-btn").addEventListener("click", () => {
+        evaluationMode = "estudio";
+        document.getElementById("eval-study-btn").classList.add("active");
+        document.getElementById("eval-exam-btn").classList.remove("active");
+        document.getElementById("eval-mode-desc").innerHTML =
+          `<strong>Estudio:</strong> Seleccionas una opción y pulsas <em>Comprobar respuesta</em> para evitar toques accidentales.`;
+      });
+
+      document.getElementById("eval-exam-btn").addEventListener("click", () => {
+        evaluationMode = "examen";
+        document.getElementById("eval-exam-btn").classList.add("active");
+        document.getElementById("eval-study-btn").classList.remove("active");
+        document.getElementById("eval-mode-desc").innerHTML =
+          `<strong>Examen:</strong> Respondes libremente, puedes volver atrás y se corrige todo al finalizar.`;
+      });
+
+      document.getElementById("btn-start-official-modelo-a").addEventListener("click", () => {
+        startQuiz(EXAMEN_MODELO_A_110, {
+          sessionTitle: "Examen Oficial Modelo A (21/11/2026)",
+          forceExamMode: true,
+          durationSeconds: OFFICIAL_EXAM_DURATION_SEC,
+          reserveStartIndex: 100,
+          officialModeloB: true
+        });
+      });
+
+      document.getElementById("btn-start-official-modelo-b").addEventListener("click", () => {
+        startQuiz(EXAMEN_MODELO_B_110, {
+          sessionTitle: "Examen Oficial Modelo B (21/11/2026)",
+          forceExamMode: true,
+          durationSeconds: OFFICIAL_EXAM_DURATION_SEC,
+          reserveStartIndex: 100,
+          officialModeloB: true
+        });
+      });
+
+      const runTemplateCheck = () => {
+        const idx = Number(document.getElementById("saved-templates-select").value) || 0;
+        const tpl = savedTemplates[idx] || plantillaInicialSeparada;
+        evaluateSeparatedTemplate(tpl, true);
+      };
+
+      document.getElementById("btn-check-selected-template").addEventListener("click", runTemplateCheck);
+      document.getElementById("btn-eval-template-now").addEventListener("click", runTemplateCheck);
+
+      document.getElementById("btn-export-selected-template").addEventListener("click", () => {
+        const idx = Number(document.getElementById("saved-templates-select").value) || 0;
+        const tpl = savedTemplates[idx] || plantillaInicialSeparada;
+        triggerFileDownload(`${tpl.id_plantilla || "plantilla"}.json`, JSON.stringify(tpl, null, 2));
+      });
+
+      document.getElementById("template-file-input").addEventListener("change", (ev) => {
+        const file = ev.target.files && ev.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const parsed = JSON.parse(String(e.target.result || ""));
+            if (!parsed || typeof parsed !== "object" || !parsed.respuestas || typeof parsed.respuestas !== "object") {
+              alert("El archivo de plantilla no tiene un objeto 'respuestas' válido.");
+              return;
+            }
+            const cleanResp = {};
+            Object.entries(parsed.respuestas).forEach(([k, v]) => {
+              if (v && ["a", "b", "c", "d"].includes(String(v).trim().toLowerCase())) {
+                cleanResp[String(k).trim()] = String(v).trim().toLowerCase();
+              }
+            });
+            const newTpl = {
+              id_plantilla: parsed.id_plantilla || `tpl_${Date.now()}`,
+              nombre: parsed.nombre || file.name.replace(/\.json$/i, ""),
+              modelo: parsed.modelo || "Modelo B",
+              respuestas: cleanResp
+            };
+            savedTemplates = [newTpl, ...savedTemplates];
+            saveTemplates();
+            document.getElementById("saved-templates-select").value = "0";
+            alert(`Plantilla "${newTpl.nombre}" cargada (${Object.keys(cleanResp).length} respuestas).`);
+          } catch {
+            alert("No se pudo leer la plantilla .json.");
+          }
+        };
+        reader.readAsText(file);
+        ev.target.value = "";
+      });
+
+      document.querySelectorAll("[data-exam-order]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("[data-exam-order]").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          examOrderMode = btn.getAttribute("data-exam-order") || "selection";
+        });
+      });
+
+      document.getElementById("exam-titulares-qty").addEventListener("input", updateCustomExamBuilderUI);
+      document.getElementById("exam-has-reserve").addEventListener("change", updateCustomExamBuilderUI);
+      document.getElementById("exam-reserve-qty").addEventListener("input", updateCustomExamBuilderUI);
+
+      document.getElementById("btn-clear-exam-pool").addEventListener("click", () => {
+        customExamPoolKeys = [];
+        saveCustomExamPool();
+        updateCustomExamBuilderUI();
+      });
+
+      document.getElementById("btn-start-custom-exam").addEventListener("click", () => {
+        const selectedItems = allQuestions.filter((q) => customExamPoolKeys.includes(getQuestionKey(q)));
+        if (!selectedItems.length) return;
+
+        let ordered = [...selectedItems];
+        if (examOrderMode === "random") ordered = fisherYatesShuffle(ordered);
+
+        const hasRes = document.getElementById("exam-has-reserve").checked;
+        const titQty = Math.min(ordered.length, Math.max(1, Number(document.getElementById("exam-titulares-qty").value) || 1));
+        const resQty = hasRes ? Math.max(1, Number(document.getElementById("exam-reserve-qty").value) || 1) : 0;
+
+        const titulares = ordered.slice(0, titQty).map((q) => ({ ...q, es_reserva: false }));
+        const reservasSource = ordered.length > titQty ? ordered.slice(titQty) : ordered;
+        const reservas = hasRes
+          ? Array.from({ length: resQty }, (_, i) => ({ ...reservasSource[i % reservasSource.length], es_reserva: true }))
+          : [];
+
+        startQuiz([...titulares, ...reservas], {
+          sessionTitle: hasRes ? `Examen Personalizado (${titulares.length} + ${reservas.length} res.)` : `Examen Personalizado (${titulares.length} preg.)`,
+          forceExamMode: true,
+          reserveStartIndex: hasRes ? titulares.length : null
+        });
+      });
+
+      document.getElementById("manager-search-input").addEventListener("input", renderQuestionManager);
+      document.getElementById("btn-reset-bank-default").addEventListener("click", resetBankToDefault);
+      document.getElementById("btn-save-edited-question").addEventListener("click", saveEditedQuestion);
+      document.getElementById("btn-cancel-edit-question").addEventListener("click", () => {
+        editingQuestionRef = null;
+        document.getElementById("question-edit-modal").classList.add("hidden");
+      });
+
+      const importQuestionsList = (arr, labelText) => {
+        if (!validateQuestionsArray(arr)) {
+          alert("El archivo JSON no contiene un array válido de preguntas con opciones y respuesta correcta.");
+          return false;
+        }
+        allQuestions = arr.map((q) => ({
+          ...q,
+          bloque: normalizeBlockName(q.bloque),
+          opciones: { ...(q.opciones || {}) },
+          correcta: String(q.correcta).toLowerCase()
+        }));
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(allQuestions)); } catch {}
+        document.getElementById("import-status").textContent = `✓ ${labelText} · ${allQuestions.length} preguntas.`;
+        updateMenuCounts(true);
+        return true;
+      };
+
+      const fetchJsonFromRepoUrl = async (url, labelName) => {
+        try {
+          const resp = await fetch(url, { cache: "no-store" });
+          if (!resp.ok) {
+            alert(`No se pudo descargar "${url}" (HTTP ${resp.status}).`);
+            return;
+          }
+          const json = await resp.json();
+          if (json && typeof json === "object" && !Array.isArray(json) && json.respuestas && typeof json.respuestas === "object") {
+            const cleanResp = {};
+            Object.entries(json.respuestas).forEach(([k, v]) => {
+              if (v && ["a", "b", "c", "d"].includes(String(v).trim().toLowerCase())) {
+                cleanResp[String(k).trim()] = String(v).trim().toLowerCase();
+              }
+            });
+            const newTpl = {
+              id_plantilla: json.id_plantilla || `tpl_repo_${Date.now()}`,
+              nombre: json.nombre || labelName,
+              modelo: json.modelo || (labelName.toLowerCase().includes("modelo_a") ? "Modelo A" : "Modelo B"),
+              respuestas: cleanResp
+            };
+            savedTemplates = [newTpl, ...savedTemplates.filter((t) => t.id_plantilla !== newTpl.id_plantilla)];
+            saveTemplates();
+            document.getElementById("saved-templates-select").value = "0";
+            alert(`Plantilla "${newTpl.nombre}" importada desde el repositorio.`);
+            return;
+          }
+          const qArray = Array.isArray(json) ? json : (Array.isArray(json?.preguntas) ? json.preguntas : null);
+          if (!qArray) {
+            alert("El JSON del repositorio no tiene un formato reconocido.");
+            return;
+          }
+          importQuestionsList(qArray, `Repo: ${labelName}`);
+        } catch {
+          alert("Error de red o CORS al cargar desde el repositorio.");
+        }
+      };
+
+      document.getElementById("btn-scan-repo-folder").addEventListener("click", async () => {
+        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
+        const manifestUrl = folder ? `${folder}/manifest.json` : "manifest.json";
+        const sel = document.getElementById("repo-manifest-select");
+        try {
+          const resp = await fetch(manifestUrl, { cache: "no-store" });
+          if (!resp.ok) {
+            alert(`No se encontró "${manifestUrl}". Puedes escribir el nombre del .json y pulsar "Importar desde repo".`);
+            return;
+          }
+          const list = await resp.json();
+          if (!Array.isArray(list) || !list.length) {
+            alert("El manifest.json está vacío.");
+            return;
+          }
+          sel.innerHTML = "";
+          list.forEach((item) => {
+            const fileVal = typeof item === "string" ? item : item.file;
+            const lbl = typeof item === "string" ? item : (item.label || item.file);
+            if (!fileVal) return;
+            const opt = document.createElement("option");
+            opt.value = fileVal;
+            opt.textContent = lbl;
+            sel.appendChild(opt);
+          });
+          sel.classList.remove("hidden");
+          const chosenFile = sel.value;
+          if (chosenFile) {
+            document.getElementById("repo-json-filename").value = chosenFile;
+            await fetchJsonFromRepoUrl(folder ? `${folder}/${chosenFile}` : chosenFile, chosenFile);
+          }
+        } catch {
+          alert("No se pudo leer manifest.json.");
         }
       });
 
+      document.getElementById("repo-manifest-select").addEventListener("change", async (ev) => {
+        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
+        const fileVal = ev.target.value;
+        if (!fileVal) return;
+        document.getElementById("repo-json-filename").value = fileVal;
+        await fetchJsonFromRepoUrl(folder ? `${folder}/${fileVal}` : fileVal, fileVal);
+      });
+
+      document.getElementById("btn-fetch-repo-json").addEventListener("click", async () => {
+        const folder = (document.getElementById("repo-folder-path").value || "baterias").trim().replace(/^\/+|\/+$/g, "");
+        const fname = (document.getElementById("repo-json-filename").value || "").trim().replace(/^\/+/, "");
+        if (!fname) return;
+        const url = folder && !fname.startsWith(folder + "/") ? `${folder}/${fname}` : fname;
+        await fetchJsonFromRepoUrl(url, fname);
+      });
+
+      document.getElementById("json-file-input").addEventListener("change", (ev) => {
+        const file = ev.target.files && ev.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const parsed = JSON.parse(String(e.target.result || ""));
+            const qArray = Array.isArray(parsed) ? parsed : (Array.isArray(parsed?.preguntas) ? parsed.preguntas : null);
+            if (!qArray) {
+              alert("El archivo JSON debe contener un array de preguntas.");
+              return;
+            }
+            importQuestionsList(qArray, file.name);
+          } catch {
+            alert("No se pudo leer el archivo JSON.");
+          }
+        };
+        reader.readAsText(file);
+        ev.target.value = "";
+      });
+
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredInstallPrompt = e;
+      });
+
+      document.getElementById("btn-install-pwa").addEventListener("click", async () => {
+        if (window.location.protocol === "content:") {
+          alert("Estás abriendo el archivo desde content:// (Descargas/Gestor de archivos). Ábrelo mediante GitHub Pages o un servidor HTTP/HTTPS para instalar la PWA.");
+          return;
+        }
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          await deferredInstallPrompt.userChoice;
+          deferredInstallPrompt = null;
+        } else {
+          alert("Abre el menú del navegador (⋮) y pulsa 'Añadir a pantalla de inicio' o 'Instalar aplicación'.");
+        }
+      });
+
+      document.getElementById("btn-start-test").addEventListener("click", () => {
+        startQuiz(null, {});
+      });
+
+      document.getElementById("btn-abort-quiz").addEventListener("click", handleAbortQuiz);
+
+      document.getElementById("btn-toggle-exam-bookmark").addEventListener("click", () => {
+        const q = sessionQuestions[currentIndex];
+        if (!q) return;
+        const key = getQuestionKey(q);
+        const pos = customExamPoolKeys.indexOf(key);
+        if (pos >= 0) customExamPoolKeys.splice(pos, 1);
+        else customExamPoolKeys.push(key);
+        saveCustomExamPool();
+        renderCurrentQuestion();
+      });
+
+      document.getElementById("btn-prev-question").addEventListener("click", () => {
+        if (evaluationMode === "examen" && currentIndex > 0) {
+          currentIndex--;
+          renderCurrentQuestion();
+        }
+      });
+
+      document.getElementById("btn-next-question").addEventListener("click", () => {
+        if (evaluationMode === "examen") {
+          if (currentIndex < sessionQuestions.length - 1) {
+            currentIndex++;
+            renderCurrentQuestion();
+          } else {
+            gradeExamSession();
+            saveCurrentAttemptToHistory();
+            showResults(false);
+          }
+          return;
+        }
+
+        if (!answeredCurrent) {
+          confirmCurrentStudyAnswer();
+          return;
+        }
+
+        if (currentIndex < sessionQuestions.length - 1) {
+          currentIndex++;
+          pendingStudyChoice = null;
+          answeredCurrent = false;
+          renderCurrentQuestion();
+        } else {
+          stopTimer();
+          saveCurrentAttemptToHistory();
+          showResults(false);
+        }
+      });
+
+      document.getElementById("btn-tab-failures").addEventListener("click", () => {
+        reviewFilter = "failures";
+        renderReviewList();
+      });
+
+      document.getElementById("btn-tab-all").addEventListener("click", () => {
+        reviewFilter = "all";
+        renderReviewList();
+      });
+
+      document.getElementById("btn-download-answer-sheet-json").addEventListener("click", downloadAnswerSheetJson);
+      document.getElementById("btn-download-report-txt").addEventListener("click", downloadReportTxt);
+
+      document.getElementById("btn-retry-failed").addEventListener("click", () => {
+        if (!failedQuestions.length) return;
+        const retryList = failedQuestions.map((f) => ({ ...f.question, es_reserva: false }));
+        startQuiz(retryList, {
+          sessionTitle: "Repaso de preguntas falladas",
+          forceExamMode: false
+        });
+      });
+
       document.getElementById("btn-back-menu").addEventListener("click", () => {
-        stopTimer();
-        updateTimerBadgeUI();
         switchScreen("screen-menu");
         updateMenuCounts(false);
       });
